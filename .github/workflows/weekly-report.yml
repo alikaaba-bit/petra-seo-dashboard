@@ -1,0 +1,44 @@
+name: Weekly SEO Report
+
+on:
+  schedule:
+    # Run every Monday at 8 AM UTC (midnight PST)
+    - cron: '0 8 * * 1'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  send-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-auth google-api-python-client
+
+      - name: Send weekly report
+        env:
+          GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+          SMTP_SERVER: smtp.gmail.com
+          SMTP_PORT: 587
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          FROM_EMAIL: seo-reports@petrajewelryfactory.com
+        run: |
+          echo '${{ secrets.GSC_CREDENTIALS }}' > credentials.json
+          python scripts/email_alerts.py
+
+      - name: Save report data
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "Weekly report data - $(date +'%Y-%m-%d')"
+          git push

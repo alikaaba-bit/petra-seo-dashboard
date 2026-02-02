@@ -1,0 +1,39 @@
+name: Update SEO Dashboard
+
+on:
+  schedule:
+    # Run every Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-auth google-api-python-client
+
+      - name: Create credentials file
+        run: |
+          echo '${{ secrets.GSC_CREDENTIALS }}' > credentials.json
+
+      - name: Update dashboard data
+        run: python scripts/update_data.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "Update SEO data - $(date +'%Y-%m-%d')"
+          git push

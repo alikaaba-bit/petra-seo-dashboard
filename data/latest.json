@@ -1,0 +1,542 @@
+{
+  "generated_at": "2026-02-02T19:38:14.342186",
+  "site_url": "https://petrajewelryfactory.com/",
+  "overall_metrics": {
+    "total_clicks": 2,
+    "total_impressions": 9,
+    "avg_ctr": 22.22,
+    "avg_position": 19.0,
+    "period_start": "2026-01-23",
+    "period_end": "2026-01-30"
+  },
+  "keyword_summary": {
+    "total_tracked": 50,
+    "total_ranking": 0,
+    "page1_keywords": 0,
+    "top3_keywords": 0
+  },
+  "category_stats": {
+    "china_location": {
+      "total": 10,
+      "ranking": 0,
+      "page1": 0
+    },
+    "durability": {
+      "total": 8,
+      "ranking": 0,
+      "page1": 0
+    },
+    "materials": {
+      "total": 10,
+      "ranking": 0,
+      "page1": 0
+    },
+    "private_label": {
+      "total": 8,
+      "ranking": 0,
+      "page1": 0
+    },
+    "ecommerce": {
+      "total": 7,
+      "ranking": 0,
+      "page1": 0
+    },
+    "quality": {
+      "total": 7,
+      "ranking": 0,
+      "page1": 0
+    }
+  },
+  "tracked_keywords": {
+    "jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "china jewelry factory": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "stainless steel jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "jewelry supplier china wholesale": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "premium jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "jewelry factory dongguan": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "chinese jewelry manufacturer for brands": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "china jewelry factory high quality": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "silver jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "brass jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "hard jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "durable jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "waterproof jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "tarnish free jewelry supplier": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "lifetime warranty jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "hypoallergenic jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "long lasting jewelry supplier": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "surgical steel jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "stainless steel jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "316L stainless steel jewelry supplier": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "brass jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "sterling silver jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "925 silver jewelry wholesale": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "PVD plated jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "gold plated stainless steel jewelry wholesale": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "rose gold jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "stainless steel jewelry factory": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "nickel free jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "private label jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "OEM jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "ODM jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "white label jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "custom jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "private label jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "contract jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "jewelry manufacturing partner": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "jewelry manufacturer for ecommerce brands": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "jewelry supplier for DTC brands": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "jewelry manufacturer for shopify brands": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "wholesale jewelry supplier for online stores": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "B2B jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "jewelry manufacturer for retailers": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "jewelry supplier for amazon sellers": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "premium jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "high quality jewelry factory": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "reliable jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "jewelry manufacturer quality control": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "best jewelry manufacturer for brands": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "luxury stainless steel jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    },
+    "consistent jewelry manufacturing supplier": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": false
+    }
+  },
+  "discovered_keywords": [
+    {
+      "keyword": "petra jewellery",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 45,
+      "ctr": 0
+    },
+    {
+      "keyword": "petra pieces jewellery",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 24,
+      "ctr": 0
+    }
+  ],
+  "top_pages": [
+    {
+      "page": "/",
+      "impressions": 9,
+      "clicks": 2,
+      "position": 18,
+      "ctr": 22.22
+    },
+    {
+      "page": "/about/",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 5,
+      "ctr": 0
+    }
+  ],
+  "priority_keywords": {
+    "jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "stainless steel jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "private label jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "hard jewelry manufacturer": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "316L stainless steel jewelry supplier": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "jewelry manufacturer for ecommerce brands": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    },
+    "premium jewelry manufacturer china": {
+      "impressions": 0,
+      "clicks": 0,
+      "avg_position": 0,
+      "ctr": 0,
+      "status": "Not Ranking",
+      "is_priority": true
+    }
+  }
+}

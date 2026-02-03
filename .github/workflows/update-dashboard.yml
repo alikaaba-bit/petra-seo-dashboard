@@ -2,8 +2,8 @@ name: Update SEO Dashboard
 
 on:
   schedule:
-    # Run every Monday at 9 AM UTC
-    - cron: '0 9 * * 1'
+    # Run daily at 9 AM UTC
+    - cron: '0 9 * * *'
   workflow_dispatch:  # Allow manual trigger
 
 permissions:

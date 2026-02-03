@@ -1,29 +1,25 @@
 #!/usr/bin/env python3
 """
 SEO Email Alert System for Petra Jewelry Factory
-Sends weekly reports and ranking change alerts to ali@petrabrands.com
+Sends weekly reports to ali@petrabrands.com via Resend API
 """
 
 import json
 import os
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+import urllib.request
+import urllib.error
 from datetime import datetime, timedelta
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 # Configuration
-CREDENTIALS_PATH = os.environ.get('GSC_CREDENTIALS_PATH', 'credentials.json')
+CREDENTIALS_PATH = 'credentials.json'
 SITE_URL = 'https://petrajewelryfactory.com/'
 ALERT_EMAIL = 'ali@petrabrands.com'
-SMTP_SERVER = os.environ.get('SMTP_SERVER', 'smtp.gmail.com')
-SMTP_PORT = int(os.environ.get('SMTP_PORT', 587))
-SMTP_USER = os.environ.get('SMTP_USER', '')
-SMTP_PASSWORD = os.environ.get('SMTP_PASSWORD', '')
-FROM_EMAIL = os.environ.get('FROM_EMAIL', 'seo-alerts@petrajewelryfactory.com')
+RESEND_API_KEY = os.environ.get('RESEND_API_KEY', '')
+FROM_EMAIL = 'SEO Reports <reports@resend.dev>'  # Use resend.dev for testing
 
-# Priority keywords to monitor closely
+# Priority keywords
 PRIORITY_KEYWORDS = [
     "jewelry manufacturer china",
     "stainless steel jewelry manufacturer",
@@ -36,34 +32,34 @@ PRIORITY_KEYWORDS = [
 
 # All 50 keywords
 ALL_KEYWORDS = [
-    # China Location
+    # China Location (10)
     "jewelry manufacturer china", "china jewelry factory",
     "stainless steel jewelry manufacturer china", "jewelry supplier china wholesale",
     "premium jewelry manufacturer china", "jewelry factory dongguan",
     "chinese jewelry manufacturer for brands", "china jewelry factory high quality",
     "silver jewelry manufacturer china", "brass jewelry manufacturer china",
-    # Durability
+    # Durability (8)
     "hard jewelry manufacturer", "durable jewelry manufacturer",
     "waterproof jewelry manufacturer", "tarnish free jewelry supplier",
     "lifetime warranty jewelry manufacturer", "hypoallergenic jewelry manufacturer",
     "long lasting jewelry supplier", "surgical steel jewelry manufacturer",
-    # Materials
+    # Materials (10)
     "stainless steel jewelry manufacturer", "316L stainless steel jewelry supplier",
     "brass jewelry manufacturer", "sterling silver jewelry manufacturer",
     "925 silver jewelry wholesale", "PVD plated jewelry manufacturer",
     "gold plated stainless steel jewelry wholesale", "rose gold jewelry manufacturer",
     "stainless steel jewelry factory", "nickel free jewelry manufacturer",
-    # Private Label
+    # Private Label (8)
     "private label jewelry manufacturer", "OEM jewelry manufacturer",
     "ODM jewelry manufacturer", "white label jewelry manufacturer",
     "custom jewelry manufacturer", "private label jewelry manufacturer china",
     "contract jewelry manufacturer", "jewelry manufacturing partner",
-    # Ecommerce
+    # Ecommerce (7)
     "jewelry manufacturer for ecommerce brands", "jewelry supplier for DTC brands",
     "jewelry manufacturer for shopify brands", "wholesale jewelry supplier for online stores",
     "B2B jewelry manufacturer", "jewelry manufacturer for retailers",
     "jewelry supplier for amazon sellers",
-    # Quality
+    # Quality (7)
     "premium jewelry manufacturer", "high quality jewelry factory",
     "reliable jewelry manufacturer", "jewelry manufacturer quality control",
     "best jewelry manufacturer for brands", "luxury stainless steel jewelry manufacturer",
@@ -79,8 +75,6 @@ def get_service():
             scopes=['https://www.googleapis.com/auth/webmasters.readonly']
         )
     else:
-        # Try loading from environment variable
-        import json
         creds_json = os.environ.get('GSC_CREDENTIALS', '{}')
         creds_dict = json.loads(creds_json)
         credentials = service_account.Credentials.from_service_account_info(
@@ -91,7 +85,7 @@ def get_service():
 
 
 def get_keyword_data(service, keyword, days=7):
-    """Get ranking data for a specific keyword."""
+    """Get ranking data for a keyword."""
     end_date = datetime.now() - timedelta(days=3)
     start_date = end_date - timedelta(days=days)
 
@@ -100,37 +94,22 @@ def get_keyword_data(service, keyword, days=7):
         'endDate': end_date.strftime('%Y-%m-%d'),
         'dimensions': ['query'],
         'dimensionFilterGroups': [{
-            'filters': [{
-                'dimension': 'query',
-                'operator': 'contains',
-                'expression': keyword
-            }]
+            'filters': [{'dimension': 'query', 'operator': 'contains', 'expression': keyword}]
         }],
         'rowLimit': 10
     }
 
     try:
-        response = service.searchanalytics().query(
-            siteUrl=SITE_URL,
-            body=request
-        ).execute()
-
+        response = service.searchanalytics().query(siteUrl=SITE_URL, body=request).execute()
         rows = response.get('rows', [])
         if rows:
             total_imp = sum(r.get('impressions', 0) for r in rows)
             total_clicks = sum(r.get('clicks', 0) for r in rows)
             avg_pos = sum(r.get('position', 0) * r.get('impressions', 0) for r in rows)
             avg_pos = avg_pos / total_imp if total_imp > 0 else 0
-
-            return {
-                'impressions': total_imp,
-                'clicks': total_clicks,
-                'position': round(avg_pos, 1),
-                'ranking': avg_pos > 0
-            }
+            return {'impressions': total_imp, 'clicks': total_clicks, 'position': round(avg_pos, 1), 'ranking': avg_pos > 0}
     except Exception as e:
-        print(f"Error fetching {keyword}: {e}")
-
+        print(f"Error: {e}")
     return {'impressions': 0, 'clicks': 0, 'position': 0, 'ranking': False}
 
 
@@ -157,243 +136,232 @@ def get_overall_metrics(service, days=7):
 
 
 def load_previous_data():
-    """Load previous week's data for comparison."""
-    data_path = 'data/previous_rankings.json'
-    if os.path.exists(data_path):
-        with open(data_path, 'r') as f:
+    """Load previous week's data."""
+    if os.path.exists('data/previous_rankings.json'):
+        with open('data/previous_rankings.json', 'r') as f:
             return json.load(f)
     return {}
 
 
 def save_current_data(data):
-    """Save current data for next week's comparison."""
+    """Save current data for comparison."""
     os.makedirs('data', exist_ok=True)
     with open('data/previous_rankings.json', 'w') as f:
         json.dump(data, f, indent=2)
 
 
-def generate_weekly_report(current_data, previous_data, overall):
-    """Generate weekly email report."""
+def generate_report_html(current_data, previous_data, overall):
+    """Generate HTML email report."""
+    ranking_count = sum(1 for v in current_data.values() if v['ranking'])
+    page1_count = sum(1 for v in current_data.values() if 0 < v['position'] <= 10)
+    top3_count = sum(1 for v in current_data.values() if 0 < v['position'] <= 3)
+    prev_ranking = sum(1 for v in previous_data.values() if v.get('ranking', False))
 
-    # Calculate summary stats
-    ranking_count = sum(1 for k, v in current_data.items() if v['ranking'])
-    page1_count = sum(1 for k, v in current_data.items() if 0 < v['position'] <= 10)
-    top3_count = sum(1 for k, v in current_data.items() if 0 < v['position'] <= 3)
-
-    prev_ranking = sum(1 for k, v in previous_data.items() if v.get('ranking', False))
-
-    # Find improvements and new rankings
-    improvements = []
+    # Find changes
     new_rankings = []
-
+    improvements = []
     for kw, data in current_data.items():
         prev = previous_data.get(kw, {})
-
         if data['ranking'] and not prev.get('ranking', False):
             new_rankings.append((kw, data['position']))
         elif data['ranking'] and prev.get('ranking', False):
-            pos_change = prev.get('position', 100) - data['position']
-            if pos_change > 2:  # Improved by more than 2 positions
-                improvements.append((kw, data['position'], pos_change))
+            change = prev.get('position', 100) - data['position']
+            if change > 2:
+                improvements.append((kw, data['position'], change))
 
-    # Build email HTML
     html = f"""
-    <html>
-    <head>
-        <style>
-            body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
-            .header {{ background: #1a1a2e; color: #d4af37; padding: 20px; text-align: center; }}
-            .metric-box {{ display: inline-block; background: #f5f5f5; padding: 15px 25px; margin: 10px; border-radius: 8px; text-align: center; }}
-            .metric-value {{ font-size: 28px; font-weight: bold; color: #1a1a2e; }}
-            .metric-label {{ font-size: 12px; color: #666; }}
-            .section {{ margin: 20px 0; padding: 15px; background: #fafafa; border-radius: 8px; }}
-            .section h3 {{ color: #1a1a2e; margin-top: 0; }}
-            .success {{ color: #00b894; }}
-            .warning {{ color: #fdcb6e; }}
-            table {{ width: 100%; border-collapse: collapse; }}
-            th, td {{ padding: 10px; text-align: left; border-bottom: 1px solid #eee; }}
-            th {{ background: #1a1a2e; color: #fff; }}
-            .badge {{ padding: 3px 10px; border-radius: 12px; font-size: 11px; }}
-            .badge-success {{ background: #00b894; color: #fff; }}
-            .badge-new {{ background: #e94560; color: #fff; }}
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <h1>Petra Jewelry Factory</h1>
-            <p>Weekly SEO Report - {datetime.now().strftime('%B %d, %Y')}</p>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; margin: 0; padding: 20px; }}
+.container {{ max-width: 600px; margin: 0 auto; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }}
+.header {{ background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: #d4af37; padding: 30px; text-align: center; }}
+.header h1 {{ margin: 0; font-size: 24px; }}
+.header p {{ margin: 10px 0 0; color: #a0a0a0; font-size: 14px; }}
+.metrics {{ display: flex; flex-wrap: wrap; padding: 20px; gap: 10px; }}
+.metric {{ flex: 1; min-width: 120px; background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }}
+.metric-value {{ font-size: 28px; font-weight: bold; color: #1a1a2e; }}
+.metric-label {{ font-size: 11px; color: #666; text-transform: uppercase; margin-top: 5px; }}
+.section {{ padding: 20px; border-top: 1px solid #eee; }}
+.section h2 {{ font-size: 16px; color: #1a1a2e; margin: 0 0 15px; }}
+.alert {{ background: #e8f5e9; border-left: 4px solid #4caf50; padding: 12px 15px; margin: 10px 0; border-radius: 0 8px 8px 0; }}
+.alert-new {{ background: #fff3e0; border-color: #ff9800; }}
+table {{ width: 100%; border-collapse: collapse; font-size: 14px; }}
+th {{ background: #f8f9fa; padding: 10px; text-align: left; font-weight: 600; color: #333; }}
+td {{ padding: 10px; border-bottom: 1px solid #eee; }}
+.badge {{ display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }}
+.badge-success {{ background: #e8f5e9; color: #2e7d32; }}
+.badge-warning {{ background: #fff3e0; color: #ef6c00; }}
+.badge-muted {{ background: #f5f5f5; color: #999; }}
+.footer {{ background: #1a1a2e; color: #888; padding: 20px; text-align: center; font-size: 12px; }}
+.footer a {{ color: #d4af37; }}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Petra Jewelry Factory</h1>
+        <p>Weekly SEO Report &bull; {datetime.now().strftime('%B %d, %Y')}</p>
+    </div>
+
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-value">{overall['clicks']}</div>
+            <div class="metric-label">Clicks</div>
         </div>
+        <div class="metric">
+            <div class="metric-value">{overall['impressions']}</div>
+            <div class="metric-label">Impressions</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">{ranking_count}<span style="font-size:14px;color:#666">/50</span></div>
+            <div class="metric-label">Ranking</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">{page1_count}</div>
+            <div class="metric-label">Page 1</div>
+        </div>
+    </div>
+"""
 
-        <div style="padding: 20px;">
-            <h2>📊 Overall Performance (Last 7 Days)</h2>
-            <div style="text-align: center;">
-                <div class="metric-box">
-                    <div class="metric-value">{overall['clicks']}</div>
-                    <div class="metric-label">CLICKS</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">{overall['impressions']}</div>
-                    <div class="metric-label">IMPRESSIONS</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">{overall['ctr']}%</div>
-                    <div class="metric-label">CTR</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">{overall['position']}</div>
-                    <div class="metric-label">AVG POSITION</div>
-                </div>
-            </div>
+    # Week over week
+    change = ranking_count - prev_ranking
+    if change != 0:
+        html += f"""
+    <div class="section">
+        <div class="alert {'alert-new' if change > 0 else ''}">
+            <strong>Week over Week:</strong> {'+' if change > 0 else ''}{change} keywords {'now ranking' if change > 0 else 'lost'}
+        </div>
+    </div>
+"""
 
-            <h2>🎯 Keyword Tracking (50 Keywords)</h2>
-            <div style="text-align: center;">
-                <div class="metric-box">
-                    <div class="metric-value">{ranking_count}/50</div>
-                    <div class="metric-label">RANKING</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">{page1_count}</div>
-                    <div class="metric-label">PAGE 1</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">{top3_count}</div>
-                    <div class="metric-label">TOP 3</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">{ranking_count - prev_ranking:+d}</div>
-                    <div class="metric-label">VS LAST WEEK</div>
-                </div>
-            </div>
-    """
-
-    # New rankings section
+    # New rankings
     if new_rankings:
         html += """
-            <div class="section">
-                <h3>🎉 NEW RANKINGS THIS WEEK</h3>
-                <table>
-                    <tr><th>Keyword</th><th>Position</th></tr>
-        """
-        for kw, pos in new_rankings:
-            html += f'<tr><td>{kw}</td><td><span class="badge badge-new">#{pos:.0f}</span></td></tr>'
+    <div class="section">
+        <h2>🎉 New Rankings This Week</h2>
+        <table>
+            <tr><th>Keyword</th><th>Position</th></tr>
+"""
+        for kw, pos in sorted(new_rankings, key=lambda x: x[1]):
+            html += f'<tr><td>{kw}</td><td><span class="badge badge-success">#{int(pos)}</span></td></tr>'
         html += "</table></div>"
 
-    # Improvements section
+    # Improvements
     if improvements:
         html += """
-            <div class="section">
-                <h3>📈 IMPROVED RANKINGS</h3>
-                <table>
-                    <tr><th>Keyword</th><th>Position</th><th>Change</th></tr>
-        """
-        for kw, pos, change in sorted(improvements, key=lambda x: -x[2])[:10]:
-            html += f'<tr><td>{kw}</td><td>#{pos:.0f}</td><td class="success">↑ {change:.0f}</td></tr>'
+    <div class="section">
+        <h2>📈 Improved Rankings</h2>
+        <table>
+            <tr><th>Keyword</th><th>Position</th><th>Change</th></tr>
+"""
+        for kw, pos, chg in sorted(improvements, key=lambda x: -x[2])[:5]:
+            html += f'<tr><td>{kw}</td><td>#{int(pos)}</td><td style="color:#2e7d32">↑ {int(chg)}</td></tr>'
         html += "</table></div>"
 
-    # Priority keywords status
+    # Priority keywords
     html += """
-        <div class="section">
-            <h3>⭐ PRIORITY KEYWORDS STATUS</h3>
-            <table>
-                <tr><th>Keyword</th><th>Position</th><th>Impressions</th><th>Clicks</th></tr>
-    """
+    <div class="section">
+        <h2>⭐ Priority Keywords</h2>
+        <table>
+            <tr><th>Keyword</th><th>Position</th><th>Impressions</th></tr>
+"""
     for kw in PRIORITY_KEYWORDS:
-        data = current_data.get(kw, {})
-        pos = data.get('position', 0)
-        pos_display = f"#{pos:.0f}" if pos > 0 else "Not ranking"
-        html += f"""
-            <tr>
-                <td>{kw}</td>
-                <td>{pos_display}</td>
-                <td>{data.get('impressions', 0)}</td>
-                <td>{data.get('clicks', 0)}</td>
-            </tr>
-        """
-    html += "</table></div>"
+        d = current_data.get(kw, {})
+        pos = d.get('position', 0)
+        if pos > 0:
+            badge = f'<span class="badge badge-success">#{int(pos)}</span>'
+        else:
+            badge = '<span class="badge badge-muted">Not ranking</span>'
+        html += f'<tr><td>{kw}</td><td>{badge}</td><td>{d.get("impressions", 0)}</td></tr>'
 
-    # Footer
     html += f"""
-            <div style="margin-top: 30px; padding: 20px; background: #1a1a2e; color: #fff; text-align: center;">
-                <p>View full dashboard: <a href="https://alikaaba-bit.github.io/petra-seo-dashboard/" style="color: #d4af37;">SEO Dashboard</a></p>
-                <p style="font-size: 12px; color: #888;">Data from Google Search Console | Report generated automatically</p>
-            </div>
-        </div>
-    </body>
-    </html>
-    """
+        </table>
+    </div>
 
+    <div class="footer">
+        <p><a href="https://alikaaba-bit.github.io/petra-seo-dashboard/">View Full Dashboard</a></p>
+        <p>Data from Google Search Console &bull; Auto-generated report</p>
+    </div>
+</div>
+</body>
+</html>
+"""
     return html
 
 
-def send_email(subject, html_content):
-    """Send email using SMTP."""
-    if not SMTP_USER or not SMTP_PASSWORD:
-        print("SMTP credentials not configured. Email not sent.")
-        print(f"Would send to: {ALERT_EMAIL}")
-        print(f"Subject: {subject}")
-        # Save report locally instead
+def send_email_resend(to_email, subject, html_content):
+    """Send email using Resend API."""
+    if not RESEND_API_KEY:
+        print("RESEND_API_KEY not set. Saving report locally.")
+        os.makedirs('data', exist_ok=True)
         with open('data/latest_report.html', 'w') as f:
             f.write(html_content)
         print("Report saved to data/latest_report.html")
         return False
 
-    msg = MIMEMultipart('alternative')
-    msg['Subject'] = subject
-    msg['From'] = FROM_EMAIL
-    msg['To'] = ALERT_EMAIL
+    url = 'https://api.resend.com/emails'
+    data = json.dumps({
+        'from': FROM_EMAIL,
+        'to': [to_email],
+        'subject': subject,
+        'html': html_content
+    }).encode('utf-8')
 
-    msg.attach(MIMEText(html_content, 'html'))
+    req = urllib.request.Request(url, data=data, method='POST')
+    req.add_header('Authorization', f'Bearer {RESEND_API_KEY}')
+    req.add_header('Content-Type', 'application/json')
 
     try:
-        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-            server.starttls()
-            server.login(SMTP_USER, SMTP_PASSWORD)
-            server.sendmail(FROM_EMAIL, ALERT_EMAIL, msg.as_string())
-        print(f"Email sent to {ALERT_EMAIL}")
-        return True
+        with urllib.request.urlopen(req) as response:
+            result = json.loads(response.read().decode())
+            print(f"Email sent successfully! ID: {result.get('id')}")
+            return True
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode()
+        print(f"Failed to send email: {e.code} - {error_body}")
+        return False
     except Exception as e:
-        print(f"Failed to send email: {e}")
+        print(f"Error sending email: {e}")
         return False
 
 
 def main():
-    """Main function to generate and send weekly report."""
-    print(f"Generating weekly SEO report for {SITE_URL}")
-    print(f"Alert email: {ALERT_EMAIL}")
+    """Main function."""
+    print(f"Generating weekly SEO report...")
+    print(f"Target: {ALERT_EMAIL}")
 
     service = get_service()
 
-    # Get current data
+    # Fetch data
     print("Fetching keyword data...")
     current_data = {}
     for kw in ALL_KEYWORDS:
         current_data[kw] = get_keyword_data(service, kw)
 
-    # Get overall metrics
     overall = get_overall_metrics(service)
-
-    # Load previous data
     previous_data = load_previous_data()
 
     # Generate report
-    html_report = generate_weekly_report(current_data, previous_data, overall)
+    html = generate_report_html(current_data, previous_data, overall)
 
-    # Calculate summary for subject line
+    # Summary for subject
     ranking_count = sum(1 for v in current_data.values() if v['ranking'])
-    new_rankings = sum(1 for k, v in current_data.items()
-                       if v['ranking'] and not previous_data.get(k, {}).get('ranking', False))
+    new_count = sum(1 for k, v in current_data.items()
+                    if v['ranking'] and not previous_data.get(k, {}).get('ranking', False))
 
-    subject = f"Petra SEO Report: {ranking_count}/50 keywords ranking"
-    if new_rankings > 0:
-        subject += f" (+{new_rankings} new!)"
+    subject = f"Petra SEO: {ranking_count}/50 keywords ranking"
+    if new_count > 0:
+        subject += f" (+{new_count} new!)"
 
     # Send email
-    send_email(subject, html_report)
+    send_email_resend(ALERT_EMAIL, subject, html)
 
-    # Save current data for next comparison
+    # Save for next week
     save_current_data(current_data)
 
-    print("Report complete!")
+    print("Done!")
 
 
 if __name__ == '__main__':

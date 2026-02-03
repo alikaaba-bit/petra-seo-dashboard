@@ -26,11 +26,7 @@ jobs:
       - name: Send weekly report
         env:
           GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
-          SMTP_SERVER: smtp.gmail.com
-          SMTP_PORT: 587
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          FROM_EMAIL: seo-reports@petrajewelryfactory.com
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           echo '${{ secrets.GSC_CREDENTIALS }}' > credentials.json
           python scripts/email_alerts.py

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "changes": [],
+  "topics": [
+    {"topic": "Private label jewelry manufacturing", "page": "/private-label/", "intent": "commercial", "business_value": 3},
+    {"topic": "Contract jewelry manufacturing", "page": "/contract-manufacturing/", "intent": "commercial", "business_value": 3},
+    {"topic": "Jewelry manufacturing services", "page": "/services/", "intent": "commercial", "business_value": 3},
+    {"topic": "Manufacturing partner quality checklist", "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/", "intent": "research", "business_value": 2}
+  ],
+  "business_facts": {
+    "sales_email": null,
+    "phone": null,
+    "moq": null,
+    "sample_lead_time": null,
+    "production_lead_time": null
+  }
+}

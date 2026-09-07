@@ -1,0 +1,36 @@
+name: Website performance checks
+on:
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: seo-data-update
+  cancel-in-progress: false
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npx --yes @lhci/cli@0.15.1 autorun
+      - run: python scripts/lighthouse_summary.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: website-lighthouse-reports
+          path: artifacts/lighthouse
+      - name: Save lab results
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/performance.json
+          git diff --staged --quiet || git commit -m "Update website lab performance results"
+          git pull --rebase origin main
+          git push origin HEAD:main

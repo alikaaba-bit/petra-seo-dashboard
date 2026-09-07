@@ -9,6 +9,7 @@ import os
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
@@ -86,15 +87,16 @@ def get_service():
 
 def get_keyword_data(service, keyword, days=7):
     """Get ranking data for a keyword."""
-    end_date = datetime.now() - timedelta(days=3)
-    start_date = end_date - timedelta(days=days)
+    end_date = datetime.now(ZoneInfo('America/Los_Angeles')) - timedelta(days=3)
+    start_date = end_date - timedelta(days=days - 1)
 
     request = {
         'startDate': start_date.strftime('%Y-%m-%d'),
         'endDate': end_date.strftime('%Y-%m-%d'),
         'dimensions': ['query'],
+        'dataState': 'final',
         'dimensionFilterGroups': [{
-            'filters': [{'dimension': 'query', 'operator': 'contains', 'expression': keyword}]
+            'filters': [{'dimension': 'query', 'operator': 'equals', 'expression': keyword}]
         }],
         'rowLimit': 10
     }
@@ -109,19 +111,20 @@ def get_keyword_data(service, keyword, days=7):
             avg_pos = avg_pos / total_imp if total_imp > 0 else 0
             return {'impressions': total_imp, 'clicks': total_clicks, 'position': round(avg_pos, 1), 'ranking': avg_pos > 0}
     except Exception as e:
-        print(f"Error: {e}")
+        raise RuntimeError('Keyword collection failed; not sending a misleading report') from e
     return {'impressions': 0, 'clicks': 0, 'position': 0, 'ranking': False}
 
 
 def get_overall_metrics(service, days=7):
     """Get overall site metrics."""
-    end_date = datetime.now() - timedelta(days=3)
-    start_date = end_date - timedelta(days=days)
+    end_date = datetime.now(ZoneInfo('America/Los_Angeles')) - timedelta(days=3)
+    start_date = end_date - timedelta(days=days - 1)
 
     request = {
         'startDate': start_date.strftime('%Y-%m-%d'),
         'endDate': end_date.strftime('%Y-%m-%d'),
-        'dimensions': ['date'],
+        'dimensions': [],
+        'dataState': 'final',
     }
 
     response = service.searchanalytics().query(siteUrl=SITE_URL, body=request).execute()
@@ -130,8 +133,8 @@ def get_overall_metrics(service, days=7):
     return {
         'clicks': sum(r.get('clicks', 0) for r in rows),
         'impressions': sum(r.get('impressions', 0) for r in rows),
-        'ctr': round(sum(r.get('ctr', 0) for r in rows) / len(rows) * 100, 2) if rows else 0,
-        'position': round(sum(r.get('position', 0) for r in rows) / len(rows), 1) if rows else 0,
+        'ctr': round(sum(r.get('clicks', 0) for r in rows) / sum(r.get('impressions', 0) for r in rows) * 100, 2) if sum(r.get('impressions', 0) for r in rows) else 0,
+        'position': rows[0].get('position', 0) if rows else 0,
     }
 
 

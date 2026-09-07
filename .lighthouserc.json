@@ -1,0 +1,14 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/contract-manufacturing/"
+      ],
+      "numberOfRuns": 1,
+      "settings": {"onlyCategories": ["performance", "accessibility", "best-practices", "seo"]}
+    },
+    "upload": {"target": "filesystem", "outputDir": "artifacts/lighthouse"}
+  }
+}

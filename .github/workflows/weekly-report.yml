@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: seo-data-update
+  cancel-in-progress: false
+
 jobs:
   send-report:
     runs-on: ubuntu-latest
@@ -28,7 +32,6 @@ jobs:
           GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
-          echo '${{ secrets.GSC_CREDENTIALS }}' > credentials.json
           python scripts/email_alerts.py
 
       - name: Save report data
@@ -37,4 +40,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/
           git diff --staged --quiet || git commit -m "Weekly report data - $(date +'%Y-%m-%d')"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main

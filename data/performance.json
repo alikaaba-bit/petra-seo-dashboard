@@ -1,0 +1,267 @@
+{
+  "generated_at": "2026-09-07T09:22:16.124364+00:00",
+  "reports": [
+    {
+      "url": "https://petrajewelryfactory.com/",
+      "fetched_at": "2026-09-07T09:18:48.868Z",
+      "scores": {
+        "performance": 59,
+        "accessibility": 95,
+        "best-practices": 71,
+        "seo": 92
+      },
+      "findings": [
+        {
+          "title": "First Contentful Paint",
+          "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+          "value": "2.6 s"
+        },
+        {
+          "title": "Largest Contentful Paint",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+          "value": "2.6 s"
+        },
+        {
+          "title": "Speed Index",
+          "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+          "value": "12.2 s"
+        },
+        {
+          "title": "Total Blocking Time",
+          "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/).",
+          "value": "1,260 ms"
+        },
+        {
+          "title": "Max Potential First Input Delay",
+          "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+          "value": "1,040 ms"
+        },
+        {
+          "title": "Browser errors were logged to the console",
+          "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+          "value": ""
+        },
+        {
+          "title": "Time to Interactive",
+          "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+          "value": "57.3 s"
+        },
+        {
+          "title": "Serves images with low resolution",
+          "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).",
+          "value": ""
+        },
+        {
+          "title": "Uses third-party cookies",
+          "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+          "value": "5 cookies found"
+        },
+        {
+          "title": "Minimize main-thread work",
+          "description": "Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. [Learn how to minimize main-thread work](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/)",
+          "value": "5.7 s"
+        },
+        {
+          "title": "Largest Contentful Paint element",
+          "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+          "value": "2,620 ms"
+        },
+        {
+          "title": "Image elements do not have explicit `width` and `height`",
+          "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+          "value": ""
+        },
+        {
+          "title": "Heading elements are not in a sequentially-descending order",
+          "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.10/heading-order).",
+          "value": ""
+        },
+        {
+          "title": "Links do not have a discernible name",
+          "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.10/link-name).",
+          "value": ""
+        },
+        {
+          "title": "Serve static assets with an efficient cache policy",
+          "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+          "value": "7 resources found"
+        }
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/private-label/",
+      "fetched_at": "2026-09-07T09:19:23.909Z",
+      "scores": {
+        "performance": 84,
+        "accessibility": 94,
+        "best-practices": 71,
+        "seo": 92
+      },
+      "findings": [
+        {
+          "title": "First Contentful Paint",
+          "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+          "value": "2.2 s"
+        },
+        {
+          "title": "Largest Contentful Paint",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+          "value": "3.2 s"
+        },
+        {
+          "title": "Speed Index",
+          "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+          "value": "6.8 s"
+        },
+        {
+          "title": "Max Potential First Input Delay",
+          "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+          "value": "80 ms"
+        },
+        {
+          "title": "Cumulative Layout Shift",
+          "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+          "value": "0.045"
+        },
+        {
+          "title": "Browser errors were logged to the console",
+          "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+          "value": ""
+        },
+        {
+          "title": "Reduce initial server response time",
+          "description": "Keep the server response time for the main document short because all other requests depend on it. [Learn more about the Time to First Byte metric](https://developer.chrome.com/docs/lighthouse/performance/time-to-first-byte/).",
+          "value": "Root document took 890 ms"
+        },
+        {
+          "title": "Time to Interactive",
+          "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+          "value": "6.9 s"
+        },
+        {
+          "title": "Serves images with low resolution",
+          "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).",
+          "value": ""
+        },
+        {
+          "title": "Uses third-party cookies",
+          "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+          "value": "4 cookies found"
+        },
+        {
+          "title": "Largest Contentful Paint element",
+          "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+          "value": "3,210 ms"
+        },
+        {
+          "title": "Image elements do not have explicit `width` and `height`",
+          "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+          "value": ""
+        },
+        {
+          "title": "Missing source maps for large first-party JavaScript",
+          "description": "Source maps translate minified code to the original source code. This helps developers debug in production. In addition, Lighthouse is able to provide further insights. Consider deploying source maps to take advantage of these benefits. [Learn more about source maps](https://developer.chrome.com/docs/devtools/javascript/source-maps/).",
+          "value": ""
+        },
+        {
+          "title": "Heading elements are not in a sequentially-descending order",
+          "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.10/heading-order).",
+          "value": ""
+        },
+        {
+          "title": "Links do not have a discernible name",
+          "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.10/link-name).",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "fetched_at": "2026-09-07T09:19:44.165Z",
+      "scores": {
+        "performance": 89,
+        "accessibility": 83,
+        "best-practices": 71,
+        "seo": 92
+      },
+      "findings": [
+        {
+          "title": "First Contentful Paint",
+          "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+          "value": "1.6 s"
+        },
+        {
+          "title": "Largest Contentful Paint",
+          "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+          "value": "2.8 s"
+        },
+        {
+          "title": "Speed Index",
+          "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+          "value": "5.6 s"
+        },
+        {
+          "title": "Max Potential First Input Delay",
+          "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+          "value": "70 ms"
+        },
+        {
+          "title": "Cumulative Layout Shift",
+          "description": "Cumulative Layout Shift measures the movement of visible elements within the viewport. [Learn more about the Cumulative Layout Shift metric](https://web.dev/articles/cls).",
+          "value": "0.08"
+        },
+        {
+          "title": "Browser errors were logged to the console",
+          "description": "Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns. [Learn more about this errors in console diagnostic audit](https://developer.chrome.com/docs/lighthouse/best-practices/errors-in-console/)",
+          "value": ""
+        },
+        {
+          "title": "Time to Interactive",
+          "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+          "value": "7.2 s"
+        },
+        {
+          "title": "Serves images with low resolution",
+          "description": "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity. [Learn how to provide responsive images](https://web.dev/articles/serve-responsive-images).",
+          "value": ""
+        },
+        {
+          "title": "Uses third-party cookies",
+          "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+          "value": "3 cookies found"
+        },
+        {
+          "title": "Largest Contentful Paint element",
+          "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+          "value": "2,820 ms"
+        },
+        {
+          "title": "Image elements do not have explicit `width` and `height`",
+          "description": "Set an explicit width and height on image elements to reduce layout shifts and improve CLS. [Learn how to set image dimensions](https://web.dev/articles/optimize-cls#images_without_dimensions)",
+          "value": ""
+        },
+        {
+          "title": "`[aria-*]` attributes do not match their roles",
+          "description": "Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn how to match ARIA attributes to their roles](https://dequeuniversity.com/rules/axe/4.10/aria-allowed-attr).",
+          "value": ""
+        },
+        {
+          "title": "`[role]`s do not have all required `[aria-*]` attributes",
+          "description": "Some ARIA roles have required attributes that describe the state of the element to screen readers. [Learn more about roles and required attributes](https://dequeuniversity.com/rules/axe/4.10/aria-required-attr).",
+          "value": ""
+        },
+        {
+          "title": "Heading elements are not in a sequentially-descending order",
+          "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more about heading order](https://dequeuniversity.com/rules/axe/4.10/heading-order).",
+          "value": ""
+        },
+        {
+          "title": "Links do not have a discernible name",
+          "description": "Link text (and alternate text for images, when used as links) that is discernible, unique, and focusable improves the navigation experience for screen reader users. [Learn how to make links accessible](https://dequeuniversity.com/rules/axe/4.10/link-name).",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "type": "Lighthouse mobile lab tests, not field Core Web Vitals"
+}

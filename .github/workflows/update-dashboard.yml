@@ -9,9 +9,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: seo-data-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
 
     steps:
       - uses: actions/checkout@v4
@@ -21,14 +26,15 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install google-auth google-api-python-client
-
-      - name: Create credentials file
-        run: |
-          echo '${{ secrets.GSC_CREDENTIALS }}' > credentials.json
+        run: pip install -r requirements.txt
 
       - name: Update dashboard data
-        run: python scripts/update_data.py
+        env:
+          GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+        run: python scripts/seo_pipeline.py --crawl --crawl-limit 100 --inspect-limit 10
+
+      - name: Validate analysis
+        run: python -m unittest discover -s tests -v
 
       - name: Commit and push
         run: |
@@ -36,4 +42,5 @@ jobs:
           git config user.email "actions@github.com"
           git add data/
           git diff --staged --quiet || git commit -m "Update SEO data - $(date +'%Y-%m-%d')"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main

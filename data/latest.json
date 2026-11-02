@@ -1,37 +1,30 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-01T15:32:31.027020+00:00",
+  "generated_at": "2026-11-02T18:57:41.688569+00:00",
   "site_url": "https://petrajewelryfactory.com/",
   "period": {
-    "start": "2026-10-02",
-    "end": "2026-10-29",
+    "start": "2026-10-03",
+    "end": "2026-10-30",
     "days": 28
   },
   "previous_period": {
-    "start": "2026-09-04",
-    "end": "2026-10-01",
+    "start": "2026-09-05",
+    "end": "2026-10-02",
     "days": 28
   },
   "overall": {
-    "clicks": 8,
-    "impressions": 94,
-    "ctr": 8.511,
-    "position": 15.95
+    "clicks": 9,
+    "impressions": 90,
+    "ctr": 10.0,
+    "position": 15.13
   },
   "previous_overall": {
     "clicks": 4,
     "impressions": 105,
     "ctr": 3.81,
-    "position": 23.69
+    "position": 24.62
   },
   "daily": [
-    {
-      "date": "2026-10-02",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0.0,
-      "position": 27.6
-    },
     {
       "date": "2026-10-03",
       "clicks": 0,
@@ -220,6 +213,13 @@
       "impressions": 1,
       "ctr": 0.0,
       "position": 3.0
+    },
+    {
+      "date": "2026-10-30",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 100.0,
+      "position": 1.0
     }
   ],
   "pages": [
@@ -228,13 +228,13 @@
       "path": "/private-label/",
       "current": {
         "clicks": 0,
-        "impressions": 16,
+        "impressions": 15,
         "ctr": 0.0,
-        "position": 3.62
+        "position": 3.33
       },
       "previous": {
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0.0,
         "position": 8.0
       },
@@ -314,15 +314,15 @@
       "path": "/contract-manufacturing/",
       "current": {
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 4,
         "ctr": 0.0,
-        "position": 19.8
+        "position": 23.0
       },
       "previous": {
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 4,
         "ctr": 0.0,
-        "position": 6.67
+        "position": 6.75
       },
       "queries": [
         {
@@ -411,23 +411,23 @@
       "path": "/services/",
       "current": {
         "clicks": 0,
-        "impressions": 7,
+        "impressions": 5,
         "ctr": 0.0,
-        "position": 20.86
+        "position": 19.6
       },
       "previous": {
         "clicks": 0,
-        "impressions": 21,
+        "impressions": 23,
         "ctr": 0.0,
-        "position": 35.19
+        "position": 34.22
       },
       "queries": [
         {
           "query": "petra jewellery",
           "clicks": 0,
-          "impressions": 3,
+          "impressions": 2,
           "ctr": 0.0,
-          "position": 43.67,
+          "position": 44.0,
           "branded": true
         }
       ],
@@ -473,7 +473,7 @@
       "click_change": 0,
       "inspection": {
         "verdict": "NEUTRAL",
-        "lastCrawlTime": "2026-10-31T21:00:43Z",
+        "lastCrawlTime": "2026-11-02T05:30:42Z",
         "robotsTxtState": "ALLOWED",
         "indexingState": "INDEXING_STATE_UNSPECIFIED"
       },
@@ -680,15 +680,15 @@
       "path": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
       "current": {
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 1,
         "ctr": 0.0,
-        "position": 54.0
+        "position": 52.0
       },
       "previous": {
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0.0,
-        "position": 65.0
+        "position": 60.5
       },
       "queries": [],
       "topic": "Unassigned",
@@ -766,13 +766,13 @@
       "path": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
       "current": {
         "clicks": 0,
-        "impressions": 1,
-        "ctr": 0.0,
-        "position": 10.0
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
       },
       "previous": {
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0.0,
         "position": 10.0
       },
@@ -784,37 +784,14 @@
       "confidence": "Low sample",
       "evidence": [
         "Index inspection: Crawled - currently not indexed",
-        "Website issue needs attention"
+        "Limited search evidence"
       ],
       "actions": [
         "Investigate index coverage and page usefulness before expanding this content.",
-        "Resolve the flagged website issues, then verify the live page."
+        "Review buyer questions and collect more search data before choosing a major rewrite."
       ],
       "effort": "Review",
-      "audit": {
-        "url": "https://petrajewelryfactory.com/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
-        "path": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
-        "final_url": "https://petrajewelryfactory.com/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
-        "http_status": 404,
-        "crawl_status": "checked",
-        "title": "This Page Does Not Exist",
-        "description": "Oops, looks like the page is lost.",
-        "canonical": "",
-        "headings": [
-          {
-            "level": "h1",
-            "text": "This Page Does Not Exist"
-          }
-        ],
-        "word_count": 19,
-        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
-        "links": [],
-        "issues": [
-          "HTTP 404",
-          "Missing canonical"
-        ],
-        "incoming_links": []
-      },
+      "audit": {},
       "index_status": "Crawled - currently not indexed",
       "click_change": 0,
       "inspection": {
@@ -854,15 +831,15 @@
       "path": "/about/",
       "current": {
         "clicks": 0,
-        "impressions": 17,
+        "impressions": 15,
         "ctr": 0.0,
-        "position": 17.59
+        "position": 17.6
       },
       "previous": {
         "clicks": 0,
-        "impressions": 58,
+        "impressions": 59,
         "ctr": 0.0,
-        "position": 25.95
+        "position": 25.42
       },
       "queries": [
         {
@@ -871,14 +848,6 @@
           "impressions": 5,
           "ctr": 0.0,
           "position": 41.6,
-          "branded": true
-        },
-        {
-          "query": "petra jewelry designer",
-          "clicks": 0,
-          "impressions": 1,
-          "ctr": 0.0,
-          "position": 31.0,
           "branded": true
         }
       ],
@@ -1057,16 +1026,16 @@
       "url": "https://petrajewelryfactory.com/",
       "path": "/",
       "current": {
-        "clicks": 8,
-        "impressions": 72,
-        "ctr": 11.111,
-        "position": 11.82
+        "clicks": 9,
+        "impressions": 71,
+        "ctr": 12.676,
+        "position": 11.89
       },
       "previous": {
         "clicks": 4,
-        "impressions": 49,
-        "ctr": 8.163,
-        "position": 17.45
+        "impressions": 46,
+        "ctr": 8.696,
+        "position": 17.89
       },
       "queries": [
         {
@@ -1365,7 +1334,7 @@
         "incoming_links": []
       },
       "index_status": "Submitted and indexed",
-      "click_change": 4,
+      "click_change": 5,
       "inspection": {
         "verdict": "PASS",
         "lastCrawlTime": "2026-10-23T00:46:04Z",
@@ -1391,15 +1360,15 @@
       "path": "/contact/",
       "current": {
         "clicks": 0,
-        "impressions": 1,
-        "ctr": 0.0,
-        "position": 2.0
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
       },
       "previous": {
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0.0,
-        "position": 14.25
+        "position": 11.8
       },
       "queries": [],
       "topic": "Unassigned",
@@ -1408,36 +1377,13 @@
       "priority_score": 10,
       "confidence": "Low sample",
       "evidence": [
-        "Website issue needs attention"
+        "Limited search evidence"
       ],
       "actions": [
-        "Resolve the flagged website issues, then verify the live page."
+        "Review buyer questions and collect more search data before choosing a major rewrite."
       ],
       "effort": "Review",
-      "audit": {
-        "url": "https://petrajewelryfactory.com/contact/",
-        "path": "/contact/",
-        "final_url": "https://petrajewelryfactory.com/contact/",
-        "http_status": 404,
-        "crawl_status": "checked",
-        "title": "This Page Does Not Exist",
-        "description": "Oops, looks like the page is lost.",
-        "canonical": "",
-        "headings": [
-          {
-            "level": "h1",
-            "text": "This Page Does Not Exist"
-          }
-        ],
-        "word_count": 19,
-        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
-        "links": [],
-        "issues": [
-          "HTTP 404",
-          "Missing canonical"
-        ],
-        "incoming_links": []
-      },
+      "audit": {},
       "index_status": "Not inspected",
       "click_change": 0,
       "brief": {
@@ -1466,13 +1412,13 @@
       "path": "/faqs/",
       "current": {
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 3,
         "ctr": 0.0,
-        "position": 6.5
+        "position": 6.67
       },
       "previous": {
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0.0,
         "position": 6.0
       },
@@ -1533,9 +1479,9 @@
       "path": "/how-it-works/",
       "current": {
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0.0,
-        "position": 8.0
+        "position": 7.67
       },
       "previous": {
         "clicks": 0,
@@ -1600,15 +1546,15 @@
       "path": "/product-catalog-request-callai-form/",
       "current": {
         "clicks": 0,
-        "impressions": 1,
-        "ctr": 0.0,
-        "position": 9.0
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
       },
       "previous": {
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 3,
         "ctr": 0.0,
-        "position": 9.5
+        "position": 9.33
       },
       "queries": [],
       "topic": "Unassigned",
@@ -1617,36 +1563,13 @@
       "priority_score": 10,
       "confidence": "Low sample",
       "evidence": [
-        "Website issue needs attention"
+        "Limited search evidence"
       ],
       "actions": [
-        "Resolve the flagged website issues, then verify the live page."
+        "Review buyer questions and collect more search data before choosing a major rewrite."
       ],
       "effort": "Review",
-      "audit": {
-        "url": "https://petrajewelryfactory.com/product-catalog-request-callai-form/",
-        "path": "/product-catalog-request-callai-form/",
-        "final_url": "https://petrajewelryfactory.com/product-catalog-request-callai-form/",
-        "http_status": 404,
-        "crawl_status": "checked",
-        "title": "This Page Does Not Exist",
-        "description": "Oops, looks like the page is lost.",
-        "canonical": "",
-        "headings": [
-          {
-            "level": "h1",
-            "text": "This Page Does Not Exist"
-          }
-        ],
-        "word_count": 19,
-        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
-        "links": [],
-        "issues": [
-          "HTTP 404",
-          "Missing canonical"
-        ],
-        "incoming_links": []
-      },
+      "audit": {},
       "index_status": "Not inspected",
       "click_change": 0,
       "brief": {
@@ -1675,15 +1598,15 @@
       "path": "/sustainability/",
       "current": {
         "clicks": 0,
-        "impressions": 3,
+        "impressions": 2,
         "ctr": 0.0,
         "position": 3.0
       },
       "previous": {
         "clicks": 0,
-        "impressions": 4,
+        "impressions": 5,
         "ctr": 0.0,
-        "position": 2.5
+        "position": 2.6
       },
       "queries": [],
       "topic": "Unassigned",
@@ -2291,9 +2214,9 @@
     {
       "query": "petra jewellery",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 19,
       "ctr": 0.0,
-      "position": 35.9,
+      "position": 35.53,
       "branded": true
     },
     {
@@ -2302,14 +2225,6 @@
       "impressions": 2,
       "ctr": 0.0,
       "position": 21.0,
-      "branded": true
-    },
-    {
-      "query": "petra jewelry designer",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 31.0,
       "branded": true
     },
     {
@@ -2322,7 +2237,7 @@
     }
   ],
   "change_results": [],
-  "content_generated_at": "2026-11-01T15:31:27.552592+00:00",
+  "content_generated_at": "2026-11-02T18:56:37.436189+00:00",
   "crawl_warnings": [],
   "measurement": {
     "leads": "Not connected",
@@ -2335,34 +2250,34 @@
     "Priority scores organize review work; they do not forecast traffic gains."
   ],
   "overall_metrics": {
-    "total_clicks": 8,
-    "total_impressions": 94,
-    "avg_ctr": 8.511,
-    "avg_position": 15.95,
-    "period_start": "2026-10-02",
-    "period_end": "2026-10-29"
+    "total_clicks": 9,
+    "total_impressions": 90,
+    "avg_ctr": 10.0,
+    "avg_position": 15.13,
+    "period_start": "2026-10-03",
+    "period_end": "2026-10-30"
   },
   "top_pages": [
     {
       "page": "/private-label/",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 15,
       "ctr": 0.0,
-      "position": 3.62
+      "position": 3.33
     },
     {
       "page": "/contract-manufacturing/",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 4,
       "ctr": 0.0,
-      "position": 19.8
+      "position": 23.0
     },
     {
       "page": "/services/",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 5,
       "ctr": 0.0,
-      "position": 20.86
+      "position": 19.6
     },
     {
       "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
@@ -2381,23 +2296,23 @@
     {
       "page": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0.0,
-      "position": 54.0
+      "position": 52.0
     },
     {
       "page": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
       "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 10.0
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
     },
     {
       "page": "/about/",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 15,
       "ctr": 0.0,
-      "position": 17.59
+      "position": 17.6
     },
     {
       "page": "/category/uncategorized/page/2/",
@@ -2408,43 +2323,43 @@
     },
     {
       "page": "/",
-      "clicks": 8,
-      "impressions": 72,
-      "ctr": 11.111,
-      "position": 11.82
+      "clicks": 9,
+      "impressions": 71,
+      "ctr": 12.676,
+      "position": 11.89
     },
     {
       "page": "/contact/",
       "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 2.0
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
     },
     {
       "page": "/faqs/",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0.0,
-      "position": 6.5
+      "position": 6.67
     },
     {
       "page": "/how-it-works/",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0.0,
-      "position": 8.0
+      "position": 7.67
     },
     {
       "page": "/product-catalog-request-callai-form/",
       "clicks": 0,
-      "impressions": 1,
-      "ctr": 0.0,
-      "position": 9.0
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
     },
     {
       "page": "/sustainability/",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0.0,
       "position": 3.0
     }

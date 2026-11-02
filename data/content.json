@@ -291,30 +291,6 @@
       "incoming_links": []
     },
     {
-      "url": "https://petrajewelryfactory.com/contact/",
-      "path": "/contact/",
-      "final_url": "https://petrajewelryfactory.com/contact/",
-      "http_status": 404,
-      "crawl_status": "checked",
-      "title": "This Page Does Not Exist",
-      "description": "Oops, looks like the page is lost.",
-      "canonical": "",
-      "headings": [
-        {
-          "level": "h1",
-          "text": "This Page Does Not Exist"
-        }
-      ],
-      "word_count": 19,
-      "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
-      "links": [],
-      "issues": [
-        "HTTP 404",
-        "Missing canonical"
-      ],
-      "incoming_links": []
-    },
-    {
       "url": "https://petrajewelryfactory.com/contract-manufacturing/",
       "path": "/contract-manufacturing/",
       "final_url": "https://petrajewelryfactory.com/contract-manufacturing/",
@@ -390,30 +366,6 @@
       "url": "https://petrajewelryfactory.com/private-label/",
       "path": "/private-label/",
       "final_url": "https://petrajewelryfactory.com/private-label/",
-      "http_status": 404,
-      "crawl_status": "checked",
-      "title": "This Page Does Not Exist",
-      "description": "Oops, looks like the page is lost.",
-      "canonical": "",
-      "headings": [
-        {
-          "level": "h1",
-          "text": "This Page Does Not Exist"
-        }
-      ],
-      "word_count": 19,
-      "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
-      "links": [],
-      "issues": [
-        "HTTP 404",
-        "Missing canonical"
-      ],
-      "incoming_links": []
-    },
-    {
-      "url": "https://petrajewelryfactory.com/product-catalog-request-callai-form/",
-      "path": "/product-catalog-request-callai-form/",
-      "final_url": "https://petrajewelryfactory.com/product-catalog-request-callai-form/",
       "http_status": 404,
       "crawl_status": "checked",
       "title": "This Page Does Not Exist",
@@ -531,30 +483,6 @@
       "incoming_links": []
     },
     {
-      "url": "https://petrajewelryfactory.com/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
-      "path": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
-      "final_url": "https://petrajewelryfactory.com/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
-      "http_status": 404,
-      "crawl_status": "checked",
-      "title": "This Page Does Not Exist",
-      "description": "Oops, looks like the page is lost.",
-      "canonical": "",
-      "headings": [
-        {
-          "level": "h1",
-          "text": "This Page Does Not Exist"
-        }
-      ],
-      "word_count": 19,
-      "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
-      "links": [],
-      "issues": [
-        "HTTP 404",
-        "Missing canonical"
-      ],
-      "incoming_links": []
-    },
-    {
       "url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
       "path": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
       "final_url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
@@ -579,6 +507,6 @@
       "incoming_links": []
     }
   ],
-  "generated_at": "2026-11-01T15:31:27.552592+00:00",
+  "generated_at": "2026-11-02T18:56:37.436189+00:00",
   "warnings": []
 }

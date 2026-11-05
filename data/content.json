@@ -238,7 +238,990 @@
       ],
       "issues": [
         "Missing canonical",
-        "Review heading structure: 8 H1 headings"
+        "Review heading structure: 8 H1 headings",
+        "Duplicate title",
+        "Duplicate description"
+      ],
+      "incoming_links": [
+        "/",
+        "/",
+        "/",
+        "/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/about",
+      "path": "/",
+      "final_url": "https://petrajewelryfactory.com/#/about",
+      "http_status": 200,
+      "crawl_status": "checked",
+      "title": "Petra Jewelry â The partner youâll never need to replace",
+      "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "The partner youâll never need to replace."
+        },
+        {
+          "level": "h2",
+          "text": "Our clients"
+        },
+        {
+          "level": "h2",
+          "text": "Craftsmanship, speed and straight answers"
+        },
+        {
+          "level": "h2",
+          "text": "Sketch to shelf. One partner."
+        },
+        {
+          "level": "h2",
+          "text": "Different starting points. The same ambition."
+        },
+        {
+          "level": "h3",
+          "text": "A head start. Still your signature."
+        },
+        {
+          "level": "h3",
+          "text": "Your design. Built to spec."
+        },
+        {
+          "level": "h2",
+          "text": "What we produce"
+        },
+        {
+          "level": "h2",
+          "text": "The detail is the difference."
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h3",
+          "text": "In our clientsâ words"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our story"
+        },
+        {
+          "level": "h3",
+          "text": "Full vertical integration"
+        },
+        {
+          "level": "h3",
+          "text": "On-ground team"
+        },
+        {
+          "level": "h3",
+          "text": "Transparency-first"
+        },
+        {
+          "level": "h3",
+          "text": "Scalable support"
+        },
+        {
+          "level": "h2",
+          "text": "Global meets local"
+        },
+        {
+          "level": "h1",
+          "text": "Jewelry development that works like clockwork"
+        },
+        {
+          "level": "h2",
+          "text": "Work that works."
+        },
+        {
+          "level": "h3",
+          "text": "Product Development"
+        },
+        {
+          "level": "h3",
+          "text": "Casting"
+        },
+        {
+          "level": "h3",
+          "text": "Stone Setting"
+        },
+        {
+          "level": "h3",
+          "text": "Plating & Finishing"
+        },
+        {
+          "level": "h3",
+          "text": "Packaging Solutions"
+        },
+        {
+          "level": "h3",
+          "text": "Logistics & Fulfillment"
+        },
+        {
+          "level": "h2",
+          "text": "Frequently asked questions"
+        },
+        {
+          "level": "h1",
+          "text": "Your idea, our factory"
+        },
+        {
+          "level": "h2",
+          "text": "Our process"
+        },
+        {
+          "level": "h3",
+          "text": "Share your Vision"
+        },
+        {
+          "level": "h3",
+          "text": "Design & Plan"
+        },
+        {
+          "level": "h3",
+          "text": "Expert Crafting"
+        },
+        {
+          "level": "h3",
+          "text": "Final Assurance"
+        },
+        {
+          "level": "h2",
+          "text": "Who we serve"
+        },
+        {
+          "level": "h1",
+          "text": "Our commitment to sustainability"
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our approach"
+        },
+        {
+          "level": "h3",
+          "text": "Ethical Sourcing"
+        },
+        {
+          "level": "h3",
+          "text": "Eco-Conscious Manufacturing"
+        },
+        {
+          "level": "h3",
+          "text": "Waste Management & Recycling"
+        },
+        {
+          "level": "h2",
+          "text": "Continuous Improvement"
+        },
+        {
+          "level": "h2",
+          "text": "A Better Future, Together"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Thank you."
+        },
+        {
+          "level": "h1",
+          "text": "Letâs build your next best-seller."
+        },
+        {
+          "level": "h2",
+          "text": "Request received."
+        },
+        {
+          "level": "h1",
+          "text": "A name behind every piece."
+        },
+        {
+          "level": "h2",
+          "text": "Meet our leadership"
+        },
+        {
+          "level": "h2",
+          "text": "We started on your side of the table."
+        },
+        {
+          "level": "h2",
+          "text": "One team. One standard."
+        },
+        {
+          "level": "h3",
+          "text": "We know what it means to trust someone with an idea."
+        },
+        {
+          "level": "h3",
+          "text": "The same bar for every piece, no matter who signs it off."
+        },
+        {
+          "level": "h3",
+          "text": "Your project has a name, a desk, and a phone number."
+        },
+        {
+          "level": "h2",
+          "text": "Letâs make whatâs next"
+        },
+        {
+          "level": "h2",
+          "text": "Inside Petra."
+        }
+      ],
+      "word_count": 1393,
+      "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+      "links": [
+        "https://petrajewelryfactory.com/"
+      ],
+      "issues": [
+        "Missing canonical",
+        "Review heading structure: 8 H1 headings",
+        "Duplicate title",
+        "Duplicate description"
+      ],
+      "incoming_links": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/home:collection",
+      "path": "/",
+      "final_url": "https://petrajewelryfactory.com/#/home:collection",
+      "http_status": 200,
+      "crawl_status": "checked",
+      "title": "Petra Jewelry â The partner youâll never need to replace",
+      "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "The partner youâll never need to replace."
+        },
+        {
+          "level": "h2",
+          "text": "Our clients"
+        },
+        {
+          "level": "h2",
+          "text": "Craftsmanship, speed and straight answers"
+        },
+        {
+          "level": "h2",
+          "text": "Sketch to shelf. One partner."
+        },
+        {
+          "level": "h2",
+          "text": "Different starting points. The same ambition."
+        },
+        {
+          "level": "h3",
+          "text": "A head start. Still your signature."
+        },
+        {
+          "level": "h3",
+          "text": "Your design. Built to spec."
+        },
+        {
+          "level": "h2",
+          "text": "What we produce"
+        },
+        {
+          "level": "h2",
+          "text": "The detail is the difference."
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h3",
+          "text": "In our clientsâ words"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our story"
+        },
+        {
+          "level": "h3",
+          "text": "Full vertical integration"
+        },
+        {
+          "level": "h3",
+          "text": "On-ground team"
+        },
+        {
+          "level": "h3",
+          "text": "Transparency-first"
+        },
+        {
+          "level": "h3",
+          "text": "Scalable support"
+        },
+        {
+          "level": "h2",
+          "text": "Global meets local"
+        },
+        {
+          "level": "h1",
+          "text": "Jewelry development that works like clockwork"
+        },
+        {
+          "level": "h2",
+          "text": "Work that works."
+        },
+        {
+          "level": "h3",
+          "text": "Product Development"
+        },
+        {
+          "level": "h3",
+          "text": "Casting"
+        },
+        {
+          "level": "h3",
+          "text": "Stone Setting"
+        },
+        {
+          "level": "h3",
+          "text": "Plating & Finishing"
+        },
+        {
+          "level": "h3",
+          "text": "Packaging Solutions"
+        },
+        {
+          "level": "h3",
+          "text": "Logistics & Fulfillment"
+        },
+        {
+          "level": "h2",
+          "text": "Frequently asked questions"
+        },
+        {
+          "level": "h1",
+          "text": "Your idea, our factory"
+        },
+        {
+          "level": "h2",
+          "text": "Our process"
+        },
+        {
+          "level": "h3",
+          "text": "Share your Vision"
+        },
+        {
+          "level": "h3",
+          "text": "Design & Plan"
+        },
+        {
+          "level": "h3",
+          "text": "Expert Crafting"
+        },
+        {
+          "level": "h3",
+          "text": "Final Assurance"
+        },
+        {
+          "level": "h2",
+          "text": "Who we serve"
+        },
+        {
+          "level": "h1",
+          "text": "Our commitment to sustainability"
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our approach"
+        },
+        {
+          "level": "h3",
+          "text": "Ethical Sourcing"
+        },
+        {
+          "level": "h3",
+          "text": "Eco-Conscious Manufacturing"
+        },
+        {
+          "level": "h3",
+          "text": "Waste Management & Recycling"
+        },
+        {
+          "level": "h2",
+          "text": "Continuous Improvement"
+        },
+        {
+          "level": "h2",
+          "text": "A Better Future, Together"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Thank you."
+        },
+        {
+          "level": "h1",
+          "text": "Letâs build your next best-seller."
+        },
+        {
+          "level": "h2",
+          "text": "Request received."
+        },
+        {
+          "level": "h1",
+          "text": "A name behind every piece."
+        },
+        {
+          "level": "h2",
+          "text": "Meet our leadership"
+        },
+        {
+          "level": "h2",
+          "text": "We started on your side of the table."
+        },
+        {
+          "level": "h2",
+          "text": "One team. One standard."
+        },
+        {
+          "level": "h3",
+          "text": "We know what it means to trust someone with an idea."
+        },
+        {
+          "level": "h3",
+          "text": "The same bar for every piece, no matter who signs it off."
+        },
+        {
+          "level": "h3",
+          "text": "Your project has a name, a desk, and a phone number."
+        },
+        {
+          "level": "h2",
+          "text": "Letâs make whatâs next"
+        },
+        {
+          "level": "h2",
+          "text": "Inside Petra."
+        }
+      ],
+      "word_count": 1393,
+      "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+      "links": [
+        "https://petrajewelryfactory.com/"
+      ],
+      "issues": [
+        "Missing canonical",
+        "Review heading structure: 8 H1 headings",
+        "Duplicate title",
+        "Duplicate description"
+      ],
+      "incoming_links": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/services",
+      "path": "/",
+      "final_url": "https://petrajewelryfactory.com/#/services",
+      "http_status": 200,
+      "crawl_status": "checked",
+      "title": "Petra Jewelry â The partner youâll never need to replace",
+      "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "The partner youâll never need to replace."
+        },
+        {
+          "level": "h2",
+          "text": "Our clients"
+        },
+        {
+          "level": "h2",
+          "text": "Craftsmanship, speed and straight answers"
+        },
+        {
+          "level": "h2",
+          "text": "Sketch to shelf. One partner."
+        },
+        {
+          "level": "h2",
+          "text": "Different starting points. The same ambition."
+        },
+        {
+          "level": "h3",
+          "text": "A head start. Still your signature."
+        },
+        {
+          "level": "h3",
+          "text": "Your design. Built to spec."
+        },
+        {
+          "level": "h2",
+          "text": "What we produce"
+        },
+        {
+          "level": "h2",
+          "text": "The detail is the difference."
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h3",
+          "text": "In our clientsâ words"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our story"
+        },
+        {
+          "level": "h3",
+          "text": "Full vertical integration"
+        },
+        {
+          "level": "h3",
+          "text": "On-ground team"
+        },
+        {
+          "level": "h3",
+          "text": "Transparency-first"
+        },
+        {
+          "level": "h3",
+          "text": "Scalable support"
+        },
+        {
+          "level": "h2",
+          "text": "Global meets local"
+        },
+        {
+          "level": "h1",
+          "text": "Jewelry development that works like clockwork"
+        },
+        {
+          "level": "h2",
+          "text": "Work that works."
+        },
+        {
+          "level": "h3",
+          "text": "Product Development"
+        },
+        {
+          "level": "h3",
+          "text": "Casting"
+        },
+        {
+          "level": "h3",
+          "text": "Stone Setting"
+        },
+        {
+          "level": "h3",
+          "text": "Plating & Finishing"
+        },
+        {
+          "level": "h3",
+          "text": "Packaging Solutions"
+        },
+        {
+          "level": "h3",
+          "text": "Logistics & Fulfillment"
+        },
+        {
+          "level": "h2",
+          "text": "Frequently asked questions"
+        },
+        {
+          "level": "h1",
+          "text": "Your idea, our factory"
+        },
+        {
+          "level": "h2",
+          "text": "Our process"
+        },
+        {
+          "level": "h3",
+          "text": "Share your Vision"
+        },
+        {
+          "level": "h3",
+          "text": "Design & Plan"
+        },
+        {
+          "level": "h3",
+          "text": "Expert Crafting"
+        },
+        {
+          "level": "h3",
+          "text": "Final Assurance"
+        },
+        {
+          "level": "h2",
+          "text": "Who we serve"
+        },
+        {
+          "level": "h1",
+          "text": "Our commitment to sustainability"
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our approach"
+        },
+        {
+          "level": "h3",
+          "text": "Ethical Sourcing"
+        },
+        {
+          "level": "h3",
+          "text": "Eco-Conscious Manufacturing"
+        },
+        {
+          "level": "h3",
+          "text": "Waste Management & Recycling"
+        },
+        {
+          "level": "h2",
+          "text": "Continuous Improvement"
+        },
+        {
+          "level": "h2",
+          "text": "A Better Future, Together"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Thank you."
+        },
+        {
+          "level": "h1",
+          "text": "Letâs build your next best-seller."
+        },
+        {
+          "level": "h2",
+          "text": "Request received."
+        },
+        {
+          "level": "h1",
+          "text": "A name behind every piece."
+        },
+        {
+          "level": "h2",
+          "text": "Meet our leadership"
+        },
+        {
+          "level": "h2",
+          "text": "We started on your side of the table."
+        },
+        {
+          "level": "h2",
+          "text": "One team. One standard."
+        },
+        {
+          "level": "h3",
+          "text": "We know what it means to trust someone with an idea."
+        },
+        {
+          "level": "h3",
+          "text": "The same bar for every piece, no matter who signs it off."
+        },
+        {
+          "level": "h3",
+          "text": "Your project has a name, a desk, and a phone number."
+        },
+        {
+          "level": "h2",
+          "text": "Letâs make whatâs next"
+        },
+        {
+          "level": "h2",
+          "text": "Inside Petra."
+        }
+      ],
+      "word_count": 1393,
+      "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+      "links": [
+        "https://petrajewelryfactory.com/"
+      ],
+      "issues": [
+        "Missing canonical",
+        "Review heading structure: 8 H1 headings",
+        "Duplicate title",
+        "Duplicate description"
+      ],
+      "incoming_links": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/team",
+      "path": "/",
+      "final_url": "https://petrajewelryfactory.com/#/team",
+      "http_status": 200,
+      "crawl_status": "checked",
+      "title": "Petra Jewelry â The partner youâll never need to replace",
+      "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "The partner youâll never need to replace."
+        },
+        {
+          "level": "h2",
+          "text": "Our clients"
+        },
+        {
+          "level": "h2",
+          "text": "Craftsmanship, speed and straight answers"
+        },
+        {
+          "level": "h2",
+          "text": "Sketch to shelf. One partner."
+        },
+        {
+          "level": "h2",
+          "text": "Different starting points. The same ambition."
+        },
+        {
+          "level": "h3",
+          "text": "A head start. Still your signature."
+        },
+        {
+          "level": "h3",
+          "text": "Your design. Built to spec."
+        },
+        {
+          "level": "h2",
+          "text": "What we produce"
+        },
+        {
+          "level": "h2",
+          "text": "The detail is the difference."
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h3",
+          "text": "In our clientsâ words"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our story"
+        },
+        {
+          "level": "h3",
+          "text": "Full vertical integration"
+        },
+        {
+          "level": "h3",
+          "text": "On-ground team"
+        },
+        {
+          "level": "h3",
+          "text": "Transparency-first"
+        },
+        {
+          "level": "h3",
+          "text": "Scalable support"
+        },
+        {
+          "level": "h2",
+          "text": "Global meets local"
+        },
+        {
+          "level": "h1",
+          "text": "Jewelry development that works like clockwork"
+        },
+        {
+          "level": "h2",
+          "text": "Work that works."
+        },
+        {
+          "level": "h3",
+          "text": "Product Development"
+        },
+        {
+          "level": "h3",
+          "text": "Casting"
+        },
+        {
+          "level": "h3",
+          "text": "Stone Setting"
+        },
+        {
+          "level": "h3",
+          "text": "Plating & Finishing"
+        },
+        {
+          "level": "h3",
+          "text": "Packaging Solutions"
+        },
+        {
+          "level": "h3",
+          "text": "Logistics & Fulfillment"
+        },
+        {
+          "level": "h2",
+          "text": "Frequently asked questions"
+        },
+        {
+          "level": "h1",
+          "text": "Your idea, our factory"
+        },
+        {
+          "level": "h2",
+          "text": "Our process"
+        },
+        {
+          "level": "h3",
+          "text": "Share your Vision"
+        },
+        {
+          "level": "h3",
+          "text": "Design & Plan"
+        },
+        {
+          "level": "h3",
+          "text": "Expert Crafting"
+        },
+        {
+          "level": "h3",
+          "text": "Final Assurance"
+        },
+        {
+          "level": "h2",
+          "text": "Who we serve"
+        },
+        {
+          "level": "h1",
+          "text": "Our commitment to sustainability"
+        },
+        {
+          "level": "h2",
+          "text": "Global perspective. Local precision."
+        },
+        {
+          "level": "h2",
+          "text": "Our approach"
+        },
+        {
+          "level": "h3",
+          "text": "Ethical Sourcing"
+        },
+        {
+          "level": "h3",
+          "text": "Eco-Conscious Manufacturing"
+        },
+        {
+          "level": "h3",
+          "text": "Waste Management & Recycling"
+        },
+        {
+          "level": "h2",
+          "text": "Continuous Improvement"
+        },
+        {
+          "level": "h2",
+          "text": "A Better Future, Together"
+        },
+        {
+          "level": "h1",
+          "text": "Rooted in craft. Driven by precision."
+        },
+        {
+          "level": "h2",
+          "text": "Thank you."
+        },
+        {
+          "level": "h1",
+          "text": "Letâs build your next best-seller."
+        },
+        {
+          "level": "h2",
+          "text": "Request received."
+        },
+        {
+          "level": "h1",
+          "text": "A name behind every piece."
+        },
+        {
+          "level": "h2",
+          "text": "Meet our leadership"
+        },
+        {
+          "level": "h2",
+          "text": "We started on your side of the table."
+        },
+        {
+          "level": "h2",
+          "text": "One team. One standard."
+        },
+        {
+          "level": "h3",
+          "text": "We know what it means to trust someone with an idea."
+        },
+        {
+          "level": "h3",
+          "text": "The same bar for every piece, no matter who signs it off."
+        },
+        {
+          "level": "h3",
+          "text": "Your project has a name, a desk, and a phone number."
+        },
+        {
+          "level": "h2",
+          "text": "Letâs make whatâs next"
+        },
+        {
+          "level": "h2",
+          "text": "Inside Petra."
+        }
+      ],
+      "word_count": 1393,
+      "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+      "links": [
+        "https://petrajewelryfactory.com/"
+      ],
+      "issues": [
+        "Missing canonical",
+        "Review heading structure: 8 H1 headings",
+        "Duplicate title",
+        "Duplicate description"
       ],
       "incoming_links": []
     },
@@ -507,6 +1490,6 @@
       "incoming_links": []
     }
   ],
-  "generated_at": "2026-11-04T16:39:14.955952+00:00",
+  "generated_at": "2026-11-05T16:55:18.794690+00:00",
   "warnings": []
 }

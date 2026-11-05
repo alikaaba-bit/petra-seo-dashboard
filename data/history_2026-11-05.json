@@ -1,0 +1,3783 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-05T16:56:20.770066+00:00",
+  "site_url": "https://petrajewelryfactory.com/",
+  "period": {
+    "start": "2026-10-06",
+    "end": "2026-11-02",
+    "days": 28
+  },
+  "previous_period": {
+    "start": "2026-09-08",
+    "end": "2026-10-05",
+    "days": 28
+  },
+  "overall": {
+    "clicks": 8,
+    "impressions": 90,
+    "ctr": 8.889,
+    "position": 14.36
+  },
+  "previous_overall": {
+    "clicks": 5,
+    "impressions": 98,
+    "ctr": 5.102,
+    "position": 24.44
+  },
+  "daily": [
+    {
+      "date": "2026-10-06",
+      "clicks": 1,
+      "impressions": 3,
+      "ctr": 33.333,
+      "position": 6.67
+    },
+    {
+      "date": "2026-10-07",
+      "clicks": 2,
+      "impressions": 6,
+      "ctr": 33.333,
+      "position": 16.17
+    },
+    {
+      "date": "2026-10-08",
+      "clicks": 1,
+      "impressions": 6,
+      "ctr": 16.667,
+      "position": 16.83
+    },
+    {
+      "date": "2026-10-09",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 23.0
+    },
+    {
+      "date": "2026-10-10",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 22.75
+    },
+    {
+      "date": "2026-10-11",
+      "clicks": 1,
+      "impressions": 3,
+      "ctr": 33.333,
+      "position": 10.0
+    },
+    {
+      "date": "2026-10-12",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 55.33
+    },
+    {
+      "date": "2026-10-13",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 12.75
+    },
+    {
+      "date": "2026-10-14",
+      "clicks": 1,
+      "impressions": 5,
+      "ctr": 20.0,
+      "position": 27.6
+    },
+    {
+      "date": "2026-10-15",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 7.0
+    },
+    {
+      "date": "2026-10-16",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0.0,
+      "position": 6.56
+    },
+    {
+      "date": "2026-10-17",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 1.5
+    },
+    {
+      "date": "2026-10-18",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 11.0
+    },
+    {
+      "date": "2026-10-19",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0.0,
+      "position": 10.5
+    },
+    {
+      "date": "2026-10-20",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 6.0
+    },
+    {
+      "date": "2026-10-21",
+      "clicks": 1,
+      "impressions": 3,
+      "ctr": 33.333,
+      "position": 12.33
+    },
+    {
+      "date": "2026-10-22",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
+    },
+    {
+      "date": "2026-10-23",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 8.0
+    },
+    {
+      "date": "2026-10-24",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 28.5
+    },
+    {
+      "date": "2026-10-25",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 11.0
+    },
+    {
+      "date": "2026-10-26",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0.0,
+      "position": 3.67
+    },
+    {
+      "date": "2026-10-27",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 8.0
+    },
+    {
+      "date": "2026-10-28",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0.0,
+      "position": 26.4
+    },
+    {
+      "date": "2026-10-29",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 3.0
+    },
+    {
+      "date": "2026-10-30",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 100.0,
+      "position": 1.0
+    },
+    {
+      "date": "2026-10-31",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 8.5
+    },
+    {
+      "date": "2026-11-01",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 10.0
+    },
+    {
+      "date": "2026-11-02",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 3.0
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://petrajewelryfactory.com/private-label/",
+      "path": "/private-label/",
+      "current": {
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0.0,
+        "position": 3.43
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0.0,
+        "position": 6.5
+      },
+      "queries": [],
+      "topic": "Private label jewelry manufacturing",
+      "intent": "commercial",
+      "business_value": 3,
+      "priority_score": 46,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Not found (404)",
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/private-label/",
+        "path": "/private-label/",
+        "final_url": "https://petrajewelryfactory.com/private-label/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not found (404)",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-10-26T13:15:48Z",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED"
+      },
+      "brief": {
+        "suggested_title": "Private label jewelry manufacturing | Petra",
+        "suggested_h1": "Private label jewelry manufacturing",
+        "query_review": [],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/private-label/",
+            "anchor": "Private label jewelry manufacturing",
+            "reason": "Shared terms: label, private",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/private-label/",
+            "anchor": "Private label jewelry manufacturing",
+            "reason": "Shared terms: label, private",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/private-label/",
+            "anchor": "Private label jewelry manufacturing",
+            "reason": "Shared terms: label, private",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/private-label/",
+            "anchor": "Private label jewelry manufacturing",
+            "reason": "Shared terms: label, private",
+            "overlap": 2
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "path": "/contract-manufacturing/",
+      "current": {
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0.0,
+        "position": 23.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0.0,
+        "position": 6.75
+      },
+      "queries": [
+        {
+          "query": "wear test jewelry prototypes draper",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0.0,
+          "position": 88.0,
+          "branded": false
+        }
+      ],
+      "topic": "Contract jewelry manufacturing",
+      "intent": "commercial",
+      "business_value": 3,
+      "priority_score": 45,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Not found (404)",
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/contract-manufacturing/",
+        "path": "/contract-manufacturing/",
+        "final_url": "https://petrajewelryfactory.com/contract-manufacturing/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not found (404)",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-11-04T15:00:57Z",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED"
+      },
+      "brief": {
+        "suggested_title": "Contract jewelry manufacturing | Petra",
+        "suggested_h1": "Contract jewelry manufacturing",
+        "query_review": [
+          "wear test jewelry prototypes draper"
+        ],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/contract-manufacturing/",
+            "anchor": "Contract jewelry manufacturing",
+            "reason": "Shared terms: contract",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/contract-manufacturing/",
+            "anchor": "Contract jewelry manufacturing",
+            "reason": "Shared terms: contract",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/contract-manufacturing/",
+            "anchor": "Contract jewelry manufacturing",
+            "reason": "Shared terms: contract",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/contract-manufacturing/",
+            "anchor": "Contract jewelry manufacturing",
+            "reason": "Shared terms: contract",
+            "overlap": 1
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/services/",
+      "path": "/services/",
+      "current": {
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0.0,
+        "position": 13.75
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0.0,
+        "position": 34.58
+      },
+      "queries": [
+        {
+          "query": "petra jewellery",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0.0,
+          "position": 45.0,
+          "branded": true
+        }
+      ],
+      "topic": "Jewelry manufacturing services",
+      "intent": "commercial",
+      "business_value": 3,
+      "priority_score": 45,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Not found (404)",
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/services/",
+        "path": "/services/",
+        "final_url": "https://petrajewelryfactory.com/services/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not found (404)",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-11-05T08:33:55Z",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED"
+      },
+      "brief": {
+        "suggested_title": "Jewelry manufacturing services | Petra",
+        "suggested_h1": "Jewelry manufacturing services",
+        "query_review": [],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/services/",
+            "anchor": "Jewelry manufacturing services",
+            "reason": "Shared terms: services",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/services/",
+            "anchor": "Jewelry manufacturing services",
+            "reason": "Shared terms: services",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/services/",
+            "anchor": "Jewelry manufacturing services",
+            "reason": "Shared terms: services",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/services/",
+            "anchor": "Jewelry manufacturing services",
+            "reason": "Shared terms: services",
+            "overlap": 1
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/services",
+      "path": "/",
+      "current": {
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 1.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 2,
+      "priority_score": 35,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: URL is unknown to Google",
+        "4 crawl findings"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Review the on-page findings and improve the page's presentation in search."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/#/services",
+        "path": "/",
+        "final_url": "https://petrajewelryfactory.com/#/services",
+        "http_status": 200,
+        "crawl_status": "checked",
+        "title": "Petra Jewelry â The partner youâll never need to replace",
+        "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "The partner youâll never need to replace."
+          },
+          {
+            "level": "h2",
+            "text": "Our clients"
+          },
+          {
+            "level": "h2",
+            "text": "Craftsmanship, speed and straight answers"
+          },
+          {
+            "level": "h2",
+            "text": "Sketch to shelf. One partner."
+          },
+          {
+            "level": "h2",
+            "text": "Different starting points. The same ambition."
+          },
+          {
+            "level": "h3",
+            "text": "A head start. Still your signature."
+          },
+          {
+            "level": "h3",
+            "text": "Your design. Built to spec."
+          },
+          {
+            "level": "h2",
+            "text": "What we produce"
+          },
+          {
+            "level": "h2",
+            "text": "The detail is the difference."
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h3",
+            "text": "In our clientsâ words"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our story"
+          },
+          {
+            "level": "h3",
+            "text": "Full vertical integration"
+          },
+          {
+            "level": "h3",
+            "text": "On-ground team"
+          },
+          {
+            "level": "h3",
+            "text": "Transparency-first"
+          },
+          {
+            "level": "h3",
+            "text": "Scalable support"
+          },
+          {
+            "level": "h2",
+            "text": "Global meets local"
+          },
+          {
+            "level": "h1",
+            "text": "Jewelry development that works like clockwork"
+          },
+          {
+            "level": "h2",
+            "text": "Work that works."
+          },
+          {
+            "level": "h3",
+            "text": "Product Development"
+          },
+          {
+            "level": "h3",
+            "text": "Casting"
+          },
+          {
+            "level": "h3",
+            "text": "Stone Setting"
+          },
+          {
+            "level": "h3",
+            "text": "Plating & Finishing"
+          },
+          {
+            "level": "h3",
+            "text": "Packaging Solutions"
+          },
+          {
+            "level": "h3",
+            "text": "Logistics & Fulfillment"
+          },
+          {
+            "level": "h2",
+            "text": "Frequently asked questions"
+          },
+          {
+            "level": "h1",
+            "text": "Your idea, our factory"
+          },
+          {
+            "level": "h2",
+            "text": "Our process"
+          },
+          {
+            "level": "h3",
+            "text": "Share your Vision"
+          },
+          {
+            "level": "h3",
+            "text": "Design & Plan"
+          },
+          {
+            "level": "h3",
+            "text": "Expert Crafting"
+          },
+          {
+            "level": "h3",
+            "text": "Final Assurance"
+          },
+          {
+            "level": "h2",
+            "text": "Who we serve"
+          },
+          {
+            "level": "h1",
+            "text": "Our commitment to sustainability"
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our approach"
+          },
+          {
+            "level": "h3",
+            "text": "Ethical Sourcing"
+          },
+          {
+            "level": "h3",
+            "text": "Eco-Conscious Manufacturing"
+          },
+          {
+            "level": "h3",
+            "text": "Waste Management & Recycling"
+          },
+          {
+            "level": "h2",
+            "text": "Continuous Improvement"
+          },
+          {
+            "level": "h2",
+            "text": "A Better Future, Together"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Thank you."
+          },
+          {
+            "level": "h1",
+            "text": "Letâs build your next best-seller."
+          },
+          {
+            "level": "h2",
+            "text": "Request received."
+          },
+          {
+            "level": "h1",
+            "text": "A name behind every piece."
+          },
+          {
+            "level": "h2",
+            "text": "Meet our leadership"
+          },
+          {
+            "level": "h2",
+            "text": "We started on your side of the table."
+          },
+          {
+            "level": "h2",
+            "text": "One team. One standard."
+          },
+          {
+            "level": "h3",
+            "text": "We know what it means to trust someone with an idea."
+          },
+          {
+            "level": "h3",
+            "text": "The same bar for every piece, no matter who signs it off."
+          },
+          {
+            "level": "h3",
+            "text": "Your project has a name, a desk, and a phone number."
+          },
+          {
+            "level": "h2",
+            "text": "Letâs make whatâs next"
+          },
+          {
+            "level": "h2",
+            "text": "Inside Petra."
+          }
+        ],
+        "word_count": 1393,
+        "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+        "links": [
+          "https://petrajewelryfactory.com/"
+        ],
+        "issues": [
+          "Missing canonical",
+          "Review heading structure: 8 H1 headings",
+          "Duplicate title",
+          "Duplicate description"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "URL is unknown to Google",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED"
+      },
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "path": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "current": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "queries": [],
+      "topic": "Manufacturing partner quality checklist",
+      "intent": "research",
+      "business_value": 2,
+      "priority_score": 35,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Crawled - currently not indexed",
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "path": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "final_url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Crawled - currently not indexed",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-09-02T23:24:31Z",
+        "googleCanonical": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "userCanonical": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED"
+      },
+      "brief": {
+        "suggested_title": "Manufacturing partner quality checklist | Petra",
+        "suggested_h1": "Manufacturing partner quality checklist",
+        "query_review": [],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+            "anchor": "Manufacturing partner quality checklist",
+            "reason": "Shared terms: partner, quality",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+            "anchor": "Manufacturing partner quality checklist",
+            "reason": "Shared terms: partner, quality",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+            "anchor": "Manufacturing partner quality checklist",
+            "reason": "Shared terms: partner, quality",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+            "anchor": "Manufacturing partner quality checklist",
+            "reason": "Shared terms: partner, quality",
+            "overlap": 2
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+      "path": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+      "current": {
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 7.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 2,
+      "priority_score": 35,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Not found (404)",
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+        "path": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+        "final_url": "https://petrajewelryfactory.com/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not found (404)",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-11-04T14:41:03Z",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED"
+      },
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "anchor": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "reason": "Shared terms: materials, premium",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "anchor": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "reason": "Shared terms: materials, premium",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "anchor": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "reason": "Shared terms: materials, premium",
+            "overlap": 2
+          },
+          {
+            "source": "/",
+            "target": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "anchor": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+            "reason": "Shared terms: materials, premium",
+            "overlap": 2
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+      "path": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+      "current": {
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 52.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 60.5
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 2,
+      "priority_score": 35,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Not found (404)",
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+        "path": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+        "final_url": "https://petrajewelryfactory.com/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not found (404)",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-10-23T04:19:40Z",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED"
+      },
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "anchor": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "reason": "Shared terms: design, process, product",
+            "overlap": 3
+          },
+          {
+            "source": "/",
+            "target": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "anchor": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "reason": "Shared terms: design, process, product",
+            "overlap": 3
+          },
+          {
+            "source": "/",
+            "target": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "anchor": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "reason": "Shared terms: design, process, product",
+            "overlap": 3
+          },
+          {
+            "source": "/",
+            "target": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "anchor": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+            "reason": "Shared terms: design, process, product",
+            "overlap": 3
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+      "path": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+      "current": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 10.0
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 2,
+      "priority_score": 35,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Crawled - currently not indexed",
+        "Limited search evidence"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Review buyer questions and collect more search data before choosing a major rewrite."
+      ],
+      "effort": "Review",
+      "audit": {},
+      "index_status": "Crawled - currently not indexed",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-09-13T10:07:20Z",
+        "googleCanonical": "https://petrajewelryfactory.com/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+        "userCanonical": "https://petrajewelryfactory.com/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED"
+      },
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Minimum order by design/material",
+          "Sample approval process and timing",
+          "Production lead time and what changes it",
+          "Quality checks supported by real evidence",
+          "Customization and packaging options",
+          "Clear next step to request a quote"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "anchor": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "reason": "Shared terms: brands, quality, stainless, steel, why",
+            "overlap": 5
+          },
+          {
+            "source": "/",
+            "target": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "anchor": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "reason": "Shared terms: brands, quality, stainless, steel, why",
+            "overlap": 5
+          },
+          {
+            "source": "/",
+            "target": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "anchor": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "reason": "Shared terms: brands, quality, stainless, steel, why",
+            "overlap": 5
+          },
+          {
+            "source": "/",
+            "target": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "anchor": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+            "reason": "Shared terms: brands, quality, stainless, steel, why",
+            "overlap": 5
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/about/",
+      "path": "/about/",
+      "current": {
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0.0,
+        "position": 18.91
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 54,
+        "ctr": 0.0,
+        "position": 23.83
+      },
+      "queries": [
+        {
+          "query": "petra jewellery",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0.0,
+          "position": 42.75,
+          "branded": true
+        }
+      ],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 26,
+      "confidence": "Low sample",
+      "evidence": [
+        "Index inspection: Not found (404)",
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Investigate index coverage and page usefulness before expanding this content.",
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/about/",
+        "path": "/about/",
+        "final_url": "https://petrajewelryfactory.com/about/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not found (404)",
+      "click_change": 0,
+      "inspection": {
+        "verdict": "NEUTRAL",
+        "lastCrawlTime": "2026-10-31T06:50:42Z",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED"
+      },
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/about/",
+            "anchor": "/about/",
+            "reason": "Shared terms: about",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/about/",
+            "anchor": "/about/",
+            "reason": "Shared terms: about",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/about/",
+            "anchor": "/about/",
+            "reason": "Shared terms: about",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/about/",
+            "anchor": "/about/",
+            "reason": "Shared terms: about",
+            "overlap": 1
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/",
+      "path": "/",
+      "current": {
+        "clicks": 8,
+        "impressions": 75,
+        "ctr": 10.667,
+        "position": 11.61
+      },
+      "previous": {
+        "clicks": 5,
+        "impressions": 39,
+        "ctr": 12.821,
+        "position": 15.67
+      },
+      "queries": [
+        {
+          "query": "petra jewellery",
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0.0,
+          "position": 27.93,
+          "branded": true
+        },
+        {
+          "query": "petra jewelry",
+          "clicks": 1,
+          "impressions": 4,
+          "ctr": 25.0,
+          "position": 6.25,
+          "branded": true
+        },
+        {
+          "query": "petra jewelry dallas",
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0.0,
+          "position": 21.0,
+          "branded": true
+        },
+        {
+          "query": "petra accessories",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0.0,
+          "position": 3.0,
+          "branded": true
+        },
+        {
+          "query": "petra factory",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0.0,
+          "position": 4.0,
+          "branded": true
+        }
+      ],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 14,
+      "confidence": "Low sample",
+      "evidence": [
+        "4 crawl findings"
+      ],
+      "actions": [
+        "Review the on-page findings and improve the page's presentation in search."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/",
+        "path": "/",
+        "final_url": "https://petrajewelryfactory.com/",
+        "http_status": 200,
+        "crawl_status": "checked",
+        "title": "Petra Jewelry â The partner youâll never need to replace",
+        "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "The partner youâll never need to replace."
+          },
+          {
+            "level": "h2",
+            "text": "Our clients"
+          },
+          {
+            "level": "h2",
+            "text": "Craftsmanship, speed and straight answers"
+          },
+          {
+            "level": "h2",
+            "text": "Sketch to shelf. One partner."
+          },
+          {
+            "level": "h2",
+            "text": "Different starting points. The same ambition."
+          },
+          {
+            "level": "h3",
+            "text": "A head start. Still your signature."
+          },
+          {
+            "level": "h3",
+            "text": "Your design. Built to spec."
+          },
+          {
+            "level": "h2",
+            "text": "What we produce"
+          },
+          {
+            "level": "h2",
+            "text": "The detail is the difference."
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h3",
+            "text": "In our clientsâ words"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our story"
+          },
+          {
+            "level": "h3",
+            "text": "Full vertical integration"
+          },
+          {
+            "level": "h3",
+            "text": "On-ground team"
+          },
+          {
+            "level": "h3",
+            "text": "Transparency-first"
+          },
+          {
+            "level": "h3",
+            "text": "Scalable support"
+          },
+          {
+            "level": "h2",
+            "text": "Global meets local"
+          },
+          {
+            "level": "h1",
+            "text": "Jewelry development that works like clockwork"
+          },
+          {
+            "level": "h2",
+            "text": "Work that works."
+          },
+          {
+            "level": "h3",
+            "text": "Product Development"
+          },
+          {
+            "level": "h3",
+            "text": "Casting"
+          },
+          {
+            "level": "h3",
+            "text": "Stone Setting"
+          },
+          {
+            "level": "h3",
+            "text": "Plating & Finishing"
+          },
+          {
+            "level": "h3",
+            "text": "Packaging Solutions"
+          },
+          {
+            "level": "h3",
+            "text": "Logistics & Fulfillment"
+          },
+          {
+            "level": "h2",
+            "text": "Frequently asked questions"
+          },
+          {
+            "level": "h1",
+            "text": "Your idea, our factory"
+          },
+          {
+            "level": "h2",
+            "text": "Our process"
+          },
+          {
+            "level": "h3",
+            "text": "Share your Vision"
+          },
+          {
+            "level": "h3",
+            "text": "Design & Plan"
+          },
+          {
+            "level": "h3",
+            "text": "Expert Crafting"
+          },
+          {
+            "level": "h3",
+            "text": "Final Assurance"
+          },
+          {
+            "level": "h2",
+            "text": "Who we serve"
+          },
+          {
+            "level": "h1",
+            "text": "Our commitment to sustainability"
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our approach"
+          },
+          {
+            "level": "h3",
+            "text": "Ethical Sourcing"
+          },
+          {
+            "level": "h3",
+            "text": "Eco-Conscious Manufacturing"
+          },
+          {
+            "level": "h3",
+            "text": "Waste Management & Recycling"
+          },
+          {
+            "level": "h2",
+            "text": "Continuous Improvement"
+          },
+          {
+            "level": "h2",
+            "text": "A Better Future, Together"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Thank you."
+          },
+          {
+            "level": "h1",
+            "text": "Letâs build your next best-seller."
+          },
+          {
+            "level": "h2",
+            "text": "Request received."
+          },
+          {
+            "level": "h1",
+            "text": "A name behind every piece."
+          },
+          {
+            "level": "h2",
+            "text": "Meet our leadership"
+          },
+          {
+            "level": "h2",
+            "text": "We started on your side of the table."
+          },
+          {
+            "level": "h2",
+            "text": "One team. One standard."
+          },
+          {
+            "level": "h3",
+            "text": "We know what it means to trust someone with an idea."
+          },
+          {
+            "level": "h3",
+            "text": "The same bar for every piece, no matter who signs it off."
+          },
+          {
+            "level": "h3",
+            "text": "Your project has a name, a desk, and a phone number."
+          },
+          {
+            "level": "h2",
+            "text": "Letâs make whatâs next"
+          },
+          {
+            "level": "h2",
+            "text": "Inside Petra."
+          }
+        ],
+        "word_count": 1393,
+        "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+        "links": [
+          "https://petrajewelryfactory.com/"
+        ],
+        "issues": [
+          "Missing canonical",
+          "Review heading structure: 8 H1 headings",
+          "Duplicate title",
+          "Duplicate description"
+        ],
+        "incoming_links": [
+          "/",
+          "/",
+          "/",
+          "/"
+        ]
+      },
+      "index_status": "Submitted and indexed",
+      "click_change": 3,
+      "inspection": {
+        "verdict": "PASS",
+        "lastCrawlTime": "2026-11-03T22:48:17Z",
+        "googleCanonical": "https://petrajewelryfactory.com/",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED"
+      },
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/about",
+      "path": "/",
+      "current": {
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 1.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "4 crawl findings"
+      ],
+      "actions": [
+        "Review the on-page findings and improve the page's presentation in search."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/#/about",
+        "path": "/",
+        "final_url": "https://petrajewelryfactory.com/#/about",
+        "http_status": 200,
+        "crawl_status": "checked",
+        "title": "Petra Jewelry â The partner youâll never need to replace",
+        "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "The partner youâll never need to replace."
+          },
+          {
+            "level": "h2",
+            "text": "Our clients"
+          },
+          {
+            "level": "h2",
+            "text": "Craftsmanship, speed and straight answers"
+          },
+          {
+            "level": "h2",
+            "text": "Sketch to shelf. One partner."
+          },
+          {
+            "level": "h2",
+            "text": "Different starting points. The same ambition."
+          },
+          {
+            "level": "h3",
+            "text": "A head start. Still your signature."
+          },
+          {
+            "level": "h3",
+            "text": "Your design. Built to spec."
+          },
+          {
+            "level": "h2",
+            "text": "What we produce"
+          },
+          {
+            "level": "h2",
+            "text": "The detail is the difference."
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h3",
+            "text": "In our clientsâ words"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our story"
+          },
+          {
+            "level": "h3",
+            "text": "Full vertical integration"
+          },
+          {
+            "level": "h3",
+            "text": "On-ground team"
+          },
+          {
+            "level": "h3",
+            "text": "Transparency-first"
+          },
+          {
+            "level": "h3",
+            "text": "Scalable support"
+          },
+          {
+            "level": "h2",
+            "text": "Global meets local"
+          },
+          {
+            "level": "h1",
+            "text": "Jewelry development that works like clockwork"
+          },
+          {
+            "level": "h2",
+            "text": "Work that works."
+          },
+          {
+            "level": "h3",
+            "text": "Product Development"
+          },
+          {
+            "level": "h3",
+            "text": "Casting"
+          },
+          {
+            "level": "h3",
+            "text": "Stone Setting"
+          },
+          {
+            "level": "h3",
+            "text": "Plating & Finishing"
+          },
+          {
+            "level": "h3",
+            "text": "Packaging Solutions"
+          },
+          {
+            "level": "h3",
+            "text": "Logistics & Fulfillment"
+          },
+          {
+            "level": "h2",
+            "text": "Frequently asked questions"
+          },
+          {
+            "level": "h1",
+            "text": "Your idea, our factory"
+          },
+          {
+            "level": "h2",
+            "text": "Our process"
+          },
+          {
+            "level": "h3",
+            "text": "Share your Vision"
+          },
+          {
+            "level": "h3",
+            "text": "Design & Plan"
+          },
+          {
+            "level": "h3",
+            "text": "Expert Crafting"
+          },
+          {
+            "level": "h3",
+            "text": "Final Assurance"
+          },
+          {
+            "level": "h2",
+            "text": "Who we serve"
+          },
+          {
+            "level": "h1",
+            "text": "Our commitment to sustainability"
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our approach"
+          },
+          {
+            "level": "h3",
+            "text": "Ethical Sourcing"
+          },
+          {
+            "level": "h3",
+            "text": "Eco-Conscious Manufacturing"
+          },
+          {
+            "level": "h3",
+            "text": "Waste Management & Recycling"
+          },
+          {
+            "level": "h2",
+            "text": "Continuous Improvement"
+          },
+          {
+            "level": "h2",
+            "text": "A Better Future, Together"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Thank you."
+          },
+          {
+            "level": "h1",
+            "text": "Letâs build your next best-seller."
+          },
+          {
+            "level": "h2",
+            "text": "Request received."
+          },
+          {
+            "level": "h1",
+            "text": "A name behind every piece."
+          },
+          {
+            "level": "h2",
+            "text": "Meet our leadership"
+          },
+          {
+            "level": "h2",
+            "text": "We started on your side of the table."
+          },
+          {
+            "level": "h2",
+            "text": "One team. One standard."
+          },
+          {
+            "level": "h3",
+            "text": "We know what it means to trust someone with an idea."
+          },
+          {
+            "level": "h3",
+            "text": "The same bar for every piece, no matter who signs it off."
+          },
+          {
+            "level": "h3",
+            "text": "Your project has a name, a desk, and a phone number."
+          },
+          {
+            "level": "h2",
+            "text": "Letâs make whatâs next"
+          },
+          {
+            "level": "h2",
+            "text": "Inside Petra."
+          }
+        ],
+        "word_count": 1393,
+        "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+        "links": [
+          "https://petrajewelryfactory.com/"
+        ],
+        "issues": [
+          "Missing canonical",
+          "Review heading structure: 8 H1 headings",
+          "Duplicate title",
+          "Duplicate description"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/home:collection",
+      "path": "/",
+      "current": {
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 1.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "4 crawl findings"
+      ],
+      "actions": [
+        "Review the on-page findings and improve the page's presentation in search."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/#/home:collection",
+        "path": "/",
+        "final_url": "https://petrajewelryfactory.com/#/home:collection",
+        "http_status": 200,
+        "crawl_status": "checked",
+        "title": "Petra Jewelry â The partner youâll never need to replace",
+        "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "The partner youâll never need to replace."
+          },
+          {
+            "level": "h2",
+            "text": "Our clients"
+          },
+          {
+            "level": "h2",
+            "text": "Craftsmanship, speed and straight answers"
+          },
+          {
+            "level": "h2",
+            "text": "Sketch to shelf. One partner."
+          },
+          {
+            "level": "h2",
+            "text": "Different starting points. The same ambition."
+          },
+          {
+            "level": "h3",
+            "text": "A head start. Still your signature."
+          },
+          {
+            "level": "h3",
+            "text": "Your design. Built to spec."
+          },
+          {
+            "level": "h2",
+            "text": "What we produce"
+          },
+          {
+            "level": "h2",
+            "text": "The detail is the difference."
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h3",
+            "text": "In our clientsâ words"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our story"
+          },
+          {
+            "level": "h3",
+            "text": "Full vertical integration"
+          },
+          {
+            "level": "h3",
+            "text": "On-ground team"
+          },
+          {
+            "level": "h3",
+            "text": "Transparency-first"
+          },
+          {
+            "level": "h3",
+            "text": "Scalable support"
+          },
+          {
+            "level": "h2",
+            "text": "Global meets local"
+          },
+          {
+            "level": "h1",
+            "text": "Jewelry development that works like clockwork"
+          },
+          {
+            "level": "h2",
+            "text": "Work that works."
+          },
+          {
+            "level": "h3",
+            "text": "Product Development"
+          },
+          {
+            "level": "h3",
+            "text": "Casting"
+          },
+          {
+            "level": "h3",
+            "text": "Stone Setting"
+          },
+          {
+            "level": "h3",
+            "text": "Plating & Finishing"
+          },
+          {
+            "level": "h3",
+            "text": "Packaging Solutions"
+          },
+          {
+            "level": "h3",
+            "text": "Logistics & Fulfillment"
+          },
+          {
+            "level": "h2",
+            "text": "Frequently asked questions"
+          },
+          {
+            "level": "h1",
+            "text": "Your idea, our factory"
+          },
+          {
+            "level": "h2",
+            "text": "Our process"
+          },
+          {
+            "level": "h3",
+            "text": "Share your Vision"
+          },
+          {
+            "level": "h3",
+            "text": "Design & Plan"
+          },
+          {
+            "level": "h3",
+            "text": "Expert Crafting"
+          },
+          {
+            "level": "h3",
+            "text": "Final Assurance"
+          },
+          {
+            "level": "h2",
+            "text": "Who we serve"
+          },
+          {
+            "level": "h1",
+            "text": "Our commitment to sustainability"
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our approach"
+          },
+          {
+            "level": "h3",
+            "text": "Ethical Sourcing"
+          },
+          {
+            "level": "h3",
+            "text": "Eco-Conscious Manufacturing"
+          },
+          {
+            "level": "h3",
+            "text": "Waste Management & Recycling"
+          },
+          {
+            "level": "h2",
+            "text": "Continuous Improvement"
+          },
+          {
+            "level": "h2",
+            "text": "A Better Future, Together"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Thank you."
+          },
+          {
+            "level": "h1",
+            "text": "Letâs build your next best-seller."
+          },
+          {
+            "level": "h2",
+            "text": "Request received."
+          },
+          {
+            "level": "h1",
+            "text": "A name behind every piece."
+          },
+          {
+            "level": "h2",
+            "text": "Meet our leadership"
+          },
+          {
+            "level": "h2",
+            "text": "We started on your side of the table."
+          },
+          {
+            "level": "h2",
+            "text": "One team. One standard."
+          },
+          {
+            "level": "h3",
+            "text": "We know what it means to trust someone with an idea."
+          },
+          {
+            "level": "h3",
+            "text": "The same bar for every piece, no matter who signs it off."
+          },
+          {
+            "level": "h3",
+            "text": "Your project has a name, a desk, and a phone number."
+          },
+          {
+            "level": "h2",
+            "text": "Letâs make whatâs next"
+          },
+          {
+            "level": "h2",
+            "text": "Inside Petra."
+          }
+        ],
+        "word_count": 1393,
+        "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+        "links": [
+          "https://petrajewelryfactory.com/"
+        ],
+        "issues": [
+          "Missing canonical",
+          "Review heading structure: 8 H1 headings",
+          "Duplicate title",
+          "Duplicate description"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/#/team",
+      "path": "/",
+      "current": {
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 1.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "4 crawl findings"
+      ],
+      "actions": [
+        "Review the on-page findings and improve the page's presentation in search."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/#/team",
+        "path": "/",
+        "final_url": "https://petrajewelryfactory.com/#/team",
+        "http_status": 200,
+        "crawl_status": "checked",
+        "title": "Petra Jewelry â The partner youâll never need to replace",
+        "description": "Full-service jewelry manufacturing for brands. Two integrated factories in Dongguan and a design studio in Shenzhen.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "The partner youâll never need to replace."
+          },
+          {
+            "level": "h2",
+            "text": "Our clients"
+          },
+          {
+            "level": "h2",
+            "text": "Craftsmanship, speed and straight answers"
+          },
+          {
+            "level": "h2",
+            "text": "Sketch to shelf. One partner."
+          },
+          {
+            "level": "h2",
+            "text": "Different starting points. The same ambition."
+          },
+          {
+            "level": "h3",
+            "text": "A head start. Still your signature."
+          },
+          {
+            "level": "h3",
+            "text": "Your design. Built to spec."
+          },
+          {
+            "level": "h2",
+            "text": "What we produce"
+          },
+          {
+            "level": "h2",
+            "text": "The detail is the difference."
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h3",
+            "text": "In our clientsâ words"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our story"
+          },
+          {
+            "level": "h3",
+            "text": "Full vertical integration"
+          },
+          {
+            "level": "h3",
+            "text": "On-ground team"
+          },
+          {
+            "level": "h3",
+            "text": "Transparency-first"
+          },
+          {
+            "level": "h3",
+            "text": "Scalable support"
+          },
+          {
+            "level": "h2",
+            "text": "Global meets local"
+          },
+          {
+            "level": "h1",
+            "text": "Jewelry development that works like clockwork"
+          },
+          {
+            "level": "h2",
+            "text": "Work that works."
+          },
+          {
+            "level": "h3",
+            "text": "Product Development"
+          },
+          {
+            "level": "h3",
+            "text": "Casting"
+          },
+          {
+            "level": "h3",
+            "text": "Stone Setting"
+          },
+          {
+            "level": "h3",
+            "text": "Plating & Finishing"
+          },
+          {
+            "level": "h3",
+            "text": "Packaging Solutions"
+          },
+          {
+            "level": "h3",
+            "text": "Logistics & Fulfillment"
+          },
+          {
+            "level": "h2",
+            "text": "Frequently asked questions"
+          },
+          {
+            "level": "h1",
+            "text": "Your idea, our factory"
+          },
+          {
+            "level": "h2",
+            "text": "Our process"
+          },
+          {
+            "level": "h3",
+            "text": "Share your Vision"
+          },
+          {
+            "level": "h3",
+            "text": "Design & Plan"
+          },
+          {
+            "level": "h3",
+            "text": "Expert Crafting"
+          },
+          {
+            "level": "h3",
+            "text": "Final Assurance"
+          },
+          {
+            "level": "h2",
+            "text": "Who we serve"
+          },
+          {
+            "level": "h1",
+            "text": "Our commitment to sustainability"
+          },
+          {
+            "level": "h2",
+            "text": "Global perspective. Local precision."
+          },
+          {
+            "level": "h2",
+            "text": "Our approach"
+          },
+          {
+            "level": "h3",
+            "text": "Ethical Sourcing"
+          },
+          {
+            "level": "h3",
+            "text": "Eco-Conscious Manufacturing"
+          },
+          {
+            "level": "h3",
+            "text": "Waste Management & Recycling"
+          },
+          {
+            "level": "h2",
+            "text": "Continuous Improvement"
+          },
+          {
+            "level": "h2",
+            "text": "A Better Future, Together"
+          },
+          {
+            "level": "h1",
+            "text": "Rooted in craft. Driven by precision."
+          },
+          {
+            "level": "h2",
+            "text": "Thank you."
+          },
+          {
+            "level": "h1",
+            "text": "Letâs build your next best-seller."
+          },
+          {
+            "level": "h2",
+            "text": "Request received."
+          },
+          {
+            "level": "h1",
+            "text": "A name behind every piece."
+          },
+          {
+            "level": "h2",
+            "text": "Meet our leadership"
+          },
+          {
+            "level": "h2",
+            "text": "We started on your side of the table."
+          },
+          {
+            "level": "h2",
+            "text": "One team. One standard."
+          },
+          {
+            "level": "h3",
+            "text": "We know what it means to trust someone with an idea."
+          },
+          {
+            "level": "h3",
+            "text": "The same bar for every piece, no matter who signs it off."
+          },
+          {
+            "level": "h3",
+            "text": "Your project has a name, a desk, and a phone number."
+          },
+          {
+            "level": "h2",
+            "text": "Letâs make whatâs next"
+          },
+          {
+            "level": "h2",
+            "text": "Inside Petra."
+          }
+        ],
+        "word_count": 1393,
+        "text": "Design-led.\nManufacturing-minded.\n- Integrated\nfactories\n- 2\n- Starting MOQ\nin units\n- 200\n- Core\ncapabilities\n- 6\nFrom concept\nto collection.\nFor your brand.\nFull-service jewelry\nmanufacturing.\nBuilt around your\nnext big idea.\nOur clients\nCraftsmanship, speed and straight answers\nCompany details\nTap a line to explore\n2017Founded\n200Minimum order Â· units\nTwo factories in Dongguan handling stone setting, polishing, quality control and packaging in-house, with every stage of production, from casting to plating, managed and inspected by our team.\nA design-forward office in Shenzhen, where CAD design, sampling and material sourcing begin.\nStainless steel, silver and brass.\n70+ specialists across 250+ machines, including one of the regionâs largest chain-making facilities.\nTransparent pricing, quality assurance and flexible minimum orders, starting from 200 units.\nWith two factories in Dongguan and a design-forward office in Shenzhen, we specialize in full-service jewelry development, from concept to customer.\nWe built the factory we always wished we had. Now itâs yours.\nWhether youâre scaling a DTC brand or developing private label for retail, we meet you at your growth stage.\nMeet the team\nTwo core divisions\nDifferent starting points.\nThe same ambition.\nA head start.\nStill your signature.\nStart with pre-designed styles, flexible minimums, and faster production timelines. Build a collection with your brand at its heart.\n- Pre-designed styles\n- MOQ-friendly options\n- Faster production timelines\nExplore private label\nYour design.\nBuilt to spec.\nBring your own designs. We take them from CAD to sample to scaled production, with IP protection and NDAs as standard.\n- CAD-to-sample process\n- IP-safe, NDA-protected\n- Scalable production\nExplore contract manufacturing\nWhat we produce\nSix core capabilities.\nOne considered process.\nThe beginning of every form.\nCasting in sterling silver, stainless steel, and brass. We develop the structure of your piece around its design, material, and production needs.\nColor that lasts.\nGold vermeil, IP plating and rhodium, applied to your spec so every piece in the run matches the approved sample.\nSet to hold. Placed to catch the light.\nProng, bezel and pavÃ© settings that secure every stone and show it at its best.\nDetail, down to the hallmark.\nPrecision engraving and laser work for logos, personalization and hallmarking.\nThe finish you can feel.\nPolished, brushed or sandblasted. We agree the surface with you, then hold it across the whole order.\nReady for the shelf.\nCustom packaging and fulfillment solutions, so your collection arrives ready to sell.\nThe way a piece is made matters. Explore our approach to certification, responsible manufacturing, and the details behind every collection.\nOur approach\n- Sedex member\n- amfori BSCI\n- ISO certified\nIn our clientsâ words\nAbout us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nOur story\nFounded in 2017, Petra Jewelry emerged from a shared vision to bridge the gap between creative brands and expert manufacturing. With decades of combined experienceâspanning global brand-building and high-volume production for industry leadersâwe crafted a factory that marries design innovation with technical precision.\nTrusted by brands like Asos, Guess, and Nordstrom, we specialize in crafting fashion jewelry from premium materials, including sterling silver and stainless steel, and boast one of the regionâs largest chain-making facilities.\nMeet the people behind Petra\n- 01 Full vertical integration Design, casting, setting, plating, QC, and fulfillment\n- 02 On-ground team WesternâChinese leadership with strong factory ties\n- 03 Transparency-first Clear pricing, real timelines, and open communication\n- 04 Scalable support From small runs to mass-market rollouts\nOur hybrid leadership structure means youâre getting the best of both worlds â international quality standards with the speed and cost-efficiency of Chinese manufacturing.\n- Countries\nserved\n- 30\n- Global\npartners\n- 15\n- Skilled\nartisans\n- 200\nWe offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Brass, sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural â prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.\nWe take your custom designs and turn them into high-quality, production-ready jewelry â with full control over materials, processes, and details.\nStart your project\nOur process\n- Start with your concept and goals â we listen, understand, and collaborate on your vision.\n- From CAD modeling to material selection, we plan every detail with precision and purpose.\n- Skilled artisans and advanced tools come together to build your custom solution with care.\n- Thorough inspection and testing to ensure stability, quality, and reliability.\nSix core capabilities.\nOne considered process.\nBespoke jewelry crafted with premium materials and innovative design, reflecting exclusivity and prestige.\nPrivate label and exclusive collections built to your price points, with the consistency and certified production big retailers expect.\nReliable, repeatable production at volume â from small runs to mass-market rollouts.\nAt Petra Jewelry, sustainability isnât an afterthoughtâitâs part of who we are. As a trusted manufacturing partner to leading global brands, we believe that beautiful jewelry should be made with integrity and respect for the planet.\nOur approach\n- FSC Packaging\n- Recycled Metals\n- Ethical Sourcing\nOur approach\nEthical Sourcing\nWe work only with vetted suppliers who meet strict ethical and environmental standardsâensuring our metals, stones, and materials are responsibly sourced.\nEco-Conscious Manufacturing\nOur fully integrated production process allows us to minimize waste and energy use at every stageâfrom design and casting to finishing and fulfillment.\nWaste Management & Recycling\nWe recycle precious metals, reuse materials, and responsibly dispose of manufacturing byproducts.\nContinuous\nImprovement\nWe know sustainability is a journey, not a destination. Thatâs why we regularly review and refine our processes, working closely with our partners to raise the bar on responsibility and transparency across the supply chain. From ethically sourced materials to reducing waste in production, every step we take is intentional.\nOur goal is not only to meet global standards but to lead by example in building a more responsible jewelry industry.\nA Better Future, Together\nWeâre proud to help global brands bring their jewelry to life â beautifully, ethically, and responsibly. When you partner with Petra Jewelry, youâre not just choosing a manufacturer. Youâre choosing to make a positive impact. We prioritize sustainable materials, energy-efficient production, and fair labor practices.\nTogether, we can create timeless pieces that respect both people and the planet.\nContact us\nA trusted manufacturing partner to todayâs most forward-thinking jewelry brands â built on experience, integrity, and relentless attention to detail.\nRequest for catalogue\nWe respond within 24 hours.\nA name behind every piece.\nEvery promise has a face.\nMeet the people you would work with. Western and Chinese leadership, united by one standard: standing behind your product.\nWe started on your side of the table.\nWe were jewelry designers and brand builders, sending files into a black box and waiting to see what came back.\nBeautiful work arrived too slowly. Faster production fell short. Middlemen stood between the brand and the people making it.\nSo we built a different kind of partner.\nOne team. One standard.\nFrom the master you sign\nto the carton we seal.\nWe know what it means to trust someone with an idea.\nWe began as jewelry designers and brand builders. Your point of view is where our story started.\nThe same bar for every piece, no matter who signs it off.\nWestern and Chinese leadership share one quality standard. A sample passes or it goes back, and you hear about it either way.\nYour project has a name, a desk, and a phone number.\nNo agents, no middlemen. You work directly with the people in Shenzhen and Dongguan who design, make, and ship your product.",
+        "links": [
+          "https://petrajewelryfactory.com/"
+        ],
+        "issues": [
+          "Missing canonical",
+          "Review heading structure: 8 H1 headings",
+          "Duplicate title",
+          "Duplicate description"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/category/uncategorized/page/2/",
+      "path": "/category/uncategorized/page/2/",
+      "current": {
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 5.5
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/category/uncategorized/page/2/",
+        "path": "/category/uncategorized/page/2/",
+        "final_url": "https://petrajewelryfactory.com/category/uncategorized/page/2/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [
+          {
+            "source": "/private-label/",
+            "target": "/category/uncategorized/page/2/",
+            "anchor": "/category/uncategorized/page/2/",
+            "reason": "Shared terms: page",
+            "overlap": 1
+          },
+          {
+            "source": "/contract-manufacturing/",
+            "target": "/category/uncategorized/page/2/",
+            "anchor": "/category/uncategorized/page/2/",
+            "reason": "Shared terms: page",
+            "overlap": 1
+          },
+          {
+            "source": "/services/",
+            "target": "/category/uncategorized/page/2/",
+            "anchor": "/category/uncategorized/page/2/",
+            "reason": "Shared terms: page",
+            "overlap": 1
+          },
+          {
+            "source": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+            "target": "/category/uncategorized/page/2/",
+            "anchor": "/category/uncategorized/page/2/",
+            "reason": "Shared terms: page",
+            "overlap": 1
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/contact/",
+      "path": "/contact/",
+      "current": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0.0,
+        "position": 11.8
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "Limited search evidence"
+      ],
+      "actions": [
+        "Review buyer questions and collect more search data before choosing a major rewrite."
+      ],
+      "effort": "Review",
+      "audit": {},
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/contact/",
+            "anchor": "/contact/",
+            "reason": "Shared terms: contact",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/contact/",
+            "anchor": "/contact/",
+            "reason": "Shared terms: contact",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/contact/",
+            "anchor": "/contact/",
+            "reason": "Shared terms: contact",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/contact/",
+            "anchor": "/contact/",
+            "reason": "Shared terms: contact",
+            "overlap": 1
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/faqs/",
+      "path": "/faqs/",
+      "current": {
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0.0,
+        "position": 6.67
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0.0,
+        "position": 6.0
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/faqs/",
+        "path": "/faqs/",
+        "final_url": "https://petrajewelryfactory.com/faqs/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/how-it-works/",
+      "path": "/how-it-works/",
+      "current": {
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0.0,
+        "position": 7.67
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 9.0
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/how-it-works/",
+        "path": "/how-it-works/",
+        "final_url": "https://petrajewelryfactory.com/how-it-works/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/product-catalog-request-callai-form/",
+      "path": "/product-catalog-request-callai-form/",
+      "current": {
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0.0,
+        "position": 9.33
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "Limited search evidence"
+      ],
+      "actions": [
+        "Review buyer questions and collect more search data before choosing a major rewrite."
+      ],
+      "effort": "Review",
+      "audit": {},
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/product-catalog-request-callai-form/",
+            "anchor": "/product-catalog-request-callai-form/",
+            "reason": "Shared terms: form, product, request",
+            "overlap": 3
+          },
+          {
+            "source": "/",
+            "target": "/product-catalog-request-callai-form/",
+            "anchor": "/product-catalog-request-callai-form/",
+            "reason": "Shared terms: form, product, request",
+            "overlap": 3
+          },
+          {
+            "source": "/",
+            "target": "/product-catalog-request-callai-form/",
+            "anchor": "/product-catalog-request-callai-form/",
+            "reason": "Shared terms: form, product, request",
+            "overlap": 3
+          },
+          {
+            "source": "/",
+            "target": "/product-catalog-request-callai-form/",
+            "anchor": "/product-catalog-request-callai-form/",
+            "reason": "Shared terms: form, product, request",
+            "overlap": 3
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    },
+    {
+      "url": "https://petrajewelryfactory.com/sustainability/",
+      "path": "/sustainability/",
+      "current": {
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 3.0
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0.0,
+        "position": 2.6
+      },
+      "queries": [],
+      "topic": "Unassigned",
+      "intent": "Needs review",
+      "business_value": 1,
+      "priority_score": 10,
+      "confidence": "Low sample",
+      "evidence": [
+        "Website issue needs attention"
+      ],
+      "actions": [
+        "Resolve the flagged website issues, then verify the live page."
+      ],
+      "effort": "Review",
+      "audit": {
+        "url": "https://petrajewelryfactory.com/sustainability/",
+        "path": "/sustainability/",
+        "final_url": "https://petrajewelryfactory.com/sustainability/",
+        "http_status": 404,
+        "crawl_status": "checked",
+        "title": "This Page Does Not Exist",
+        "description": "Oops, looks like the page is lost.",
+        "canonical": "",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "This Page Does Not Exist"
+          }
+        ],
+        "word_count": 19,
+        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+        "links": [],
+        "issues": [
+          "HTTP 404",
+          "Missing canonical"
+        ],
+        "incoming_links": []
+      },
+      "index_status": "Not inspected",
+      "click_change": 0,
+      "brief": {
+        "suggested_title": null,
+        "suggested_h1": null,
+        "query_review": [],
+        "buyer_questions": [
+          "Answer the actual query intent",
+          "Add original examples and evidence",
+          "Link to the relevant service page"
+        ],
+        "internal_links": [
+          {
+            "source": "/",
+            "target": "/sustainability/",
+            "anchor": "/sustainability/",
+            "reason": "Shared terms: sustainability",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/sustainability/",
+            "anchor": "/sustainability/",
+            "reason": "Shared terms: sustainability",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/sustainability/",
+            "anchor": "/sustainability/",
+            "reason": "Shared terms: sustainability",
+            "overlap": 1
+          },
+          {
+            "source": "/",
+            "target": "/sustainability/",
+            "anchor": "/sustainability/",
+            "reason": "Shared terms: sustainability",
+            "overlap": 1
+          }
+        ],
+        "note": "Draft suggestions. Confirm intent, company facts and natural link placement before publishing. A query missing from headings is not proof the content is missing."
+      }
+    }
+  ],
+  "overlap_candidates": [],
+  "tracked_keywords": {
+    "jewelry manufacturer china": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": true,
+      "status": "No query data"
+    },
+    "china jewelry factory": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "stainless steel jewelry manufacturer china": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "jewelry supplier china wholesale": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "premium jewelry manufacturer china": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": true,
+      "status": "No query data"
+    },
+    "jewelry factory dongguan": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "chinese jewelry manufacturer for brands": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "china jewelry factory high quality": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "silver jewelry manufacturer china": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "brass jewelry manufacturer china": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "hard jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": true,
+      "status": "No query data"
+    },
+    "durable jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "waterproof jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "tarnish free jewelry supplier": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "lifetime warranty jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "hypoallergenic jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "long lasting jewelry supplier": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "surgical steel jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "stainless steel jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": true,
+      "status": "No query data"
+    },
+    "316L stainless steel jewelry supplier": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": true,
+      "status": "No query data"
+    },
+    "brass jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "sterling silver jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "925 silver jewelry wholesale": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "PVD plated jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "gold plated stainless steel jewelry wholesale": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "rose gold jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "stainless steel jewelry factory": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "nickel free jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "private label jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": true,
+      "status": "No query data"
+    },
+    "OEM jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "ODM jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "white label jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "custom jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "private label jewelry manufacturer china": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "contract jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "jewelry manufacturing partner": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "jewelry manufacturer for ecommerce brands": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": true,
+      "status": "No query data"
+    },
+    "jewelry supplier for DTC brands": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "jewelry manufacturer for shopify brands": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "wholesale jewelry supplier for online stores": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "B2B jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "jewelry manufacturer for retailers": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "jewelry supplier for amazon sellers": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "premium jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "high quality jewelry factory": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "reliable jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "jewelry manufacturer quality control": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "best jewelry manufacturer for brands": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "luxury stainless steel jewelry manufacturer": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    },
+    "consistent jewelry manufacturing supplier": {
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null,
+      "avg_position": 0,
+      "is_priority": false,
+      "status": "No query data"
+    }
+  },
+  "target_categories": {
+    "china_location": [
+      "jewelry manufacturer china",
+      "china jewelry factory",
+      "stainless steel jewelry manufacturer china",
+      "jewelry supplier china wholesale",
+      "premium jewelry manufacturer china",
+      "jewelry factory dongguan",
+      "chinese jewelry manufacturer for brands",
+      "china jewelry factory high quality",
+      "silver jewelry manufacturer china",
+      "brass jewelry manufacturer china"
+    ],
+    "durability": [
+      "hard jewelry manufacturer",
+      "durable jewelry manufacturer",
+      "waterproof jewelry manufacturer",
+      "tarnish free jewelry supplier",
+      "lifetime warranty jewelry manufacturer",
+      "hypoallergenic jewelry manufacturer",
+      "long lasting jewelry supplier",
+      "surgical steel jewelry manufacturer"
+    ],
+    "materials": [
+      "stainless steel jewelry manufacturer",
+      "316L stainless steel jewelry supplier",
+      "brass jewelry manufacturer",
+      "sterling silver jewelry manufacturer",
+      "925 silver jewelry wholesale",
+      "PVD plated jewelry manufacturer",
+      "gold plated stainless steel jewelry wholesale",
+      "rose gold jewelry manufacturer",
+      "stainless steel jewelry factory",
+      "nickel free jewelry manufacturer"
+    ],
+    "private_label": [
+      "private label jewelry manufacturer",
+      "OEM jewelry manufacturer",
+      "ODM jewelry manufacturer",
+      "white label jewelry manufacturer",
+      "custom jewelry manufacturer",
+      "private label jewelry manufacturer china",
+      "contract jewelry manufacturer",
+      "jewelry manufacturing partner"
+    ],
+    "ecommerce": [
+      "jewelry manufacturer for ecommerce brands",
+      "jewelry supplier for DTC brands",
+      "jewelry manufacturer for shopify brands",
+      "wholesale jewelry supplier for online stores",
+      "B2B jewelry manufacturer",
+      "jewelry manufacturer for retailers",
+      "jewelry supplier for amazon sellers"
+    ],
+    "quality": [
+      "premium jewelry manufacturer",
+      "high quality jewelry factory",
+      "reliable jewelry manufacturer",
+      "jewelry manufacturer quality control",
+      "best jewelry manufacturer for brands",
+      "luxury stainless steel jewelry manufacturer",
+      "consistent jewelry manufacturing supplier"
+    ]
+  },
+  "queries": [
+    {
+      "query": "petra jewelry",
+      "clicks": 1,
+      "impressions": 4,
+      "ctr": 25.0,
+      "position": 6.25,
+      "branded": true
+    },
+    {
+      "query": "petra accessories",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 3.0,
+      "branded": true
+    },
+    {
+      "query": "petra factory",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 4.0,
+      "branded": true
+    },
+    {
+      "query": "petra jewellery",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0.0,
+      "position": 31.95,
+      "branded": true
+    },
+    {
+      "query": "petra jewelry dallas",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 21.0,
+      "branded": true
+    },
+    {
+      "query": "wear test jewelry prototypes draper",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 88.0,
+      "branded": false
+    }
+  ],
+  "change_results": [],
+  "content_generated_at": "2026-11-05T16:55:18.794690+00:00",
+  "crawl_warnings": [],
+  "measurement": {
+    "leads": "Not connected",
+    "note": "Connect aggregate organic enquiries and qualified leads; do not publish customer details in this public repository."
+  },
+  "data_notes": [
+    "Finalized web-search data, dates in Pacific Time.",
+    "Query rows omit anonymized searches and may be limited by Google; they need not sum to page or property totals.",
+    "Average position is not a fixed country/device rank.",
+    "Priority scores organize review work; they do not forecast traffic gains."
+  ],
+  "overall_metrics": {
+    "total_clicks": 8,
+    "total_impressions": 90,
+    "avg_ctr": 8.889,
+    "avg_position": 14.36,
+    "period_start": "2026-10-06",
+    "period_end": "2026-11-02"
+  },
+  "top_pages": [
+    {
+      "page": "/private-label/",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0.0,
+      "position": 3.43
+    },
+    {
+      "page": "/contract-manufacturing/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 23.0
+    },
+    {
+      "page": "/services/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 13.75
+    },
+    {
+      "page": "/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 1.0
+    },
+    {
+      "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
+    },
+    {
+      "page": "/the-business-case-for-premium-materials-in-jewelry-manufacturing/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 7.0
+    },
+    {
+      "page": "/the-complete-jewelry-manufacturing-process-from-design-to-finished-product/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 52.0
+    },
+    {
+      "page": "/why-quality-focused-brands-choose-stainless-steel-jewelry-manufacturing/",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
+    },
+    {
+      "page": "/about/",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0.0,
+      "position": 18.91
+    },
+    {
+      "page": "/",
+      "clicks": 8,
+      "impressions": 75,
+      "ctr": 10.667,
+      "position": 11.61
+    },
+    {
+      "page": "/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 1.0
+    },
+    {
+      "page": "/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 1.0
+    },
+    {
+      "page": "/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 1.0
+    },
+    {
+      "page": "/category/uncategorized/page/2/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 5.5
+    },
+    {
+      "page": "/contact/",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
+    },
+    {
+      "page": "/faqs/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 6.67
+    },
+    {
+      "page": "/how-it-works/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 7.67
+    },
+    {
+      "page": "/product-catalog-request-callai-form/",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
+    },
+    {
+      "page": "/sustainability/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 3.0
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "attempted_at": "2026-11-16T15:10:42.467405+00:00",
+  "status": "failed",
+  "coverage": {
+    "recorded": 5,
+    "html_ok": 0,
+    "http_errors": 4,
+    "errors": 1,
+    "blocked": 0,
+    "unsupported": 0
+  },
+  "required_urls": [
+    "https://petrajewelryfactory.com/",
+    "https://petrajewelryfactory.com/private-label/",
+    "https://petrajewelryfactory.com/contract-manufacturing/",
+    "https://petrajewelryfactory.com/services/"
+  ],
+  "blockers": [
+    "/: Crawl failed: Response exceeds 4,000,000-byte crawl limit",
+    "Required page /: error, HTTP 200",
+    "Required page /private-label/: checked, HTTP 404",
+    "Required page /contract-manufacturing/: checked, HTTP 404",
+    "Required page /services/: checked, HTTP 404"
+  ],
+  "warnings": [
+    "robots.txt returned HTTP 404; crawling allowed, policy unavailable.",
+    "No readable sitemap found. /sitemap_index.xml: HTTP 404; /wp-sitemap.xml: HTTP 404; /sitemap.xml: HTTP 404",
+    "/: Response exceeds 4,000,000-byte crawl limit",
+    "/private-label/: HTTP 404",
+    "/contract-manufacturing/: HTTP 404",
+    "/services/: HTTP 404",
+    "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/: HTTP 404"
+  ],
+  "url_collisions": [],
+  "pages": [
+    {
+      "url": "https://petrajewelryfactory.com/",
+      "path": "/",
+      "crawl_status": "error",
+      "error": {
+        "code": "response_too_large",
+        "message": "Response exceeds 4,000,000-byte crawl limit",
+        "limit_bytes": 4000000,
+        "bytes_read": 4019036,
+        "http_status": 200
+      },
+      "http_status": 200,
+      "issues": [
+        "Crawl failed: Response exceeds 4,000,000-byte crawl limit"
+      ],
+      "links": [],
+      "incoming_links": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/private-label/",
+      "path": "/private-label/",
+      "final_url": "https://petrajewelryfactory.com/private-label/",
+      "http_status": 404,
+      "crawl_status": "checked",
+      "title": "This Page Does Not Exist",
+      "description": "Oops, looks like the page is lost.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "This Page Does Not Exist"
+        }
+      ],
+      "word_count": 19,
+      "robots": [
+        ""
+      ],
+      "schema_types": [],
+      "schema_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "schema_errors": 0,
+      "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+      "links": [],
+      "fragment_links": [],
+      "issues": [
+        "HTTP 404",
+        "Missing canonical",
+        "No JSON-LD found; review relevant truthful markup"
+      ],
+      "incoming_links": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "path": "/contract-manufacturing/",
+      "final_url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "http_status": 404,
+      "crawl_status": "checked",
+      "title": "This Page Does Not Exist",
+      "description": "Oops, looks like the page is lost.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "This Page Does Not Exist"
+        }
+      ],
+      "word_count": 19,
+      "robots": [
+        ""
+      ],
+      "schema_types": [],
+      "schema_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "schema_errors": 0,
+      "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+      "links": [],
+      "fragment_links": [],
+      "issues": [
+        "HTTP 404",
+        "Missing canonical",
+        "No JSON-LD found; review relevant truthful markup"
+      ],
+      "incoming_links": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/services/",
+      "path": "/services/",
+      "final_url": "https://petrajewelryfactory.com/services/",
+      "http_status": 404,
+      "crawl_status": "checked",
+      "title": "This Page Does Not Exist",
+      "description": "Oops, looks like the page is lost.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "This Page Does Not Exist"
+        }
+      ],
+      "word_count": 19,
+      "robots": [
+        ""
+      ],
+      "schema_types": [],
+      "schema_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "schema_errors": 0,
+      "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+      "links": [],
+      "fragment_links": [],
+      "issues": [
+        "HTTP 404",
+        "Missing canonical",
+        "No JSON-LD found; review relevant truthful markup"
+      ],
+      "incoming_links": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "path": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "final_url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "http_status": 404,
+      "crawl_status": "checked",
+      "title": "This Page Does Not Exist",
+      "description": "Oops, looks like the page is lost.",
+      "canonical": "",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "This Page Does Not Exist"
+        }
+      ],
+      "word_count": 19,
+      "robots": [
+        ""
+      ],
+      "schema_types": [],
+      "schema_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "schema_errors": 0,
+      "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
+      "links": [],
+      "fragment_links": [],
+      "issues": [
+        "HTTP 404",
+        "Missing canonical",
+        "No JSON-LD found; review relevant truthful markup"
+      ],
+      "incoming_links": []
+    }
+  ]
+}

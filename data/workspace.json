@@ -1,0 +1,1780 @@
+{
+  "version": 1,
+  "generated_at": "2026-11-16T15:10:59.281943+00:00",
+  "sources": {
+    "search": "2026-11-05T16:56:20.770066+00:00",
+    "search_through": "2026-11-02",
+    "crawl": "2026-11-16T15:10:42.467405+00:00",
+    "lab": "2026-09-07T09:22:16.124364+00:00",
+    "browser": "2026-11-16T15:10:32.442814+00:00"
+  },
+  "terms": [
+    {
+      "keyword": "jewelry manufacturer china",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ]
+    },
+    {
+      "keyword": "china jewelry factory",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ]
+    },
+    {
+      "keyword": "stainless steel jewelry manufacturer china",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "stainless_steel"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "stainless_steel"
+      ]
+    },
+    {
+      "keyword": "jewelry supplier china wholesale",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "wholesale"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "wholesale"
+      ]
+    },
+    {
+      "keyword": "premium jewelry manufacturer china",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "quality_evidence"
+      ]
+    },
+    {
+      "keyword": "jewelry factory dongguan",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "dongguan_manufacturing"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "dongguan_manufacturing"
+      ]
+    },
+    {
+      "keyword": "chinese jewelry manufacturer for brands",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ]
+    },
+    {
+      "keyword": "china jewelry factory high quality",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "quality_evidence"
+      ]
+    },
+    {
+      "keyword": "silver jewelry manufacturer china",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "silver"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "silver"
+      ]
+    },
+    {
+      "keyword": "brass jewelry manufacturer china",
+      "category": "china_location",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "brass"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing",
+        "brass"
+      ]
+    },
+    {
+      "keyword": "hard jewelry manufacturer",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "brand_affiliation"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "brand_affiliation"
+      ]
+    },
+    {
+      "keyword": "durable jewelry manufacturer",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "durability"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "durability"
+      ]
+    },
+    {
+      "keyword": "waterproof jewelry manufacturer",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "waterproof"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "waterproof"
+      ]
+    },
+    {
+      "keyword": "tarnish free jewelry supplier",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "tarnish_free"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "tarnish_free"
+      ]
+    },
+    {
+      "keyword": "lifetime warranty jewelry manufacturer",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "lifetime_warranty"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "lifetime_warranty"
+      ]
+    },
+    {
+      "keyword": "hypoallergenic jewelry manufacturer",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "hypoallergenic"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "hypoallergenic"
+      ]
+    },
+    {
+      "keyword": "long lasting jewelry supplier",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "durability"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "durability"
+      ]
+    },
+    {
+      "keyword": "surgical steel jewelry manufacturer",
+      "category": "durability",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "surgical_steel"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "surgical_steel"
+      ]
+    },
+    {
+      "keyword": "stainless steel jewelry manufacturer",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel"
+      ]
+    },
+    {
+      "keyword": "316L stainless steel jewelry supplier",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel",
+        "steel_316l"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel",
+        "steel_316l"
+      ]
+    },
+    {
+      "keyword": "brass jewelry manufacturer",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "brass"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "brass"
+      ]
+    },
+    {
+      "keyword": "sterling silver jewelry manufacturer",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "silver",
+        "sterling_925"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "silver",
+        "sterling_925"
+      ]
+    },
+    {
+      "keyword": "925 silver jewelry wholesale",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "silver",
+        "sterling_925",
+        "wholesale"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "silver",
+        "sterling_925",
+        "wholesale"
+      ]
+    },
+    {
+      "keyword": "PVD plated jewelry manufacturer",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "pvd"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "pvd"
+      ]
+    },
+    {
+      "keyword": "gold plated stainless steel jewelry wholesale",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel",
+        "gold_plating",
+        "wholesale"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel",
+        "gold_plating",
+        "wholesale"
+      ]
+    },
+    {
+      "keyword": "rose gold jewelry manufacturer",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "rose_gold"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "rose_gold"
+      ]
+    },
+    {
+      "keyword": "stainless steel jewelry factory",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel"
+      ]
+    },
+    {
+      "keyword": "nickel free jewelry manufacturer",
+      "category": "materials",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "nickel_free"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "nickel_free"
+      ]
+    },
+    {
+      "keyword": "private label jewelry manufacturer",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/private-label/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "OEM jewelry manufacturer",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/contract-manufacturing/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "ODM jewelry manufacturer",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/private-label/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "odm"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "odm"
+      ]
+    },
+    {
+      "keyword": "white label jewelry manufacturer",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/private-label/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "white_label"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "white_label"
+      ]
+    },
+    {
+      "keyword": "custom jewelry manufacturer",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/private-label/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "private label jewelry manufacturer china",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/private-label/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "china_manufacturing"
+      ]
+    },
+    {
+      "keyword": "contract jewelry manufacturer",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/contract-manufacturing/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "jewelry manufacturing partner",
+      "category": "private_label",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/contract-manufacturing/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "jewelry manufacturer for ecommerce brands",
+      "category": "ecommerce",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "jewelry supplier for DTC brands",
+      "category": "ecommerce",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "jewelry manufacturer for shopify brands",
+      "category": "ecommerce",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "wholesale jewelry supplier for online stores",
+      "category": "ecommerce",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "wholesale"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "wholesale"
+      ]
+    },
+    {
+      "keyword": "B2B jewelry manufacturer",
+      "category": "ecommerce",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "jewelry manufacturer for retailers",
+      "category": "ecommerce",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "jewelry supplier for amazon sellers",
+      "category": "ecommerce",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "premium jewelry manufacturer",
+      "category": "quality",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ]
+    },
+    {
+      "keyword": "high quality jewelry factory",
+      "category": "quality",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ]
+    },
+    {
+      "keyword": "reliable jewelry manufacturer",
+      "category": "quality",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ]
+    },
+    {
+      "keyword": "jewelry manufacturer quality control",
+      "category": "quality",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ]
+    },
+    {
+      "keyword": "best jewelry manufacturer for brands",
+      "category": "quality",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "needs_review",
+      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ]
+    },
+    {
+      "keyword": "luxury stainless steel jewelry manufacturer",
+      "category": "quality",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "stainless_steel",
+        "quality_evidence"
+      ]
+    },
+    {
+      "keyword": "consistent jewelry manufacturing supplier",
+      "category": "quality",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/services/",
+      "approved_page": null,
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ],
+      "status": "hold",
+      "reason": "Capability, location or claim evidence and SERP review required.",
+      "serp": {
+        "urls": [],
+        "checked_at": null,
+        "market": null,
+        "device": null,
+        "page_type": null
+      },
+      "reviewer": null,
+      "reviewed_at": null,
+      "missing_facts": [
+        "organization_name",
+        "manufacturing_summary",
+        "quality_evidence"
+      ]
+    }
+  ],
+  "fact_fields": {
+    "organization_name": "Public organization name",
+    "manufacturing_summary": "Confirmed manufacturing scope",
+    "moq": "Minimum order rules",
+    "sample_lead_time": "Sample timing and conditions",
+    "production_lead_time": "Production timing and conditions",
+    "sales_email": "Public sales email",
+    "phone": "Public phone",
+    "address": "Public address",
+    "certifications": "Current certification evidence",
+    "sampling_process": "First-hand sampling process",
+    "quality_evidence": "First-hand quality-control evidence",
+    "china_manufacturing": "Manufacturing in China",
+    "dongguan_manufacturing": "Manufacturing in Dongguan",
+    "stainless_steel": "Stainless steel capability",
+    "steel_316l": "316L material evidence",
+    "brass": "Brass capability",
+    "silver": "Silver capability",
+    "sterling_925": "925 silver evidence",
+    "pvd": "PVD process capability",
+    "gold_plating": "Gold plating capability",
+    "rose_gold": "Rose gold capability",
+    "waterproof": "Waterproof claim and test conditions",
+    "tarnish_free": "Tarnish claim and test conditions",
+    "lifetime_warranty": "Warranty policy and exclusions",
+    "hypoallergenic": "Hypoallergenic claim evidence",
+    "surgical_steel": "Surgical steel grade evidence",
+    "nickel_free": "Nickel claim and test evidence",
+    "durability": "Durability evidence and conditions",
+    "brand_affiliation": "Permission for named-brand association",
+    "odm": "ODM design capability",
+    "white_label": "White-label capability",
+    "wholesale": "Wholesale supply model"
+  },
+  "capability_fields": [
+    "brand_affiliation",
+    "brass",
+    "china_manufacturing",
+    "dongguan_manufacturing",
+    "durability",
+    "gold_plating",
+    "hypoallergenic",
+    "lifetime_warranty",
+    "nickel_free",
+    "odm",
+    "pvd",
+    "rose_gold",
+    "silver",
+    "stainless_steel",
+    "steel_316l",
+    "sterling_925",
+    "surgical_steel",
+    "tarnish_free",
+    "waterproof",
+    "white_label",
+    "wholesale"
+  ],
+  "facts": {},
+  "draft_pack": {
+    "status": "draft_only",
+    "packets": [
+      {
+        "page": "/contract-manufacturing/",
+        "topic": "Contract jewelry manufacturing",
+        "status": "hold",
+        "blockers": [
+          "No term has both reviewed SERP intent and the required confirmed facts.",
+          "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved."
+        ],
+        "terms": [
+          "OEM jewelry manufacturer",
+          "contract jewelry manufacturer",
+          "jewelry manufacturing partner"
+        ],
+        "eligible_terms": [],
+        "missing_facts": [
+          "manufacturing_summary",
+          "organization_name"
+        ],
+        "page_review": null,
+        "suggested_title": null,
+        "suggested_description": null,
+        "outline": [
+          "Answer the reviewed buyer problem",
+          "Explain confirmed scope and limits",
+          "Show first-hand process and quality evidence",
+          "Explain confirmed sampling and production conditions",
+          "State what a brand should provide to request a quote"
+        ],
+        "evidence": [],
+        "confirmed_facts": {},
+        "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+      },
+      {
+        "page": "/private-label/",
+        "topic": "Private label jewelry manufacturing",
+        "status": "hold",
+        "blockers": [
+          "No term has both reviewed SERP intent and the required confirmed facts.",
+          "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved."
+        ],
+        "terms": [
+          "private label jewelry manufacturer",
+          "ODM jewelry manufacturer",
+          "white label jewelry manufacturer",
+          "custom jewelry manufacturer",
+          "private label jewelry manufacturer china"
+        ],
+        "eligible_terms": [],
+        "missing_facts": [
+          "china_manufacturing",
+          "manufacturing_summary",
+          "odm",
+          "organization_name",
+          "white_label"
+        ],
+        "page_review": null,
+        "suggested_title": null,
+        "suggested_description": null,
+        "outline": [
+          "Answer the reviewed buyer problem",
+          "Explain confirmed scope and limits",
+          "Show first-hand process and quality evidence",
+          "Explain confirmed sampling and production conditions",
+          "State what a brand should provide to request a quote"
+        ],
+        "evidence": [],
+        "confirmed_facts": {},
+        "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+      },
+      {
+        "page": "/services/",
+        "topic": "Jewelry manufacturing services",
+        "status": "hold",
+        "blockers": [
+          "No term has both reviewed SERP intent and the required confirmed facts.",
+          "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved."
+        ],
+        "terms": [
+          "jewelry manufacturer china",
+          "china jewelry factory",
+          "stainless steel jewelry manufacturer china",
+          "jewelry supplier china wholesale",
+          "premium jewelry manufacturer china",
+          "jewelry factory dongguan",
+          "chinese jewelry manufacturer for brands",
+          "china jewelry factory high quality",
+          "silver jewelry manufacturer china",
+          "brass jewelry manufacturer china",
+          "hard jewelry manufacturer",
+          "durable jewelry manufacturer",
+          "waterproof jewelry manufacturer",
+          "tarnish free jewelry supplier",
+          "lifetime warranty jewelry manufacturer",
+          "hypoallergenic jewelry manufacturer",
+          "long lasting jewelry supplier",
+          "surgical steel jewelry manufacturer",
+          "stainless steel jewelry manufacturer",
+          "316L stainless steel jewelry supplier",
+          "brass jewelry manufacturer",
+          "sterling silver jewelry manufacturer",
+          "925 silver jewelry wholesale",
+          "PVD plated jewelry manufacturer",
+          "gold plated stainless steel jewelry wholesale",
+          "rose gold jewelry manufacturer",
+          "stainless steel jewelry factory",
+          "nickel free jewelry manufacturer",
+          "jewelry manufacturer for ecommerce brands",
+          "jewelry supplier for DTC brands",
+          "jewelry manufacturer for shopify brands",
+          "wholesale jewelry supplier for online stores",
+          "B2B jewelry manufacturer",
+          "jewelry manufacturer for retailers",
+          "jewelry supplier for amazon sellers",
+          "premium jewelry manufacturer",
+          "high quality jewelry factory",
+          "reliable jewelry manufacturer",
+          "jewelry manufacturer quality control",
+          "best jewelry manufacturer for brands",
+          "luxury stainless steel jewelry manufacturer",
+          "consistent jewelry manufacturing supplier"
+        ],
+        "eligible_terms": [],
+        "missing_facts": [
+          "brand_affiliation",
+          "brass",
+          "china_manufacturing",
+          "dongguan_manufacturing",
+          "durability",
+          "gold_plating",
+          "hypoallergenic",
+          "lifetime_warranty",
+          "manufacturing_summary",
+          "nickel_free",
+          "organization_name",
+          "pvd",
+          "quality_evidence",
+          "rose_gold",
+          "silver",
+          "stainless_steel",
+          "steel_316l",
+          "sterling_925",
+          "surgical_steel",
+          "tarnish_free",
+          "waterproof",
+          "wholesale"
+        ],
+        "page_review": null,
+        "suggested_title": null,
+        "suggested_description": null,
+        "outline": [
+          "Answer the reviewed buyer problem",
+          "Explain confirmed scope and limits",
+          "Show first-hand process and quality evidence",
+          "Explain confirmed sampling and production conditions",
+          "State what a brand should provide to request a quote"
+        ],
+        "evidence": [],
+        "confirmed_facts": {},
+        "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+      }
+    ],
+    "organization_schema": null,
+    "llms_txt": null,
+    "unknown_facts": [
+      "organization_name",
+      "manufacturing_summary",
+      "moq",
+      "sample_lead_time",
+      "production_lead_time",
+      "sales_email",
+      "phone",
+      "address",
+      "certifications",
+      "sampling_process",
+      "quality_evidence",
+      "china_manufacturing",
+      "dongguan_manufacturing",
+      "stainless_steel",
+      "steel_316l",
+      "brass",
+      "silver",
+      "sterling_925",
+      "pvd",
+      "gold_plating",
+      "rose_gold",
+      "waterproof",
+      "tarnish_free",
+      "lifetime_warranty",
+      "hypoallergenic",
+      "surgical_steel",
+      "nickel_free",
+      "durability",
+      "brand_affiliation",
+      "odm",
+      "white_label",
+      "wholesale"
+    ],
+    "note": "Planning packets are not publication approval. Validate schema against visible confirmed facts; llms.txt is optional and is not a Google Search requirement."
+  },
+  "followups": [],
+  "alerts": [
+    {
+      "id": "search-stale",
+      "severity": "critical",
+      "message": "Search evidence is stale or unavailable.",
+      "next_action": "Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.",
+      "owner": "Account owner"
+    },
+    {
+      "id": "crawl-blockers",
+      "severity": "critical",
+      "message": "Live page or coverage blockers need review.",
+      "next_action": "Identify the serving CMS/repo and repair approved destinations; verify in a browser.",
+      "owner": "Website owner"
+    },
+    {
+      "id": "lab-stale",
+      "severity": "warning",
+      "message": "Lighthouse lab evidence is stale or unavailable.",
+      "next_action": "Review runner access and approved URL targets before a manual lab check.",
+      "owner": "Technical maintainer"
+    },
+    {
+      "id": "browser-check",
+      "severity": "warning",
+      "message": "Rendered-page checks are missing, stale or have findings.",
+      "next_action": "Run the bounded browser smoke check; inspect raw and visible demo strings.",
+      "owner": "Website owner"
+    },
+    {
+      "id": "term-review",
+      "severity": "warning",
+      "message": "50 target terms need intent review or confirmed facts.",
+      "next_action": "Review grouped page briefs; approve only evidence-backed destinations.",
+      "owner": "SEO lead and operations owner"
+    },
+    {
+      "id": "publication-log",
+      "severity": "info",
+      "message": "No publication records are available for follow-up.",
+      "next_action": "After a human publish, verify the URL, log the actual date, export and dry-run the reviewed import.",
+      "owner": "Publisher"
+    }
+  ],
+  "drift": {
+    "findings": [],
+    "note": "No baseline supplied. Capture the observed pre-change state before a human publish."
+  },
+  "opportunities": [],
+  "publication_ready": false,
+  "note": "This workspace measures, briefs and checks. A person approves and publishes."
+}

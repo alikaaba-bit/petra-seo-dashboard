@@ -26,6 +26,8 @@ const safePath = (path) =>
   !/[\\\s]/.test(path);
 let data, editorial, inventory, activePage;
 let performanceData = { reports: [] };
+let crawlAttempt = {};
+let workspaceData = {}, performanceAttempt = {};
 let local = { changes: [], tasks: {}, leads: [] };
 try {
   local = {
@@ -38,7 +40,9 @@ try {
 if (!Array.isArray(local.changes)) local.changes = [];
 if (!Array.isArray(local.leads)) local.leads = [];
 if (!local.tasks || typeof local.tasks !== "object") local.tasks = {};
+if (!local.review || typeof local.review !== "object") local.review = {};
 const views = {
+  workflow: ["Review, publish, learn.", "Confirm facts and intent, prepare a focused page, and track the next evidence check."],
   overview: [
     "A clearer path to growth.",
     "Search performance, useful next steps, and the evidence behind them.",
@@ -107,7 +111,69 @@ function pageButton(p) {
 function table(headers, rows) {
   return `<div class="table-wrap"><table><thead><tr>${headers.map((h) => `<th scope="col">${esc(h)}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
 }
+function pagePath(url) {
+  const u = new URL(url);
+  return u.pathname + u.search + u.hash;
+}
+function latestCrawl() {
+  const attemptTime = Date.parse(crawlAttempt.attempted_at),
+    inventoryTime = Date.parse(inventory.generated_at);
+  if (Number.isFinite(attemptTime) && (!Number.isFinite(inventoryTime) || attemptTime >= inventoryTime))
+    return { ...crawlAttempt, generated_at: crawlAttempt.attempted_at, gate: true };
+  return { ...inventory, gate: false };
+}
+function routeCollisions(urls) {
+  const groups = new Map();
+  for (const value of urls) {
+    const u = new URL(value), full = u.href;
+    u.hash = "";
+    if (!groups.has(u.href)) groups.set(u.href, new Set());
+    groups.get(u.href).add(full);
+  }
+  return [...groups].filter(([, urls]) => urls.size > 1)
+    .map(([request_url, urls]) => ({ request_url, urls: [...urls] }));
+}
+function auditReady(p) {
+  const a = p.audit || {};
+  return !new URL(p.url).hash && a.crawl_status === "checked" && a.http_status === 200 &&
+    new URL(a.final_url || p.url).href === new URL(p.url).href &&
+    !(a.issues || []).some((i) => /^(Template placeholder|Noindex)/.test(i));
+}
 function normalize(raw) {
+  const result = { ...normalizeSnapshot(raw) }, crawl = latestCrawl(),
+    audits = new Map((crawl.pages || []).map((p) => [new URL(p.url).href, p]));
+  result.pages = result.pages.map((p) => ({ ...p, path: pagePath(p.url), audit: { ...p.audit }, brief: { ...p.brief } }));
+  for (const [url, audit] of audits) {
+    if (result.pages.some((p) => new URL(p.url).href === url)) continue;
+    const topic = editorial.topics.find((t) => t.page === pagePath(url));
+    result.pages.push({
+      url, path: pagePath(url), audit, current: { clicks: null, impressions: null, ctr: null, position: null },
+      previous: {}, queries: [], topic: topic?.topic || "Unassigned", intent: topic?.intent || "Needs review",
+      business_value: topic?.business_value || 1, priority_score: 0, confidence: "Crawl only", index_status: "Not inspected",
+      evidence: ["Discovered in the content crawl; not present in the saved search snapshot."],
+      actions: ["Review page purpose and crawl findings before drafting."], brief: {},
+    });
+  }
+  for (const p of result.pages) {
+    if (crawl.generated_at)
+      p.audit = audits.get(new URL(p.url).href) || { crawl_status: "not_checked", issues: ["Not checked in the latest crawl; current content is unknown."] };
+    if (!auditReady(p) || !p.brief.note) {
+      p.brief = { status: "blocked", internal_links: [], buyer_questions: [], query_review: [],
+        note: new URL(p.url).hash
+          ? "Brief on hold. This fragment route shares an HTTP document. Review the rendered route and choose its intended crawlable destination."
+          : "Brief on hold. Resolve crawl or website blockers and verify this exact URL before preparing a new draft." };
+    }
+  }
+  for (const p of result.pages)
+    p.brief.internal_links = (p.brief.internal_links || []).filter((link) =>
+      result.pages.some((source) => source.path === link.source && auditReady(source)));
+  result.url_collisions = routeCollisions([
+    ...result.pages.map((p) => p.url),
+    ...(crawl.pages || []).flatMap((p) => p.fragment_links || []),
+  ]);
+  return result;
+}
+function normalizeSnapshot(raw) {
   if (raw.schema_version === 2) return raw;
   const m = raw.overall_metrics || {},
     oldPages = raw.top_pages || [];
@@ -238,7 +304,7 @@ function overview() {
     ),
     count = leads.length ? leads.reduce((s, r) => s + r.enquiries, 0) : null,
     issues = data.pages.reduce((n, p) => n + (p.audit.issues?.length || 0), 0);
-  return `<div class="metrics">${metric("Organic clicks", num(m.clicks), delta(m.clicks, prev?.clicks))}${metric("Search impressions", num(m.impressions), delta(m.impressions, prev?.impressions))}${metric("Click-through rate", pct(m.ctr), "Clicks ÷ impressions")}${metric("Organic enquiries", num(count), count == null ? "Not connected · Add counts in Results" : "Manually recorded · matching date range")}</div><div class="layout"><div>${panel("Search visibility", chart(), "Daily impressions · current period", badge(`${data.period.days} days`, "gray"))}${panel("Where to focus next", priorityList(data.pages.slice(0, 4)), "Review these pages before expanding the content calendar.", '<a href="#priorities">All priorities ↗</a>')}</div><div>${panel("From search to enquiry", '<div class="flow"><span>Discover</span>→<span>Improve</span>→<span>Publish</span>→<span>Measure</span></div><div class="insight"><h3>One page. One useful change.</h3><p>Open a page brief, review buyer questions, and log the date when the change goes live.</p></div><p class="chart-caption">Before/after changes are observations. Demand, seasonality and other changes can affect results.</p><a href="#results" class="secondary">Track a change</a>')}${panel("Website checks", `<div class="big-number">${issues}</div><p class="chart-caption">Findings across ${inventory.pages?.length || 0} crawled pages. Findings need review; this is not a Google ranking score.</p><a href="#health" class="text-button">Review site health ↗</a>`)}${panel("Data you can trust", '<div class="issue">Exact query matching for tracked terms after refresh.</div><div class="issue">No query data does not mean a page never ranks.</div><div class="issue">Low sample sizes stay visible in recommendations.</div>')}</div></div>`;
+  return `<div class="metrics">${metric("Organic clicks", num(m.clicks), delta(m.clicks, prev?.clicks))}${metric("Search impressions", num(m.impressions), delta(m.impressions, prev?.impressions))}${metric("Click-through rate", pct(m.ctr), "Clicks ÷ impressions")}${metric("Organic enquiries", num(count), count == null ? "Not connected · Add counts in Results" : "Manually recorded · matching date range")}</div><div class="layout"><div>${panel("Search visibility", chart(), "Daily impressions · current period", badge(`${data.period.days} days`, "gray"))}${panel("Where to focus next", priorityList(data.pages.slice(0, 4)), "Review these pages before expanding the content calendar.", '<a href="#priorities">All priorities ↗</a>')}</div><div>${panel("From search to enquiry", '<div class="flow"><span>Discover</span>→<span>Improve</span>→<span>Publish</span>→<span>Measure</span></div><div class="insight"><h3>One page. One useful change.</h3><p>Open a page brief, review buyer questions, and log the date when the change goes live.</p></div><p class="chart-caption">Before/after changes are observations. Demand, seasonality and other changes can affect results.</p><a href="#results" class="secondary">Track a change</a>')}${panel("Website checks", `${crawlSummary()}<div class="big-number">${issues}</div><p class="chart-caption">Findings across ${data.pages.length} known URLs; ${latestCrawl().pages?.length || 0} crawl records are available. Unexamined pages stay flagged. Findings need review; this is not a Google ranking score.</p><a href="#health" class="text-button">Review site health ↗</a>`)}${panel("Data you can trust", '<div class="issue">Exact query matching for tracked terms after refresh.</div><div class="issue">No query data does not mean a page never ranks.</div><div class="issue">Low sample sizes stay visible in recommendations.</div>')}</div></div>`;
 }
 function priorities() {
   return panel(
@@ -282,7 +348,7 @@ function topics() {
       .filter((p) => p.topic === "Unassigned")
       .map((p) => `<div class="issue">${pageButton(p)}</div>`)
       .join("") || empty("All pages have an assigned topic."),
-  )}</div><div>${panel("Possible query overlap", data.overlap_candidates.length ? data.overlap_candidates.map((o) => `<div class="topic-card"><h3>${esc(o.query)}</h3>${o.pages.map((p) => `<p>${esc(new URL(p.url).pathname)} · ${num(p.impressions)} impressions</p>`).join("")}<p class="muted">${esc(o.verdict)}</p></div>`).join("") : empty(data.legacy ? "Needs query + page data from a successful refresh." : "No candidates met the review threshold in this period."))}${panel("Before creating a page", '<ol class="number-list"><li>Check the actual query and buyer intent.</li><li>Review whether an existing page already answers it.</li><li>Improve that page or give the new one a distinct purpose.</li><li>Use original company evidence and verified facts.</li></ol>')}</div></div>`;
+  )}</div><div>${panel("Possible query overlap", data.overlap_candidates.length ? data.overlap_candidates.map((o) => `<div class="topic-card"><h3>${esc(o.query)}</h3>${o.pages.map((p) => `<p>${esc(pagePath(p.url))} · ${num(p.impressions)} impressions</p>`).join("")}<p class="muted">${esc(o.verdict)}</p></div>`).join("") : empty(data.legacy ? "Needs query + page data from a successful refresh." : "No candidates met the review threshold in this period."))}${panel("Before creating a page", '<ol class="number-list"><li>Check the actual query and buyer intent.</li><li>Review whether an existing page already answers it.</li><li>Improve that page or give the new one a distinct purpose.</li><li>Use original company evidence and verified facts.</li></ol>')}</div></div>`;
 }
 function allChanges() {
   return [
@@ -301,12 +367,12 @@ function pageOptions() {
 }
 function results() {
   const changes = allChanges();
-  return `<div class="layout"><div>${panel("Log a published change", `<form id="change-form" class="form-grid"><label>Page<select name="page" required>${pageOptions()}</select></label><label>Published date<input name="published_at" type="date" max="${new Date().toISOString().slice(0, 10)}" required></label><label class="full">What changed?<textarea name="summary" maxlength="1200" placeholder="Example: clarified sampling steps and added quality-control photos." required></textarea></label><label>Change type<select name="type"><option>Content update</option><option>Title / description</option><option>Internal links</option><option>Technical fix</option></select></label><label>Owner<input name="owner" maxlength="100" placeholder="Optional"></label><div class="full"><button class="primary">Save change</button></div></form><p class="content-status">Saved in this browser. Export a backup to keep your work. Automatic follow-ups require syncing exported changes to data/editorial.json and refreshing the pipeline.</p>`)}${panel(
+  return `<div class="layout"><div>${panel("Log a published change", `<form id="change-form" class="form-grid"><label>Page<select name="page" required>${pageOptions()}</select></label><label>Published date<input name="published_at" type="date" max="${new Date().toISOString().slice(0, 10)}" required></label><label class="full">What changed?<textarea name="summary" maxlength="1200" placeholder="Example: clarified sampling steps and added quality-control photos." required></textarea></label><label>Change type<select name="type"><option>Content update</option><option>Title / description</option><option>Internal links</option><option>Technical fix</option></select></label><label>Hypothesis<input name="hypothesis" maxlength="1200" required></label><label>Public verification URL<input name="evidence_url" type="url" required></label><label>Verified live on<input name="verified_at" type="date" max="${new Date().toISOString().slice(0, 10)}" required></label><label class="full"><span><input name="publication_confirmed" type="checkbox" required> A person published this change and I verified the live destination.</span></label><div class="full"><button class="primary">Save change</button></div></form><p class="content-status">Saved in this browser. Export a backup to keep your work. Automatic follow-ups require syncing exported changes to data/editorial.json and refreshing the pipeline.</p>`)}${panel(
     "Published changes",
     changes.length
       ? changes
           .map((c) => {
-            const r = data.change_results.find((r) => r.change.id === c.id);
+            const r = data.change_results.find((r) => r.change.id === c.id && r.change.page === c.page && r.change.published_at === c.published_at);
             return `<article class="topic-card"><h3>${esc(c.summary)}</h3><p>${esc(c.page)} · ${esc(c.published_at)}</p>${r?.windows ? r.windows.map((w) => `<div class="issue">${w.days} days: ${esc(w.status)}${w.before ? `<br>Clicks ${num(w.before.clicks)} → ${num(w.after.clicks)} · impressions ${num(w.before.impressions)} → ${num(w.after.impressions)}` : ` · through ${esc(w.ready_on)}`}</div>`).join("") : badge("Export + sync to calculate follow-ups", "amber")}</article>`;
           })
           .join("")
@@ -330,13 +396,13 @@ function results() {
   )}${panel("Keep your work", '<div class="toolbar"><button class="secondary" id="export-work">Export workspace</button><label class="secondary">Import backup<input id="import-work" type="file" accept="application/json" hidden></label></div><p class="chart-caption">Backups include changes, task statuses and aggregate enquiries. Matching record IDs are updated on import.</p>')}${panel("How results are measured", '<div class="issue">28- and 56-day windows compare equal periods before and after publication.</div><div class="issue">Fewer than 20 clicks in either window is marked inconclusive.</div><div class="issue">No causal lift or revenue claim is made from a before/after comparison.</div>')}</div></div>`;
 }
 function health() {
-  const pages = data.pages.filter((p) => p.audit.issues?.length);
+  const pages = data.pages.filter((p) => p.audit.issues?.length), crawl = latestCrawl();
   return panel(
     "Website findings",
-    `<p class="content-status">Content crawl: ${esc(inventory.generated_at?.slice(0, 10) || "not run")}. Index inspection is separate from crawlability.</p>${(inventory.warnings || []).map((w) => `<div class="callout">${esc(w)}</div>`).join("")}${
+    `${crawlSummary()}<p class="content-status">Saved inventory: ${esc(inventory.generated_at?.slice(0, 10) || "not available")}. Failed attempts preserve this file; the findings below reflect the latest attempt. Index inspection uses the saved search snapshot (${esc(data.generated_at?.slice(0, 10) || "unknown")}); it is separate from crawlability.</p>${[...(crawl.blockers || []), ...(crawl.warnings || [])].map((w) => `<div class="callout">${esc(w)}</div>`).join("")}${data.url_collisions.length ? `<div class="callout">URL variants share an HTTP document. Review routing before selecting destinations; no automatic merge, redirect or canonical change.</div>${data.url_collisions.map((c) => `<div class="issue">${c.urls.map(esc).join("<br>")}</div>`).join("")}` : ""}${
       pages.length
         ? table(
-            ["Page", "Findings", "Index status"],
+            ["Page", "Findings", "Index status · saved"],
             pages.map((p) => [
               pageButton(p),
               p.audit.issues
@@ -350,6 +416,11 @@ function health() {
           )
     }<details><summary>What this checks</summary><p>HTTP status, same-site redirects, metadata, headings, canonicals, noindex, known template leftovers, duplicate metadata, and broken links to crawled pages. It does not replace a full security, accessibility, backlink, or Core Web Vitals audit.</p></details>`,
   );
+}
+function crawlSummary() {
+  const crawl = latestCrawl(), date = crawl.generated_at?.slice(0, 10) || "not run",
+    stale = !Number.isFinite(Date.parse(crawl.generated_at)) || Date.now() - Date.parse(crawl.generated_at) > 3 * 86400000;
+  return `<div class="callout">${crawl.gate ? `Check: ${esc(crawl.status)} · ${num(crawl.coverage?.html_ok)} of ${num(crawl.coverage?.recorded)} records are successful HTML responses.` : "Health gate has not run for this inventory; no passing result is assumed."}<br>Latest crawl: ${esc(date)}${stale ? " · stale" : ""}. Search and Lighthouse dates are tracked separately.</div>`;
 }
 function queryTable(rows) {
   return rows.length
@@ -394,10 +465,14 @@ function showPage(path) {
   const p = data.pages.find((p) => p.path === path);
   if (!p) return;
   activePage = p;
-  const b = p.brief || {},
-    a = p.audit || {};
+  const packet = workspaceData.draft_pack?.packets?.find(r => r.page === p.path);
+  const b = currentPack() && packet?.status === 'draft_for_human_review' && auditReady(p)
+    ? {...p.brief, status:'draft', suggested_title:packet.suggested_title, suggested_h1:packet.topic, note:packet.measurement}
+    : {status:'blocked', note:'Brief on hold. Review current crawl evidence, facts and search intent in Weekly review.', internal_links:[]};
+  const a = p.audit || {};
+  activePage = {...p, brief:b};
   $("#page-detail").innerHTML =
-    `<h2 id="detail-title">${esc(label(p.path))}</h2><p><a class="text-button" href="${esc(p.url)}" target="_blank" rel="noopener">View website page ↗</a></p><div class="row-meta">${badge(p.confidence, "amber")}${badge(p.intent, "gray")}${badge(p.index_status, "gray")}</div><div class="metrics">${metric("Impressions", num(p.current.impressions))}${metric("Clicks", num(p.current.clicks))}${metric("Average position", num(p.current.position))}${metric("CTR", pct(p.current.ctr))}</div>${data.legacy ? '<div class="callout">These page metrics use the legacy snapshot’s longer window, not the overview period.</div>' : ""}${panel("Why this page", p.evidence.map((e) => `<div class="issue">${esc(e)}</div>`).join(""))}${panel("Content brief", `<div class="fact-grid"><div class="fact"><small>Suggested title · draft</small>${esc(b.suggested_title || "Review intent before selecting a title")}</div><div class="fact"><small>Suggested H1 · draft</small>${esc(b.suggested_h1 || "Review query evidence first")}</div></div><h3 style="margin-top:22px">Buyer questions to review</h3><ul class="number-list">${(b.buyer_questions || []).map((q) => `<li>${esc(q)}</li>`).join("")}</ul>${b.query_review?.length ? `<h3>Queries to check against body content</h3><p class="chart-caption">${b.query_review.map(esc).join(" · ")}</p>` : ""}<div class="callout">${esc(b.note)}</div><button class="secondary" id="download-brief">Download brief</button>`)}${panel("Queries bringing this page into search", p.queries.length ? queryTable(p.queries) : empty("No query-to-page rows available. This does not prove the page has no visibility."))}${panel(
+    `<h2 id="detail-title">${esc(label(p.path))}</h2><p><a class="text-button" href="${esc(p.url)}" target="_blank" rel="noopener">View website page ↗</a></p><div class="row-meta">${badge(p.confidence, "amber")}${badge(p.intent, "gray")}${badge(p.index_status, "gray")}</div><div class="metrics">${metric("Impressions", num(p.current.impressions))}${metric("Clicks", num(p.current.clicks))}${metric("Average position", num(p.current.position))}${metric("CTR", pct(p.current.ctr))}</div>${data.legacy ? '<div class="callout">These page metrics use the legacy snapshot’s longer window, not the overview period.</div>' : ""}${panel("Why this page", p.evidence.map((e) => `<div class="issue">${esc(e)}</div>`).join(""), `Saved prioritization: ${data.generated_at?.slice(0, 10) || "unknown"}. See current crawl checks below.`)}${panel("Content brief", b.status === "blocked" ? `<div class="callout">${esc(b.note)}</div>` : `<div class="fact-grid"><div class="fact"><small>Suggested title · draft</small>${esc(b.suggested_title || "Review intent before selecting a title")}</div><div class="fact"><small>Suggested H1 · draft</small>${esc(b.suggested_h1 || "Review query evidence first")}</div></div><h3 style="margin-top:22px">Buyer questions to review</h3><ul class="number-list">${(b.buyer_questions || []).map((q) => `<li>${esc(q)}</li>`).join("")}</ul>${b.query_review?.length ? `<h3>Queries to check against body content</h3><p class="chart-caption">${b.query_review.map(esc).join(" · ")}</p>` : ""}<div class="callout">${esc(b.note)}</div><button class="secondary" id="download-brief">Download brief</button>`)}${panel("Queries bringing this page into search", p.queries.length ? queryTable(p.queries) : empty("No query-to-page rows available. This does not prove the page has no visibility."))}${panel(
       "Internal-link suggestions",
       b.internal_links?.length
         ? table(
@@ -417,6 +492,7 @@ function showPage(path) {
 function labHealth() {
   return (
     health() +
+    (performanceAttempt.attempted_at ? panel("Latest lab attempt", `<p>${esc(performanceAttempt.attempted_at)} · ${esc(performanceAttempt.status)}</p>${(performanceAttempt.failures || []).map(f=>`<div class="issue">${esc(f)}</div>`).join("")}<p>Failed attempts preserve earlier scores below.</p>`) : "") +
     panel(
       "Mobile lab checks",
       performanceData.reports?.length
@@ -427,7 +503,8 @@ function labHealth() {
               num(r.scores.performance),
               num(r.scores.accessibility),
               num(r.scores.seo),
-              esc(r.fetched_at?.slice(0, 10)),
+              esc((r.fetched_at?.slice(0, 10) || "unknown") +
+                (!Number.isFinite(Date.parse(r.fetched_at)) || Date.now() - Date.parse(r.fetched_at) > 8 * 86400000 ? " · stale" : "")),
             ]),
           )
         : empty(
@@ -455,8 +532,127 @@ function render() {
     results,
     health: labHealth,
     keywords,
+    workflow: weeklyReview,
   }[view]();
 }
+function reviewRecords(section) {
+  return { ...(editorial[section] || {}), ...(local.review?.[section] || {}) };
+}
+function workspaceBackup() {
+  return { version: 2, changes: allChanges(), tasks: local.tasks, leads: local.leads,
+    review: Object.fromEntries(['fact_reviews', 'term_reviews', 'page_reviews'].map(s => [s, reviewRecords(s)])) };
+}
+function stableRecord(value) {
+  if (Array.isArray(value)) return value.map(stableRecord);
+  if (value && typeof value === 'object') return Object.fromEntries(Object.keys(value).sort().map(k => [k, stableRecord(value[k])]));
+  return value;
+}
+function sameReview(section, key, a, b) {
+  try { return JSON.stringify(stableRecord(validateReview(section,key,a))) === JSON.stringify(stableRecord(validateReview(section,key,b))); }
+  catch { return false; }
+}
+function pendingReviews() {
+  return ['fact_reviews', 'term_reviews', 'page_reviews'].some(s =>
+    Object.entries(local.review?.[s] || {}).some(([k, v]) => !sameReview(s, k, v, editorial[s]?.[k])));
+}
+function currentPack() {
+  const crawlAt = latestCrawl().generated_at;
+  return workspaceData.generated_at && !pendingReviews() &&
+    workspaceData.sources?.crawl === crawlAt && Date.now() - Date.parse(crawlAt) < 3 * 86400000;
+}
+function publicReference(value) {
+  try {
+    const u = new URL(value), host = u.hostname;
+    return u.protocol === 'https:' && !u.username && !u.password && !u.search &&
+      !/[\s\\]/.test(value) && (!u.port || u.port === '443') && host.includes('.') &&
+      !/^[\d.]+$/.test(host) && !host.includes(':') && !/(^|\.)(localhost|local|internal)$/.test(host);
+  } catch { return false; }
+}
+function canonicalDestination(value) {
+  try { const decoded = decodeURIComponent(value); return safePath(decoded) && !/[?#]/.test(decoded) && !decoded.split('/').some(s => s === '.' || s === '..'); }
+  catch { return false; }
+}
+function reviewDate(value) {
+  if (!validDate(value) || value > new Date().toISOString().slice(0, 10)) throw Error('Use a valid review date, not in the future.');
+  return value;
+}
+function requiredText(value, field, max = 1600) {
+  if (typeof value !== 'string' || !value.trim() || value.length > max || /[\x00-\x08\x0b-\x1f]/.test(value)) throw Error(`Check ${field}.`);
+  return value.trim();
+}
+function validateReview(section, key, record) {
+  if (!record || typeof record !== 'object') throw Error('Invalid review record.');
+  if (section === 'fact_reviews') {
+    if (!Object.hasOwn(workspaceData.fact_fields || {}, key)) throw Error('Unknown fact field. Build the weekly workspace first.');
+    if (record.status === 'unknown') return { status: 'unknown', value: null };
+    if (record.status !== 'confirmed') throw Error('Choose a fact status.');
+  }
+  if (section === 'term_reviews') {
+    if (!(workspaceData.terms || []).some(t => t.keyword === key)) throw Error('Unknown target term.');
+    if (!['approved', 'hold', 'needs_review'].includes(record.status)) throw Error('Choose a term status.');
+    if (record.status !== 'approved') return { status: record.status, reason: requiredText(record.reason, 'review reason') };
+    const s = record.serp || {};
+    if (!Array.isArray(s.urls) || s.urls.length < 1 || s.urls.length > 5 || !s.urls.every(publicReference)) throw Error('Add 1–5 public SERP result URLs without query tokens.');
+    if (!canonicalDestination(record.approved_page)) throw Error('Use a same-site destination without a hash or query.');
+    if (!['commercial', 'informational'].includes(record.intent) || !['supplier_landing', 'comparison', 'guide'].includes(record.page_type) || s.page_type !== record.page_type || (record.intent === 'informational') !== (record.page_type === 'guide')) throw Error('Match the page type to reviewed intent.');
+    if (!['desktop', 'mobile'].includes(s.device)) throw Error('Record the SERP device.');
+    return { status: 'approved', reason: requiredText(record.reason, 'reason'), approved_page: record.approved_page,
+      intent: record.intent, page_type: record.page_type, reviewer: requiredText(record.reviewer, 'reviewer', 100), reviewed_at: reviewDate(record.reviewed_at),
+      serp: {urls: s.urls, checked_at: reviewDate(s.checked_at), market: requiredText(s.market, 'market', 100), device: s.device, page_type: s.page_type} };
+  }
+  if (record.public_safe !== true || !publicReference(record.source_url)) throw Error('Confirm public-safe evidence and add its public HTTPS URL without query tokens.');
+  const shared = { source_url: record.source_url, public_safe: true, reviewer: requiredText(record.reviewer, 'reviewer'), reviewed_at: reviewDate(record.reviewed_at) };
+  if (section === 'fact_reviews') {
+    const clean = { ...shared, status: 'confirmed', value: requiredText(record.value, 'fact value') };
+    if ((workspaceData.capability_fields || []).includes(key)) {
+      if (typeof record.supported !== 'boolean') throw Error('Explicitly confirm whether the capability is supported.');
+      clean.supported = record.supported;
+    }
+    if (key === 'sales_email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean.value)) throw Error('Check the public sales email.');
+    return clean;
+  }
+  if (section !== 'page_reviews' || !canonicalDestination(key)) throw Error('Invalid page-review destination.');
+  return { ...shared, buyer_problem: requiredText(record.buyer_problem, 'buyer problem'), first_hand_evidence: requiredText(record.first_hand_evidence, 'first-hand evidence'),
+    hypothesis: requiredText(record.hypothesis, 'hypothesis'), working_title: requiredText(record.working_title, 'working title', 200) };
+}
+function reviewInput(name, title, type = 'text', required = false) {
+  return `<label>${esc(title)}<input name="${name}" type="${type}" ${required ? 'required' : ''} maxlength="1600"></label>`;
+}
+function evidenceFields() {
+  return `${reviewInput('source_url', 'Public evidence URL', 'url')}${reviewInput('reviewer', 'Reviewer role / public name')}${reviewInput('reviewed_at', 'Review date', 'date')}<label class="full"><span><input name="public_safe" type="checkbox"> This evidence and text are approved for public use.</span></label>`;
+}
+function reviewDateLabel(value) {
+  if (!value) return 'Unavailable';
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  const parsed = new Date(value);
+  return Number.isFinite(parsed.getTime()) ? parsed.toLocaleString(undefined, {year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'UTC',timeZoneName:'short'}) : 'Unavailable';
+}
+function weeklyReview() {
+  if (!workspaceData.generated_at) return panel('Build the weekly review', '<p>Run the offline workspace builder using the saved search data and latest crawl. This view never authenticates to GSC or publishes.</p><code>python scripts/seo_workspace.py --output-dir tmp/preview/data</code>');
+  const terms = workspaceData.terms || [], pack = workspaceData.draft_pack || {}, facts = reviewRecords('fact_reviews');
+  const alerts = (workspaceData.alerts || []).map(a => `<article class="topic-card">${badge(a.severity, a.severity === 'critical' ? 'red' : 'amber')}<h3>${esc(a.message)}</h3><p>${esc(a.next_action)}</p><p class="muted">${esc(a.owner)}</p></article>`).join('');
+  return panel('This week’s review', `<p>Generated ${esc(reviewDateLabel(workspaceData.generated_at))}. Source dates remain separate.</p><div class="fact-grid">${Object.entries(workspaceData.sources || {}).map(([k,v]) => `<div class="fact"><small>${esc(({search:'Search refresh',search_through:'Search data through',crawl:'Crawl check',lab:'Lighthouse lab',browser:'Rendered check'})[k] || k)}</small>${esc(reviewDateLabel(v))}</div>`).join('')}</div><div class="callout">${pendingReviews() ? 'Local reviews differ from the imported editorial file. Export, validate and rebuild before using a new draft packet.' : 'Review facts and intent, prepare a focused page, then let a person publish.'} ${currentPack() ? '' : 'Draft downloads are held until current crawl evidence and imported reviews match.'}</div><div class="toolbar"><button class="secondary" id="export-work">Export workspace</button><button class="secondary" id="download-pack" ${currentPack() ? '' : 'disabled'}>Download planning packet</button></div>${alerts}`) +
+    panel('Page packets', (pack.packets || []).map(p => `<article class="topic-card"><h3>${esc(p.page)}</h3>${badge(p.status, 'amber')}<p>${esc(p.topic)}</p>${p.blockers.map(b => `<div class="issue">${esc(b)}</div>`).join('')}<p>Unknown / unsupported: ${esc(p.missing_facts.join(', ') || 'None in this packet')}</p><p>${esc(p.terms.length)} target terms · ${esc(p.eligible_terms.length)} reviewed and fact-supported</p>${p.suggested_title ? `<p>Draft title: ${esc(p.suggested_title)}</p><p>${esc(p.suggested_description)}</p>` : ''}<details><summary>Planning outline and terms</summary><ol>${p.outline.map(s => `<li>${esc(s)}</li>`).join('')}</ol><p>${p.terms.map(esc).join(' · ')}</p></details></article>`).join(''), 'Grouped destinations are proposals. No page is published or marked complete automatically.') +
+    panel('Confirm public facts', `<p>Leave missing facts unknown. Capability evidence can confirm a limitation as well as support. Do not enter private documents, customer details or token-bearing links.</p><details><summary>Review a fact</summary><form id="fact-review-form" class="form-grid"><label>Fact<select name="key">${Object.entries(workspaceData.fact_fields || {}).map(([k,v])=>`<option value="${esc(k)}">${esc(v)}</option>`).join('')}</select></label><label>Status<select name="status"><option value="unknown">Unknown</option><option value="confirmed">Confirmed with evidence</option></select></label><label class="full">Confirmed value / limitations<textarea name="value" maxlength="1600"></textarea></label><label>Capability supported?<select name="supported"><option value="">Not a capability / not confirmed</option><option value="true">Yes, within the documented limits</option><option value="false">No</option></select></label>${evidenceFields()}<div class="full"><button class="secondary">Save local review</button></div></form></details>${table(['Fact', 'Status', 'Value'], Object.entries(workspaceData.fact_fields || {}).map(([k,v])=>[esc(v),esc(facts[k]?.status || 'unknown'),esc(facts[k]?.value || 'Unknown')]))}`) +
+    panel('Review search intent', `<details><summary>Assign a term after checking the SERP</summary><form id="term-review-form" class="form-grid"><label class="full">Target term<select name="key">${terms.map(t=>`<option>${esc(t.keyword)}</option>`).join('')}</select></label><label>Status<select name="status"><option value="needs_review">Needs review</option><option value="hold">Hold</option><option value="approved">Reviewed destination</option></select></label><label>Intent<select name="intent"><option value="commercial">Commercial</option><option value="informational">Informational</option></select></label><label>Observed page type<select name="page_type"><option value="supplier_landing">Supplier landing page</option><option value="comparison">Comparison</option><option value="guide">Guide</option></select></label>${reviewInput('approved_page','Approved destination, e.g. /private-label/')}${reviewInput('reason','Review reason')}${reviewInput('market','SERP market / location')}<label>Device<select name="device"><option>desktop</option><option>mobile</option></select></label>${reviewInput('checked_at','SERP checked date','date')}<label class="full">Result-page evidence URLs, one per line (1–5)<textarea name="urls" maxlength="10000"></textarea></label>${reviewInput('reviewer','Reviewer role / public name')}${reviewInput('reviewed_at','Review date','date')}<div class="full"><button class="secondary">Save local review</button></div></form></details>${table(['Term', 'Review status', 'Proposed / approved page', 'Facts to confirm'], terms.map(t=>{const r=reviewRecords('term_reviews')[t.keyword] || t;return [esc(t.keyword),esc(r.status),esc(r.approved_page || t.proposed_page),esc(t.missing_facts.join(', '))]}))}`) +
+    panel('First-hand page evidence', `<details><summary>Review a page’s purpose and proof</summary><form id="page-review-form" class="form-grid">${reviewInput('key','Canonical destination', 'text', true)}${reviewInput('working_title','Reviewed working title', 'text', true)}${reviewInput('buyer_problem','Buyer problem', 'text', true)}<label class="full">First-hand evidence to show<textarea name="first_hand_evidence" maxlength="1600" required></textarea></label>${reviewInput('hypothesis','What should improve and why?', 'text', true)}${evidenceFields()}<div class="full"><button class="secondary">Save local review</button></div></form></details>${Object.entries(reviewRecords('page_reviews')).map(([p,r])=>`<div class="issue">${esc(p)} · ${esc(r.working_title || r.buyer_problem)} · ${esc(r.reviewed_at)}</div>`).join('')}`, 'Use original process evidence. Facts in an old draft or live theme are not confirmations.') +
+    panel('Follow-ups and drift', `${(workspaceData.followups || []).length ? table(['Page', 'Window', 'Earliest check', 'Status'],workspaceData.followups.map(r=>[esc(r.page),`${r.days} days`,esc(r.earliest_check_on),esc(r.status)])) : empty('No published changes imported yet. Log the actual publication after a human publishes.')}<p>${esc(workspaceData.drift?.note)}</p>${(workspaceData.drift?.findings || []).map(f=>`<div class="issue">${esc(f.url)} · ${esc(f.field)} · ${esc(f.kind)} · ${esc(f.severity)}</div>`).join('')}`) +
+    panel('Opportunity candidates', (workspaceData.opportunities || []).length ? table(['Query','Page','Impressions','Position'],workspaceData.opportunities.map(q=>[esc(q.query),esc(q.page),num(q.impressions),num(q.position)])) : empty('No supported candidates in the saved search snapshot.'), `Saved GSC evidence: ${workspaceData.sources?.search || 'unknown'}. Stale evidence is a research lead, not a current performance claim.`);
+}
+function loadReviewForm(form) {
+  const section = {'fact-review-form':'fact_reviews','term-review-form':'term_reviews','page-review-form':'page_reviews'}[form.id];
+  const key = form.elements.key.value, record = reviewRecords(section)[key];
+  form.reset(); form.elements.key.value = key;
+  if (!record) return;
+  const fields = {...record, ...(record.serp || {}), urls: (record.serp?.urls || []).join('\n')};
+  for (const [name,value] of Object.entries(fields)) {
+    const el = form.elements.namedItem(name);
+    if (!el || value == null) continue;
+    if (el.type === 'checkbox') el.checked = value === true;
+    else el.value = String(value);
+  }
+}
+
 function mergeRecords(a, b) {
   return [...new Map([...a, ...b].map((r) => [r.id, r])).values()];
 }
@@ -517,7 +713,13 @@ function validateBackup(v) {
       )
     )
       tasks[path] = status;
-  return { ...v, tasks };
+  const review = {};
+  for (const section of ['fact_reviews', 'term_reviews', 'page_reviews']) {
+    const records = v.review?.[section] || {};
+    if (Array.isArray(records) || typeof records !== 'object' || Object.keys(records).length > 100) throw Error('Invalid review backup.');
+    review[section] = Object.fromEntries(Object.entries(records).map(([key,r]) => [key,validateReview(section,key,r)]));
+  }
+  return { ...v, tasks, review };
 }
 document.addEventListener("click", (event) => {
   const b = event.target.closest("[data-page]");
@@ -526,16 +728,15 @@ document.addEventListener("click", (event) => {
     $("#page-dialog").close();
     render();
   }
+  if (event.target.id === "download-pack") {
+    if (!currentPack()) return toast("Import reviews and rebuild against the latest crawl first.");
+    download("petra-draft-pack.json", JSON.stringify(workspaceData.draft_pack, null, 2));
+  }
   if (event.target.id === "export-work")
     download(
       "petra-workspace.json",
       JSON.stringify(
-        {
-          version: 2,
-          changes: allChanges(),
-          tasks: local.tasks,
-          leads: local.leads,
-        },
+        workspaceBackup(),
         null,
         2,
       ),
@@ -543,6 +744,7 @@ document.addEventListener("click", (event) => {
   if (event.target.id === "download-brief" && activePage) {
     const p = activePage,
       b = p.brief;
+    if (b.status === "blocked" || !currentPack()) return toast(b.note || "Rebuild the reviewed packet first.");
     download(
       `petra-${p.path.replace(/[^a-z0-9]/gi, "-")}-brief.md`,
       `# ${p.topic}\n\nPage: ${p.url}\nSnapshot: ${data.generated_at}\nConfidence: ${p.confidence}\n\n## Suggested title\n${b.suggested_title || "Review required"}\n\n## Suggested H1\n${b.suggested_h1 || "Review required"}\n\n## Buyer questions\n${b.buyer_questions.map((q) => "- " + q).join("\n")}\n\n## Query evidence\n${p.queries.map((q) => `- ${q.query}: ${q.impressions} impressions, ${q.clicks} clicks, position ${q.position}`).join("\n") || "Unavailable"}\n\n## Suggested internal links\n${b.internal_links.map((l) => `- ${l.source} → ${p.path}: ${l.anchor}`).join("\n") || "None supported yet"}\n\n${b.note}\n`,
@@ -582,6 +784,7 @@ document.addEventListener("input", (event) => {
   }
 });
 document.addEventListener("change", async (event) => {
+  if (event.target.name === 'key' && ['fact-review-form','term-review-form','page-review-form'].includes(event.target.form?.id)) loadReviewForm(event.target.form);
   if (event.target.id === "task-status" && activePage) {
     local.tasks[activePage.path] = event.target.value;
     save();
@@ -596,6 +799,7 @@ document.addEventListener("change", async (event) => {
       local.changes = mergeRecords(local.changes, v.changes);
       local.leads = mergedLeads;
       local.tasks = { ...local.tasks, ...v.tasks };
+      for (const section of Object.keys(v.review)) local.review[section] = { ...(local.review[section] || {}), ...v.review[section] };
       save();
       render();
       toast("Workspace imported.");
@@ -605,11 +809,27 @@ document.addEventListener("change", async (event) => {
   }
 });
 document.addEventListener("submit", (event) => {
+  const section = {'fact-review-form':'fact_reviews','term-review-form':'term_reviews','page-review-form':'page_reviews'}[event.target.id];
+  if (section) {
+    event.preventDefault();
+    try {
+      const v = Object.fromEntries(new FormData(event.target));
+      v.public_safe = v.public_safe === 'on';
+      v.supported = v.supported === 'true' ? true : v.supported === 'false' ? false : null;
+      if (section === 'term_reviews') v.serp = {urls: v.urls.split(/\n/).map(s=>s.trim()).filter(Boolean),checked_at:v.checked_at,market:v.market,device:v.device,page_type:v.page_type};
+      const clean = validateReview(section, v.key, v);
+      local.review[section] ||= {}; local.review[section][v.key] = clean;
+      save(); render(); toast('Review saved locally. Export, validate and rebuild to update draft packets.');
+    } catch (e) { toast(e.message); }
+    return;
+  }
   if (!["change-form", "lead-form"].includes(event.target.id)) return;
   event.preventDefault();
   const v = Object.fromEntries(new FormData(event.target));
   if (event.target.id === "change-form") {
     if (!v.summary.trim()) return toast("Describe the published change.");
+    if (!publicReference(v.evidence_url) || !validDate(v.verified_at) || v.verified_at < v.published_at || v.verified_at > new Date().toISOString().slice(0,10) || v.publication_confirmed !== 'on') return toast('Confirm the actual publication and a valid live verification date / public URL.');
+    delete v.publication_confirmed;
     local.changes.push({ id: crypto.randomUUID(), ...v });
   } else {
     v.enquiries = Number(v.enquiries);
@@ -653,15 +873,21 @@ async function loadJSON(path, optional = false) {
 }
 (async () => {
   try {
-    const [raw, ed, inv, perf] = await Promise.all([
+    const [raw, ed, inv, perf, attempt, workspace, labAttempt] = await Promise.all([
       loadJSON("data/latest.json"),
       loadJSON("data/editorial.json"),
       loadJSON("data/content.json", true),
       loadJSON("data/performance.json", true),
+      loadJSON("data/crawl-health.json", true),
+      loadJSON("data/workspace.json", true),
+      loadJSON("data/performance-health.json", true),
     ]);
     editorial = ed;
     inventory = inv;
     performanceData = perf;
+    crawlAttempt = attempt;
+    workspaceData = workspace;
+    performanceAttempt = labAttempt;
     data = normalize(raw);
     freshness();
     render();

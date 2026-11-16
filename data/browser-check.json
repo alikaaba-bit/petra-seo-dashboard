@@ -1,0 +1,30 @@
+{
+  "attempted_at": "2026-11-16T15:10:32.442814+00:00",
+  "status": "failed",
+  "pages": [
+    {
+      "requested_url": "https://petrajewelryfactory.com/",
+      "url": "https://petrajewelryfactory.com/",
+      "title": "Petra Jewelry | Custom and private label jewelry manufacturing",
+      "h1": [
+        "Custom and\nprivate label\njewelry\nmanufacturing."
+      ],
+      "raw_h1_count": 10,
+      "description": "Custom and private label jewelry manufacturing in stainless steel and sterling silver, for brands and retailers. Two factories in Dongguan, design studio in Shenzhen. Minimum orders start at 200 units. Request a quote.",
+      "canonical": "",
+      "visible_characters": 6047,
+      "raw_matches": [
+        "sophie moore",
+        "elliot ellington"
+      ],
+      "visible_matches": [],
+      "findings": [
+        "raw_matches: sophie moore",
+        "raw_matches: elliot ellington",
+        "Missing canonical"
+      ],
+      "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
+    }
+  ],
+  "scope": "Bounded rendered DOM smoke check; no forms submitted or site changes made"
+}

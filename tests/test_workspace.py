@@ -9,7 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import seo_workspace as workspace
-from seo_pipeline import SITE
+from seo_pipeline import SITE, crawl_health
 from update_data import ALL_KEYWORDS
 
 TODAY = date(2026, 11, 16)
@@ -171,6 +171,40 @@ class WorkspaceTests(unittest.TestCase):
         self.assertTrue(report['alerts'])
         self.assertEqual(report['opportunities'], [])
         self.assertFalse(report['publication_ready'])
+
+    def test_nonrequired_article_404_is_a_warning_and_its_draft_stays_blocked(self):
+        path = '/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/'
+        retired = checked(path)
+        retired.update(http_status=404, issues=['HTTP 404'])
+        pages = [checked('/'), retired]
+        for include_health in (True, False):
+            with self.subTest(include_health=include_health):
+                crawl = {'attempted_at': '2026-11-16T00:00:00Z', 'pages': pages}
+                if include_health:
+                    crawl.update(crawl_health(pages, [], [SITE]))
+                report = workspace.build_workspace({}, {}, crawl, {}, today=TODAY)
+                alerts = {a['id']: a for a in report['alerts']}
+                self.assertNotIn('crawl-blockers', alerts)
+                self.assertEqual(alerts['crawl-warnings']['severity'], 'warning')
+                packet = next(p for p in report['draft_pack']['packets'] if p['page'] == path)
+                self.assertNotEqual(packet['status'], 'draft_for_human_review')
+                self.assertTrue(any('crawl' in b.lower() for b in packet['blockers']))
+                self.assertFalse(report['publication_ready'])
+
+    def test_required_page_failure_and_optional_request_error_stay_critical(self):
+        core = checked('/')
+        core.update(http_status=404, issues=['HTTP 404'])
+        error = checked('/retired/')
+        error.update(crawl_status='error', issues=['Crawl failed: request failed'])
+        for pages in ([core], [checked('/'), error]):
+            for include_health in (True, False):
+                with self.subTest(pages=pages, include_health=include_health):
+                    crawl = {'attempted_at': '2026-11-16T00:00:00Z', 'pages': pages}
+                    if include_health:
+                        crawl.update(crawl_health(pages, [], [SITE]))
+                    report = workspace.build_workspace({}, {}, crawl, {}, today=TODAY)
+                    alerts = {a['id']: a for a in report['alerts']}
+                    self.assertEqual(alerts['crawl-blockers']['severity'], 'critical')
 
 
 if __name__ == '__main__':

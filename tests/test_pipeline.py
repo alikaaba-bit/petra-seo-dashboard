@@ -10,7 +10,7 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from seo_pipeline import period, metrics, fetch_rows, build_pages, overlap_candidates, PageHTML, safe_url, change_results, SITE, main
+from seo_pipeline import period, metrics, fetch_rows, build_pages, overlap_candidates, PageHTML, safe_url, change_results, SITE, main, request_page
 import update_data
 
 
@@ -19,6 +19,53 @@ def row(keys, impressions=100, clicks=5, position=10):
 
 
 class PipelineTests(unittest.TestCase):
+    def test_utf8_html_without_http_charset_ignores_requests_latin1_default(self):
+        import requests
+        html = '<meta charset="UTF-8"><title>Let’s create — Pavé</title><h1>Pavé jewelry</h1>'
+        response = requests.Response()
+        response.status_code = 200
+        response.headers['Content-Type'] = 'text/html'
+        response.encoding = requests.utils.get_encoding_from_headers(response.headers)
+        self.assertEqual(response.encoding, 'ISO-8859-1')
+        response.raw = io.BytesIO(html.encode('utf-8'))
+        session = MagicMock()
+        session.get.return_value = response
+        status, body, url, headers = request_page(session, SITE)
+        self.assertEqual(body, html)
+        self.assertEqual((status, url, headers['Content-Type']), (200, SITE, 'text/html'))
+        parsed = PageHTML(url)
+        parsed.feed(body)
+        self.assertEqual(parsed.title, 'Let’s create — Pavé')
+        self.assertEqual(parsed.headings[0]['text'], 'Pavé jewelry')
+
+    def test_crawl_decoding_honors_bom_explicit_header_and_meta_before_fallback(self):
+        cases = [
+            ('utf8-bom', '<title>Pavé — jewelry</title>'.encode('utf-8-sig'), 'text/html; charset=iso-8859-1', 'Pavé — jewelry'),
+            ('utf16-bom', '<title>Pavé — jewelry</title>'.encode('utf-16'), 'text/html; charset=utf-8', 'Pavé — jewelry'),
+            ('explicit-header', '<meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('cp1252'), 'text/html; charset="windows-1252"', 'Pavé — jewelry'),
+            ('legacy-meta', '<meta content="text/html; charset=windows-1252" http-equiv="Content-Type"><title>Pavé — jewelry</title>'.encode('cp1252'), 'text/html', 'Pavé — jewelry'),
+            ('utf8-fallback', '<title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html', 'Pavé — jewelry'),
+            ('invalid-header', '<meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html; charset=invalid-codec', 'Pavé — jewelry'),
+            ('nul-header', '<meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html; charset="utf-8\0"', 'Pavé — jewelry'),
+            ('nul-meta', '<meta charset="utf-8\0"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html', 'Pavé — jewelry'),
+            ('comment-not-meta', '<!-- <meta charset="windows-1252"> --><meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html', 'Pavé — jewelry'),
+        ]
+        for name, payload, content_type, expected in cases:
+            with self.subTest(name=name):
+                response = MagicMock(status_code=200, headers={'Content-Type': content_type}, encoding='ISO-8859-1')
+                response.iter_content.return_value = [payload[:7], payload[7:]]
+                session = MagicMock()
+                session.get.return_value.__enter__.return_value = response
+                _, body, _, _ = request_page(session, SITE)
+                parsed = PageHTML(SITE)
+                parsed.feed(body)
+                self.assertEqual(parsed.title, expected)
+
+    def test_malformed_encoding_prescan_does_not_break_utf8_fallback(self):
+        from seo_pipeline import decode_response_body
+        html = '<![not-a-valid-section]><p>Pavé — jewelry</p>'
+        self.assertEqual(decode_response_body(html.encode('utf-8'), {'Content-Type': 'text/html'}), html)
+
     def test_inclusive_periods_do_not_overlap(self):
         current = period(28, date(2026, 9, 4))
         previous = period(28, date(2026, 8, 7))

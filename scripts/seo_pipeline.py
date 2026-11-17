@@ -1,8 +1,10 @@
 """Evidence-led SEO reporting. Only finalized GSC data; no publishing or email side effects."""
 import argparse
+import codecs
 import hashlib
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
+from email.message import Message
 from html import unescape
 from html.parser import HTMLParser
 import json
@@ -162,6 +164,56 @@ def placeholder_matches(body):
     return [marker for marker in PLACEHOLDERS if any(marker in value for value in candidates)]
 
 
+def decode_response_body(body, headers):
+    """Use actual encoding declarations, never Requests' implicit text/* Latin-1."""
+    for marker, encoding in ((codecs.BOM_UTF32_LE, "utf-32"), (codecs.BOM_UTF32_BE, "utf-32"),
+                             (codecs.BOM_UTF8, "utf-8-sig"), (codecs.BOM_UTF16_LE, "utf-16"),
+                             (codecs.BOM_UTF16_BE, "utf-16")):
+        if body.startswith(marker):
+            return body.decode(encoding, errors="replace")
+
+    def charset(content_type):
+        message = Message()
+        message["Content-Type"] = content_type
+        return message.get_content_charset()
+
+    class EncodingMeta(HTMLParser):
+        encoding = None
+
+        def handle_starttag(self, tag, attrs):
+            if tag != "meta" or self.encoding:
+                return
+            attributes = dict(attrs)
+            self.encoding = attributes.get("charset")
+            if not self.encoding and (attributes.get("http-equiv") or "").lower() == "content-type":
+                self.encoding = charset(attributes.get("content") or "")
+
+    declared = charset(next((value for key, value in headers.items() if key.lower() == "content-type"), ""))
+    if declared:
+        try:
+            return body.decode(declared, errors="replace")
+        except (LookupError, UnicodeError, ValueError):
+            pass
+    # HTML's declaration prescan is bounded; comments and script text are not meta tags.
+    prefix = body[:1024].decode("ascii", errors="ignore")
+    meta = EncodingMeta()
+    try:
+        meta.feed(prefix)
+    except (AssertionError, ValueError):
+        pass  # Malformed markup must not prevent the encoding fallback.
+    xml = re.match(r'\s*<\?xml\b[^>]*\bencoding\s*=\s*[\'\"]([^\'\"]+)', prefix, re.I)
+    for encoding in (meta.encoding, xml.group(1) if xml else None):
+        if encoding:
+            try:
+                return body.decode(encoding, errors="replace")
+            except (LookupError, UnicodeError, ValueError):
+                pass
+    try:
+        return body.decode("utf-8")
+    except UnicodeDecodeError:
+        return body.decode("windows-1252", errors="replace")
+
+
 def request_page(session, url):
     """Follow only same-host HTTPS redirects; bound response sizes."""
     for _ in range(6):
@@ -178,7 +230,7 @@ def request_page(session, url):
                     raise CrawlError("response_too_large", f"Response exceeds {MAX_RESPONSE_BYTES:,}-byte crawl limit",
                                      limit_bytes=MAX_RESPONSE_BYTES, bytes_read=size, http_status=response.status_code)
                 chunks.append(chunk)
-            return response.status_code, b"".join(chunks).decode(response.encoding or "utf-8", errors="replace"), url, dict(response.headers)
+            return response.status_code, decode_response_body(b"".join(chunks), response.headers), url, dict(response.headers)
     raise CrawlError("redirect_limit", "Redirect limit exceeded")
 
 

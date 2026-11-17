@@ -2,7 +2,7 @@
 
 [Open dashboard](https://alikaaba-bit.github.io/petra-seo-dashboard/)
 
-A static workspace for deciding which website pages to improve, preparing evidence-led briefs, and measuring published changes. It uses live Google Search Console data and a bounded crawl of petrajewelryfactory.com.
+A static workspace for deciding which website pages to improve, preparing evidence-led briefs, and measuring published changes. It reads saved Google Search Console snapshots and a bounded crawl of petrajewelryfactory.com; check each source's dates before treating it as current.
 
 ## Views
 
@@ -13,7 +13,7 @@ A static workspace for deciding which website pages to improve, preparing eviden
 - Changes & results: published change log, 28/56-day follow-up results, browser-local aggregate enquiry counts and JSON backups.
 - Site health: crawl checks, index inspection and optional Lighthouse mobile lab results.
 - Search queries: branded/non-branded discovery and exact-match target tracking.
-- Weekly review: all 50 term dispositions, confirmed facts, first-hand page evidence, grouped draft packets, alerts, drift and 28/56-day follow-ups.
+- Weekly review: active target dispositions, confirmed facts, first-hand page evidence, grouped draft packets, alerts, drift and 28/56-day follow-ups.
 
 ## Run locally
 
@@ -55,7 +55,9 @@ To inspect a temporary report in the UI, serve a preview containing only `index.
 
 GitHub Pages serves the root of `main`. The daily workflow refreshes GSC, crawls the site, inspects ten priority URLs and commits data only after collection succeeds. A weekly Lighthouse workflow produces mobile lab reports for the homepage, private-label and contract-manufacturing pages. This is lab data, not field Core Web Vitals. Existing weekly email scheduling is retained; this upgrade does not send a test email.
 
-The September upgrade is already present on remote main and the November 5 Pages deployment. On November 16, the latest inspected [GSC refresh failure](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/43732656701) reported HTTP 403 for the configured URL-prefix property. That is the demonstrated collection blocker; the September billing-lock note is historical. Account billing settings were not inspected. A billing lock, if reported again, requires the account owner. A local crawl works independently of GSC access.
+The September upgrade is already present on remote main and the November 5 Pages deployment. The [scheduled GSC refresh on November 16 at 18:59 UTC](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/43934609525), inspected November 17, reported HTTP 403 and insufficient permission for the exact URL-prefix property `https://petrajewelryfactory.com/`. Human browser access does not establish access for the workflow principal. The [November 16 Lighthouse run](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/43912864173) separately received homepage HTTP 403 and produced zero usable reports; it is not evidence of a slow-page score. Account billing settings and credential values were not inspected. A local crawl works independently of GSC access.
+
+Search collection writes `search-health.json` with the attempt time, sanitized error classification and the last successful search snapshot's dates. Authentication, query and follow-up collection failures still exit 1 and preserve `latest.json` and history. The daily workflow uploads this diagnostic even after failure; failed-run artifacts are not automatically published to the dashboard. No raw exception payload or credential value is included. This local diagnostic change does not repair remote permissions or run the collector.
 
 The existing email workflow can send after GSC access is restored. Recovering measurement must not implicitly authorize outbound email: the owner must separately approve isolating that workflow before access recovery. This local increment neither runs nor changes it. No new schedules, paid APIs or publishing integrations are introduced.
 
@@ -85,6 +87,7 @@ The interface can import a previous browser backup. Records merge by ID. Aggrega
 - Briefs and link suggestions are deterministic editorial drafts. Validate buyer intent, actual body content, factual claims and natural link placement.
 - Before/after windows are 28 and 56 days on either side of publication. Fewer than 20 clicks in either window is inconclusive. Observed differences do not establish causation.
 - The previous eight-week plan remains a historical document, not a forecast or active promise.
+- The November 17 target configuration has 14 active terms and six priorities, centered on stainless-steel manufacturing, private label, original-design development and buyer preparation; silver is secondary. UK spelling and steel OEM variants share a proposed destination. All 50 original target terms remain in `HISTORICAL_TARGET_KEYWORDS`; saved search/history files and retired editorial reviews are preserved. Retired terms can still appear in actual observed query rows. Claim-led and brand-navigation targets are not active acquisition priorities. Proposed paths and guide intent are pending review, not content or publication approval.
 
 ## Open-source integrations
 
@@ -110,7 +113,7 @@ Use the existing Python environment and static dashboard. No added service, paid
 
 1. **Unblock evidence and the live site.** Owner reviews the exact GSC property permission and billing if a current error names it. Approve isolating the existing email workflow before restoring access, since recovery can enable its scheduled sends. Website owner identifies the serving CMS/repo, removes raw/hidden demo leftovers, restores real commercial destinations and discovery endpoints, and verifies titles, H1s, canonicals and schema. Done: current authenticated measurement and verified routes, separately evidenced. This build does not perform those actions.
 2. **Review this local branch.** The September workspace already reached main; do not merge the old branch blindly. Review `fix/seo-health-evidence-20261116` against current main, run the tests, inspect workflow diffs and preserve user edits in older checkouts. Release/push/merge/Pages deployment require separate authorization. Done locally: all checks pass and the public-only preview works. Done remotely only after an authorized deployment is read back.
-3. **Prepare one focused page.** Weekly, use the 50-term table as dispositions, not 50 article requests. Review a small related group using actual supplier-versus-guide SERPs. Record market, device, date and result URLs; choose a real destination. Operations owner confirms public facts and limits; SEO lead records buyer problem, first-hand evidence, title and hypothesis. Missing facts remain unknown; unsupported capability records keep claim terms on hold. Done: an evidence-backed page packet that a person has reviewed.
+3. **Prepare one focused page.** Weekly, use the active target table as dispositions, not an article quota. Review a small related group using actual supplier-versus-guide SERPs. Record market, device, date and result URLs; choose a real destination. Operations owner confirms public facts and limits; SEO lead records buyer problem, first-hand evidence, title and hypothesis. Missing facts remain unknown; unsupported capability records keep claim terms on hold. Done: an evidence-backed page packet that a person has reviewed.
 4. **Publish and verify manually.** Export the browser workspace, dry-run the importer, apply only approved public fields to a local candidate, then rebuild. Capture an observed baseline before the website change. A person publishes through the verified serving system, checks desktop/mobile and the actual URL, then logs the real publication/verification dates. Re-crawl and compare with the baseline. Done: verified published page and imported publication record; task status alone does not count.
 5. **Learn each week.** Run the existing GSC pipeline only after owner access recovery; review fresh non-brand opportunities alongside crawl/lab/browser evidence. Follow-up queue shows all publications at 28 and 56 days, allowing the existing three-day finalized-data lag. Collection defaults to 50 change records; later records explicitly show deferred status. Increase `--followup-limit` deliberately when needed, or review/archive old completed records. Keep the under-20-click and non-causal rules. Done: one documented next decision, not a content quota.
 

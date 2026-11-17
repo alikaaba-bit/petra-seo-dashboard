@@ -30,11 +30,31 @@ def checked(path='/private-label/'):
 class WorkspaceTests(unittest.TestCase):
     def test_all_targets_have_proposals_but_no_invented_approval(self):
         terms = workspace.term_map({}, TODAY)
-        self.assertEqual(len(terms), 50)
+        self.assertEqual(len(terms), len(ALL_KEYWORDS))
         self.assertEqual({x['keyword'] for x in terms}, set(ALL_KEYWORDS))
         self.assertFalse(any(x['status'] == 'approved' for x in terms))
         self.assertTrue(all(x['approved_page'] is None for x in terms))
-        self.assertEqual(next(x for x in terms if 'lifetime warranty' in x['keyword'])['status'], 'hold')
+        self.assertEqual(workspace.seed_term('lifetime warranty jewelry manufacturer', 'durability')['status'], 'hold')
+
+    def test_retired_reviews_are_preserved_without_becoming_active_targets(self):
+        editorial = {'term_reviews': {'waterproof jewelry manufacturer': {'status': 'hold', 'reason': 'Historical review'}}}
+        original = copy.deepcopy(editorial)
+        terms = workspace.term_map(editorial, TODAY)
+        self.assertEqual(editorial, original)
+        self.assertNotIn('waterproof jewelry manufacturer', [term['keyword'] for term in terms])
+        with self.assertRaises(ValueError):
+            workspace.term_map({'term_reviews': {'unknown target': {}}}, TODAY)
+
+    def test_target_proposals_group_variants_and_keep_guide_intent_unapproved(self):
+        terms = {term['keyword']: term for term in workspace.term_map({}, TODAY)}
+        core = terms['stainless steel jewelry manufacturer']['proposed_page']
+        for keyword in ('custom stainless steel jewelry manufacturer', 'stainless steel jewellery manufacturer',
+                        'stainless steel jewelry OEM manufacturer'):
+            self.assertEqual(terms[keyword]['proposed_page'], core)
+        brief = terms['jewelry manufacturing brief template']
+        self.assertEqual((brief['intent'], brief['page_type']), ('informational', 'guide'))
+        self.assertIsNone(brief['approved_page'])
+        self.assertNotEqual(brief['status'], 'approved')
 
     def test_confirmed_facts_require_source_review_and_public_approval(self):
         for key in ('source_url', 'reviewer', 'reviewed_at', 'public_safe'):
@@ -71,7 +91,7 @@ class WorkspaceTests(unittest.TestCase):
         self.assertIn('draft', draft['status'])
 
     def test_negative_capability_does_not_clear_a_term_hold(self):
-        term = next(t for t in workspace.term_map({}, TODAY) if t['keyword'] == 'waterproof jewelry manufacturer')
+        term = workspace.seed_term('waterproof jewelry manufacturer', 'durability')
         missing = workspace.missing_facts(term, {'waterproof': fact('Not supported', supported=False)})
         self.assertIn('waterproof', missing)
 
@@ -147,7 +167,7 @@ class WorkspaceTests(unittest.TestCase):
     def test_report_build_keeps_sources_dated_and_missing_metrics_unknown(self):
         report = workspace.build_workspace({}, {}, {}, {}, today=TODAY)
         self.assertEqual(report['sources']['search'], None)
-        self.assertEqual(len(report['terms']), 50)
+        self.assertEqual(len(report['terms']), len(ALL_KEYWORDS))
         self.assertTrue(report['alerts'])
         self.assertEqual(report['opportunities'], [])
         self.assertFalse(report['publication_ready'])

@@ -1,11 +1,132 @@
 {
   "version": 1,
-  "changes": [],
+  "changes": [
+    {
+      "id": "technical-20261117-home",
+      "page": "/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-private-label",
+      "page": "/private-label/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/private-label/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-contract-manufacturing",
+      "page": "/contract-manufacturing/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-services",
+      "page": "/services/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/services/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-how-it-works",
+      "page": "/how-it-works/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/how-it-works/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-about",
+      "page": "/about/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/about/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-sustainability",
+      "page": "/sustainability/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/sustainability/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-contact",
+      "page": "/contact/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/contact/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-catalog",
+      "page": "/catalog/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/catalog/",
+      "verified_at": "2026-11-17"
+    },
+    {
+      "id": "technical-20261117-team",
+      "page": "/team/",
+      "published_at": "2026-11-17",
+      "summary": "Technical crawlability release: verified HTTP 200, page-specific title and description, one H1, a self-referencing canonical and valid JSON-LD. Part of the same release covering 10 current routes. Draft-content approval remains separate.",
+      "type": "technical",
+      "hypothesis": "Improve crawlability and search presentation. Compare finalized 28- and 56-day page data when available; this technical verification does not establish click growth or causation.",
+      "evidence_url": "https://petrajewelryfactory.com/team/",
+      "verified_at": "2026-11-17"
+    }
+  ],
   "topics": [
-    {"topic": "Private label jewelry manufacturing", "page": "/private-label/", "intent": "commercial", "business_value": 3},
-    {"topic": "Contract jewelry manufacturing", "page": "/contract-manufacturing/", "intent": "commercial", "business_value": 3},
-    {"topic": "Jewelry manufacturing services", "page": "/services/", "intent": "commercial", "business_value": 3},
-    {"topic": "Manufacturing partner quality checklist", "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/", "intent": "research", "business_value": 2}
+    {
+      "topic": "Private label jewelry manufacturing",
+      "page": "/private-label/",
+      "intent": "commercial",
+      "business_value": 3
+    },
+    {
+      "topic": "Contract jewelry manufacturing",
+      "page": "/contract-manufacturing/",
+      "intent": "commercial",
+      "business_value": 3
+    },
+    {
+      "topic": "Jewelry manufacturing services",
+      "page": "/services/",
+      "intent": "commercial",
+      "business_value": 3
+    },
+    {
+      "topic": "Manufacturing partner quality checklist",
+      "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "intent": "research",
+      "business_value": 2
+    }
   ],
   "business_facts": {
     "sales_email": null,

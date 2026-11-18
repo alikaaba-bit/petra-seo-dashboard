@@ -75,8 +75,10 @@ const views = {
 function save() {
   try {
     localStorage.setItem("petra-workspace-v2", JSON.stringify(local));
+    return true;
   } catch {
     toast("Storage unavailable. Export your work before closing.");
+    return false;
   }
 }
 function toast(message) {
@@ -274,7 +276,7 @@ function dailySummary(raw) {
     daily: rows,
   };
 }
-function freshness(report = data) {
+function freshness(report = data, view) {
   const age = Math.floor(
       (Date.now() - new Date(report.generated_at).getTime()) / 86400000,
     ),
@@ -292,8 +294,10 @@ function freshness(report = data) {
   } else if (data.legacy)
     $("#status").textContent +=
       " Legacy snapshot: summary and page metrics cover different periods; query-to-page analysis is unavailable.";
-  $("#period").textContent =
-    `${report.period.start || "Unknown"} → ${report.period.end || "Unknown"}`;
+  const start = report.period.start || "Unknown", end = report.period.end || "Unknown";
+  $("#period").textContent = view === "results" && !report.legacy
+    ? `Page and query data through ${end} (from ${start})`
+    : `${start} → ${end}`;
   $("#footer-date").textContent =
     `Search snapshot: ${report.generated_at?.slice(0, 10) || "unavailable"}`;
 }
@@ -409,7 +413,7 @@ function results() {
         ),
   )}</div><div>${panel(
     "Organic enquiries",
-    `<p class="chart-caption">Record aggregate enquiries attributed to organic search. Use consistent dates and landing pages. Leave customer names and contact details out.</p><form id="lead-form" class="form-grid"><label>Period start<input name="start" type="date" required value="${esc((searchSummary || data).period.start)}"></label><label>Period end<input name="end" type="date" required value="${esc((searchSummary || data).period.end)}"></label><label class="full">Landing page<select name="page"><option value="*">Whole website</option>${pageOptions()}</select></label><label>Enquiries<input name="enquiries" type="number" min="0" step="1" required></label><label>Qualified enquiries<input name="qualified" type="number" min="0" step="1" required></label><div class="full"><button class="secondary">Save counts</button></div></form>${
+    `<p class="chart-caption">Record aggregate enquiries attributed to organic search. Use consistent dates and landing pages. Leave customer names and contact details out.</p><form id="lead-form" class="form-grid"><label>Enquiry reporting period start<input name="start" type="date" required value="${esc((searchSummary || data).period.start)}"></label><label>Enquiry reporting period end<input name="end" type="date" required value="${esc((searchSummary || data).period.end)}"></label><label class="full">Landing page<select name="page"><option value="*">Whole website</option>${pageOptions()}</select></label><label>Enquiries<input name="enquiries" type="number" min="0" step="1" required></label><label>Qualified enquiries<input name="qualified" type="number" min="0" step="1" required></label><div class="full"><button class="secondary">Save counts</button></div></form>${
       local.leads.length
         ? table(
             ["Period / page", "Enquiries", "Qualified"],
@@ -520,7 +524,8 @@ function showPage(path) {
 function labHealth() {
   return (
     health() +
-    (performanceAttempt.attempted_at ? panel("Latest lab attempt", `<p>${esc(performanceAttempt.attempted_at)} · ${esc(performanceAttempt.status)}</p>${(performanceAttempt.failures || []).map(f=>`<div class="issue">${esc(f)}</div>`).join("")}<p>Failed attempts preserve earlier scores below.</p>`) : "") +
+    (performanceAttempt?.attempted_at ? panel("Latest lab attempt", `<p>${esc(performanceAttempt.attempted_at)} · ${esc(performanceAttempt.status)}</p>${(performanceAttempt.failures || []).map(f=>`<div class="issue">${esc(f)}</div>`).join("")}<p>Failed attempts preserve earlier scores below.</p>`)
+      : panel("Latest lab attempt", empty("Lab status unavailable."))) +
     panel(
       "Mobile lab checks",
       performanceData.reports?.length
@@ -546,7 +551,7 @@ function render() {
   const view = Object.hasOwn(views, location.hash.slice(1))
     ? location.hash.slice(1)
     : "overview";
-  freshness(view === "overview" ? searchSummary || data : data);
+  freshness(view === "overview" ? searchSummary || data : data, view);
   $("#view-title").textContent = views[view][0];
   $("#view-subtitle").textContent = views[view][1];
   document.querySelectorAll("nav a").forEach((a) => {
@@ -685,12 +690,15 @@ function loadReviewForm(form) {
 function mergeRecords(a, b) {
   return [...new Map([...a, ...b].map((r) => [r.id, r])).values()];
 }
+function enquiryRangesOverlap(a, b) {
+  return a.start <= b.end && b.start <= a.end &&
+    (a.page === "*" || b.page === "*" || a.page === b.page);
+}
 function validateLeadOverlap(records) {
   for (let i = 0; i < records.length; i++) {
     for (let j = i + 1; j < records.length; j++) {
       const a = records[i], b = records[j];
-      if (a.start <= b.end && b.start <= a.end &&
-          (a.page === '*' || b.page === '*' || a.page === b.page)) {
+      if (enquiryRangesOverlap(a, b)) {
         throw Error('Backup contains overlapping enquiry counts. Resolve the overlap before importing.');
       }
     }
@@ -816,8 +824,7 @@ document.addEventListener("change", async (event) => {
   if (event.target.name === 'key' && ['fact-review-form','term-review-form','page-review-form'].includes(event.target.form?.id)) loadReviewForm(event.target.form);
   if (event.target.id === "task-status" && activePage) {
     local.tasks[activePage.path] = event.target.value;
-    save();
-    toast("Work status saved in this browser.");
+    if (save()) toast("Work status saved in this browser.");
   }
   if (event.target.id === "import-work") {
     try {
@@ -829,9 +836,9 @@ document.addEventListener("change", async (event) => {
       local.leads = mergedLeads;
       local.tasks = { ...local.tasks, ...v.tasks };
       for (const section of Object.keys(v.review)) local.review[section] = { ...(local.review[section] || {}), ...v.review[section] };
-      save();
+      const saved = save();
       render();
-      toast("Workspace imported.");
+      if (saved) toast("Workspace imported.");
     } catch (e) {
       toast(e.message);
     }
@@ -848,7 +855,9 @@ document.addEventListener("submit", (event) => {
       if (section === 'term_reviews') v.serp = {urls: v.urls.split(/\n/).map(s=>s.trim()).filter(Boolean),checked_at:v.checked_at,market:v.market,device:v.device,page_type:v.page_type};
       const clean = validateReview(section, v.key, v);
       local.review[section] ||= {}; local.review[section][v.key] = clean;
-      save(); render(); toast('Review saved locally. Export, validate and rebuild to update draft packets.');
+      const saved = save();
+      render();
+      if (saved) toast('Review saved locally. Export, validate and rebuild to update draft packets.');
     } catch (e) { toast(e.message); }
     return;
   }
@@ -870,9 +879,7 @@ document.addEventListener("submit", (event) => {
     if (
       local.leads.some(
         (r) =>
-          r.start <= v.end &&
-          v.start <= r.end &&
-          (r.page === "*" || v.page === "*" || r.page === v.page) &&
+          enquiryRangesOverlap(r, v) &&
           !(r.start === v.start && r.end === v.end && r.page === v.page),
       )
     )
@@ -882,9 +889,9 @@ document.addEventListener("submit", (event) => {
     v.id = `${v.start}:${v.end}:${v.page}`;
     local.leads = mergeRecords(local.leads, [v]);
   }
-  save();
+  const saved = save();
   render();
-  toast("Saved in this browser. Export a backup to keep your work.");
+  if (saved) toast("Saved in this browser. Export a backup to keep your work.");
 });
 window.addEventListener("hashchange", () => {
   if (data) {
@@ -909,7 +916,7 @@ async function loadJSON(path, optional = false) {
       loadJSON("data/performance.json", true),
       loadJSON("data/crawl-health.json", true),
       loadJSON("data/workspace.json", true),
-      loadJSON("data/performance-health.json", true),
+      loadJSON("data/performance-health.json").catch(() => null),
       loadJSON("data/daily-search.json").catch(() => null),
     ]);
     editorial = ed;

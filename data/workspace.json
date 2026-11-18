@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-17T22:52:13.058254+00:00",
+  "generated_at": "2026-11-18T13:40:24.063439+00:00",
   "sources": {
     "search": "2026-11-05T16:56:20.770066+00:00",
     "search_through": "2026-11-02",
@@ -1034,7 +1034,7 @@
     {
       "id": "search-stale",
       "severity": "critical",
-      "message": "Search evidence is stale or unavailable.",
+      "message": "Page and query data is stale or unavailable.",
       "next_action": "Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.",
       "owner": "Account owner"
     },

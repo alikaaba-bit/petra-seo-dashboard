@@ -162,7 +162,7 @@ def term_map(editorial, today):
     # Retired reviews stay in the original editorial record without reactivating a target.
     if not isinstance(reviews, dict) or set(reviews) - set(ALL_KEYWORDS) - set(HISTORICAL_KEYWORDS):
         raise ValueError('Term reviews must use the configured target list')
-    return [validate_term(k, reviews.get(k, seed_term(k, c)), today) for c, terms in TARGET_KEYWORDS.items() for k in terms]
+    return [validate_term(keyword, reviews.get(keyword, {}), today) for keyword in ALL_KEYWORDS]
 
 
 def missing_facts(term, facts):
@@ -313,7 +313,7 @@ def build_workspace(editorial, search, crawl, performance, baseline=None, browse
     def alert(key, severity, message, action, owner):
         alerts.append({'id': key, 'severity': severity, 'message': message, 'next_action': action, 'owner': owner})
     if stale(sources['search'], today, 3):
-        alert('search-stale', 'critical', 'Search evidence is stale or unavailable.', 'Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.', 'Account owner')
+        alert('search-stale', 'critical', 'Page and query data is stale or unavailable.', 'Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.', 'Account owner')
     if stale(sources['crawl'], today, 3):
         alert('crawl-stale', 'warning', 'Crawl evidence is stale or unavailable.', 'Run the bounded crawl-only check.', 'SEO operator')
     health = crawl

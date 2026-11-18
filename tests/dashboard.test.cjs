@@ -15,18 +15,18 @@ const page = (url, clicks = 1) => ({
 const snapshot = (pages) => ({ schema_version: 2, generated_at: "2026-11-05T00:00:00Z", pages, period: { start: "2026-10-06", end: "2026-11-02" } });
 
 function workspace(raw, inv = {}, attempt = {}) {
-  const elements = {};
+  const elements = {}, handlers = {};
   const context = vm.createContext({
     URL, Date, setTimeout, clearTimeout,
     localStorage: { getItem: () => null },
-    document: { addEventListener() {}, querySelector: (selector) => elements[selector] ||= { showModal() {} } },
+    document: { addEventListener(type, fn) { handlers[type] = fn; }, querySelector: (selector) => elements[selector] ||= { showModal() {} } },
     window: { addEventListener() {} },
     fetch: () => new Promise(() => {}),
     raw, inv, attempt,
   });
   vm.runInContext(source, context);
   vm.runInContext("editorial = {topics: [], changes: []}; inventory = inv; crawlAttempt = attempt; data = normalize(raw);", context);
-  return { elements, run: (expression) => vm.runInContext(expression, context) };
+  return { elements, handlers, run: (expression) => vm.runInContext(expression, context) };
 }
 
 test("fragment workspaces retain separate clicks, links and task identities", () => {
@@ -151,8 +151,53 @@ test("daily traffic can update the overview without redating page evidence", () 
   assert.equal(run("searchSummary.overall.clicks"), 2);
   assert.equal(run("searchSummary.overall.impressions"), 54);
   assert.match(elements["#period"].textContent, /2026-11-16/);
-  run("freshness(data)");
-  assert.match(elements["#period"].textContent, /2026-11-02/);
+  run("freshness(data, 'results')");
+  assert.match(elements["#period"].textContent, /Page and query data through 2026-11-02/);
+  assert.match(run("results()"), /Enquiry reporting period end<input[^>]+value="2026-11-16"/);
   assert.equal(run("dailySummary({ ...fixture, daily:fixture.daily.slice(1) })"), null);
   assert.equal(run("fixture.daily[7].clicks = -1; dailySummary(fixture)"), null);
+});
+
+test("enquiry overlap includes shared boundary dates and whole-site rows", () => {
+  const { run } = workspace(snapshot([]));
+  run('globalThis.a = {start:"2026-11-01",end:"2026-11-07",page:"/rings/"}');
+  assert.equal(run('enquiryRangesOverlap(a, {...a, start:a.end})'), true);
+  assert.equal(run('enquiryRangesOverlap(a, {...a, start:"2026-11-08",end:"2026-11-09"})'), false);
+  assert.equal(run('enquiryRangesOverlap(a, {...a, page:"/chains/"})'), false);
+  assert.throws(() => run('validateLeadOverlap([a, {...a, page:"*"}])'), /overlapping/);
+  assert.throws(() => run('validateLeadOverlap([{...a, page:"*"}, a])'), /overlapping/);
+});
+
+test("a failed task save keeps the record exportable and shows the storage warning", async () => {
+  const {run, handlers, elements} = workspace(snapshot([]));
+  run('setTimeout = () => {}; activePage = {path:"/rings/"}; localStorage.setItem = () => { throw Error("quota") }');
+  const event = {target: {id:"task-status",value:"In progress"}};
+  await handlers.change(event);
+  assert.match(elements["#toast"].textContent, /Storage unavailable/);
+  assert.equal(run('workspaceBackup().tasks["/rings/"]'), "In progress");
+  run('localStorage.setItem = () => {}');
+  await handlers.change(event);
+  assert.match(elements["#toast"].textContent, /saved in this browser/);
+});
+
+test("a lab status outage leaves the overview available and required feed failures stay visible", async () => {
+  async function startWithFailedFeed(failedPath) {
+    const elements = {};
+    const context = vm.createContext({
+      URL, Date, location: {hash:"#overview"}, window: {addEventListener() {}},
+      localStorage: {getItem: () => null},
+      document: {addEventListener() {}, querySelectorAll: () => [],
+        querySelector: key => elements[key] ||= {}},
+      fetch: async file => file === failedPath ? {ok:false,status:503} : {
+        ok:true, json: async () => JSON.parse(fs.readFileSync(path.join(__dirname, "..", file), "utf8"))
+      }
+    });
+    await vm.runInContext(source, context);
+    return {elements, context};
+  }
+  const lab = await startWithFailedFeed("data/performance-health.json");
+  assert.match(lab.elements["#content"].innerHTML, /Organic clicks/);
+  assert.match(vm.runInContext("labHealth()", lab.context), /Lab status unavailable/);
+  const required = await startWithFailedFeed("data/latest.json");
+  assert.match(required.elements["#status"].textContent, /latest.json \(HTTP 503\)/);
 });

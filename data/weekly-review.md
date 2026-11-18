@@ -14,7 +14,7 @@ Draft planning output. Human approval and publication required.
 ```
 
 ## Actions
-- critical: Search evidence is stale or unavailable. Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery. Owner: Account owner.
+- critical: Page and query data is stale or unavailable. Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery. Owner: Account owner.
 - warning: Crawl findings need review; affected pages remain held from drafts and link suggestions. Review crawl-health.json warnings and page findings; retain holds for unavailable pages. Owner: Website owner.
 - warning: 14 target terms need intent review or confirmed facts. Review grouped page briefs; approve only evidence-backed destinations. Owner: SEO lead and operations owner.
 

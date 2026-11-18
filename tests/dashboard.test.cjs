@@ -142,3 +142,17 @@ test('a Python-normalized review clears pending state despite JSON key order and
   run("workspaceData={fact_fields:{moq:'MOQ'}}; local.review={fact_reviews:{moq:{status:'unknown',value:null}}}; editorial.fact_reviews={moq:{value:null,status:'unknown'}}");
   assert.equal(run('pendingReviews()'),false);
 });
+
+test("daily traffic can update the overview without redating page evidence", () => {
+  const {run, elements} = workspace(snapshot([]));
+  run(`globalThis.fixture = {verified_on:"2026-11-18", daily:Array.from({length:28}, (_,i) => ({
+    date:new Date(Date.UTC(2026,9,20+i)).toISOString().slice(0,10), clicks:i===0?2:0, impressions:i===0?27:1
+  }))}; searchSummary = dailySummary(fixture); freshness(searchSummary)`);
+  assert.equal(run("searchSummary.overall.clicks"), 2);
+  assert.equal(run("searchSummary.overall.impressions"), 54);
+  assert.match(elements["#period"].textContent, /2026-11-16/);
+  run("freshness(data)");
+  assert.match(elements["#period"].textContent, /2026-11-02/);
+  assert.equal(run("dailySummary({ ...fixture, daily:fixture.daily.slice(1) })"), null);
+  assert.equal(run("fixture.daily[7].clicks = -1; dailySummary(fixture)"), null);
+});

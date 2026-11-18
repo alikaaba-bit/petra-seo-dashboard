@@ -24,7 +24,7 @@ const safePath = (path) =>
   path.startsWith("/") &&
   !path.startsWith("//") &&
   !/[\\\s]/.test(path);
-let data, editorial, inventory, activePage;
+let data, editorial, inventory, activePage, searchSummary;
 let performanceData = { reports: [] };
 let crawlAttempt = {};
 let workspaceData = {}, performanceAttempt = {};
@@ -44,7 +44,7 @@ if (!local.review || typeof local.review !== "object") local.review = {};
 const views = {
   workflow: ["Review, publish, learn.", "Confirm facts and intent, prepare a focused page, and track the next evidence check."],
   overview: [
-    "A clearer path to growth.",
+    "Search overview",
     "Search performance, useful next steps, and the evidence behind them.",
   ],
   priorities: [
@@ -253,22 +253,49 @@ function normalizeSnapshot(raw) {
     change_results: [],
   };
 }
-function freshness() {
+function dailySummary(raw) {
+  const rows = raw?.daily;
+  const isoDay = /^\d{4}-\d{2}-\d{2}$/;
+  if (!isoDay.test(raw?.verified_on) || !Array.isArray(rows) || rows.length !== 28) return null;
+  let clicks = 0, impressions = 0;
+  for (const [i, row] of rows.entries()) {
+    if (!row || !isoDay.test(row.date) || !Number.isFinite(Date.parse(row.date)) ||
+        [row.clicks, row.impressions].some(v => !Number.isSafeInteger(v) || v < 0) ||
+        (i && Date.parse(row.date) - Date.parse(rows[i - 1].date) !== 86400000)) return null;
+    clicks += row.clicks;
+    impressions += row.impressions;
+  }
+  const end = rows.at(-1).date;
+  if (end > raw.verified_on || end < (data.period.end || "")) return null;
+  return {
+    generated_at: raw.verified_on,
+    overall: { clicks, impressions, ctr: impressions ? 100 * clicks / impressions : null },
+    period: { start: rows[0].date, end, days: rows.length },
+    daily: rows,
+  };
+}
+function freshness(report = data) {
   const age = Math.floor(
-      (Date.now() - new Date(data.generated_at).getTime()) / 86400000,
+      (Date.now() - new Date(report.generated_at).getTime()) / 86400000,
     ),
     stale = !Number.isFinite(age) || age > 3;
   $("#status").className = `banner ${stale ? "warning" : ""}`;
   $("#status").textContent = stale
-    ? `Search data is stale · Last successful refresh: ${data.generated_at?.slice(0, 10) || "unknown"}. Recommendations use this saved snapshot. Check Update status for the current failure.`
-    : `Search data refreshed ${data.generated_at.slice(0, 10)} · Finalized results through ${data.period.end}.`;
-  if (data.legacy)
+    ? `Search data is stale · Last successful refresh: ${report.generated_at?.slice(0, 10) || "unknown"}. Page and query figures cover the period shown below.`
+    : `Search data refreshed ${report.generated_at.slice(0, 10)} · Finalized results through ${report.period.end}.`;
+  if (report === searchSummary) {
+    $("#status").textContent = `Google Search Console · Verified ${report.generated_at} · Data through ${report.period.end}.`;
+    if (stale || Date.now() - Date.parse(report.period.end) > 7 * 86400000) {
+      $("#status").className = "banner warning";
+      $("#status").textContent += " The daily report is overdue.";
+    }
+  } else if (data.legacy)
     $("#status").textContent +=
       " Legacy snapshot: summary and page metrics cover different periods; query-to-page analysis is unavailable.";
   $("#period").textContent =
-    `${data.period.start || "Unknown"} → ${data.period.end || "Unknown"}`;
+    `${report.period.start || "Unknown"} → ${report.period.end || "Unknown"}`;
   $("#footer-date").textContent =
-    `Search snapshot: ${data.generated_at?.slice(0, 10) || "unavailable"}`;
+    `Search snapshot: ${report.generated_at?.slice(0, 10) || "unavailable"}`;
 }
 function priorityList(pages) {
   return (
@@ -280,10 +307,10 @@ function priorityList(pages) {
       .join("") || empty("No pages available yet.")
   );
 }
-function chart() {
-  if (!data.daily.length)
+function chart(daily = data.daily) {
+  if (!daily.length)
     return empty("Daily trends will appear after a successful refresh.");
-  const rows = [...data.daily].sort((a, b) => a.date.localeCompare(b.date)),
+  const rows = [...daily].sort((a, b) => a.date.localeCompare(b.date)),
     max = Math.max(1, ...rows.map((r) => r.impressions));
   const points = rows
     .map(
@@ -297,14 +324,15 @@ function chart() {
   )}</details>`;
 }
 function overview() {
-  const m = data.overall,
-    prev = data.previous_overall,
+  const report = searchSummary || data,
+    m = report.overall,
+    prev = report.previous_overall,
     leads = local.leads.filter(
-      (r) => r.start === data.period.start && r.end === data.period.end,
+      (r) => r.start === report.period.start && r.end === report.period.end,
     ),
     count = leads.length ? leads.reduce((s, r) => s + r.enquiries, 0) : null,
     issues = data.pages.reduce((n, p) => n + (p.audit.issues?.length || 0), 0);
-  return `<div class="metrics">${metric("Organic clicks", num(m.clicks), delta(m.clicks, prev?.clicks))}${metric("Search impressions", num(m.impressions), delta(m.impressions, prev?.impressions))}${metric("Click-through rate", pct(m.ctr), "Clicks ÷ impressions")}${metric("Organic enquiries", num(count), count == null ? "Not connected · Add counts in Results" : "Manually recorded · matching date range")}</div><div class="layout"><div>${panel("Search visibility", chart(), "Daily impressions · current period", badge(`${data.period.days} days`, "gray"))}${panel("Where to focus next", priorityList(data.pages.slice(0, 4)), "Review these pages before expanding the content calendar.", '<a href="#priorities">All priorities ↗</a>')}</div><div>${panel("From search to enquiry", '<div class="flow"><span>Discover</span>→<span>Improve</span>→<span>Publish</span>→<span>Measure</span></div><div class="insight"><h3>One page. One useful change.</h3><p>Open a page brief, review buyer questions, and log the date when the change goes live.</p></div><p class="chart-caption">Before/after changes are observations. Demand, seasonality and other changes can affect results.</p><a href="#results" class="secondary">Track a change</a>')}${panel("Website checks", `${crawlSummary()}<div class="big-number">${issues}</div><p class="chart-caption">Findings across ${data.pages.length} known URLs; ${latestCrawl().pages?.length || 0} crawl records are available. Unexamined pages stay flagged. Findings need review; this is not a Google ranking score.</p><a href="#health" class="text-button">Review site health ↗</a>`)}${panel("Data you can trust", '<div class="issue">Exact query matching for tracked terms after refresh.</div><div class="issue">No query data does not mean a page never ranks.</div><div class="issue">Low sample sizes stay visible in recommendations.</div>')}</div></div>`;
+  return `<div class="metrics">${metric("Organic clicks", num(m.clicks), delta(m.clicks, prev?.clicks))}${metric("Search impressions", num(m.impressions), delta(m.impressions, prev?.impressions))}${metric("Click-through rate", pct(m.ctr), "Clicks ÷ impressions")}${metric("Organic enquiries", num(count), count == null ? "Not connected · Add counts in Results" : "Manually recorded · matching date range")}</div><div class="layout"><div>${panel("Search visibility", chart(report.daily), "Daily impressions · current period", badge(`${report.period.days} days`, "gray"))}${panel("Where to focus next", priorityList(data.pages.slice(0, 4)), `Page-level search data through ${data.period.end || "unknown"}.`, '<a href="#priorities">All priorities ↗</a>')}</div><div>${panel("From search to enquiry", '<div class="flow"><span>Discover</span>→<span>Improve</span>→<span>Publish</span>→<span>Measure</span></div><div class="insight"><h3>One page. One useful change.</h3><p>Open a page brief, review buyer questions, and log the date when the change goes live.</p></div><p class="chart-caption">Before/after changes are observations. Demand, seasonality and other changes can affect results.</p><a href="#results" class="secondary">Track a change</a>')}${panel("Website checks", `${crawlSummary()}<div class="big-number">${issues}</div><p class="chart-caption">Findings across ${data.pages.length} known URLs; ${latestCrawl().pages?.length || 0} crawl records are available. Unexamined pages stay flagged. Findings need review; this is not a Google ranking score.</p><a href="#health" class="text-button">Review site health ↗</a>`)}${panel("Data you can trust", '<div class="issue">Exact query matching for tracked terms after refresh.</div><div class="issue">No query data does not mean a page never ranks.</div><div class="issue">Low sample sizes stay visible in recommendations.</div>')}</div></div>`;
 }
 function priorities() {
   return panel(
@@ -381,7 +409,7 @@ function results() {
         ),
   )}</div><div>${panel(
     "Organic enquiries",
-    `<p class="chart-caption">Record aggregate enquiries attributed to organic search. Use consistent dates and landing pages. Leave customer names and contact details out.</p><form id="lead-form" class="form-grid"><label>Period start<input name="start" type="date" required value="${esc(data.period.start)}"></label><label>Period end<input name="end" type="date" required value="${esc(data.period.end)}"></label><label class="full">Landing page<select name="page"><option value="*">Whole website</option>${pageOptions()}</select></label><label>Enquiries<input name="enquiries" type="number" min="0" step="1" required></label><label>Qualified enquiries<input name="qualified" type="number" min="0" step="1" required></label><div class="full"><button class="secondary">Save counts</button></div></form>${
+    `<p class="chart-caption">Record aggregate enquiries attributed to organic search. Use consistent dates and landing pages. Leave customer names and contact details out.</p><form id="lead-form" class="form-grid"><label>Period start<input name="start" type="date" required value="${esc((searchSummary || data).period.start)}"></label><label>Period end<input name="end" type="date" required value="${esc((searchSummary || data).period.end)}"></label><label class="full">Landing page<select name="page"><option value="*">Whole website</option>${pageOptions()}</select></label><label>Enquiries<input name="enquiries" type="number" min="0" step="1" required></label><label>Qualified enquiries<input name="qualified" type="number" min="0" step="1" required></label><div class="full"><button class="secondary">Save counts</button></div></form>${
       local.leads.length
         ? table(
             ["Period / page", "Enquiries", "Qualified"],
@@ -518,6 +546,7 @@ function render() {
   const view = Object.hasOwn(views, location.hash.slice(1))
     ? location.hash.slice(1)
     : "overview";
+  freshness(view === "overview" ? searchSummary || data : data);
   $("#view-title").textContent = views[view][0];
   $("#view-subtitle").textContent = views[view][1];
   document.querySelectorAll("nav a").forEach((a) => {
@@ -873,7 +902,7 @@ async function loadJSON(path, optional = false) {
 }
 (async () => {
   try {
-    const [raw, ed, inv, perf, attempt, workspace, labAttempt] = await Promise.all([
+    const [raw, ed, inv, perf, attempt, workspace, labAttempt, dailySearch] = await Promise.all([
       loadJSON("data/latest.json"),
       loadJSON("data/editorial.json"),
       loadJSON("data/content.json", true),
@@ -881,6 +910,7 @@ async function loadJSON(path, optional = false) {
       loadJSON("data/crawl-health.json", true),
       loadJSON("data/workspace.json", true),
       loadJSON("data/performance-health.json", true),
+      loadJSON("data/daily-search.json").catch(() => null),
     ]);
     editorial = ed;
     inventory = inv;
@@ -889,7 +919,7 @@ async function loadJSON(path, optional = false) {
     workspaceData = workspace;
     performanceAttempt = labAttempt;
     data = normalize(raw);
-    freshness();
+    searchSummary = dailySummary(dailySearch);
     render();
   } catch (e) {
     $("#status").className = "banner error";

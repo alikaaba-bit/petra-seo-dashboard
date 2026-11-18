@@ -162,7 +162,7 @@ def term_map(editorial, today):
     # Retired reviews stay in the original editorial record without reactivating a target.
     if not isinstance(reviews, dict) or set(reviews) - set(ALL_KEYWORDS) - set(HISTORICAL_KEYWORDS):
         raise ValueError('Term reviews must use the configured target list')
-    return [validate_term(k, reviews.get(k, seed_term(k, c)), today) for c, terms in TARGET_KEYWORDS.items() for k in terms]
+    return [validate_term(keyword, reviews.get(keyword, {}), today) for keyword in ALL_KEYWORDS]
 
 
 def missing_facts(term, facts):

@@ -685,12 +685,15 @@ function loadReviewForm(form) {
 function mergeRecords(a, b) {
   return [...new Map([...a, ...b].map((r) => [r.id, r])).values()];
 }
+function enquiryRangesOverlap(a, b) {
+  return a.start <= b.end && b.start <= a.end &&
+    (a.page === "*" || b.page === "*" || a.page === b.page);
+}
 function validateLeadOverlap(records) {
   for (let i = 0; i < records.length; i++) {
     for (let j = i + 1; j < records.length; j++) {
       const a = records[i], b = records[j];
-      if (a.start <= b.end && b.start <= a.end &&
-          (a.page === '*' || b.page === '*' || a.page === b.page)) {
+      if (enquiryRangesOverlap(a, b)) {
         throw Error('Backup contains overlapping enquiry counts. Resolve the overlap before importing.');
       }
     }
@@ -870,9 +873,7 @@ document.addEventListener("submit", (event) => {
     if (
       local.leads.some(
         (r) =>
-          r.start <= v.end &&
-          v.start <= r.end &&
-          (r.page === "*" || v.page === "*" || r.page === v.page) &&
+          enquiryRangesOverlap(r, v) &&
           !(r.start === v.start && r.end === v.end && r.page === v.page),
       )
     )

@@ -156,3 +156,13 @@ test("daily traffic can update the overview without redating page evidence", () 
   assert.equal(run("dailySummary({ ...fixture, daily:fixture.daily.slice(1) })"), null);
   assert.equal(run("fixture.daily[7].clicks = -1; dailySummary(fixture)"), null);
 });
+
+test("enquiry overlap includes shared boundary dates and whole-site rows", () => {
+  const { run } = workspace(snapshot([]));
+  run('globalThis.a = {start:"2026-11-01",end:"2026-11-07",page:"/rings/"}');
+  assert.equal(run('enquiryRangesOverlap(a, {...a, start:a.end})'), true);
+  assert.equal(run('enquiryRangesOverlap(a, {...a, start:"2026-11-08",end:"2026-11-09"})'), false);
+  assert.equal(run('enquiryRangesOverlap(a, {...a, page:"/chains/"})'), false);
+  assert.throws(() => run('validateLeadOverlap([a, {...a, page:"*"}])'), /overlapping/);
+  assert.throws(() => run('validateLeadOverlap([{...a, page:"*"}, a])'), /overlapping/);
+});

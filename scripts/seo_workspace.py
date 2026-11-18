@@ -10,8 +10,8 @@ import re
 from urllib.parse import unquote, urljoin, urlparse
 from zoneinfo import ZoneInfo
 
-from seo_pipeline import ROOT, SITE, brief_blocked, write_json
-from update_data import TARGET_KEYWORDS, ALL_KEYWORDS
+from seo_pipeline import ROOT, SITE, brief_blocked, crawl_health, required_pages, write_json
+from update_data import TARGET_KEYWORDS, ALL_KEYWORDS, HISTORICAL_KEYWORDS, TARGET_PAGES
 
 FACT_FIELDS = {
     'organization_name': 'Public organization name', 'manufacturing_summary': 'Confirmed manufacturing scope',
@@ -115,7 +115,10 @@ def seed_term(keyword, category):
     page = '/private-label/' if category == 'private_label' else '/services/'
     if any(word in keyword for word in ('OEM', 'contract', 'manufacturing partner')):
         page = '/contract-manufacturing/'
-    return {'keyword': keyword, 'category': category, 'intent': 'commercial', 'page_type': 'supplier_landing',
+    page = TARGET_PAGES.get(keyword, page)
+    informational = category == 'buyer_preparation'
+    return {'keyword': keyword, 'category': category, 'intent': 'informational' if informational else 'commercial',
+            'page_type': 'guide' if informational else 'supplier_landing',
             'proposed_page': page, 'approved_page': None, 'required_facts': facts,
             'status': 'hold' if len(facts) > 2 else 'needs_review',
             'reason': 'Capability, location or claim evidence and SERP review required.' if len(facts) > 2 else 'Proposed grouping only; review actual SERP intent and approve the destination.',
@@ -156,7 +159,8 @@ def validate_term(keyword, record, today):
 
 def term_map(editorial, today):
     reviews = editorial.get('term_reviews', {})
-    if not isinstance(reviews, dict) or set(reviews) - set(ALL_KEYWORDS):
+    # Retired reviews stay in the original editorial record without reactivating a target.
+    if not isinstance(reviews, dict) or set(reviews) - set(ALL_KEYWORDS) - set(HISTORICAL_KEYWORDS):
         raise ValueError('Term reviews must use the configured target list')
     return [validate_term(k, reviews.get(k, seed_term(k, c)), today) for c, terms in TARGET_KEYWORDS.items() for k in terms]
 
@@ -312,8 +316,13 @@ def build_workspace(editorial, search, crawl, performance, baseline=None, browse
         alert('search-stale', 'critical', 'Search evidence is stale or unavailable.', 'Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.', 'Account owner')
     if stale(sources['crawl'], today, 3):
         alert('crawl-stale', 'warning', 'Crawl evidence is stale or unavailable.', 'Run the bounded crawl-only check.', 'SEO operator')
-    if crawl.get('status') == 'failed' or any(brief_blocked({'url': p['url'], 'audit': p}) for p in crawl.get('pages', [])):
+    health = crawl
+    if crawl.get('status') not in ('passed', 'warning', 'failed') and crawl.get('pages'):
+        health = crawl_health(crawl['pages'], crawl.get('warnings', []), required_pages(editorial))
+    if health.get('status') == 'failed':
         alert('crawl-blockers', 'critical', 'Live page or coverage blockers need review.', 'Identify the serving CMS/repo and repair approved destinations; verify in a browser.', 'Website owner')
+    elif health.get('status') == 'warning' or any(brief_blocked({'url': p['url'], 'audit': p}) for p in crawl.get('pages', [])):
+        alert('crawl-warnings', 'warning', 'Crawl findings need review; affected pages remain held from drafts and link suggestions.', 'Review crawl-health.json warnings and page findings; retain holds for unavailable pages.', 'Website owner')
     if stale(sources['lab'], today, 8):
         alert('lab-stale', 'warning', 'Lighthouse lab evidence is stale or unavailable.', 'Review runner access and approved URL targets before a manual lab check.', 'Technical maintainer')
     if (lab_attempt or {}).get('status') == 'failed':

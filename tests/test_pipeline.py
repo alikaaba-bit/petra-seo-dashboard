@@ -1,11 +1,17 @@
+import io
+import json
 import sys
+import tempfile
+import traceback
 import unittest
+from contextlib import redirect_stdout
 from datetime import date
 from pathlib import Path
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from seo_pipeline import period, metrics, fetch_rows, build_pages, overlap_candidates, PageHTML, safe_url, change_results, SITE
+from seo_pipeline import period, metrics, fetch_rows, build_pages, overlap_candidates, PageHTML, safe_url, change_results, SITE, main, request_page
+import update_data
 
 
 def row(keys, impressions=100, clicks=5, position=10):
@@ -13,6 +19,53 @@ def row(keys, impressions=100, clicks=5, position=10):
 
 
 class PipelineTests(unittest.TestCase):
+    def test_utf8_html_without_http_charset_ignores_requests_latin1_default(self):
+        import requests
+        html = '<meta charset="UTF-8"><title>Let’s create — Pavé</title><h1>Pavé jewelry</h1>'
+        response = requests.Response()
+        response.status_code = 200
+        response.headers['Content-Type'] = 'text/html'
+        response.encoding = requests.utils.get_encoding_from_headers(response.headers)
+        self.assertEqual(response.encoding, 'ISO-8859-1')
+        response.raw = io.BytesIO(html.encode('utf-8'))
+        session = MagicMock()
+        session.get.return_value = response
+        status, body, url, headers = request_page(session, SITE)
+        self.assertEqual(body, html)
+        self.assertEqual((status, url, headers['Content-Type']), (200, SITE, 'text/html'))
+        parsed = PageHTML(url)
+        parsed.feed(body)
+        self.assertEqual(parsed.title, 'Let’s create — Pavé')
+        self.assertEqual(parsed.headings[0]['text'], 'Pavé jewelry')
+
+    def test_crawl_decoding_honors_bom_explicit_header_and_meta_before_fallback(self):
+        cases = [
+            ('utf8-bom', '<title>Pavé — jewelry</title>'.encode('utf-8-sig'), 'text/html; charset=iso-8859-1', 'Pavé — jewelry'),
+            ('utf16-bom', '<title>Pavé — jewelry</title>'.encode('utf-16'), 'text/html; charset=utf-8', 'Pavé — jewelry'),
+            ('explicit-header', '<meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('cp1252'), 'text/html; charset="windows-1252"', 'Pavé — jewelry'),
+            ('legacy-meta', '<meta content="text/html; charset=windows-1252" http-equiv="Content-Type"><title>Pavé — jewelry</title>'.encode('cp1252'), 'text/html', 'Pavé — jewelry'),
+            ('utf8-fallback', '<title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html', 'Pavé — jewelry'),
+            ('invalid-header', '<meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html; charset=invalid-codec', 'Pavé — jewelry'),
+            ('nul-header', '<meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html; charset="utf-8\0"', 'Pavé — jewelry'),
+            ('nul-meta', '<meta charset="utf-8\0"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html', 'Pavé — jewelry'),
+            ('comment-not-meta', '<!-- <meta charset="windows-1252"> --><meta charset="utf-8"><title>Pavé — jewelry</title>'.encode('utf-8'), 'text/html', 'Pavé — jewelry'),
+        ]
+        for name, payload, content_type, expected in cases:
+            with self.subTest(name=name):
+                response = MagicMock(status_code=200, headers={'Content-Type': content_type}, encoding='ISO-8859-1')
+                response.iter_content.return_value = [payload[:7], payload[7:]]
+                session = MagicMock()
+                session.get.return_value.__enter__.return_value = response
+                _, body, _, _ = request_page(session, SITE)
+                parsed = PageHTML(SITE)
+                parsed.feed(body)
+                self.assertEqual(parsed.title, expected)
+
+    def test_malformed_encoding_prescan_does_not_break_utf8_fallback(self):
+        from seo_pipeline import decode_response_body
+        html = '<![not-a-valid-section]><p>Pavé — jewelry</p>'
+        self.assertEqual(decode_response_body(html.encode('utf-8'), {'Content-Type': 'text/html'}), html)
+
     def test_inclusive_periods_do_not_overlap(self):
         current = period(28, date(2026, 9, 4))
         previous = period(28, date(2026, 8, 7))
@@ -40,6 +93,104 @@ class PipelineTests(unittest.TestCase):
         service.searchanalytics().query().execute.side_effect = RuntimeError('API unavailable')
         with self.assertRaises(RuntimeError):
             fetch_rows(service, ['query'], period(28, date(2026, 9, 4)))
+
+    def test_active_targets_exclude_claims_and_keep_historical_configuration(self):
+        active = update_data.ALL_KEYWORDS
+        self.assertEqual(len(active), len(set(active)))
+        self.assertTrue(set(update_data.HIGH_PRIORITY).issubset(active))
+        self.assertEqual(len(update_data.HIGH_PRIORITY), 6)
+        historical = [term for terms in update_data.HISTORICAL_TARGET_KEYWORDS.values() for term in terms]
+        self.assertEqual(len(historical), 50)
+        for pattern in ('hard jewelry', '316l', 'waterproof', 'tarnish free', 'lifetime warranty',
+                        'hypoallergenic', 'nickel free', 'surgical steel', 'sterling', '925', 'pvd'):
+            self.assertFalse(any(pattern in term.lower() for term in active), pattern)
+        self.assertIn('316L stainless steel jewelry supplier', historical)
+        self.assertIn('stainless steel jewellery manufacturer', active)
+
+    def test_failed_refresh_records_sanitized_health_without_overwriting_observations(self):
+        class FakeHttpError(Exception):
+            resp = type('Response', (), {'status': 403})()
+
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            saved = {'generated_at': '2026-11-05T00:00:00+00:00',
+                     'period': {'start': '2026-10-06', 'end': '2026-11-02', 'days': 28},
+                     'queries': [{'query': 'old observed term', 'clicks': 8}]}
+            snapshot = json.dumps(saved).encode()
+            (output / 'latest.json').write_bytes(snapshot)
+            (output / 'history_2026-11-05.json').write_bytes(snapshot)
+            service = MagicMock()
+            service.searchanalytics().query().execute.side_effect = FakeHttpError('PRIVATE_ERROR_PAYLOAD')
+            stdout = io.StringIO()
+            with patch.object(sys, 'argv', ['seo_pipeline.py', '--output-dir', directory]), \
+                    patch('seo_pipeline.google_service', return_value=service), \
+                    patch('seo_workspace.write_workspace') as workspace, redirect_stdout(stdout):
+                with self.assertRaises(SystemExit) as exit_result:
+                    main()
+            self.assertEqual(exit_result.exception.code, 1)
+            workspace.assert_not_called()
+            self.assertEqual((output / 'latest.json').read_bytes(), snapshot)
+            self.assertEqual((output / 'history_2026-11-05.json').read_bytes(), snapshot)
+            health_text = (output / 'search-health.json').read_text()
+            health = json.loads(health_text)
+            self.assertEqual(health['status'], 'failed')
+            self.assertEqual(health['error']['http_status'], 403)
+            self.assertEqual(health['last_successful_snapshot']['period']['end'], '2026-11-02')
+            self.assertNotEqual(health['attempted_at'], saved['generated_at'])
+            self.assertNotIn('PRIVATE_ERROR_PAYLOAD', health_text + stdout.getvalue())
+
+    def test_successful_refresh_keeps_observed_queries_outside_active_targets(self):
+        with tempfile.TemporaryDirectory() as directory:
+            service = MagicMock()
+            service.searchanalytics().query().execute.return_value = {'rows': []}
+
+            def rows_for_dimensions(_service, dimensions, _window):
+                return [row(['316L stainless steel jewelry supplier'], 7, 1, 12)] if dimensions == ['query'] else []
+
+            with patch.object(sys, 'argv', ['seo_pipeline.py', '--output-dir', directory, '--inspect-limit', '0']), \
+                    patch('seo_pipeline.google_service', return_value=service), \
+                    patch('seo_pipeline.fetch_rows', side_effect=rows_for_dimensions), \
+                    patch('seo_pipeline.change_results', return_value=[]), \
+                    patch('seo_workspace.write_workspace'), redirect_stdout(io.StringIO()):
+                main()
+            saved = json.loads((Path(directory) / 'latest.json').read_text())
+            health = json.loads((Path(directory) / 'search-health.json').read_text())
+            self.assertEqual(saved['queries'][0]['clicks'], 1)
+            self.assertNotIn('316L stainless steel jewelry supplier', saved['tracked_keywords'])
+            self.assertEqual(set(saved['tracked_keywords']), set(update_data.ALL_KEYWORDS))
+            self.assertEqual(health['status'], 'success')
+            self.assertIsNone(health['error'])
+            self.assertEqual(health['last_successful_snapshot']['period'], saved['period'])
+
+    def test_diagnostic_write_failure_suppresses_sensitive_exception_chain(self):
+        class FakeHttpError(Exception):
+            resp = type('Response', (), {'status': 403})()
+
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            snapshot = b'{"generated_at":"2026-11-05T00:00:00+00:00"}'
+            (output / 'latest.json').write_bytes(snapshot)
+            stdout = io.StringIO()
+            caught = None
+            rendered_traceback = ''
+            with patch.object(sys, 'argv', ['seo_pipeline.py', '--output-dir', directory]), \
+                    patch('seo_pipeline.google_service', side_effect=FakeHttpError('SENSITIVE_ORIGINAL_PAYLOAD')), \
+                    patch('seo_pipeline.write_json', side_effect=PermissionError('SENSITIVE_WRITE_PAYLOAD')), \
+                    patch('seo_workspace.write_workspace') as workspace, redirect_stdout(stdout):
+                try:
+                    main()
+                except BaseException as error:
+                    caught = error
+                    rendered_traceback = ''.join(traceback.format_exception(type(error), error, error.__traceback__))
+            self.assertIsInstance(caught, SystemExit)
+            self.assertEqual(caught.code, 1)
+            self.assertTrue(caught.__suppress_context__)
+            self.assertEqual(stdout.getvalue(), 'Search Console refresh failed (FakeHttpError; HTTP 403); diagnostic-write-failed.\n')
+            for marker in ('SENSITIVE_ORIGINAL_PAYLOAD', 'SENSITIVE_WRITE_PAYLOAD'):
+                self.assertNotIn(marker, stdout.getvalue() + rendered_traceback)
+            self.assertEqual((output / 'latest.json').read_bytes(), snapshot)
+            self.assertFalse((output / 'search-health.json').exists())
+            workspace.assert_not_called()
 
     def test_pages_use_page_totals_not_partial_query_totals(self):
         url = SITE + 'private-label/'

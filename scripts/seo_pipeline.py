@@ -1,8 +1,10 @@
 """Evidence-led SEO reporting. Only finalized GSC data; no publishing or email side effects."""
 import argparse
+import codecs
 import hashlib
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
+from email.message import Message
 from html import unescape
 from html.parser import HTMLParser
 import json
@@ -162,6 +164,56 @@ def placeholder_matches(body):
     return [marker for marker in PLACEHOLDERS if any(marker in value for value in candidates)]
 
 
+def decode_response_body(body, headers):
+    """Use actual encoding declarations, never Requests' implicit text/* Latin-1."""
+    for marker, encoding in ((codecs.BOM_UTF32_LE, "utf-32"), (codecs.BOM_UTF32_BE, "utf-32"),
+                             (codecs.BOM_UTF8, "utf-8-sig"), (codecs.BOM_UTF16_LE, "utf-16"),
+                             (codecs.BOM_UTF16_BE, "utf-16")):
+        if body.startswith(marker):
+            return body.decode(encoding, errors="replace")
+
+    def charset(content_type):
+        message = Message()
+        message["Content-Type"] = content_type
+        return message.get_content_charset()
+
+    class EncodingMeta(HTMLParser):
+        encoding = None
+
+        def handle_starttag(self, tag, attrs):
+            if tag != "meta" or self.encoding:
+                return
+            attributes = dict(attrs)
+            self.encoding = attributes.get("charset")
+            if not self.encoding and (attributes.get("http-equiv") or "").lower() == "content-type":
+                self.encoding = charset(attributes.get("content") or "")
+
+    declared = charset(next((value for key, value in headers.items() if key.lower() == "content-type"), ""))
+    if declared:
+        try:
+            return body.decode(declared, errors="replace")
+        except (LookupError, UnicodeError, ValueError):
+            pass
+    # HTML's declaration prescan is bounded; comments and script text are not meta tags.
+    prefix = body[:1024].decode("ascii", errors="ignore")
+    meta = EncodingMeta()
+    try:
+        meta.feed(prefix)
+    except (AssertionError, ValueError):
+        pass  # Malformed markup must not prevent the encoding fallback.
+    xml = re.match(r'\s*<\?xml\b[^>]*\bencoding\s*=\s*[\'\"]([^\'\"]+)', prefix, re.I)
+    for encoding in (meta.encoding, xml.group(1) if xml else None):
+        if encoding:
+            try:
+                return body.decode(encoding, errors="replace")
+            except (LookupError, UnicodeError, ValueError):
+                pass
+    try:
+        return body.decode("utf-8")
+    except UnicodeDecodeError:
+        return body.decode("windows-1252", errors="replace")
+
+
 def request_page(session, url):
     """Follow only same-host HTTPS redirects; bound response sizes."""
     for _ in range(6):
@@ -178,7 +230,7 @@ def request_page(session, url):
                     raise CrawlError("response_too_large", f"Response exceeds {MAX_RESPONSE_BYTES:,}-byte crawl limit",
                                      limit_bytes=MAX_RESPONSE_BYTES, bytes_read=size, http_status=response.status_code)
                 chunks.append(chunk)
-            return response.status_code, b"".join(chunks).decode(response.encoding or "utf-8", errors="replace"), url, dict(response.headers)
+            return response.status_code, decode_response_body(b"".join(chunks), response.headers), url, dict(response.headers)
     raise CrawlError("redirect_limit", "Redirect limit exceeded")
 
 
@@ -520,6 +572,48 @@ def write_json(path, data):
     temporary.replace(path)
 
 
+def record_search_health(output_dir, error=None):
+    """Record attempt freshness separately; never copy raw exception/credential text."""
+    snapshot = {}
+    try:
+        snapshot = json.loads((output_dir / "latest.json").read_text())
+        if not isinstance(snapshot, dict):
+            snapshot = {}
+    except (OSError, ValueError):
+        pass
+    failure = None
+    if error is not None:
+        http_status = getattr(getattr(error, "resp", None), "status", None)
+        http_status = http_status if type(http_status) is int else None
+        category = "access_denied" if http_status == 403 else "authentication_failed" if http_status == 401 else "collection_failed"
+        action = ("Review the workflow principal's access to the exact Search Console property and API quota. "
+                  "Browser access is a separate authorization. Do not change access or resume email workflows without owner approval."
+                  if http_status == 403 else
+                  "Review the configured workflow authentication through its authorized owner; do not log credentials."
+                  if http_status == 401 else
+                  "Review the failed collection step. Keep the last successful snapshot until a complete refresh succeeds.")
+        failure = {"type": type(error).__name__, "http_status": http_status, "category": category, "action": action}
+    report = {"schema_version": 1, "attempted_at": datetime.now(timezone.utc).isoformat(),
+              "site_url": SITE, "source": "Google Search Console", "status": "failed" if error is not None else "success",
+              "last_successful_snapshot": {"generated_at": snapshot.get("generated_at"), "period": snapshot.get("period")},
+              "error": failure}
+    write_json(output_dir / "search-health.json", report)
+    return report
+
+
+def fail_search_refresh(output_dir, error):
+    status = getattr(getattr(error, "resp", None), "status", None)
+    status = status if type(status) is int else None
+    suffix = f"; HTTP {status}" if status is not None else ""
+    try:
+        record_search_health(output_dir, error)
+    except Exception:
+        print(f"Search Console refresh failed ({type(error).__name__}{suffix}); diagnostic-write-failed.")
+    else:
+        print(f"Search Console refresh failed ({type(error).__name__}{suffix}). Previous search snapshot unchanged; see search-health.json.")
+    raise SystemExit(1) from None
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--crawl", action="store_true")
@@ -554,13 +648,17 @@ def main():
         if args.fail_on_health and health_report["status"] == "failed":
             raise SystemExit(1)
         return
-    service = google_service()
     end = datetime.now(ZoneInfo("America/Los_Angeles")).date() - timedelta(days=3)
     datasets = {}
-    for label, window in (("current", period(28, end)), ("previous", period(28, end - timedelta(days=28)))):
-        datasets[label] = {"period": window}
-        for key, dims in (("overall", []), ("daily", ["date"]), ("pages", ["page"]), ("queries", ["query"]), ("query_pages", ["query", "page"])):
-            datasets[label][key] = fetch_rows(service, dims, window)
+    try:
+        service = google_service()
+        for label, window in (("current", period(28, end)), ("previous", period(28, end - timedelta(days=28)))):
+            datasets[label] = {"period": window}
+            for key, dims in (("overall", []), ("daily", ["date"]), ("pages", ["page"]), ("queries", ["query"]), ("query_pages", ["query", "page"])):
+                datasets[label][key] = fetch_rows(service, dims, window)
+        followups = change_results(service, editorial.get("changes", []), end, args.followup_limit)
+    except Exception as exc:
+        fail_search_refresh(args.output_dir, exc)
     if args.crawl:
         urls = [r["keys"][0] for r in datasets["current"]["pages"]] + [urljoin(SITE, t["page"]) for t in editorial["topics"]]
         inventory, warnings = crawl(urls, args.crawl_limit)
@@ -580,7 +678,7 @@ def main():
             page["index_status"] = "Inspection unavailable: " + type(exc).__name__
     pages.sort(key=lambda p: p["priority_score"], reverse=True)
     enrich_briefs(pages)
-    from update_data import ALL_KEYWORDS, HIGH_PRIORITY, TARGET_KEYWORDS
+    from update_data import ALL_KEYWORDS, HIGH_PRIORITY, TARGET_KEYWORDS, TARGET_REVIEWED_AT
     query_metrics = {k.lower(): v for k, v in grouped(datasets["current"]["queries"], 0).items()}
     tracked = {}
     for keyword in ALL_KEYWORDS:
@@ -595,9 +693,9 @@ def main():
               "daily": [{"date": r["keys"][0], **metrics([r])} for r in datasets["current"]["daily"]],
               "pages": pages, "overlap_candidates": overlap_candidates(datasets["current"]["query_pages"]),
               "url_collisions": url_collisions([p["url"] for p in pages]),
-              "tracked_keywords": tracked, "target_categories": TARGET_KEYWORDS,
+              "tracked_keywords": tracked, "target_categories": TARGET_KEYWORDS, "target_reviewed_at": TARGET_REVIEWED_AT,
               "queries": [{"query": k, **v, "branded": brand(k)} for k, v in grouped(datasets["current"]["queries"], 0).items()],
-              "change_results": change_results(service, editorial.get("changes", []), end, args.followup_limit),
+              "change_results": followups,
               "content_generated_at": inventory_data["generated_at"], "crawl_warnings": inventory_data.get("warnings", []),
               "measurement": {"leads": "Not connected", "note": "Connect aggregate organic enquiries and qualified leads; do not publish customer details in this public repository."},
               "data_notes": ["Finalized web-search data, dates in Pacific Time.", "Query rows omit anonymized searches and may be limited by Google; they need not sum to page or property totals.", "Average position is not a fixed country/device rank.", "Priority scores organize review work; they do not forecast traffic gains."],
@@ -605,6 +703,7 @@ def main():
               "top_pages": [{"page": p["path"], **p["current"]} for p in pages]}
     write_json(args.output_dir / "latest.json", result)
     write_json(args.output_dir / f"history_{datetime.now(timezone.utc).date()}.json", result)
+    record_search_health(args.output_dir)
     write_workspace(editorial, args.output_dir, args.output_dir, health_report)
     print(f"Updated {len(pages)} pages and {len(result['queries'])} queries through {end}.")
     if args.fail_on_health and health_report["status"] == "failed":

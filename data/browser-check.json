@@ -1,28 +1,53 @@
 {
-  "attempted_at": "2026-11-16T15:10:32.442814+00:00",
-  "status": "failed",
+  "attempted_at": "2026-11-17T19:12:21.283309+00:00",
+  "status": "passed",
   "pages": [
     {
       "requested_url": "https://petrajewelryfactory.com/",
       "url": "https://petrajewelryfactory.com/",
-      "title": "Petra Jewelry | Custom and private label jewelry manufacturing",
+      "title": "Custom Jewelry Manufacturer | Petra Jewelry",
       "h1": [
         "Custom and\nprivate label\njewelry\nmanufacturing."
       ],
-      "raw_h1_count": 10,
-      "description": "Custom and private label jewelry manufacturing in stainless steel and sterling silver, for brands and retailers. Two factories in Dongguan, design studio in Shenzhen. Minimum orders start at 200 units. Request a quote.",
-      "canonical": "",
+      "raw_h1_count": 1,
+      "description": "Custom and private label jewelry manufacturing in stainless steel and silver for brands and retailers. Explore our designs or bring your own brief.",
+      "canonical": "https://petrajewelryfactory.com/",
       "visible_characters": 6047,
-      "raw_matches": [
-        "sophie moore",
-        "elliot ellington"
-      ],
+      "raw_matches": [],
       "visible_matches": [],
-      "findings": [
-        "raw_matches: sophie moore",
-        "raw_matches: elliot ellington",
-        "Missing canonical"
+      "findings": [],
+      "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
+    },
+    {
+      "requested_url": "https://petrajewelryfactory.com/private-label/",
+      "url": "https://petrajewelryfactory.com/private-label/",
+      "title": "Private Label Jewelry Manufacturing | Petra Jewelry",
+      "h1": [
+        "Start with ours.Make it yours."
       ],
+      "raw_h1_count": 1,
+      "description": "Explore ready-to-brand jewelry collections from Petra Jewelry. Shortlist rings, necklaces, bracelets and earrings, then request options for your brand.",
+      "canonical": "https://petrajewelryfactory.com/private-label/",
+      "visible_characters": 2111,
+      "raw_matches": [],
+      "visible_matches": [],
+      "findings": [],
+      "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
+    },
+    {
+      "requested_url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "title": "Custom Jewelry Contract Manufacturing | Petra Jewelry",
+      "h1": [
+        "Your idea,our factory"
+      ],
+      "raw_h1_count": 1,
+      "description": "Bring your jewelry designs, sketches or references to Petra. Explore contract manufacturing, from development and sampling to production for your brand.",
+      "canonical": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "visible_characters": 2456,
+      "raw_matches": [],
+      "visible_matches": [],
+      "findings": [],
       "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
     }
   ],

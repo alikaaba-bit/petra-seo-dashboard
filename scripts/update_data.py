@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Tracked keyword configuration and backwards-compatible v2 entry point."""
-TARGET_KEYWORDS = {
+# Historical configuration only: not an endorsement or an active acquisition list.
+# Keep this reference and existing data/history files when reviewing past reports.
+HISTORICAL_TARGET_KEYWORDS = {
     'china_location': [
         'jewelry manufacturer china', 'china jewelry factory',
         'stainless steel jewelry manufacturer china', 'jewelry supplier china wholesale',
@@ -35,11 +37,47 @@ TARGET_KEYWORDS = {
         'luxury stainless steel jewelry manufacturer', 'consistent jewelry manufacturing supplier',
     ],
 }
+TARGET_REVIEWED_AT = '2026-11-17'
+TARGET_KEYWORDS = {
+    'stainless_steel': [
+        'stainless steel jewelry manufacturer', 'custom stainless steel jewelry manufacturer',
+        'stainless steel jewellery manufacturer', 'stainless steel jewelry OEM manufacturer',
+    ],
+    'manufacturing_models': [
+        'private label jewelry manufacturer', 'custom jewelry manufacturer for brands',
+        'OEM jewelry manufacturer',
+    ],
+    'product_manufacturing': [
+        'stainless steel ring manufacturer', 'stainless steel necklace manufacturer',
+        'stainless steel earrings manufacturer',
+    ],
+    'buyer_preparation': [
+        'jewelry manufacturing brief template', 'jewelry manufacturing sample approval checklist',
+        'jewelry supplier evaluation checklist',
+    ],
+    'silver_secondary': ['silver jewelry manufacturer'],
+}
+# Spelling and OEM variants share an intended destination; they are not extra pages.
+# Claim-led, brand-navigation and unselected legacy terms remain historical only.
 ALL_KEYWORDS = [keyword for keywords in TARGET_KEYWORDS.values() for keyword in keywords]
-HIGH_PRIORITY = ['jewelry manufacturer china', 'stainless steel jewelry manufacturer',
-                 'private label jewelry manufacturer', 'hard jewelry manufacturer',
-                 '316L stainless steel jewelry supplier', 'jewelry manufacturer for ecommerce brands',
-                 'premium jewelry manufacturer china']
+HISTORICAL_KEYWORDS = [keyword for keywords in HISTORICAL_TARGET_KEYWORDS.values() for keyword in keywords]
+HIGH_PRIORITY = ['stainless steel jewelry manufacturer', 'custom stainless steel jewelry manufacturer',
+                 'private label jewelry manufacturer', 'custom jewelry manufacturer for brands',
+                 'OEM jewelry manufacturer', 'jewelry manufacturing brief template']
+# Proposed destinations from the dated keyword review, not approved or published routes.
+TARGET_PAGES = {
+    **{keyword: '/stainless-steel-jewelry-manufacturer/' for keyword in TARGET_KEYWORDS['stainless_steel']},
+    'private label jewelry manufacturer': '/private-label/',
+    'custom jewelry manufacturer for brands': '/contract-manufacturing/',
+    'OEM jewelry manufacturer': '/contract-manufacturing/',
+    'stainless steel ring manufacturer': '/stainless-steel-jewelry-manufacturer/rings/',
+    'stainless steel necklace manufacturer': '/stainless-steel-jewelry-manufacturer/necklaces-pendants/',
+    'stainless steel earrings manufacturer': '/stainless-steel-jewelry-manufacturer/earrings/',
+    'jewelry manufacturing brief template': '/resources/jewelry-manufacturing-brief/',
+    'jewelry manufacturing sample approval checklist': '/resources/stainless-steel-sample-approval/',
+    'jewelry supplier evaluation checklist': '/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/',
+    'silver jewelry manufacturer': '/silver-jewelry-manufacturer/',
+}
 
 if __name__ == '__main__':
     from seo_pipeline import main

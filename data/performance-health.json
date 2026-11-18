@@ -1,0 +1,12 @@
+{
+  "attempted_at": "2026-11-17T16:01:25.064015+00:00",
+  "status": "passed",
+  "failures": [],
+  "usable_reports": 3,
+  "required_urls": [
+    "https://petrajewelryfactory.com/",
+    "https://petrajewelryfactory.com/private-label/",
+    "https://petrajewelryfactory.com/contract-manufacturing/"
+  ],
+  "note": "Lab measurements only. Failed attempts preserve saved scores and are not field Core Web Vitals."
+}

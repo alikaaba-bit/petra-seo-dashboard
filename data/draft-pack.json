@@ -7,13 +7,42 @@
       "status": "hold",
       "blockers": [
         "No term has both reviewed SERP intent and the required confirmed facts.",
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis."
+      ],
+      "terms": [
+        "custom jewelry manufacturer for brands",
+        "OEM jewelry manufacturer"
+      ],
+      "eligible_terms": [],
+      "missing_facts": [
+        "manufacturing_summary",
+        "organization_name"
+      ],
+      "page_review": null,
+      "suggested_title": null,
+      "suggested_description": null,
+      "outline": [
+        "Answer the reviewed buyer problem",
+        "Explain confirmed scope and limits",
+        "Show first-hand process and quality evidence",
+        "Explain confirmed sampling and production conditions",
+        "State what a brand should provide to request a quote"
+      ],
+      "evidence": [],
+      "confirmed_facts": {},
+      "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+    },
+    {
+      "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "topic": "Manufacturing partner quality checklist",
+      "status": "hold",
+      "blockers": [
+        "No term has both reviewed SERP intent and the required confirmed facts.",
         "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
         "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved."
       ],
       "terms": [
-        "OEM jewelry manufacturer",
-        "contract jewelry manufacturer",
-        "jewelry manufacturing partner"
+        "jewelry supplier evaluation checklist"
       ],
       "eligible_terms": [],
       "missing_facts": [
@@ -40,23 +69,15 @@
       "status": "hold",
       "blockers": [
         "No term has both reviewed SERP intent and the required confirmed facts.",
-        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved."
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis."
       ],
       "terms": [
-        "private label jewelry manufacturer",
-        "ODM jewelry manufacturer",
-        "white label jewelry manufacturer",
-        "custom jewelry manufacturer",
-        "private label jewelry manufacturer china"
+        "private label jewelry manufacturer"
       ],
       "eligible_terms": [],
       "missing_facts": [
-        "china_manufacturing",
         "manufacturing_summary",
-        "odm",
-        "organization_name",
-        "white_label"
+        "organization_name"
       ],
       "page_review": null,
       "suggested_title": null,
@@ -73,82 +94,222 @@
       "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
     },
     {
-      "page": "/services/",
-      "topic": "Jewelry manufacturing services",
+      "page": "/resources/jewelry-manufacturing-brief/",
+      "topic": "Page purpose needs review",
       "status": "hold",
       "blockers": [
         "No term has both reviewed SERP intent and the required confirmed facts.",
         "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved."
+        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
+        "Supply a reviewed working title; target terms are not approved factual copy."
       ],
       "terms": [
-        "jewelry manufacturer china",
-        "china jewelry factory",
-        "stainless steel jewelry manufacturer china",
-        "jewelry supplier china wholesale",
-        "premium jewelry manufacturer china",
-        "jewelry factory dongguan",
-        "chinese jewelry manufacturer for brands",
-        "china jewelry factory high quality",
-        "silver jewelry manufacturer china",
-        "brass jewelry manufacturer china",
-        "hard jewelry manufacturer",
-        "durable jewelry manufacturer",
-        "waterproof jewelry manufacturer",
-        "tarnish free jewelry supplier",
-        "lifetime warranty jewelry manufacturer",
-        "hypoallergenic jewelry manufacturer",
-        "long lasting jewelry supplier",
-        "surgical steel jewelry manufacturer",
-        "stainless steel jewelry manufacturer",
-        "316L stainless steel jewelry supplier",
-        "brass jewelry manufacturer",
-        "sterling silver jewelry manufacturer",
-        "925 silver jewelry wholesale",
-        "PVD plated jewelry manufacturer",
-        "gold plated stainless steel jewelry wholesale",
-        "rose gold jewelry manufacturer",
-        "stainless steel jewelry factory",
-        "nickel free jewelry manufacturer",
-        "jewelry manufacturer for ecommerce brands",
-        "jewelry supplier for DTC brands",
-        "jewelry manufacturer for shopify brands",
-        "wholesale jewelry supplier for online stores",
-        "B2B jewelry manufacturer",
-        "jewelry manufacturer for retailers",
-        "jewelry supplier for amazon sellers",
-        "premium jewelry manufacturer",
-        "high quality jewelry factory",
-        "reliable jewelry manufacturer",
-        "jewelry manufacturer quality control",
-        "best jewelry manufacturer for brands",
-        "luxury stainless steel jewelry manufacturer",
-        "consistent jewelry manufacturing supplier"
+        "jewelry manufacturing brief template"
       ],
       "eligible_terms": [],
       "missing_facts": [
-        "brand_affiliation",
-        "brass",
-        "china_manufacturing",
-        "dongguan_manufacturing",
-        "durability",
-        "gold_plating",
-        "hypoallergenic",
-        "lifetime_warranty",
         "manufacturing_summary",
-        "nickel_free",
+        "organization_name"
+      ],
+      "page_review": null,
+      "suggested_title": null,
+      "suggested_description": null,
+      "outline": [
+        "Answer the reviewed buyer problem",
+        "Explain confirmed scope and limits",
+        "Show first-hand process and quality evidence",
+        "Explain confirmed sampling and production conditions",
+        "State what a brand should provide to request a quote"
+      ],
+      "evidence": [],
+      "confirmed_facts": {},
+      "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+    },
+    {
+      "page": "/resources/stainless-steel-sample-approval/",
+      "topic": "Page purpose needs review",
+      "status": "hold",
+      "blockers": [
+        "No term has both reviewed SERP intent and the required confirmed facts.",
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
+        "Supply a reviewed working title; target terms are not approved factual copy."
+      ],
+      "terms": [
+        "jewelry manufacturing sample approval checklist"
+      ],
+      "eligible_terms": [],
+      "missing_facts": [
+        "manufacturing_summary",
+        "organization_name"
+      ],
+      "page_review": null,
+      "suggested_title": null,
+      "suggested_description": null,
+      "outline": [
+        "Answer the reviewed buyer problem",
+        "Explain confirmed scope and limits",
+        "Show first-hand process and quality evidence",
+        "Explain confirmed sampling and production conditions",
+        "State what a brand should provide to request a quote"
+      ],
+      "evidence": [],
+      "confirmed_facts": {},
+      "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+    },
+    {
+      "page": "/silver-jewelry-manufacturer/",
+      "topic": "Page purpose needs review",
+      "status": "hold",
+      "blockers": [
+        "No term has both reviewed SERP intent and the required confirmed facts.",
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
+        "Supply a reviewed working title; target terms are not approved factual copy."
+      ],
+      "terms": [
+        "silver jewelry manufacturer"
+      ],
+      "eligible_terms": [],
+      "missing_facts": [
+        "manufacturing_summary",
         "organization_name",
-        "pvd",
-        "quality_evidence",
-        "rose_gold",
-        "silver",
-        "stainless_steel",
-        "steel_316l",
-        "sterling_925",
-        "surgical_steel",
-        "tarnish_free",
-        "waterproof",
-        "wholesale"
+        "silver"
+      ],
+      "page_review": null,
+      "suggested_title": null,
+      "suggested_description": null,
+      "outline": [
+        "Answer the reviewed buyer problem",
+        "Explain confirmed scope and limits",
+        "Show first-hand process and quality evidence",
+        "Explain confirmed sampling and production conditions",
+        "State what a brand should provide to request a quote"
+      ],
+      "evidence": [],
+      "confirmed_facts": {},
+      "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+    },
+    {
+      "page": "/stainless-steel-jewelry-manufacturer/",
+      "topic": "Page purpose needs review",
+      "status": "hold",
+      "blockers": [
+        "No term has both reviewed SERP intent and the required confirmed facts.",
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
+        "Supply a reviewed working title; target terms are not approved factual copy."
+      ],
+      "terms": [
+        "stainless steel jewelry manufacturer",
+        "custom stainless steel jewelry manufacturer",
+        "stainless steel jewellery manufacturer",
+        "stainless steel jewelry OEM manufacturer"
+      ],
+      "eligible_terms": [],
+      "missing_facts": [
+        "manufacturing_summary",
+        "organization_name",
+        "stainless_steel"
+      ],
+      "page_review": null,
+      "suggested_title": null,
+      "suggested_description": null,
+      "outline": [
+        "Answer the reviewed buyer problem",
+        "Explain confirmed scope and limits",
+        "Show first-hand process and quality evidence",
+        "Explain confirmed sampling and production conditions",
+        "State what a brand should provide to request a quote"
+      ],
+      "evidence": [],
+      "confirmed_facts": {},
+      "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+    },
+    {
+      "page": "/stainless-steel-jewelry-manufacturer/earrings/",
+      "topic": "Page purpose needs review",
+      "status": "hold",
+      "blockers": [
+        "No term has both reviewed SERP intent and the required confirmed facts.",
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
+        "Supply a reviewed working title; target terms are not approved factual copy."
+      ],
+      "terms": [
+        "stainless steel earrings manufacturer"
+      ],
+      "eligible_terms": [],
+      "missing_facts": [
+        "manufacturing_summary",
+        "organization_name",
+        "stainless_steel"
+      ],
+      "page_review": null,
+      "suggested_title": null,
+      "suggested_description": null,
+      "outline": [
+        "Answer the reviewed buyer problem",
+        "Explain confirmed scope and limits",
+        "Show first-hand process and quality evidence",
+        "Explain confirmed sampling and production conditions",
+        "State what a brand should provide to request a quote"
+      ],
+      "evidence": [],
+      "confirmed_facts": {},
+      "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+    },
+    {
+      "page": "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+      "topic": "Page purpose needs review",
+      "status": "hold",
+      "blockers": [
+        "No term has both reviewed SERP intent and the required confirmed facts.",
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
+        "Supply a reviewed working title; target terms are not approved factual copy."
+      ],
+      "terms": [
+        "stainless steel necklace manufacturer"
+      ],
+      "eligible_terms": [],
+      "missing_facts": [
+        "manufacturing_summary",
+        "organization_name",
+        "stainless_steel"
+      ],
+      "page_review": null,
+      "suggested_title": null,
+      "suggested_description": null,
+      "outline": [
+        "Answer the reviewed buyer problem",
+        "Explain confirmed scope and limits",
+        "Show first-hand process and quality evidence",
+        "Explain confirmed sampling and production conditions",
+        "State what a brand should provide to request a quote"
+      ],
+      "evidence": [],
+      "confirmed_facts": {},
+      "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
+    },
+    {
+      "page": "/stainless-steel-jewelry-manufacturer/rings/",
+      "topic": "Page purpose needs review",
+      "status": "hold",
+      "blockers": [
+        "No term has both reviewed SERP intent and the required confirmed facts.",
+        "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+        "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
+        "Supply a reviewed working title; target terms are not approved factual copy."
+      ],
+      "terms": [
+        "stainless steel ring manufacturer"
+      ],
+      "eligible_terms": [],
+      "missing_facts": [
+        "manufacturing_summary",
+        "organization_name",
+        "stainless_steel"
       ],
       "page_review": null,
       "suggested_title": null,

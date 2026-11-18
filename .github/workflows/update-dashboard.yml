@@ -29,9 +29,22 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update dashboard data
+        id: collect-search
         env:
           GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
-        run: python scripts/seo_pipeline.py --crawl --crawl-limit 100 --inspect-limit 10
+        run: |
+          rm -f data/search-health.json
+          echo "health_scope=current-attempt" >> "$GITHUB_OUTPUT"
+          python scripts/seo_pipeline.py --crawl --crawl-limit 100 --inspect-limit 10
+
+      - name: Preserve search collection diagnostics
+        if: always() && steps.collect-search.outputs.health_scope == 'current-attempt'
+        uses: actions/upload-artifact@v4
+        with:
+          name: search-collection-health
+          path: data/search-health.json
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Validate analysis
         run: python -m unittest discover -s tests -v

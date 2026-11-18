@@ -313,7 +313,7 @@ def build_workspace(editorial, search, crawl, performance, baseline=None, browse
     def alert(key, severity, message, action, owner):
         alerts.append({'id': key, 'severity': severity, 'message': message, 'next_action': action, 'owner': owner})
     if stale(sources['search'], today, 3):
-        alert('search-stale', 'critical', 'Search evidence is stale or unavailable.', 'Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.', 'Account owner')
+        alert('search-stale', 'critical', 'Page and query data is stale or unavailable.', 'Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.', 'Account owner')
     if stale(sources['crawl'], today, 3):
         alert('crawl-stale', 'warning', 'Crawl evidence is stale or unavailable.', 'Run the bounded crawl-only check.', 'SEO operator')
     health = crawl

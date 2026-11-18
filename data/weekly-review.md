@@ -9,14 +9,13 @@ Draft planning output. Human approval and publication required.
   "search_through": "2026-11-02",
   "crawl": "2026-11-17T15:31:09.835137+00:00",
   "lab": "2026-11-17T16:01:25.064015+00:00",
-  "browser": "2026-11-17T15:33:25.602036+00:00"
+  "browser": "2026-11-17T19:12:21.283309+00:00"
 }
 ```
 
 ## Actions
 - critical: Search evidence is stale or unavailable. Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery. Owner: Account owner.
 - warning: Crawl findings need review; affected pages remain held from drafts and link suggestions. Review crawl-health.json warnings and page findings; retain holds for unavailable pages. Owner: Website owner.
-- warning: Rendered-page checks are missing, stale or have findings. Run the bounded browser smoke check; inspect raw and visible demo strings. Owner: Website owner.
 - warning: 14 target terms need intent review or confirmed facts. Review grouped page briefs; approve only evidence-backed destinations. Owner: SEO lead and operations owner.
 
 ## /contract-manufacturing/

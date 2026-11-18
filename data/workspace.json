@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generated_at": "2026-11-17T17:35:05.454676+00:00",
+  "generated_at": "2026-11-17T22:52:13.058254+00:00",
   "sources": {
     "search": "2026-11-05T16:56:20.770066+00:00",
     "search_through": "2026-11-02",
     "crawl": "2026-11-17T15:31:09.835137+00:00",
     "lab": "2026-11-17T16:01:25.064015+00:00",
-    "browser": "2026-11-17T15:33:25.602036+00:00"
+    "browser": "2026-11-17T19:12:21.283309+00:00"
   },
   "terms": [
     {
@@ -1043,13 +1043,6 @@
       "severity": "warning",
       "message": "Crawl findings need review; affected pages remain held from drafts and link suggestions.",
       "next_action": "Review crawl-health.json warnings and page findings; retain holds for unavailable pages.",
-      "owner": "Website owner"
-    },
-    {
-      "id": "browser-check",
-      "severity": "warning",
-      "message": "Rendered-page checks are missing, stale or have findings.",
-      "next_action": "Run the bounded browser smoke check; inspect raw and visible demo strings.",
       "owner": "Website owner"
     },
     {

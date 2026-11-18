@@ -1,6 +1,6 @@
 {
-  "attempted_at": "2026-11-17T15:33:25.602036+00:00",
-  "status": "failed",
+  "attempted_at": "2026-11-17T19:12:21.283309+00:00",
+  "status": "passed",
   "pages": [
     {
       "requested_url": "https://petrajewelryfactory.com/",
@@ -20,23 +20,18 @@
     },
     {
       "requested_url": "https://petrajewelryfactory.com/private-label/",
-      "url": "chrome-error://chromewebdata/",
-      "title": "petrajewelryfactory.com",
+      "url": "https://petrajewelryfactory.com/private-label/",
+      "title": "Private Label Jewelry Manufacturing | Petra Jewelry",
       "h1": [
-        "Your connection was interrupted"
+        "Start with ours.Make it yours."
       ],
       "raw_h1_count": 1,
-      "description": "",
-      "canonical": "",
-      "visible_characters": 92,
+      "description": "Explore ready-to-brand jewelry collections from Petra Jewelry. Shortlist rings, necklaces, bracelets and earrings, then request options for your brand.",
+      "canonical": "https://petrajewelryfactory.com/private-label/",
+      "visible_characters": 2111,
       "raw_matches": [],
       "visible_matches": [],
-      "findings": [
-        "Unexpected browser destination; review routing",
-        "Missing rendered description",
-        "Missing canonical",
-        "Very little rendered text; inspect manually"
-      ],
+      "findings": [],
       "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
     },
     {

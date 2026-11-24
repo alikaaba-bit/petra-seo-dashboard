@@ -43,6 +43,34 @@ test("fragment workspaces retain separate clicks, links and task identities", ()
   assert.doesNotMatch(elements["#page-detail"].innerHTML, /id="download-brief"/);
 });
 
+test("new review panels escape evidence and suppress links after a failed route check", () => {
+  const src = SITE + "/resources/", dst = SITE + "/private-label/";
+  const date = new Date().toISOString();
+  const { run } = workspace(snapshot([page(src), page(dst)]), {}, { attempted_at: date, pages: [audit(src), audit(dst)] });
+  run(`workspaceData = {
+    generated_at: ${JSON.stringify(date)}, sources: {crawl: ${JSON.stringify(date)}},
+    roadmap: [{tier:"Fatal", task:"Review <em>evidence</em>", status:"Open", evidence:"Crawl & review", owner:"SEO"}],
+    blitz: {status:"Held", page:"/private-label/", proof_categories:0},
+    proof_kb: {records:[{evidence:"<em>Receipt</em>", pages:["/private-label/"], source_url:"/internal-note"}]},
+    internal_links:{suggestions:[{source:"/resources/", target:"/private-label/", anchor:"Private label & brands"}]},
+    ai_visibility: {unobserved_prompts: ["brief-ready"], observations:[]},
+  }`);
+  const html = run("seoMethodReview()");
+  assert.match(html, /Review &lt;em&gt;evidence&lt;\/em&gt;/);
+  assert.match(html, /Crawl &amp; review/);
+  assert.match(html, /&lt;em&gt;Receipt&lt;\/em&gt;/);
+  assert.doesNotMatch(html, /href="\/internal-note"/);
+  assert.match(html, /Private label &amp; brands/);
+  run("data.pages.find(p => p.path === '/private-label/').audit.http_status = 404");
+  assert.equal(run("reviewLinks().length"), 0);
+});
+
+test("only factory URLs become page links and valid fragment identities stay distinct", () => {
+  const { run } = workspace(snapshot([page(SITE + "/#/services"), page("https://external.example/"), page("/unavailable")]));
+  assert.equal(run("data.pages.length"), 1);
+  assert.equal(run("data.pages[0].path"), "/#/services");
+});
+
 test("failed fresh crawl overrides saved audits without refreshing search timestamps or metrics", () => {
   const url = SITE + "/private-label/", raw = snapshot([page(url, 4)]);
   const attempt = { attempted_at: "2026-11-16T00:00:00Z", status: "failed", pages: [audit(url, 404)], blockers: ["Required page: HTTP 404"], warnings: [], coverage: { html_ok: 0, recorded: 1 } };

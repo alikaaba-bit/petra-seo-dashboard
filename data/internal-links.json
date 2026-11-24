@@ -1,0 +1,796 @@
+{
+  "inventory_at": "2026-11-24T01:24:15.350052+00:00",
+  "crawl_at": "2026-11-24T01:24:15.350052+00:00",
+  "graph": [
+    {
+      "url": "https://petrajewelryfactory.com/",
+      "incoming": [
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/about/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/catalog/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/collections/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/contact/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/how-it-works/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "incoming": [
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/private-label/",
+      "incoming": [
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/quality-control/",
+      "incoming": [
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/resources/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+      "incoming": [
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+      "incoming": [
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/services/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/sustainability/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/services/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/",
+      "incoming": [
+        "https://petrajewelryfactory.com/resources/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/sustainability/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/team/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/team/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/team/",
+      "incoming": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/"
+      ],
+      "outgoing": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/about/",
+        "https://petrajewelryfactory.com/catalog/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-it-works/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/services/",
+        "https://petrajewelryfactory.com/sustainability/"
+      ]
+    }
+  ],
+  "suggestions": [
+    {
+      "source": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "target": "/private-label/",
+      "anchor": "private label jewelry manufacturing",
+      "reason": "Main-content link not seen. Place beside the supplier shortlisting criteria.",
+      "status": "Draft for review"
+    },
+    {
+      "source": "/how-it-works/",
+      "target": "/private-label/",
+      "anchor": "start with a private label collection",
+      "reason": "Main-content link not seen. Use where the process explains how to select an approach.",
+      "status": "Draft for review"
+    },
+    {
+      "source": "/resources/stainless-steel-sample-approval/",
+      "target": "/stainless-steel-jewelry-manufacturer/",
+      "anchor": "stainless steel jewelry manufacturing",
+      "reason": "Main-content link not seen. Use beside the sample specification checklist.",
+      "status": "Draft for review"
+    },
+    {
+      "source": "/resources/stainless-steel-material-specification/",
+      "target": "/stainless-steel-jewelry-manufacturer/",
+      "anchor": "discuss stainless steel jewelry production",
+      "reason": "Main-content link not seen. Use at the next step after a specification review.",
+      "status": "Draft for review"
+    },
+    {
+      "source": "/private-label/",
+      "target": "/catalog/",
+      "anchor": "request the private label catalog",
+      "reason": "Main-content link not seen. Check the next step for a buyer choosing designs.",
+      "status": "Draft for review"
+    },
+    {
+      "source": "/contract-manufacturing/",
+      "target": "/contact/",
+      "anchor": "discuss your manufacturing brief",
+      "reason": "Main-content link not seen. Check the next step for a buyer with an original design.",
+      "status": "Draft for review"
+    }
+  ]
+}

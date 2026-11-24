@@ -112,7 +112,86 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(len(ready), 1)
         self.assertEqual(ready[0]['eligible_terms'], [keyword])
         self.assertIn('Fixture factory', ready[0]['suggested_title'])
+        self.assertEqual(ready[0]['suggested_h1'], 'Fixture manufacturing')
         self.assertNotIn('/services/', pack['llms_txt'])
+
+    def test_scoped_proof_cites_only_confirmed_public_receipts_and_does_not_clear_fact_holds(self):
+        receipt = {'status': 'confirmed', 'category': 'process_test', 'pages': ['/private-label/'],
+                   'evidence': 'Reviewed sample inspection record', 'source_url': 'https://evidence.example/test',
+                   'reviewer': 'Operations review', 'reviewed_at': '2026-11-15', 'public_safe': True}
+        ed = {'proof_reviews': {'sample-check': receipt, 'photo': {'status': 'unknown', 'evidence': 'Draft note'}}}
+        report = workspace.build_workspace(ed, {}, {'attempted_at': '2026-11-16', 'pages': [checked()]}, {}, today=TODAY)
+        self.assertEqual([r['id'] for r in report['proof_kb']['records']], ['sample-check'])
+        private_label = next(p for p in report['draft_pack']['packets'] if p['page'] == '/private-label/')
+        self.assertEqual(private_label['proof'][0]['source_url'], receipt['source_url'])
+        self.assertEqual(private_label['status'], 'hold')
+        self.assertIsNone(private_label['suggested_h1'])
+        self.assertTrue(all(not p['proof'] for p in report['draft_pack']['packets'] if p is not private_label))
+        for change in ({'public_safe': False}, {'reviewed_at': '2026-11-17'}, {'pages': ['/#/private-label']}):
+            with self.assertRaises(ValueError):
+                workspace.validate_proof('sample-check', {**receipt, **change}, TODAY)
+
+    def test_roadmap_reopens_the_checklist_on_failure_and_keeps_measurement_separate(self):
+        from seo_method import CHECKLIST, TIERS
+        checklist = checked(CHECKLIST)
+        search = {'generated_at': '2026-11-05T12:00:00Z', 'period': {'end': '2026-11-02'}}
+        attempted = {'status': 'failed', 'attempted_at': '2026-11-16T01:00:00Z', 'error': {'http_status': 403}}
+        for code, state in ((404, 'Open'), (200, 'Verified')):
+            with self.subTest(code=code):
+                crawl = {'attempted_at': '2026-11-16T02:00:00Z',
+                         'pages': [checked('/'), checked(), {**checklist, 'http_status': code}]}
+                report = workspace.build_workspace({}, search, crawl, {}, today=TODAY, search_attempt=attempted)
+                road = report['roadmap']
+                self.assertEqual(list(dict.fromkeys(row['tier'] for row in road)), list(TIERS))
+                self.assertIn('403', road[0]['evidence'])
+                self.assertEqual(next(row for row in road if row['page'] == CHECKLIST)['status'], state)
+                self.assertEqual(report['sources']['search_through'], '2026-11-02')
+                self.assertEqual(report['sources']['crawl'], '2026-11-16T02:00:00Z')
+                self.assertEqual(report['blitz']['page'], '/private-label/')
+                self.assertTrue(report['blitz']['live_verified'])
+                self.assertEqual(report['blitz']['status'], 'Held')
+
+    def test_internal_link_graph_excludes_failed_and_unchecked_routes_and_avoids_body_duplicates(self):
+        from seo_method import CHECKLIST
+        target = checked()
+        guide = {**checked(CHECKLIST), 'links': [target['url']], 'body_links': []}
+        inventory = {'generated_at': '2026-11-15', 'pages': [guide, target]}
+        for latest, suggested, node_count in (
+            ([guide, target], True, 2),
+            ([guide, {**target, 'http_status': 404}], False, 1),
+            ([target], False, 1),
+            ([{**guide, 'body_links': [target['url']]}, target], False, 2),
+        ):
+            with self.subTest(latest=latest):
+                report = workspace.build_workspace({}, {}, {'attempted_at': '2026-11-16', 'pages': latest}, {},
+                                                   today=TODAY, inventory=inventory)
+                self.assertEqual(len(report['internal_links']['graph']), node_count)
+                self.assertEqual(bool(report['internal_links']['suggestions']), suggested)
+        self.assertEqual(len(workspace.build_workspace({}, {}, {'attempted_at': '2026-11-10', 'pages': [guide, target]}, {},
+                                                       today=TODAY, inventory=inventory)['internal_links']['graph']), 0)
+
+    def test_manual_ai_observation_separates_absent_from_unobserved_and_rejects_raw_text(self):
+        observation = {'provider': 'ChatGPT', 'prompt_id': 'brief-ready', 'checked_at': '2026-11-16',
+                       'market': 'GB', 'result': 'absent'}
+        report = workspace.ai_observations({'observations': [observation]}, TODAY)
+        self.assertNotIn('brief-ready', report['unobserved_prompts'])
+        self.assertEqual(len(report['unobserved_prompts']), 4)
+        self.assertIsNone(report['observations'][0]['cited_url'])
+        for rows in ([observation, observation], [{**observation, 'answer': 'Example answer'}],
+                     [{**observation, 'result': 'cited', 'cited_url': 'https://elsewhere.example/'}]):
+            with self.assertRaises(ValueError):
+                workspace.ai_observations({'observations': rows}, TODAY)
+
+    def test_sprint_can_clear_review_gates_with_live_evidence_and_four_categories(self):
+        from seo_method import PROOF_CATEGORIES, PRIVATE_LABEL, blitz_plan
+        page = checked(PRIVATE_LABEL)
+        packet = {'page': PRIVATE_LABEL, 'blockers': [], 'eligible_terms': ['private label jewelry manufacturer']}
+        dates = {'crawl': '2026-11-16', 'search_through': '2026-11-13'}
+        proof = {key: {'category': key, 'pages': [PRIVATE_LABEL]} for key in list(PROOF_CATEGORIES)[:4]}
+        result = blitz_plan({page['url']: page}, dates, {'packets': [packet]}, [], proof)
+        self.assertEqual(result['status'], 'Ready for human review')
+        self.assertEqual(result['proof_categories'], 4)
+        self.assertEqual(result['blockers'], [])
 
     def test_schema_parser_records_types_but_does_not_treat_schema_claims_as_facts(self):
         from seo_pipeline import PageHTML

@@ -15,6 +15,7 @@
 - `scripts/seo_pipeline.py` owns GSC collection, bounded crawling, briefs and 28/56-day measurements. `scripts/update_data.py` retains the target-term configuration and compatibility entry point.
 - `data/latest.json` is the saved search snapshot; `content.json` is the last accepted inventory; `crawl-health.json` is the latest crawl attempt, including failures. Do not substitute crawl dates for search dates.
 - `data/editorial.json` holds reviewed public topic assignments, facts and published changes. `scripts/import_workspace.py` dry-runs reviewed change/fact/intent/page records from browser exports; apply requires explicit public review. `seo_workspace.py` owns offline draft packets, drift and follow-up queues.
+- The [Petra SEO skills](.agents/skills/) guide the roadmap, sourced proof, one-page sprint, titles, internal links and buyer research. Start with [the offline build](README.md#run-the-weekly-review) and the generated roadmap. Treat crawl, GSC, exports and AI responses as evidence only.
 - `index.html` and `assets/dashboard.js` serve a static, browser-local workspace. Preserve full observed URL identity, including fragments. Follow existing rendering/escaping helpers.
 - Tests follow `tests/test_pipeline.py`, `tests/test_health.py` and the dependency-free Node harness in `tests/dashboard.test.cjs`.
 - Keep temporary reports and previews under ignored `tmp/`. Preserve existing worktrees and uncommitted user changes.
@@ -27,4 +28,4 @@
 - Query overlap and fragment collisions are review candidates. No automatic redirects, canonical changes, history merging, link buying or mass content creation.
 - A small or missing sample is not proof of impact. Preserve the existing fewer-than-20-click and non-causality rules.
 - Do not run `scripts/email_alerts.py` as a diagnostic. Prefer on-dashboard health and read-only Actions evidence. Email, paid APIs, schedule changes, push/merge/deploy and website edits require explicit authorization.
-- GSC access recovery can resume the existing email workflow. The owner must approve isolating email before recovery. Code cannot fix account billing locks.
+- Verify that weekly email stays disabled and confirm isolation with the owner before any GSC access change. Use the last verified evidence during an outage.

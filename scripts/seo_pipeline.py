@@ -85,15 +85,24 @@ def normalize_root(url):
 
 
 class PageHTML(HTMLParser):
+    PAGE_CHROME = ("header", "nav", "aside", "footer")
+
     def __init__(self, url):
         super().__init__(convert_charrefs=True)
         self.url, self.title, self.description, self.canonical = url, "", "", ""
         self.headings, self.links, self.fragment_links, self.robots, self.text = [], [], [], [], []
+        self.main_seen, self.main_depth, self.chrome_depth = False, 0, 0
+        self.body_links = []
         self.capture, self.buffer, self.hidden, self.h1_count = None, [], 0, 0
         self.jsonld, self.schema, self.schema_errors = None, [], 0
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == "main":
+            self.main_seen = True
+            self.main_depth += 1
+        if tag in self.PAGE_CHROME:
+            self.chrome_depth += 1
         if tag in ("script", "style"):
             self.hidden += 1
         if tag == "script" and a.get("type", "").lower() == "application/ld+json":
@@ -116,8 +125,14 @@ class PageHTML(HTMLParser):
             link = urldefrag(observed)[0]
             if safe_url(link) and not urlparse(link).query:
                 self.links.append(link)
+                if self.main_depth and not self.chrome_depth and not self.hidden and not urlparse(observed).fragment:
+                    self.body_links.append(link)
 
     def handle_endtag(self, tag):
+        if tag == "main":
+            self.main_depth = max(0, self.main_depth - 1)
+        if tag in self.PAGE_CHROME:
+            self.chrome_depth = max(0, self.chrome_depth - 1)
         if tag == "script" and self.jsonld is not None:
             try:
                 self.schema.append(json.loads("".join(self.jsonld)))
@@ -340,7 +355,9 @@ def crawl(urls, limit=100):
                             "crawl_status": "checked", "title": page.title, "description": page.description,
                             "canonical": page.canonical, "headings": page.headings, "word_count": len(text.split()),
                             "robots": sorted(set(page.robots + [headers.get("X-Robots-Tag", headers.get("x-robots-tag", "")).lower()])), **schema,
-                            "text": text[:30000], "links": links, "fragment_links": sorted(set(page.fragment_links)), "issues": issues})
+                            "text": text[:30000], "links": links,
+                            "body_links": sorted(set(page.body_links)) if page.main_seen else None,
+                            "fragment_links": sorted(set(page.fragment_links)), "issues": issues})
             queue.extend(link for link in links if link not in seen)
         except Exception as exc:
             error = {"code": exc.code, "message": str(exc), **exc.details} if isinstance(exc, CrawlError) else {
@@ -498,7 +515,8 @@ def brief_blocked(page):
     audit = page.get("audit", {})
     return (bool(urlparse(page["url"]).fragment) or audit.get("crawl_status") != "checked" or audit.get("http_status") != 200
             or audit.get("final_url", page["url"]) != page["url"]
-            or any(i.startswith(("Template placeholder", "Noindex")) for i in audit.get("issues", [])))
+            or any(i.startswith(("Template placeholder", "Noindex", "Missing canonical", "Canonical points to a different URL"))
+                   for i in audit.get("issues", [])))
 
 
 def enrich_briefs(pages):

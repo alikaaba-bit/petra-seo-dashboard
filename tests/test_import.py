@@ -45,6 +45,18 @@ class ImportTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             importer.merge_workspace(backup, {})
 
+    def test_reviewed_proof_uses_public_field_allowlist(self):
+        backup = self.backup()
+        backup['review']['proof_reviews'] = {'sample-note': {
+            'status': 'confirmed', 'category': 'qc_edge_case', 'pages': ['/private-label/'],
+            'evidence': 'Approved example', 'source_url': 'https://evidence.example/proof',
+            'reviewer': 'Quality team', 'reviewed_at': '2026-11-15', 'public_safe': True, 'internal_notes': 'PRIVATE',
+        }}
+        self.assertNotIn('proof_reviews', importer.merge_workspace(backup, {}))
+        reviewed = importer.merge_workspace(backup, {}, True, date(2026, 11, 16))
+        self.assertNotIn('PRIVATE', json.dumps(reviewed))
+        self.assertEqual(reviewed['proof_reviews']['sample-note']['category'], 'qc_edge_case')
+
     def test_cli_dry_run_preserves_file_and_apply_requires_public_review(self):
         (ROOT / 'tmp').mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=ROOT / 'tmp') as folder:

@@ -1,55 +1,92 @@
 {
-  "attempted_at": "2026-11-17T19:12:21.283309+00:00",
+  "attempted_at": "2026-11-24T01:37:31.257Z",
   "status": "passed",
+  "scope": "Bounded read-only Chrome check at 1440 and 390 CSS pixels",
   "pages": [
     {
-      "requested_url": "https://petrajewelryfactory.com/",
       "url": "https://petrajewelryfactory.com/",
       "title": "Custom Jewelry Manufacturer | Petra Jewelry",
       "h1": [
         "Custom and\nprivate label\njewelry\nmanufacturing."
       ],
       "raw_h1_count": 1,
-      "description": "Custom and private label jewelry manufacturing in stainless steel and silver for brands and retailers. Explore our designs or bring your own brief.",
       "canonical": "https://petrajewelryfactory.com/",
-      "visible_characters": 6047,
+      "description": "Custom and private label jewelry manufacturing in stainless steel and silver for brands and retailers. Explore our designs or bring your own brief.",
+      "visible_characters": 6120,
       "raw_matches": [],
       "visible_matches": [],
-      "findings": [],
-      "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
+      "overflow": false,
+      "viewport": 1440,
+      "requested_url": "https://petrajewelryfactory.com/",
+      "findings": []
     },
     {
-      "requested_url": "https://petrajewelryfactory.com/private-label/",
       "url": "https://petrajewelryfactory.com/private-label/",
       "title": "Private Label Jewelry Manufacturing | Petra Jewelry",
       "h1": [
-        "Start with ours.Make it yours."
+        "Private Label Jewelry Manufacturing for Your Brand"
       ],
       "raw_h1_count": 1,
-      "description": "Explore ready-to-brand jewelry collections from Petra Jewelry. Shortlist rings, necklaces, bracelets and earrings, then request options for your brand.",
       "canonical": "https://petrajewelryfactory.com/private-label/",
-      "visible_characters": 2111,
+      "description": "Start your private-label jewelry collection from Petra’s designs. Explore material, finish, branding and packaging options, with 200 units per style.",
+      "visible_characters": 5217,
       "raw_matches": [],
       "visible_matches": [],
-      "findings": [],
-      "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
+      "overflow": false,
+      "viewport": 1440,
+      "requested_url": "https://petrajewelryfactory.com/private-label/",
+      "findings": []
     },
     {
-      "requested_url": "https://petrajewelryfactory.com/contract-manufacturing/",
       "url": "https://petrajewelryfactory.com/contract-manufacturing/",
-      "title": "Custom Jewelry Contract Manufacturing | Petra Jewelry",
+      "title": "Custom & OEM Jewelry Manufacturing | Petra Jewelry",
       "h1": [
-        "Your idea,our factory"
+        "Custom & OEM Jewelry Manufacturing"
       ],
       "raw_h1_count": 1,
-      "description": "Bring your jewelry designs, sketches or references to Petra. Explore contract manufacturing, from development and sampling to production for your brand.",
       "canonical": "https://petrajewelryfactory.com/contract-manufacturing/",
-      "visible_characters": 2456,
+      "description": "Bring your jewelry designs to Petra for CAD development, sampling and manufacturing. Stainless steel first, with silver and brass options available.",
+      "visible_characters": 5364,
       "raw_matches": [],
       "visible_matches": [],
-      "findings": [],
-      "note": "Rendered DOM observation, not proof of HTTP status, Google indexing or factual accuracy."
+      "overflow": false,
+      "viewport": 1440,
+      "requested_url": "https://petrajewelryfactory.com/contract-manufacturing/",
+      "findings": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/how-it-works/",
+      "title": "Jewelry Manufacturing Process | Petra Jewelry",
+      "h1": [
+        "Bring your brief.Get a clear routeto sampling."
+      ],
+      "raw_h1_count": 1,
+      "canonical": "https://petrajewelryfactory.com/how-it-works/",
+      "description": "See the path from your jewelry brief to a quote and sampling plan. Review materials, finishes, construction and project requirements with Petra Jewelry.",
+      "visible_characters": 2641,
+      "raw_matches": [],
+      "visible_matches": [],
+      "overflow": false,
+      "viewport": 1440,
+      "requested_url": "https://petrajewelryfactory.com/how-it-works/",
+      "findings": []
+    },
+    {
+      "url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "title": "How to Evaluate a Jewelry Manufacturing Partner | Petra Jewelry",
+      "h1": [
+        "How to Evaluate a Jewelry Manufacturing Partner"
+      ],
+      "raw_h1_count": 1,
+      "canonical": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "description": "Evaluate a jewelry manufacturing partner using a consistent brief, sample, proposal and evidence. Compare development, quality, packaging and communication.",
+      "visible_characters": 3879,
+      "raw_matches": [],
+      "visible_matches": [],
+      "overflow": false,
+      "viewport": 1440,
+      "requested_url": "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+      "findings": []
     }
-  ],
-  "scope": "Bounded rendered DOM smoke check; no forms submitted or site changes made"
+  ]
 }

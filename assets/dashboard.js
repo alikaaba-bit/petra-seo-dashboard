@@ -24,6 +24,16 @@ const safePath = (path) =>
   path.startsWith("/") &&
   !path.startsWith("//") &&
   !/[\\\s]/.test(path);
+function factoryURL(value) {
+  try {
+    const url = new URL(value);
+    return url.origin === SITE && !url.username && !url.password ? url : null;
+  } catch {
+    return null;
+  }
+}
+const markdownText = (value) =>
+  esc(String(value ?? "").replace(/\s+/g, " ").trim()).replace(/[\\`*_{}\[\]()~|]/g, "\\$&");
 let data, editorial, inventory, activePage, searchSummary;
 let performanceData = { reports: [] };
 let crawlAttempt = {};
@@ -42,7 +52,7 @@ if (!Array.isArray(local.leads)) local.leads = [];
 if (!local.tasks || typeof local.tasks !== "object") local.tasks = {};
 if (!local.review || typeof local.review !== "object") local.review = {};
 const views = {
-  workflow: ["Review, publish, learn.", "Confirm facts and intent, prepare a focused page, and track the next evidence check."],
+  workflow: ["Weekly SEO review", "Review the roadmap, confirm facts, and prepare one page for human publication."],
   overview: [
     "Search overview",
     "Search performance, useful next steps, and the evidence behind them.",
@@ -127,7 +137,9 @@ function latestCrawl() {
 function routeCollisions(urls) {
   const groups = new Map();
   for (const value of urls) {
-    const u = new URL(value), full = u.href;
+    const u = factoryURL(value);
+    if (!u) continue;
+    const full = u.href;
     u.hash = "";
     if (!groups.has(u.href)) groups.set(u.href, new Set());
     groups.get(u.href).add(full);
@@ -137,14 +149,18 @@ function routeCollisions(urls) {
 }
 function auditReady(p) {
   const a = p.audit || {};
-  return !new URL(p.url).hash && a.crawl_status === "checked" && a.http_status === 200 &&
-    new URL(a.final_url || p.url).href === new URL(p.url).href &&
-    !(a.issues || []).some((i) => /^(Template placeholder|Noindex)/.test(i));
+  const url = factoryURL(p.url);
+  return url && !url.hash && a.crawl_status === "checked" && a.http_status === 200 &&
+    factoryURL(a.final_url || p.url)?.href === url.href &&
+    !(a.issues || []).some((i) => /^(Template placeholder|Noindex|Missing canonical|Canonical points to a different URL)/.test(i));
 }
 function normalize(raw) {
   const result = { ...normalizeSnapshot(raw) }, crawl = latestCrawl(),
-    audits = new Map((crawl.pages || []).map((p) => [new URL(p.url).href, p]));
-  result.pages = result.pages.map((p) => ({ ...p, path: pagePath(p.url), audit: { ...p.audit }, brief: { ...p.brief } }));
+    audits = new Map((crawl.pages || []).filter(p => factoryURL(p.url)).map(p => [factoryURL(p.url).href, p]));
+  result.pages = result.pages.filter(p => factoryURL(p.url)).map(p => ({ ...p, path: pagePath(p.url), audit: { ...p.audit }, brief: { ...p.brief } }));
+  result.overlap_candidates = (result.overlap_candidates || []).map(o => ({
+    ...o, pages: o.pages.filter(p => factoryURL(p.url)),
+  })).filter(o => o.pages.length > 1);
   for (const [url, audit] of audits) {
     if (result.pages.some((p) => new URL(p.url).href === url)) continue;
     const topic = editorial.topics.find((t) => t.page === pagePath(url));
@@ -498,9 +514,11 @@ function showPage(path) {
   if (!p) return;
   activePage = p;
   const packet = workspaceData.draft_pack?.packets?.find(r => r.page === p.path);
+  const links = workspaceData.internal_links ? reviewLinks().filter(l => l.target === path) : p.brief.internal_links || [];
   const b = currentPack() && packet?.status === 'draft_for_human_review' && auditReady(p)
-    ? {...p.brief, status:'draft', suggested_title:packet.suggested_title, suggested_h1:packet.topic, note:packet.measurement}
-    : {status:'blocked', note:'Brief on hold. Review current crawl evidence, facts and search intent in Weekly review.', internal_links:[]};
+    ? {...p.brief, status:'draft', suggested_title:packet.suggested_title, suggested_h1:packet.suggested_h1 || packet.topic,
+       note: [packet.title_review, packet.measurement].filter(Boolean).join(' '), internal_links: links, proof: packet.proof || []}
+    : {status:'blocked', note:'Brief on hold. Review current crawl evidence, facts and search intent in Weekly review.', internal_links:links};
   const a = p.audit || {};
   activePage = {...p, brief:b};
   $("#page-detail").innerHTML =
@@ -518,7 +536,7 @@ function showPage(path) {
         : empty(
             "No supported suggestions yet. A content crawl and relevant source pages are required.",
           ),
-    )}${panel("Current content & technical checks", `<div class="fact-grid"><div class="fact"><small>Current title</small>${esc(a.title || "Not available")}</div><div class="fact"><small>Current meta description</small>${esc(a.description || "Not available")}</div></div><p class="content-status">${num(a.word_count)} extracted words · ${num(a.incoming_links?.length)} incoming links from crawled pages. Word count is descriptive, not a quality score.</p>${(a.issues || []).map((i) => `<div class="issue">${esc(i)}</div>`).join("")}<details><summary>Extracted headings</summary>${(a.headings || []).map((h) => `<p>${esc(h.level)} · ${esc(h.text)}</p>`).join("")}</details>`)}${panel("Work status", `<label for="task-status" class="sr-only">Page work status</label><select id="task-status">${["To review", "In progress", "Ready to publish", "Published"].map((s) => `<option ${local.tasks[p.path] === s ? "selected" : ""}>${s}</option>`).join("")}</select><p class="content-status">Saved in this browser. Log the publication date in Changes & results to measure the outcome.</p>`)}`;
+    )}${b.proof?.length ? panel("Confirmed first-hand evidence", proofTable(b.proof)) : ""}${panel("Current content & technical checks", `<div class="fact-grid"><div class="fact"><small>Current title</small>${esc(a.title || "Not available")}</div><div class="fact"><small>Current meta description</small>${esc(a.description || "Not available")}</div></div><p class="content-status">${num(a.word_count)} extracted words · ${num(a.incoming_links?.length)} incoming links from crawled pages. Word count is for editorial triage.</p>${(a.issues || []).map((i) => `<div class="issue">${esc(i)}</div>`).join("")}<details><summary>Extracted headings</summary>${(a.headings || []).map((h) => `<p>${esc(h.level)} · ${esc(h.text)}</p>`).join("")}</details>`)}${panel("Work status", `<label for="task-status" class="sr-only">Page work status</label><select id="task-status">${["To review", "In progress", "Ready to publish", "Published"].map((s) => `<option ${local.tasks[p.path] === s ? "selected" : ""}>${s}</option>`).join("")}</select><p class="content-status">Saved in this browser. Log the publication date in Changes & results to measure the outcome.</p>`)}`;
   $("#page-dialog").showModal();
 }
 function labHealth() {
@@ -594,6 +612,11 @@ function currentPack() {
   return workspaceData.generated_at && !pendingReviews() &&
     workspaceData.sources?.crawl === crawlAt && Date.now() - Date.parse(crawlAt) < 3 * 86400000;
 }
+function reviewLinks() {
+  if (!currentPack()) return [];
+  const eligible = new Set((data?.pages || []).filter(auditReady).map(p => p.path));
+  return (workspaceData.internal_links?.suggestions || []).filter(l => eligible.has(l.source) && eligible.has(l.target));
+}
 function publicReference(value) {
   try {
     const u = new URL(value), host = u.hostname;
@@ -661,11 +684,48 @@ function reviewDateLabel(value) {
   const parsed = new Date(value);
   return Number.isFinite(parsed.getTime()) ? parsed.toLocaleString(undefined, {year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'UTC',timeZoneName:'short'}) : 'Unavailable';
 }
+function proofTable(records) {
+  if (!records.length) return empty("No confirmed public receipts recorded.");
+  const categories = workspaceData.proof_kb?.categories || {};
+  return table(["Evidence", "Category", "Page", "Reviewed", "Source"], records.map(r => [
+    esc(r.evidence), esc(categories[r.category] || r.category), (r.pages || []).map(esc).join(" · "),
+    esc(reviewDateLabel(r.reviewed_at)), publicReference(r.source_url)
+      ? `<a href="${esc(r.source_url)}" target="_blank" rel="noopener noreferrer">Evidence</a>` : "Unavailable",
+  ]));
+}
+function seoMethodReview() {
+  if (!workspaceData.roadmap) return "";
+  const road = workspaceData.roadmap, sprint = workspaceData.blitz, ai = workspaceData.ai_visibility;
+  const links = reviewLinks();
+  const fatal = road.filter(r => r.tier === "Fatal" && ["Open", "Needs evidence"].includes(r.status)).length;
+  return panel("SEO roadmap", table(["Priority", "Decision", "Evidence and next action", "Owner"], road.map(r => [
+    badge(r.tier, r.tier === "Fatal" && r.status !== "Verified" ? "red" : "gray"),
+    `<strong>${esc(r.task)}</strong><small>${esc(r.page || "")}</small><small>${esc(r.status)}</small>`,
+    `${esc(r.evidence)}<small>${esc(r.next_action)}</small><small>${esc(reviewDateLabel(r.observed_at))}</small>`, esc(r.owner),
+  ])), `${fatal} open fatal items · Review dated observations before changing a route.`, '<a href="data/roast-roadmap.md" download>Roadmap file</a>') +
+    panel("30-day plan · private label", `<p>${badge(sprint.status, sprint.status === "Held" ? "amber" : "gray")} ${esc(sprint.page)} · ${esc(sprint.keyword)}</p>
+      <p>${sprint.live_verified ? "Live route and canonical verified." : "Live route needs verification."} ${num(sprint.proof_categories)} of 5 proof categories recorded.</p>
+      ${(sprint.blockers || []).map(item => `<div class="issue">${esc(item)}</div>`).join("")}
+      <p>${esc(sprint.measurement)}</p>`, "The schedule starts after evidence and review gates clear.", '<a href="data/blitz-plan.md" download>Plan file</a>') +
+    panel("Internal links for review", links.length ? table(["Source", "Destination", "Suggested anchor", "Review"], links.map(l => [
+      esc(l.source), esc(l.target), esc(l.anchor), esc(l.reason),
+    ])) : empty("A current crawl and matching review build are required for supported link suggestions."),
+    "Check the placement against the existing copy.", '<a href="data/internal-links.json" download>Link graph</a>') +
+    panel("Public proof register", proofTable(workspaceData.proof_kb?.records || []),
+      `${num(workspaceData.draft_pack?.unknown_facts?.length)} fact fields still unknown. Each receipt needs a reviewed public source.`) +
+    panel("Buyer journey and AI observations", `<p>${num(ai.unobserved_prompts.length)} prompts without a manual observation.</p>${
+      ai.observations.length ? table(["Checked", "Provider", "Market", "Buyer prompt", "Observation"], ai.observations.slice(0, 15).map(r => [
+        esc(reviewDateLabel(r.checked_at)), esc(r.provider), esc(r.market), esc(r.prompt_id),
+        esc(r.result) + (factoryURL(r.cited_url) && publicReference(r.cited_url) ? `<small><a href="${esc(r.cited_url)}">Cited Petra page</a></small>` : ""),
+      ])) : empty("No observations recorded.")
+    }`, "A manual snapshot describes one answer per provider, market, date and prompt.", '<a href="data/customer-journey.md" download>Buyer journey file</a>');
+}
 function weeklyReview() {
   if (!workspaceData.generated_at) return panel('Build the weekly review', '<p>Run the offline workspace builder using the saved search data and latest crawl. This view never authenticates to GSC or publishes.</p><code>python scripts/seo_workspace.py --output-dir tmp/preview/data</code>');
   const terms = workspaceData.terms || [], pack = workspaceData.draft_pack || {}, facts = reviewRecords('fact_reviews');
   const alerts = (workspaceData.alerts || []).map(a => `<article class="topic-card">${badge(a.severity, a.severity === 'critical' ? 'red' : 'amber')}<h3>${esc(a.message)}</h3><p>${esc(a.next_action)}</p><p class="muted">${esc(a.owner)}</p></article>`).join('');
-  return panel('This week’s review', `<p>Generated ${esc(reviewDateLabel(workspaceData.generated_at))}. Source dates remain separate.</p><div class="fact-grid">${Object.entries(workspaceData.sources || {}).map(([k,v]) => `<div class="fact"><small>${esc(({search:'Search refresh',search_through:'Search data through',crawl:'Crawl check',lab:'Lighthouse lab',browser:'Rendered check'})[k] || k)}</small>${esc(reviewDateLabel(v))}</div>`).join('')}</div><div class="callout">${pendingReviews() ? 'Local reviews differ from the imported editorial file. Export, validate and rebuild before using a new draft packet.' : 'Review facts and intent, prepare a focused page, then let a person publish.'} ${currentPack() ? '' : 'Draft downloads are held until current crawl evidence and imported reviews match.'}</div><div class="toolbar"><button class="secondary" id="export-work">Export workspace</button><button class="secondary" id="download-pack" ${currentPack() ? '' : 'disabled'}>Download planning packet</button></div>${alerts}`) +
+  return panel('This week’s review', `<p>Generated ${esc(reviewDateLabel(workspaceData.generated_at))}. Source dates remain separate.</p><div class="fact-grid">${Object.entries(workspaceData.sources || {}).map(([k,v]) => `<div class="fact"><small>${esc(({search:'Search refresh',search_through:'Search data through',search_attempt:'Latest GSC attempt',crawl:'Crawl check',lab:'Lighthouse lab',browser:'Rendered check'})[k] || k)}</small>${esc(reviewDateLabel(v))}</div>`).join('')}</div><div class="callout">${pendingReviews() ? 'Local reviews differ from the imported editorial file. Export, validate and rebuild before using a new draft packet.' : 'Review facts and intent, prepare a focused page, then let a person publish.'} ${currentPack() ? '' : 'Draft downloads are held until current crawl evidence and imported reviews match.'}</div><div class="toolbar"><button class="secondary" id="export-work">Export workspace</button><button class="secondary" id="download-pack" ${currentPack() ? '' : 'disabled'}>Download planning packet</button></div>${alerts}`) +
+    seoMethodReview() +
     panel('Page packets', (pack.packets || []).map(p => `<article class="topic-card"><h3>${esc(p.page)}</h3>${badge(p.status, 'amber')}<p>${esc(p.topic)}</p>${p.blockers.map(b => `<div class="issue">${esc(b)}</div>`).join('')}<p>Unknown / unsupported: ${esc(p.missing_facts.join(', ') || 'None in this packet')}</p><p>${esc(p.terms.length)} target terms · ${esc(p.eligible_terms.length)} reviewed and fact-supported</p>${p.suggested_title ? `<p>Draft title: ${esc(p.suggested_title)}</p><p>${esc(p.suggested_description)}</p>` : ''}<details><summary>Planning outline and terms</summary><ol>${p.outline.map(s => `<li>${esc(s)}</li>`).join('')}</ol><p>${p.terms.map(esc).join(' · ')}</p></details></article>`).join(''), 'Grouped destinations are proposals. No page is published or marked complete automatically.') +
     panel('Confirm public facts', `<p>Leave missing facts unknown. Capability evidence can confirm a limitation as well as support. Do not enter private documents, customer details or token-bearing links.</p><details><summary>Review a fact</summary><form id="fact-review-form" class="form-grid"><label>Fact<select name="key">${Object.entries(workspaceData.fact_fields || {}).map(([k,v])=>`<option value="${esc(k)}">${esc(v)}</option>`).join('')}</select></label><label>Status<select name="status"><option value="unknown">Unknown</option><option value="confirmed">Confirmed with evidence</option></select></label><label class="full">Confirmed value / limitations<textarea name="value" maxlength="1600"></textarea></label><label>Capability supported?<select name="supported"><option value="">Not a capability / not confirmed</option><option value="true">Yes, within the documented limits</option><option value="false">No</option></select></label>${evidenceFields()}<div class="full"><button class="secondary">Save local review</button></div></form></details>${table(['Fact', 'Status', 'Value'], Object.entries(workspaceData.fact_fields || {}).map(([k,v])=>[esc(v),esc(facts[k]?.status || 'unknown'),esc(facts[k]?.value || 'Unknown')]))}`) +
     panel('Review search intent', `<details><summary>Assign a term after checking the SERP</summary><form id="term-review-form" class="form-grid"><label class="full">Target term<select name="key">${terms.map(t=>`<option>${esc(t.keyword)}</option>`).join('')}</select></label><label>Status<select name="status"><option value="needs_review">Needs review</option><option value="hold">Hold</option><option value="approved">Reviewed destination</option></select></label><label>Intent<select name="intent"><option value="commercial">Commercial</option><option value="informational">Informational</option></select></label><label>Observed page type<select name="page_type"><option value="supplier_landing">Supplier landing page</option><option value="comparison">Comparison</option><option value="guide">Guide</option></select></label>${reviewInput('approved_page','Approved destination, e.g. /private-label/')}${reviewInput('reason','Review reason')}${reviewInput('market','SERP market / location')}<label>Device<select name="device"><option>desktop</option><option>mobile</option></select></label>${reviewInput('checked_at','SERP checked date','date')}<label class="full">Result-page evidence URLs, one per line (1–5)<textarea name="urls" maxlength="10000"></textarea></label>${reviewInput('reviewer','Reviewer role / public name')}${reviewInput('reviewed_at','Review date','date')}<div class="full"><button class="secondary">Save local review</button></div></form></details>${table(['Term', 'Review status', 'Proposed / approved page', 'Facts to confirm'], terms.map(t=>{const r=reviewRecords('term_reviews')[t.keyword] || t;return [esc(t.keyword),esc(r.status),esc(r.approved_page || t.proposed_page),esc(t.missing_facts.join(', '))]}))}`) +
@@ -784,7 +844,7 @@ document.addEventListener("click", (event) => {
     if (b.status === "blocked" || !currentPack()) return toast(b.note || "Rebuild the reviewed packet first.");
     download(
       `petra-${p.path.replace(/[^a-z0-9]/gi, "-")}-brief.md`,
-      `# ${p.topic}\n\nPage: ${p.url}\nSnapshot: ${data.generated_at}\nConfidence: ${p.confidence}\n\n## Suggested title\n${b.suggested_title || "Review required"}\n\n## Suggested H1\n${b.suggested_h1 || "Review required"}\n\n## Buyer questions\n${b.buyer_questions.map((q) => "- " + q).join("\n")}\n\n## Query evidence\n${p.queries.map((q) => `- ${q.query}: ${q.impressions} impressions, ${q.clicks} clicks, position ${q.position}`).join("\n") || "Unavailable"}\n\n## Suggested internal links\n${b.internal_links.map((l) => `- ${l.source} → ${p.path}: ${l.anchor}`).join("\n") || "None supported yet"}\n\n${b.note}\n`,
+      `# ${markdownText(p.topic)}\n\nPage · ${markdownText(p.url)}\nSnapshot · ${markdownText(data.generated_at)}\nConfidence · ${markdownText(p.confidence)}\n\n## Suggested title\n${markdownText(b.suggested_title || "Review required")}\n\n## Suggested H1\n${markdownText(b.suggested_h1 || "Review required")}\n\n## Buyer questions\n${(b.buyer_questions || []).map(q => "- " + markdownText(q)).join("\n")}\n\n## Query evidence\n${p.queries.map(q => "- " + markdownText(`${q.query} · ${q.impressions} impressions, ${q.clicks} clicks, position ${q.position}`)).join("\n") || "Unavailable"}\n\n## First-hand receipts\n${(b.proof || []).map(r => "- " + markdownText(`${r.evidence} · ${r.source_url}`)).join("\n") || "See the reviewed page evidence."}\n\n## Suggested internal links\n${b.internal_links.map(l => "- " + markdownText(`${l.source} → ${p.path} · ${l.anchor}`)).join("\n") || "None supported yet"}\n\n${markdownText(b.note)}\n`,
       "text/markdown",
     );
   }

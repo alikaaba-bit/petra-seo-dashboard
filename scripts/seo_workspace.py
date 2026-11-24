@@ -10,7 +10,9 @@ import re
 from urllib.parse import unquote, urljoin, urlparse
 from zoneinfo import ZoneInfo
 
-from seo_pipeline import ROOT, SITE, brief_blocked, crawl_health, required_pages, write_json
+from seo_method import (JOURNEY, PROOF_CATEGORIES, blitz_markdown, blitz_plan, crawl_routes,
+                        internal_links, journey_markdown, markdown_text, roadmap, roadmap_markdown, search_issue, verified_page)
+from seo_pipeline import ROOT, SITE, brief_blocked, crawl_health, required_pages, safe_url, write_json
 from update_data import TARGET_KEYWORDS, ALL_KEYWORDS, HISTORICAL_KEYWORDS, TARGET_PAGES
 
 FACT_FIELDS = {
@@ -110,6 +112,70 @@ def confirmed_facts(editorial, today=None):
     return result
 
 
+def validate_proof(key, record, today):
+    if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,79}', key) or not isinstance(record, dict):
+        raise ValueError('Proof requires a short stable ID and a review record')
+    if record.get('status') == 'unknown':
+        return {'status': 'unknown', 'evidence': None}
+    if record.get('status') != 'confirmed' or record.get('public_safe') is not True or not public_url(record.get('source_url')):
+        raise ValueError('Confirmed proof needs a public-safe evidence URL')
+    category, pages = record.get('category'), record.get('pages')
+    if not isinstance(category, str) or category not in PROOF_CATEGORIES:
+        raise ValueError('Proof requires a recognized category')
+    if not isinstance(pages, list) or not 1 <= len(pages) <= 12 or not all(map(canonical_path, pages)):
+        raise ValueError('Proof requires 1–12 exact page paths')
+    return {'id': key, 'status': 'confirmed', 'public_safe': True,
+            'category': category, 'pages': list(dict.fromkeys(pages)),
+            'evidence': text(record.get('evidence'), 'Public first-hand receipt'),
+            'source_url': record['source_url'], 'reviewed_at': reviewed_date(record.get('reviewed_at'), today),
+            'reviewer': text(record.get('reviewer'), 'Public reviewer or role', 100)}
+
+
+def confirmed_proofs(editorial, today):
+    records = editorial.get('proof_reviews', {})
+    if not isinstance(records, dict) or len(records) > 200:
+        raise ValueError('Use at most 200 reviewed proof records')
+    checked = {k: validate_proof(k, r, today) for k, r in sorted(records.items())}
+    return {k: r for k, r in checked.items() if r['status'] == 'confirmed'}
+
+
+def ai_observations(source, today):
+    if not isinstance(source, dict) or set(source) - {'version', 'observations'} or source.get('version', 1) != 1:
+        raise ValueError('Expected a version 1 manual AI visibility file')
+    prompt_ids = [p[0] for p in JOURNEY]
+    rows = source.get('observations', [])
+    if not isinstance(rows, list) or len(rows) > 500:
+        raise ValueError('Use at most 500 manual AI observations')
+    result, seen = [], set()
+    for row in rows:
+        if not isinstance(row, dict) or set(row) - {'provider', 'prompt_id', 'market', 'checked_at', 'result', 'cited_url'}:
+            raise ValueError('AI observations accept date, provider, prompt, market, result and cited URL only')
+        provider, prompt, market = row.get('provider'), row.get('prompt_id'), row.get('market')
+        outcome, cited = row.get('result'), row.get('cited_url')
+        if provider not in ('ChatGPT', 'Perplexity', 'Google AI Overviews') or prompt not in prompt_ids:
+            raise ValueError('Choose a supported AI provider and buyer prompt')
+        if not isinstance(market, str) or not re.fullmatch('[A-Z]{2}', market):
+            raise ValueError('Record a two-letter market code')
+        if outcome not in ('cited', 'mentioned', 'absent'):
+            raise ValueError('Record cited, mentioned or absent from this answer')
+        if outcome == 'cited':
+            if not public_url(cited) or not safe_url(cited):
+                raise ValueError('Record the public Petra URL cited in the response')
+        elif cited is not None:
+            raise ValueError('A cited URL needs a cited observation')
+        checked_at = reviewed_date(row.get('checked_at'), today)
+        ident = (provider, prompt, market, checked_at)
+        if ident in seen:
+            raise ValueError('Duplicate observation for provider, prompt, market and date')
+        seen.add(ident)
+        result.append({'provider': provider, 'prompt_id': prompt, 'market': market, 'checked_at': checked_at,
+                       'result': outcome, 'cited_url': cited})
+    result.sort(key=lambda row: row['checked_at'], reverse=True)
+    observed = {r['prompt_id'] for r in result}
+    return {'observations': result, 'unobserved_prompts': [p for p in prompt_ids if p not in observed],
+            'latest_checked_at': result[0]['checked_at'] if result else None}
+
+
 def seed_term(keyword, category):
     facts = list(dict.fromkeys(['organization_name', 'manufacturing_summary'] + [key for word, key in CLAIMS if word in keyword.lower()]))
     page = '/private-label/' if category == 'private_label' else '/services/'
@@ -180,8 +246,9 @@ def validate_page_review(path, record, today):
             'reviewed_at': reviewed_date(record.get('reviewed_at'), today)}
 
 
-def draft_pack(editorial, terms, pages, today):
+def draft_pack(editorial, terms, pages, today, proof=None):
     facts = confirmed_facts(editorial, today)
+    proof = confirmed_proofs(editorial, today) if proof is None else proof
     reviews = {p: validate_page_review(p, r, today) for p, r in editorial.get('page_reviews', {}).items()}
     topics = {t['page']: t['topic'] for t in editorial.get('topics', [])}
     by_url = {p['url']: p for p in pages}
@@ -196,7 +263,7 @@ def draft_pack(editorial, terms, pages, today):
         if path not in reviews:
             blockers.append('Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.')
         page = by_url.get(urljoin(SITE, path), {})
-        if brief_blocked({'url': urljoin(SITE, path), 'audit': page}):
+        if not verified_page(urljoin(SITE, path), page):
             blockers.append('Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.')
         title = reviews.get(path, {}).get('working_title') or topics.get(path) or 'Page purpose needs review'
         if title == 'Page purpose needs review':
@@ -204,7 +271,9 @@ def draft_pack(editorial, terms, pages, today):
         packet = {'page': path, 'topic': title, 'status': 'hold' if blockers else 'draft_for_human_review',
                   'blockers': blockers, 'terms': [t['keyword'] for t in group], 'eligible_terms': [t['keyword'] for t in eligible],
                   'missing_facts': sorted({k for t in group for k in missing_facts(t, facts)}),
-                  'page_review': reviews.get(path), 'suggested_title': None, 'suggested_description': None,
+                  'page_review': reviews.get(path),
+                  'proof': [receipt for receipt in proof.values() if path in receipt['pages']],
+                  'suggested_title': None, 'suggested_h1': None, 'suggested_description': None, 'title_review': None,
                   'outline': ['Answer the reviewed buyer problem', 'Explain confirmed scope and limits',
                               'Show first-hand process and quality evidence', 'Explain confirmed sampling and production conditions',
                               'State what a brand should provide to request a quote'],
@@ -212,7 +281,11 @@ def draft_pack(editorial, terms, pages, today):
                   'confirmed_facts': {k: facts[k] for k in sorted({k for t in eligible for k in t['required_facts']})},
                   'measurement': 'Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation.'}
         if not blockers:
-            packet['suggested_title'] = f"{title} | {facts['organization_name']['value']}"
+            branded = f"{title} | {facts['organization_name']['value']}"
+            packet['suggested_title'] = branded if len(branded) <= 60 else title if len(title) <= 60 else None
+            packet['suggested_h1'] = title
+            packet['title_review'] = ('Preview the title and H1 in context. Check alignment with the reviewed buyer intent.'
+                                      if packet['suggested_title'] else 'Shorten the reviewed working title before drafting the title tag.')
             packet['suggested_description'] = facts['manufacturing_summary']['value']
         packets.append(packet)
     schema = None
@@ -297,23 +370,27 @@ def stale(value, today, days):
         return True
 
 
-def build_workspace(editorial, search, crawl, performance, baseline=None, browser=None, today=None, lab_attempt=None):
+def build_workspace(editorial, search, crawl, performance, baseline=None, browser=None, today=None, lab_attempt=None,
+                    inventory=None, search_attempt=None, ai_source=None):
     today = today or datetime.now(ZoneInfo('America/Los_Angeles')).date()
     terms = term_map(editorial, today)
     facts = confirmed_facts(editorial, today)
+    proof = confirmed_proofs(editorial, today)
     for term in terms:
         term['missing_facts'] = missing_facts(term, facts)
     crawl_at = crawl.get('attempted_at') or crawl.get('generated_at')
-    pack = draft_pack(editorial, terms, [] if stale(crawl_at, today, 3) else crawl.get('pages', []), today)
+    pages = [] if stale(crawl_at, today, 3) else crawl.get('pages', [])
+    pack = draft_pack(editorial, terms, pages, today, proof=proof)
     due = followups(editorial.get('changes', []), search, today)
     sources = {'search': search.get('generated_at'), 'search_through': search.get('period', {}).get('end'),
                'crawl': crawl.get('attempted_at') or crawl.get('generated_at'), 'lab': performance.get('generated_at'),
-               'browser': (browser or {}).get('attempted_at')}
+               'browser': (browser or {}).get('attempted_at'), 'search_attempt': (search_attempt or {}).get('attempted_at')}
     alerts = []
     def alert(key, severity, message, action, owner):
         alerts.append({'id': key, 'severity': severity, 'message': message, 'next_action': action, 'owner': owner})
-    if stale(sources['search'], today, 3):
-        alert('search-stale', 'critical', 'Page and query data is stale or unavailable.', 'Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.', 'Account owner')
+    issue = search_issue(search, search_attempt or {}, stale(sources['search'], today, 3) or stale(sources['search_through'], today, 7))
+    if issue:
+        alert('search-stale', 'critical', issue, 'Inspect the existing Actions failure and exact GSC property access. Confirm email isolation before access recovery.', 'Account owner')
     if stale(sources['crawl'], today, 3):
         alert('crawl-stale', 'warning', 'Crawl evidence is stale or unavailable.', 'Run the bounded crawl-only check.', 'SEO operator')
     health = crawl
@@ -344,9 +421,18 @@ def build_workspace(editorial, search, crawl, performance, baseline=None, browse
                              for p in search.get('pages', []) for q in p.get('queries', [])
                              if not q.get('branded') and q.get('impressions', 0) >= 20 and 4 <= (q.get('position') or 0) <= 20],
                             key=lambda q: q['impressions'], reverse=True)[:10]
+    current = crawl_routes(pages)
+    if inventory is None:
+        inventory = {} if health.get('status') == 'failed' else crawl
+    links = internal_links(inventory, current, crawl_at)
+    ai = ai_observations({} if ai_source is None else ai_source, today)
+    road = roadmap(current, health, sources, issue, pack['packets'], links, ai)
+    blitz = blitz_plan(current, sources, pack, road, proof)
     return {'version': 1, 'generated_at': datetime.now(timezone.utc).isoformat(), 'sources': sources, 'terms': terms,
             'fact_fields': FACT_FIELDS, 'capability_fields': sorted(CAPABILITIES), 'facts': facts, 'draft_pack': pack,
             'followups': due, 'alerts': alerts, 'drift': drift, 'opportunities': opportunities,
+            'roadmap': road, 'blitz': blitz, 'internal_links': links, 'ai_visibility': ai,
+            'proof_kb': {'categories': PROOF_CATEGORIES, 'records': list(proof.values())},
             'publication_ready': False, 'note': 'This workspace measures, briefs and checks. A person approves and publishes.'}
 
 
@@ -364,17 +450,39 @@ def latest_crawl(data_dir, explicit=None):
 def write_workspace(editorial, data_dir, output_dir, crawl=None, baseline=None, browser=None):
     report = build_workspace(editorial, read_json(data_dir / 'latest.json'), crawl if crawl is not None else latest_crawl(data_dir),
                              read_json(data_dir / 'performance.json'), baseline, browser or read_json(data_dir / 'browser-check.json'),
-                             lab_attempt=read_json(data_dir / 'performance-health.json'))
+                             lab_attempt=read_json(data_dir / 'performance-health.json'),
+                             inventory=read_json(data_dir / 'content.json'),
+                             search_attempt=read_json(data_dir / 'search-health.json'),
+                             ai_source=read_json(data_dir / 'ai-visibility.json'))
+    links = report['internal_links']
+    write_json(output_dir / 'internal-links.json', links)
+    report['internal_links'] = {k: v for k, v in links.items() if k != 'graph'}
     write_json(output_dir / 'workspace.json', report)
     write_json(output_dir / 'draft-pack.json', report['draft_pack'])
+    (output_dir / 'roast-roadmap.md').write_text(roadmap_markdown(report['roadmap']), encoding='utf-8')
+    (output_dir / 'blitz-plan.md').write_text(blitz_markdown(report['blitz']), encoding='utf-8')
+    (output_dir / 'customer-journey.md').write_text(journey_markdown(), encoding='utf-8')
     lines = ['# Weekly SEO review', '', 'Draft planning output. Human approval and publication required.', '',
              '## Source dates', '```json', json.dumps(report['sources'], indent=2), '```', '', '## Actions']
     lines.extend(f"- {a['severity']}: {a['message']} {a['next_action']} Owner: {a['owner']}." for a in report['alerts'])
+    lines.extend(['', '## Roadmap and sprint', '',
+                  '[Prioritized roadmap](roast-roadmap.md) · [Single-page plan](blitz-plan.md) · [Buyer journey](customer-journey.md)',
+                  f"- Private label sprint: {report['blitz']['status']}.",
+                  f"- Public fact fields without a confirmation: {len(report['draft_pack']['unknown_facts'])}.",
+                  f"- Manual AI observations: {len(report['ai_visibility']['observations'])}. "
+                  f"Buyer prompts without an observation: {len(report['ai_visibility']['unobserved_prompts'])}.",
+                  '', '## Internal links for review', ''])
+    lines.extend('- ' + markdown_text(f"{link['source']} → {link['target']} · {link['anchor']}. {link['reason']}")
+                 for link in links['suggestions'])
+    if not links['suggestions']:
+        lines.append('Current crawl and accepted inventory have no supported suggestions.')
     for packet in report['draft_pack']['packets']:
-        lines.extend(['', '## ' + packet['page'], 'Status: ' + packet['status'], *['- HOLD: ' + b for b in packet['blockers']],
+        lines.extend(['', '## ' + markdown_text(packet['page']), 'Status: ' + packet['status'], *['- HOLD: ' + b for b in packet['blockers']],
                       'Terms: ' + ', '.join(packet['terms']), 'Unknown facts: ' + ', '.join(packet['missing_facts']),
+                      *['- First-hand receipt: ' + markdown_text(r['evidence']) + ' · ' + markdown_text(r['source_url'])
+                        for r in packet['proof']],
                       *['- ' + item for item in packet['outline']], packet['measurement']])
-    (output_dir / 'weekly-review.md').write_text('\n'.join(lines) + '\n')
+    (output_dir / 'weekly-review.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     return report
 
 

@@ -17,6 +17,17 @@ def checked(url, status=200, issues=None):
 
 
 class HealthTests(unittest.TestCase):
+    def test_page_parser_distinguishes_main_content_links_from_page_chrome(self):
+        page = pipeline.PageHTML(pipeline.SITE)
+        page.feed('<header><a href="/private-label/">Header</a></header>'
+                  '<main><nav><a href="/services/">Menu</a></nav>'
+                  '<p><a href="/contact/">Discuss your brief</a><a href="/#/services">Older route</a></p>'
+                  '<aside><a href="/catalog/">Aside</a></aside></main>')
+        self.assertTrue(page.main_seen)
+        self.assertEqual(page.body_links, [pipeline.SITE + 'contact/'])
+        self.assertIn(pipeline.SITE + 'private-label/', page.links)
+        self.assertIn(pipeline.SITE + '#/services', page.fragment_links)
+
     def setUp(self):
         (ROOT / 'tmp').mkdir(exist_ok=True)
         self.temp = tempfile.TemporaryDirectory(dir=ROOT / 'tmp')

@@ -13,7 +13,7 @@ A static workspace for deciding which website pages to improve, preparing eviden
 - Changes & results: published change log, 28/56-day follow-up results, browser-local aggregate enquiry counts and JSON backups.
 - Site health: crawl checks, index inspection and optional Lighthouse mobile lab results.
 - Search queries: branded/non-branded discovery and exact-match target tracking.
-- Weekly review: active target dispositions, confirmed facts, first-hand page evidence, grouped draft packets, alerts, drift and 28/56-day follow-ups.
+- Weekly review: ordered roadmap, single-page sprint, confirmed facts and proof, contextual links, optional AI observations, grouped draft packets, drift and 28/56-day follow-ups.
 
 ## Run locally
 
@@ -53,13 +53,13 @@ To inspect a temporary report in the UI, serve a preview containing only `index.
 
 ## Scheduled updates and publishing
 
-GitHub Pages serves the root of `main`. The daily workflow refreshes GSC, crawls the site, inspects ten priority URLs and commits data only after collection succeeds. A weekly Lighthouse workflow produces mobile lab reports for the homepage, private-label and contract-manufacturing pages. This is lab data, not field Core Web Vitals. Existing weekly email scheduling is retained; this upgrade does not send a test email.
+GitHub Pages serves the root of `main`. The daily workflow refreshes GSC, crawls the site, inspects ten priority URLs and saves data after successful collection. The site-wide daily aggregate in `daily-search.json` and the page/query snapshot in `latest.json` have separate dates and sources. The Lighthouse workflow produces mobile lab reports for the homepage, private-label and contract manufacturing pages. GitHub reported the weekly email workflow as manually disabled on November 24. [Actions workflows](https://github.com/alikaaba-bit/petra-seo-dashboard/actions).
 
-The September upgrade is already present on remote main and the November 5 Pages deployment. The [scheduled GSC refresh on November 16 at 18:59 UTC](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/43934609525), inspected November 17, reported HTTP 403 and insufficient permission for the exact URL-prefix property `https://petrajewelryfactory.com/`. Human browser access does not establish access for the workflow principal. The [November 16 Lighthouse run](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/43912864173) separately received homepage HTTP 403 and produced zero usable reports; it is not evidence of a slow-page score. Account billing settings and credential values were not inspected. A local crawl works independently of GSC access.
+The latest reviewed scheduled GSC attempt returned HTTP 403 for the exact URL-prefix property `https://petrajewelryfactory.com/`. The page/query snapshot was last generated November 5, covering finalized data through November 2. Use the bounded crawl for current website evidence and the latest successful source date for each search report. [Failed GitHub run](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/45261706353) · [Sanitized attempt](data/search-health.json).
 
 Search collection writes `search-health.json` with the attempt time, sanitized error classification and the last successful search snapshot's dates. Authentication, query and follow-up collection failures still exit 1 and preserve `latest.json` and history. The daily workflow uploads this diagnostic even after failure; failed-run artifacts are not automatically published to the dashboard. No raw exception payload or credential value is included. This local diagnostic change does not repair remote permissions or run the collector.
 
-The existing email workflow can send after GSC access is restored. Recovering measurement must not implicitly authorize outbound email: the owner must separately approve isolating that workflow before access recovery. This local increment neither runs nor changes it. No new schedules, paid APIs or publishing integrations are introduced.
+Confirm the email workflow remains disabled and get owner approval for isolation before changing Search Console access. A fresh successful workflow collection is the acceptance check for page/query measurement.
 
 ## Editorial state and results
 
@@ -95,7 +95,7 @@ The interface can import a previous browser backup. Records merge by ID. Aggrega
 
 ## Website changes
 
-See `website/PUBLISHING.md` and `website/private-label-draft.html`. These are historical drafts, not approved current copy. Identify the system actually serving the live site before changing it; the current hash routes do not establish WordPress authorship. The dashboard never publishes. See the local operating loop below.
+Use the [serving-system checklist](website/PUBLISHING.md) and the [private-label review packet](website/handoff-private-label.md). Verify the current source for the exact route before a human edits it. Use Yoast only when WordPress serves that route. The included HTML remains a historical reference.
 
 ## Verification
 
@@ -109,20 +109,19 @@ The tests cover date windows, weighting, query/page separation, pagination, prop
 
 ## Offline operating loop
 
-Use the existing Python environment and static dashboard. No added service, paid API, queue, database or schedule is required. The local build is complete; external access repair and website work are still owner actions.
+### Run the weekly review
 
-1. **Unblock evidence and the live site.** Owner reviews the exact GSC property permission and billing if a current error names it. Approve isolating the existing email workflow before restoring access, since recovery can enable its scheduled sends. Website owner identifies the serving CMS/repo, removes raw/hidden demo leftovers, restores real commercial destinations and discovery endpoints, and verifies titles, H1s, canonicals and schema. Done: current authenticated measurement and verified routes, separately evidenced. This build does not perform those actions.
-2. **Review this local branch.** The September workspace already reached main; do not merge the old branch blindly. Review `fix/seo-health-evidence-20261116` against current main, run the tests, inspect workflow diffs and preserve user edits in older checkouts. Release/push/merge/Pages deployment require separate authorization. Done locally: all checks pass and the public-only preview works. Done remotely only after an authorized deployment is read back.
-3. **Prepare one focused page.** Weekly, use the active target table as dispositions, not an article quota. Review a small related group using actual supplier-versus-guide SERPs. Record market, device, date and result URLs; choose a real destination. Operations owner confirms public facts and limits; SEO lead records buyer problem, first-hand evidence, title and hypothesis. Missing facts remain unknown; unsupported capability records keep claim terms on hold. Done: an evidence-backed page packet that a person has reviewed.
-4. **Publish and verify manually.** Export the browser workspace, dry-run the importer, apply only approved public fields to a local candidate, then rebuild. Capture an observed baseline before the website change. A person publishes through the verified serving system, checks desktop/mobile and the actual URL, then logs the real publication/verification dates. Re-crawl and compare with the baseline. Done: verified published page and imported publication record; task status alone does not count.
-5. **Learn each week.** Run the existing GSC pipeline only after owner access recovery; review fresh non-brand opportunities alongside crawl/lab/browser evidence. Follow-up queue shows all publications at 28 and 56 days, allowing the existing three-day finalized-data lag. Collection defaults to 50 change records; later records explicitly show deferred status. Increase `--followup-limit` deliberately when needed, or review/archive old completed records. Keep the under-20-click and non-causal rules. Done: one documented next decision, not a content quota.
+1. Run the bounded crawl. Review Fatal items first, then Revenue, Compounding and Fluff. Confirm an affected URL before writing a handoff. Retain historical failed checks with their observation dates.
+2. Review one destination and its actual buyer SERP. Record market, device, date and evidence URLs. Confirm the relevant facts, first-hand proof and measurement hypothesis in the [public editorial store](data/editorial.json).
+3. Dry-run the reviewed import and rebuild. The [30-day plan](data/blitz-plan.md) tracks the single private-label candidate and its evidence gates.
+4. Capture the observed crawl baseline. A human publishes through the verified serving system, then checks the URL on desktop and mobile and records the actual publication and verification dates.
+5. Review finalized 28- and 56-day windows after the three-day lag. The collector defaults to 50 change records per run. Review deferred records before increasing `--followup-limit`. A window below 20 clicks remains inconclusive.
 
 Build offline from saved public inputs (no authentication, site writes or sends):
 
 ```sh
 .venv/bin/python scripts/seo_workspace.py --data-dir data --crawl-report tmp/health-check/crawl-health.json --output-dir tmp/workspace --save-baseline tmp/baselines/before-change.json
 .venv/bin/python scripts/browser_check.py --url https://petrajewelryfactory.com/ --output-dir tmp/health-check
-# Copy browser-check.json into the chosen data-dir, then rebuild to include it.
 .venv/bin/python scripts/seo_workspace.py --data-dir data --crawl-report tmp/health-check/crawl-health.json --baseline-file tmp/baselines/before-change.json --output-dir tmp/workspace
 ```
 
@@ -130,7 +129,15 @@ Baseline creation refuses to overwrite an existing file. A broken baseline is la
 
 The browser checker uses the **already installed** `chrome-devtools-axi`, at most five same-site URLs, and read-only DOM inspection. If unavailable, use a manual browser check; the script installs nothing. A browser check complements the bounded HTTP crawl, does not override it, and cannot prove Google indexing. Output contains observed website copy, which is never imported as confirmed facts.
 
-`workspace.json`, `draft-pack.json` and `weekly-review.md` are derived outputs. Copy public report files into the preview's `data/` alongside existing public inputs. Do not serve the repository root or private exports. `--editorial tmp/editorial-reviewed.json` lets the builder use a reviewed candidate without altering repository data. The pipeline also builds workspace outputs during crawl/full runs; `seo_pipeline.py --workspace-only` rebuilds from its selected `--output-dir` without authentication.
+`workspace.json`, `draft-pack.json`, `weekly-review.md`, `roast-roadmap.md`, `blitz-plan.md`, `customer-journey.md` and `internal-links.json` rebuild from the saved inputs. For a current preview, stage a copy of public input files in a temporary data folder and overlay the newer accepted `content.json`, latest `crawl-health.json` and `browser-check.json`. Build against that folder and copy public reports alongside its inputs. Serve only the preview directory with the loopback command above. Provide `--editorial tmp/editorial-reviewed.json` to build from a reviewed candidate. `seo_pipeline.py --workspace-only` also rebuilds from its selected `--output-dir` without authentication.
+
+### Record facts, proof and manual observations
+
+Use Weekly review for fact, intent and page reviews. Use `proof_reviews` in the same reviewed editorial file for atomic receipts. Each record has a stable lowercase ID, `status`, `category`, `pages`, `evidence`, `source_url`, `reviewed_at`, `reviewer` and `public_safe`. Categories are `process_test`, `customer_outcome`, `original_media`, `aggregate_data` and `qc_edge_case`. A confirmed record needs an approved public source and its exact page scope. Use `status: unknown` to withdraw a receipt.
+
+Proof can be submitted as a version 2 review export with records under `review.proof_reviews`. Run `scripts/import_workspace.py` with `--include-reviews` to dry-run, then use `--apply --public-reviewed --output tmp/editorial-reviewed.json` after owner review. The same confirmation requirement applies to fact updates. Review the final public text and validate the source before release.
+
+The optional [manual AI file](data/ai-visibility.json) uses version 1 records with `provider` (ChatGPT, Perplexity or Google AI Overviews), `prompt_id`, two-letter `market`, ISO `checked_at` and `result` (`cited`, `mentioned` or `absent`). Use `cited_url` only for a public Petra citation. The prompts are `quality-problems`, `supplier-evaluation`, `manufacturing-models`, `private-label-shortlist` and `brief-ready`. Keep raw answers, private notes and account details out of the file. An empty file means there are no observations.
 
 Local reviews do not change generated packets until exported, validated, imported and rebuilt. Pending local review edits hold packet/page-brief downloads. The importer requires explicit `--apply --public-reviewed` for local writes. Free text cannot be automatically proven public-safe: inspect it before importing, especially reviewer identities and evidence descriptions. Browser storage/export is private to that browser, not a shared editorial backend; export backups before moving devices.
 
@@ -139,6 +146,7 @@ Local reviews do not change generated packets until exported, validated, importe
 - `seo_pipeline.py` owns GSC, bounded HTTP crawl, page/query mapping and result calculations. `seo_workspace.py` owns offline review dispositions, source-backed draft scaffolds, due dates, drift and on-dashboard alerts. Neither sends email nor publishes.
 - `lighthouse_summary.py` writes `performance-health.json` on every attempted summary. Runtime errors, missing targets, redirects, null scores or failed collection preserve `performance.json`. CI uploads the attempt report even after collection failure; failed attempts remain in artifacts until deliberately copied to the dashboard. No fresh Lighthouse run was enabled by this local work. These are lab scores, not CrUX field data.
 - Installed `~/.agents/skills/seo-flow/SKILL.md`, `seo-content-brief/SKILL.md` and `seo-drift/SKILL.md` guide the human review loop. Repo artifacts win over a duplicate skill database/crawler. Use `seo-google` for targeted read-only GSC/PageSpeed/CrUX/inspection gaps after access approval; technical/schema/sitemap skills are focused review aids, not autonomous publishing. Page/plan/site-architecture help choose destinations. Do not install a parallel calendar or orchestration stack.
+- The [eight Petra wrappers](.agents/skills/) adapt Illyism's review method to the dashboard and the factory buyer journey. The existing crawler and workspace build supply their evidence and outputs. [Illyism method](https://il.ly/blog/seo-skills) · [Upstream skills](https://github.com/Illyism/seo-skills).
 - Keep Lighthouse CI; Unlighthouse is unnecessary unless a specific uncaptured route needs manual diagnosis. Keep the related keyword-calendar repo as historical reference only. Keep WordPress/Yoast as a human publishing option only after confirming they actually serve the target route.
 - Organization JSON-LD drafts use only explicitly confirmed public fields. Unknown address, phone, MOQ, timing and certifications are omitted. A separate human check must match markup to visible page content. `llms.txt` is an optional convenience draft, not a ranking requirement; [Google's AI features guidance](https://developers.google.com/search/docs/appearance/ai-features) still requires ordinary Search eligibility. No GEO-first content mill.
 - Paid SERP/SEO APIs, IndexNow submission, automatic email, backlink campaigns, shared backend and enquiry analytics remain off/unconnected pending explicit approval. Prefer dashboard alerts, manual SERP evidence and existing GSC. No programmatic landing-page multiplication, directory submissions, link buying, automatic redirects/canonicals or mass articles.

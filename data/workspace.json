@@ -1,12 +1,13 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T13:40:24.063439+00:00",
+  "generated_at": "2026-11-24T01:46:12.132938+00:00",
   "sources": {
     "search": "2026-11-05T16:56:20.770066+00:00",
     "search_through": "2026-11-02",
-    "crawl": "2026-11-17T15:31:09.835137+00:00",
+    "crawl": "2026-11-24T01:24:15.350052+00:00",
     "lab": "2026-11-17T16:01:25.064015+00:00",
-    "browser": "2026-11-17T19:12:21.283309+00:00"
+    "browser": "2026-11-24T01:37:31.257Z",
+    "search_attempt": "2026-11-23T20:40:19.275660+00:00"
   },
   "terms": [
     {
@@ -483,8 +484,11 @@
           "organization_name"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -502,8 +506,7 @@
         "status": "hold",
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
-          "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved."
+          "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis."
         ],
         "terms": [
           "jewelry supplier evaluation checklist"
@@ -514,8 +517,11 @@
           "organization_name"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -544,8 +550,11 @@
           "organization_name"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -564,7 +573,6 @@
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
           "Supply a reviewed working title; target terms are not approved factual copy."
         ],
         "terms": [
@@ -576,8 +584,11 @@
           "organization_name"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -596,7 +607,6 @@
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
           "Supply a reviewed working title; target terms are not approved factual copy."
         ],
         "terms": [
@@ -608,8 +618,11 @@
           "organization_name"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -628,7 +641,6 @@
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
           "Supply a reviewed working title; target terms are not approved factual copy."
         ],
         "terms": [
@@ -641,8 +653,11 @@
           "silver"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -661,7 +676,6 @@
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
           "Supply a reviewed working title; target terms are not approved factual copy."
         ],
         "terms": [
@@ -677,8 +691,11 @@
           "stainless_steel"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -697,7 +714,6 @@
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
           "Supply a reviewed working title; target terms are not approved factual copy."
         ],
         "terms": [
@@ -710,8 +726,11 @@
           "stainless_steel"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -730,7 +749,6 @@
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
           "Supply a reviewed working title; target terms are not approved factual copy."
         ],
         "terms": [
@@ -743,8 +761,11 @@
           "stainless_steel"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -763,7 +784,6 @@
         "blockers": [
           "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-          "Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.",
           "Supply a reviewed working title; target terms are not approved factual copy."
         ],
         "terms": [
@@ -776,8 +796,11 @@
           "stainless_steel"
         ],
         "page_review": null,
+        "proof": [],
         "suggested_title": null,
+        "suggested_h1": null,
         "suggested_description": null,
+        "title_review": null,
         "outline": [
           "Answer the reviewed buyer problem",
           "Explain confirmed scope and limits",
@@ -1034,16 +1057,9 @@
     {
       "id": "search-stale",
       "severity": "critical",
-      "message": "Page and query data is stale or unavailable.",
-      "next_action": "Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery.",
+      "message": "The latest recorded Search Console workflow attempt returned HTTP 403 for the URL-prefix property.",
+      "next_action": "Inspect the existing Actions failure and exact GSC property access. Confirm email isolation before access recovery.",
       "owner": "Account owner"
-    },
-    {
-      "id": "crawl-warnings",
-      "severity": "warning",
-      "message": "Crawl findings need review; affected pages remain held from drafts and link suggestions.",
-      "next_action": "Review crawl-health.json warnings and page findings; retain holds for unavailable pages.",
-      "owner": "Website owner"
     },
     {
       "id": "term-review",
@@ -1058,6 +1074,214 @@
     "note": "No baseline supplied. Capture the observed pre-change state before a human publish."
   },
   "opportunities": [],
+  "roadmap": [
+    {
+      "tier": "Fatal",
+      "task": "Restore page and query measurement",
+      "status": "Open",
+      "evidence": "The latest recorded Search Console workflow attempt returned HTTP 403 for the URL-prefix property.",
+      "next_action": "Confirm the weekly email workflow remains isolated, then have the owner restore read access for the exact property and verify a complete refresh.",
+      "owner": "Account owner",
+      "observed_at": "2026-11-23T20:40:19.275660+00:00",
+      "page": null
+    },
+    {
+      "tier": "Fatal",
+      "task": "Recheck the supplier checklist route",
+      "status": "Verified",
+      "evidence": "The previously unavailable route now returns HTTP 200 with its own canonical.",
+      "next_action": "Review guide intent and retain the exact route in the term review.",
+      "owner": "SEO lead",
+      "observed_at": "2026-11-24T01:24:15.350052+00:00",
+      "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/"
+    },
+    {
+      "tier": "Revenue",
+      "task": "Explain the route to sampling",
+      "status": "Review",
+      "evidence": "50 extracted words. The 350-word threshold flags pages for editorial triage.",
+      "next_action": "Review whether first-time buyers can identify the next decision, their inputs and the sample approval step.",
+      "owner": "SEO lead",
+      "observed_at": "2026-11-24T01:24:15.350052+00:00",
+      "page": "/how-it-works/"
+    },
+    {
+      "tier": "Revenue",
+      "task": "Clarify homepage buyer paths",
+      "status": "Review",
+      "evidence": "284 extracted words. The 350-word threshold flags pages for editorial triage.",
+      "next_action": "Check how a brand chooses private label or custom production and finds the brief or catalog.",
+      "owner": "SEO lead",
+      "observed_at": "2026-11-24T01:24:15.350052+00:00",
+      "page": "/"
+    },
+    {
+      "tier": "Revenue",
+      "task": "Review the contract manufacturing page",
+      "status": "Monitor",
+      "evidence": "668 extracted words. The 350-word threshold flags pages for editorial triage.",
+      "next_action": "Review OEM intent, first-hand evidence and the enquiry step against a dated baseline.",
+      "owner": "SEO lead",
+      "observed_at": "2026-11-24T01:24:15.350052+00:00",
+      "page": "/contract-manufacturing/"
+    },
+    {
+      "tier": "Revenue",
+      "task": "Clear the draft holds",
+      "status": "Held",
+      "evidence": "10 packets held. 4 distinct required fact fields are unknown or unsupported.",
+      "next_action": "Review search intent and confirm required public facts with first-hand evidence for one page.",
+      "owner": "Operations owner and SEO lead",
+      "observed_at": "2026-11-24T01:24:15.350052+00:00",
+      "page": null
+    },
+    {
+      "tier": "Compounding",
+      "task": "Review contextual internal links",
+      "status": "Review",
+      "evidence": "6 placements to check against the accepted inventory and latest crawl.",
+      "next_action": "Review body placement and buyer context on the exact live source and destination.",
+      "owner": "SEO lead",
+      "observed_at": "2026-11-24T01:24:15.350052+00:00",
+      "page": null
+    },
+    {
+      "tier": "Compounding",
+      "task": "Collect buyer-prompt observations",
+      "status": "Optional",
+      "evidence": "5 buyer prompts lack a recorded observation.",
+      "next_action": "Record a dated manual observation before proposing any change for AI visibility.",
+      "owner": "SEO lead",
+      "observed_at": null,
+      "page": null
+    },
+    {
+      "tier": "Fluff",
+      "task": "Defer cosmetic metadata refinements",
+      "status": "Deferred",
+      "evidence": "Address crawl and revenue work first.",
+      "next_action": "Revisit minor copy and metadata polish after the higher-priority decisions.",
+      "owner": "SEO lead",
+      "observed_at": null,
+      "page": null
+    }
+  ],
+  "blitz": {
+    "page": "/private-label/",
+    "keyword": "private label jewelry manufacturer",
+    "status": "Held",
+    "crawl_at": "2026-11-24T01:24:15.350052+00:00",
+    "search_through": "2026-11-02",
+    "live_verified": true,
+    "blockers": [
+      "Restore page and query measurement",
+      "No term has both reviewed SERP intent and the required confirmed facts.",
+      "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
+      "Approve intent, destination and facts for the primary private-label term.",
+      "Review four distinct first-hand proof categories for the sprint."
+    ],
+    "proof_categories": 0,
+    "proof_needed": [
+      "process_test",
+      "customer_outcome",
+      "original_media",
+      "aggregate_data",
+      "qc_edge_case"
+    ],
+    "confirmed_fields": [],
+    "missing_facts": [
+      "manufacturing_summary",
+      "organization_name"
+    ],
+    "weeks": [
+      [
+        "Days 1–7",
+        "Confirm the live source and finalized GSC baseline. Review the exact term’s supplier SERP and compare the existing title, H1 and enquiry path."
+      ],
+      [
+        "Days 8–14",
+        "Review one buyer problem, the public fact limits and the approved proof. Draft a focused opening, title and natural links."
+      ],
+      [
+        "Days 15–21",
+        "Save the crawl baseline. Have the owner review a single page change, then verify the live result after any authorized publication."
+      ],
+      [
+        "Days 22–30",
+        "Review discovery, indexability and qualified enquiries. Schedule 28- and 56-day comparisons from the actual publication date."
+      ]
+    ],
+    "measurement": "Use finalized, equal pre/post windows for page and exact-term clicks, impressions, CTR and average position. Log qualified B2B enquiries with supporting attribution. Either click window under 20 is inconclusive. Observed differences do not establish causation."
+  },
+  "internal_links": {
+    "inventory_at": "2026-11-24T01:24:15.350052+00:00",
+    "crawl_at": "2026-11-24T01:24:15.350052+00:00",
+    "suggestions": [
+      {
+        "source": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "target": "/private-label/",
+        "anchor": "private label jewelry manufacturing",
+        "reason": "Main-content link not seen. Place beside the supplier shortlisting criteria.",
+        "status": "Draft for review"
+      },
+      {
+        "source": "/how-it-works/",
+        "target": "/private-label/",
+        "anchor": "start with a private label collection",
+        "reason": "Main-content link not seen. Use where the process explains how to select an approach.",
+        "status": "Draft for review"
+      },
+      {
+        "source": "/resources/stainless-steel-sample-approval/",
+        "target": "/stainless-steel-jewelry-manufacturer/",
+        "anchor": "stainless steel jewelry manufacturing",
+        "reason": "Main-content link not seen. Use beside the sample specification checklist.",
+        "status": "Draft for review"
+      },
+      {
+        "source": "/resources/stainless-steel-material-specification/",
+        "target": "/stainless-steel-jewelry-manufacturer/",
+        "anchor": "discuss stainless steel jewelry production",
+        "reason": "Main-content link not seen. Use at the next step after a specification review.",
+        "status": "Draft for review"
+      },
+      {
+        "source": "/private-label/",
+        "target": "/catalog/",
+        "anchor": "request the private label catalog",
+        "reason": "Main-content link not seen. Check the next step for a buyer choosing designs.",
+        "status": "Draft for review"
+      },
+      {
+        "source": "/contract-manufacturing/",
+        "target": "/contact/",
+        "anchor": "discuss your manufacturing brief",
+        "reason": "Main-content link not seen. Check the next step for a buyer with an original design.",
+        "status": "Draft for review"
+      }
+    ]
+  },
+  "ai_visibility": {
+    "observations": [],
+    "unobserved_prompts": [
+      "quality-problems",
+      "supplier-evaluation",
+      "manufacturing-models",
+      "private-label-shortlist",
+      "brief-ready"
+    ],
+    "latest_checked_at": null
+  },
+  "proof_kb": {
+    "categories": {
+      "process_test": "Process or quality-control test",
+      "customer_outcome": "Customer outcome cleared for public use",
+      "original_media": "Original factory or sample photo or video",
+      "aggregate_data": "Approved aggregate production data",
+      "qc_edge_case": "Sampling or quality-control edge case"
+    },
+    "records": []
+  },
   "publication_ready": false,
   "note": "This workspace measures, briefs and checks. A person approves and publishes."
 }

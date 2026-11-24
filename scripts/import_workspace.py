@@ -5,20 +5,22 @@ from datetime import datetime
 import json
 from pathlib import Path
 from seo_pipeline import ROOT, SITE, safe_url, write_json
-from seo_workspace import canonical_path, public_url, reviewed_date, text, validate_fact, validate_term, validate_page_review
+from seo_workspace import canonical_path, public_url, reviewed_date, text, validate_fact, validate_term, validate_page_review, validate_proof
 from urllib.parse import urljoin, unquote
 from zoneinfo import ZoneInfo
 
 
 def merge_workspace(backup, editorial, include_reviews=False, today=None):
     today = today or datetime.now(ZoneInfo('America/Los_Angeles')).date()
-    if backup.get('version') != 2:
+    if not isinstance(backup, dict) or backup.get('version') != 2:
         raise ValueError('Expected a version 2 workspace export')
     records = backup.get('changes', [])
     if not isinstance(records, list) or len(records) > 1000:
         raise ValueError('Too many change records')
     clean, ids = [], set()
     for record in records:
+        if not isinstance(record, dict) or not isinstance(record.get('page'), str):
+            raise ValueError('Invalid publication record')
         ident = text(record.get('id'), 'Change ID', 100)
         if ident in ids:
             raise ValueError('Duplicate change IDs in export')
@@ -55,6 +57,14 @@ def merge_workspace(backup, editorial, include_reviews=False, today=None):
             if not isinstance(records, dict) or len(records) > maximum:
                 raise ValueError('Invalid review section: ' + section)
             result.setdefault(section, {}).update({key: validate(key, record, today) for key, record in records.items()})
+        if 'proof_reviews' in review:
+            records = review['proof_reviews']
+            if not isinstance(records, dict) or len(records) > 200:
+                raise ValueError('Invalid proof review section')
+            proofs = {**result.get('proof_reviews', {}), **{k: validate_proof(k, r, today) for k, r in records.items()}}
+            if len(proofs) > 200:
+                raise ValueError('Merged proof register exceeds 200 records')
+            result['proof_reviews'] = proofs
     return result
 
 
@@ -78,6 +88,7 @@ def main():
     print(json.dumps({'mode': 'applied locally' if args.apply else 'dry-run; no files changed',
                       'changed': proposed != original, 'changes': len(proposed['changes']),
                       'term_reviews': len(proposed.get('term_reviews', {})), 'fact_reviews': len(proposed.get('fact_reviews', {})),
+                      'proof_reviews': len(proposed.get('proof_reviews', {})),
                       'page_reviews': len(proposed.get('page_reviews', {})), 'excluded': ['owner', 'tasks', 'leads']}, indent=2))
 
 

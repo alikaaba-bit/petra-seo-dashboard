@@ -1,10 +1,20 @@
 # Human publication handoff
 
-The dashboard does not have WordPress write credentials. No website pages have been changed by this upgrade.
+The dashboard prepares drafts and records live checks. Website publication is a human action.
 
 ## Verify the serving system first
 
-The November 16 read-only inspection found a hash-routed site, missing real commercial paths, no homepage canonical and hidden demo-name strings. The HTTP crawl could not inspect the oversized homepage body; the browser check separately observed it. These findings do not identify the authoring system. Confirm the current hosting/CMS/repository before preparing a change there. Do not assume a WordPress edit affects the live route.
+On November 24, the bounded crawl checked 28 HTML URLs including the [supplier checklist](https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/), which had returned 404 in the earlier snapshot. The current pages use clean routes and self-referencing canonicals. Live HTTP read-back showed static HTML with no WordPress or Yoast markers on the checked candidates. The November 18 release record identifies Hostinger's static serving files. Confirm the exact current source with the website owner before editing. For a WordPress-served route, prepare the page fields and Yoast preview. For a static route, pass those same fields to the source owner. [Current crawl](../data/crawl-health.json) · [Earlier crawl](https://github.com/alikaaba-bit/petra-seo-dashboard/blob/2f0cc84dedad2b84dc20d0d00403b7c97d5e5e1c/data/crawl-health.json).
+
+## Current route decisions
+
+- Keep the restored supplier checklist as the guide candidate while reviewing intent. If a new check shows it unavailable, approve restoring that URL or assigning the term to a verified guide before preparing edits.
+- Review the process page first among the thin editorial candidates. Show a buyer's next decision, the inputs needed for a manufacturing brief, and where sample approval fits. Ask Operations to confirm any timing, process or quality detail before use. [Process page](https://petrajewelryfactory.com/how-it-works/) · [Roadmap](../data/roast-roadmap.md).
+- Search Console access recovery belongs to the account owner. Use the read-only workflow evidence and confirm weekly email isolation first. [Latest failed collection](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/45261706353).
+
+## Private label review
+
+Use the [single-page packet](handoff-private-label.md) with the [30-day plan](../data/blitz-plan.md).
 
 Historical drafts below require current factual and intent review. Use the dashboard Weekly review to collect sourced public fact confirmations, SERP evidence, buyer problem, first-hand proof and a measurement hypothesis. Leave all unknown operational details blank. Three planning packets cover the 50 tracked terms; they are not 50 publication requests.
 

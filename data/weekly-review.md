@@ -7,16 +7,32 @@ Draft planning output. Human approval and publication required.
 {
   "search": "2026-11-05T16:56:20.770066+00:00",
   "search_through": "2026-11-02",
-  "crawl": "2026-11-17T15:31:09.835137+00:00",
+  "crawl": "2026-11-24T01:24:15.350052+00:00",
   "lab": "2026-11-17T16:01:25.064015+00:00",
-  "browser": "2026-11-17T19:12:21.283309+00:00"
+  "browser": "2026-11-24T01:37:31.257Z",
+  "search_attempt": "2026-11-23T20:40:19.275660+00:00"
 }
 ```
 
 ## Actions
-- critical: Page and query data is stale or unavailable. Inspect the existing Actions failure and exact GSC property access. Isolate email with approval before access recovery. Owner: Account owner.
-- warning: Crawl findings need review; affected pages remain held from drafts and link suggestions. Review crawl-health.json warnings and page findings; retain holds for unavailable pages. Owner: Website owner.
+- critical: The latest recorded Search Console workflow attempt returned HTTP 403 for the URL-prefix property. Inspect the existing Actions failure and exact GSC property access. Confirm email isolation before access recovery. Owner: Account owner.
 - warning: 14 target terms need intent review or confirmed facts. Review grouped page briefs; approve only evidence-backed destinations. Owner: SEO lead and operations owner.
+
+## Roadmap and sprint
+
+[Prioritized roadmap](roast-roadmap.md) · [Single-page plan](blitz-plan.md) · [Buyer journey](customer-journey.md)
+- Private label sprint: Held.
+- Public fact fields without a confirmation: 32.
+- Manual AI observations: 0. Buyer prompts without an observation: 5.
+
+## Internal links for review
+
+- /how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/ → /private-label/ · private label jewelry manufacturing. Main-content link not seen. Place beside the supplier shortlisting criteria.
+- /how-it-works/ → /private-label/ · start with a private label collection. Main-content link not seen. Use where the process explains how to select an approach.
+- /resources/stainless-steel-sample-approval/ → /stainless-steel-jewelry-manufacturer/ · stainless steel jewelry manufacturing. Main-content link not seen. Use beside the sample specification checklist.
+- /resources/stainless-steel-material-specification/ → /stainless-steel-jewelry-manufacturer/ · discuss stainless steel jewelry production. Main-content link not seen. Use at the next step after a specification review.
+- /private-label/ → /catalog/ · request the private label catalog. Main-content link not seen. Check the next step for a buyer choosing designs.
+- /contract-manufacturing/ → /contact/ · discuss your manufacturing brief. Main-content link not seen. Check the next step for a buyer with an original design.
 
 ## /contract-manufacturing/
 Status: hold
@@ -35,7 +51,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 Terms: jewelry supplier evaluation checklist
 Unknown facts: manufacturing_summary, organization_name
 - Answer the reviewed buyer problem
@@ -62,7 +77,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: jewelry manufacturing brief template
 Unknown facts: manufacturing_summary, organization_name
@@ -77,7 +91,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: jewelry manufacturing sample approval checklist
 Unknown facts: manufacturing_summary, organization_name
@@ -92,7 +105,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: silver jewelry manufacturer
 Unknown facts: manufacturing_summary, organization_name, silver
@@ -107,7 +119,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel jewelry manufacturer, custom stainless steel jewelry manufacturer, stainless steel jewellery manufacturer, stainless steel jewelry OEM manufacturer
 Unknown facts: manufacturing_summary, organization_name, stainless_steel
@@ -122,7 +133,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel earrings manufacturer
 Unknown facts: manufacturing_summary, organization_name, stainless_steel
@@ -137,7 +147,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel necklace manufacturer
 Unknown facts: manufacturing_summary, organization_name, stainless_steel
@@ -152,7 +161,6 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
-- HOLD: Verify the exact live destination: crawl, redirect, indexability or demo checks are unresolved.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel ring manufacturer
 Unknown facts: manufacturing_summary, organization_name, stainless_steel

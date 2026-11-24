@@ -1,4 +1,8 @@
-credentials.json
+credentials*.json
+service-account*.json
+*.pem
+*.key
+petra-workspace*.json
 *.pyc
 __pycache__/
 .DS_Store

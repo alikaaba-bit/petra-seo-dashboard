@@ -8,7 +8,6 @@ Observation dates are UTC.
 
 ## Fatal
 
-- Open — Restore page and query measurement. The latest recorded Search Console workflow attempt returned HTTP 403 for the URL-prefix property. Checked 2026-11-23. Account owner. Confirm the weekly email workflow remains isolated, then have the owner restore read access for the exact property and verify a complete refresh.
 - Verified — Recheck the supplier checklist route \(/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/\). The previously unavailable route now returns HTTP 200 with its own canonical. Checked 2026-11-24. SEO lead. Review guide intent and retain the exact route in the term review.
 
 ## Revenue

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-24T01:46:12.132938+00:00",
+  "generated_at": "2026-11-24T07:10:54.706250+00:00",
   "sources": {
     "search": "2026-11-05T16:56:20.770066+00:00",
     "search_through": "2026-11-02",
@@ -34,8 +34,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "stainless_steel"
       ]
     },
@@ -63,8 +61,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "stainless_steel"
       ]
     },
@@ -92,8 +88,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "stainless_steel"
       ]
     },
@@ -121,8 +115,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "stainless_steel"
       ]
     },
@@ -132,26 +124,27 @@
       "intent": "commercial",
       "page_type": "supplier_landing",
       "proposed_page": "/private-label/",
-      "approved_page": null,
+      "approved_page": "/private-label/",
       "required_facts": [
         "organization_name",
         "manufacturing_summary"
       ],
-      "status": "needs_review",
-      "reason": "Proposed grouping only; review actual SERP intent and approve the destination.",
+      "status": "approved",
+      "reason": "An English-language web sample shows manufacturer service pages for brand buyers reviewing private-label options, samples and quotes. Exact search positions and CTR require a fresh Search Console comparison.",
       "serp": {
-        "urls": [],
-        "checked_at": null,
-        "market": null,
-        "device": null,
-        "page_type": null
+        "urls": [
+          "https://www.jy-jewellery.com/private-label-jewellery",
+          "https://www.jewelrytouch.com/private-label-jewelry",
+          "https://marigoldjewel.com/private-label-jewellery-oem-odm"
+        ],
+        "checked_at": "2026-11-23",
+        "market": "English-language web sample; no fixed geography",
+        "device": "desktop",
+        "page_type": "supplier_landing"
       },
-      "reviewer": null,
-      "reviewed_at": null,
-      "missing_facts": [
-        "organization_name",
-        "manufacturing_summary"
-      ]
+      "reviewer": "Petra SEO review",
+      "reviewed_at": "2026-11-23",
+      "missing_facts": []
     },
     {
       "keyword": "custom jewelry manufacturer for brands",
@@ -175,10 +168,7 @@
       },
       "reviewer": null,
       "reviewed_at": null,
-      "missing_facts": [
-        "organization_name",
-        "manufacturing_summary"
-      ]
+      "missing_facts": []
     },
     {
       "keyword": "OEM jewelry manufacturer",
@@ -202,10 +192,7 @@
       },
       "reviewer": null,
       "reviewed_at": null,
-      "missing_facts": [
-        "organization_name",
-        "manufacturing_summary"
-      ]
+      "missing_facts": []
     },
     {
       "keyword": "stainless steel ring manufacturer",
@@ -231,8 +218,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "stainless_steel"
       ]
     },
@@ -260,8 +245,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "stainless_steel"
       ]
     },
@@ -289,8 +272,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "stainless_steel"
       ]
     },
@@ -316,10 +297,7 @@
       },
       "reviewer": null,
       "reviewed_at": null,
-      "missing_facts": [
-        "organization_name",
-        "manufacturing_summary"
-      ]
+      "missing_facts": []
     },
     {
       "keyword": "jewelry manufacturing sample approval checklist",
@@ -343,10 +321,7 @@
       },
       "reviewer": null,
       "reviewed_at": null,
-      "missing_facts": [
-        "organization_name",
-        "manufacturing_summary"
-      ]
+      "missing_facts": []
     },
     {
       "keyword": "jewelry supplier evaluation checklist",
@@ -370,10 +345,7 @@
       },
       "reviewer": null,
       "reviewed_at": null,
-      "missing_facts": [
-        "organization_name",
-        "manufacturing_summary"
-      ]
+      "missing_facts": []
     },
     {
       "keyword": "silver jewelry manufacturer",
@@ -399,8 +371,6 @@
       "reviewer": null,
       "reviewed_at": null,
       "missing_facts": [
-        "organization_name",
-        "manufacturing_summary",
         "silver"
       ]
     }
@@ -462,7 +432,24 @@
     "white_label",
     "wholesale"
   ],
-  "facts": {},
+  "facts": {
+    "organization_name": {
+      "value": "Petra Jewelry",
+      "reviewer": "Petra SEO review",
+      "status": "confirmed",
+      "public_safe": true,
+      "source_url": "https://petrajewelryfactory.com/",
+      "reviewed_at": "2026-11-23"
+    },
+    "manufacturing_summary": {
+      "value": "Petra Jewelry makes custom and private-label jewelry for brands.",
+      "reviewer": "Petra SEO review",
+      "status": "confirmed",
+      "public_safe": true,
+      "source_url": "https://petrajewelryfactory.com/private-label/",
+      "reviewed_at": "2026-11-23"
+    }
+  },
   "draft_pack": {
     "status": "draft_only",
     "packets": [
@@ -479,10 +466,7 @@
           "OEM jewelry manufacturer"
         ],
         "eligible_terms": [],
-        "missing_facts": [
-          "manufacturing_summary",
-          "organization_name"
-        ],
+        "missing_facts": [],
         "page_review": null,
         "proof": [],
         "suggested_title": null,
@@ -512,10 +496,7 @@
           "jewelry supplier evaluation checklist"
         ],
         "eligible_terms": [],
-        "missing_facts": [
-          "manufacturing_summary",
-          "organization_name"
-        ],
+        "missing_facts": [],
         "page_review": null,
         "proof": [],
         "suggested_title": null,
@@ -538,17 +519,15 @@
         "topic": "Private label jewelry manufacturing",
         "status": "hold",
         "blockers": [
-          "No term has both reviewed SERP intent and the required confirmed facts.",
           "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis."
         ],
         "terms": [
           "private label jewelry manufacturer"
         ],
-        "eligible_terms": [],
-        "missing_facts": [
-          "manufacturing_summary",
-          "organization_name"
+        "eligible_terms": [
+          "private label jewelry manufacturer"
         ],
+        "missing_facts": [],
         "page_review": null,
         "proof": [],
         "suggested_title": null,
@@ -562,8 +541,38 @@
           "Explain confirmed sampling and production conditions",
           "State what a brand should provide to request a quote"
         ],
-        "evidence": [],
-        "confirmed_facts": {},
+        "evidence": [
+          {
+            "keyword": "private label jewelry manufacturer",
+            "urls": [
+              "https://www.jy-jewellery.com/private-label-jewellery",
+              "https://www.jewelrytouch.com/private-label-jewelry",
+              "https://marigoldjewel.com/private-label-jewellery-oem-odm"
+            ],
+            "checked_at": "2026-11-23",
+            "market": "English-language web sample; no fixed geography",
+            "device": "desktop",
+            "page_type": "supplier_landing"
+          }
+        ],
+        "confirmed_facts": {
+          "manufacturing_summary": {
+            "value": "Petra Jewelry makes custom and private-label jewelry for brands.",
+            "reviewer": "Petra SEO review",
+            "status": "confirmed",
+            "public_safe": true,
+            "source_url": "https://petrajewelryfactory.com/private-label/",
+            "reviewed_at": "2026-11-23"
+          },
+          "organization_name": {
+            "value": "Petra Jewelry",
+            "reviewer": "Petra SEO review",
+            "status": "confirmed",
+            "public_safe": true,
+            "source_url": "https://petrajewelryfactory.com/",
+            "reviewed_at": "2026-11-23"
+          }
+        },
         "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
       },
       {
@@ -579,10 +588,7 @@
           "jewelry manufacturing brief template"
         ],
         "eligible_terms": [],
-        "missing_facts": [
-          "manufacturing_summary",
-          "organization_name"
-        ],
+        "missing_facts": [],
         "page_review": null,
         "proof": [],
         "suggested_title": null,
@@ -613,10 +619,7 @@
           "jewelry manufacturing sample approval checklist"
         ],
         "eligible_terms": [],
-        "missing_facts": [
-          "manufacturing_summary",
-          "organization_name"
-        ],
+        "missing_facts": [],
         "page_review": null,
         "proof": [],
         "suggested_title": null,
@@ -648,8 +651,6 @@
         ],
         "eligible_terms": [],
         "missing_facts": [
-          "manufacturing_summary",
-          "organization_name",
           "silver"
         ],
         "page_review": null,
@@ -686,8 +687,6 @@
         ],
         "eligible_terms": [],
         "missing_facts": [
-          "manufacturing_summary",
-          "organization_name",
           "stainless_steel"
         ],
         "page_review": null,
@@ -721,8 +720,6 @@
         ],
         "eligible_terms": [],
         "missing_facts": [
-          "manufacturing_summary",
-          "organization_name",
           "stainless_steel"
         ],
         "page_review": null,
@@ -756,8 +753,6 @@
         ],
         "eligible_terms": [],
         "missing_facts": [
-          "manufacturing_summary",
-          "organization_name",
           "stainless_steel"
         ],
         "page_review": null,
@@ -791,8 +786,6 @@
         ],
         "eligible_terms": [],
         "missing_facts": [
-          "manufacturing_summary",
-          "organization_name",
           "stainless_steel"
         ],
         "page_review": null,
@@ -813,11 +806,15 @@
         "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
       }
     ],
-    "organization_schema": null,
+    "organization_schema": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://petrajewelryfactory.com/#organization",
+      "name": "Petra Jewelry",
+      "url": "https://petrajewelryfactory.com/"
+    },
     "llms_txt": null,
     "unknown_facts": [
-      "organization_name",
-      "manufacturing_summary",
       "moq",
       "sample_lead_time",
       "production_lead_time",
@@ -1064,7 +1061,7 @@
     {
       "id": "term-review",
       "severity": "warning",
-      "message": "14 target terms need intent review or confirmed facts.",
+      "message": "13 target terms need intent review or confirmed facts.",
       "next_action": "Review grouped page briefs; approve only evidence-backed destinations.",
       "owner": "SEO lead and operations owner"
     }
@@ -1129,7 +1126,7 @@
       "tier": "Revenue",
       "task": "Clear the draft holds",
       "status": "Held",
-      "evidence": "10 packets held. 4 distinct required fact fields are unknown or unsupported.",
+      "evidence": "10 packets held. 2 distinct required fact fields are unknown or unsupported.",
       "next_action": "Review search intent and confirm required public facts with first-hand evidence for one page.",
       "owner": "Operations owner and SEO lead",
       "observed_at": "2026-11-24T01:24:15.350052+00:00",
@@ -1175,9 +1172,7 @@
     "live_verified": true,
     "blockers": [
       "Restore page and query measurement",
-      "No term has both reviewed SERP intent and the required confirmed facts.",
       "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
-      "Approve intent, destination and facts for the primary private-label term.",
       "Review four distinct first-hand proof categories for the sprint."
     ],
     "proof_categories": 0,
@@ -1188,11 +1183,11 @@
       "aggregate_data",
       "qc_edge_case"
     ],
-    "confirmed_fields": [],
-    "missing_facts": [
+    "confirmed_fields": [
       "manufacturing_summary",
       "organization_name"
     ],
+    "missing_facts": [],
     "weeks": [
       [
         "Days 1–7",

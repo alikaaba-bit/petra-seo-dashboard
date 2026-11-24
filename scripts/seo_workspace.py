@@ -478,7 +478,7 @@ def write_workspace(editorial, data_dir, output_dir, crawl=None, baseline=None, 
         lines.append('Current crawl and accepted inventory have no supported suggestions.')
     for packet in report['draft_pack']['packets']:
         lines.extend(['', '## ' + markdown_text(packet['page']), 'Status: ' + packet['status'], *['- HOLD: ' + b for b in packet['blockers']],
-                      'Terms: ' + ', '.join(packet['terms']), 'Unknown facts: ' + ', '.join(packet['missing_facts']),
+                      'Terms: ' + ', '.join(packet['terms']), 'Unknown facts: ' + (', '.join(packet['missing_facts']) or 'None'),
                       *['- First-hand receipt: ' + markdown_text(r['evidence']) + ' · ' + markdown_text(r['source_url'])
                         for r in packet['proof']],
                       *['- ' + item for item in packet['outline']], packet['measurement']])

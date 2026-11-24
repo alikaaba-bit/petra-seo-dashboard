@@ -16,7 +16,7 @@ Observation dates are UTC.
 - Review — Explain the route to sampling \(/how-it-works/\). 50 extracted words. The 350-word threshold flags pages for editorial triage. Checked 2026-11-24. SEO lead. Review whether first-time buyers can identify the next decision, their inputs and the sample approval step.
 - Review — Clarify homepage buyer paths \(/\). 284 extracted words. The 350-word threshold flags pages for editorial triage. Checked 2026-11-24. SEO lead. Check how a brand chooses private label or custom production and finds the brief or catalog.
 - Monitor — Review the contract manufacturing page \(/contract-manufacturing/\). 668 extracted words. The 350-word threshold flags pages for editorial triage. Checked 2026-11-24. SEO lead. Review OEM intent, first-hand evidence and the enquiry step against a dated baseline.
-- Held — Clear the draft holds. 10 packets held. 4 distinct required fact fields are unknown or unsupported. Checked 2026-11-24. Operations owner and SEO lead. Review search intent and confirm required public facts with first-hand evidence for one page.
+- Held — Clear the draft holds. 10 packets held. 2 distinct required fact fields are unknown or unsupported. Checked 2026-11-24. Operations owner and SEO lead. Review search intent and confirm required public facts with first-hand evidence for one page.
 
 ## Compounding
 

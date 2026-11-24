@@ -16,13 +16,13 @@ Draft planning output. Human approval and publication required.
 
 ## Actions
 - critical: The latest recorded Search Console workflow attempt returned HTTP 403 for the URL-prefix property. Inspect the existing Actions failure and exact GSC property access. Confirm email isolation before access recovery. Owner: Account owner.
-- warning: 14 target terms need intent review or confirmed facts. Review grouped page briefs; approve only evidence-backed destinations. Owner: SEO lead and operations owner.
+- warning: 13 target terms need intent review or confirmed facts. Review grouped page briefs; approve only evidence-backed destinations. Owner: SEO lead and operations owner.
 
 ## Roadmap and sprint
 
 [Prioritized roadmap](roast-roadmap.md) · [Single-page plan](blitz-plan.md) · [Buyer journey](customer-journey.md)
 - Private label sprint: Held.
-- Public fact fields without a confirmation: 32.
+- Public fact fields without a confirmation: 30.
 - Manual AI observations: 0. Buyer prompts without an observation: 5.
 
 ## Internal links for review
@@ -39,7 +39,7 @@ Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 Terms: custom jewelry manufacturer for brands, OEM jewelry manufacturer
-Unknown facts: manufacturing_summary, organization_name
+Unknown facts: None
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -52,7 +52,7 @@ Status: hold
 - HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 Terms: jewelry supplier evaluation checklist
-Unknown facts: manufacturing_summary, organization_name
+Unknown facts: None
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -62,10 +62,9 @@ Log the actual human publication date. Review equal 28/56-day windows; either wi
 
 ## /private-label/
 Status: hold
-- HOLD: No term has both reviewed SERP intent and the required confirmed facts.
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 Terms: private label jewelry manufacturer
-Unknown facts: manufacturing_summary, organization_name
+Unknown facts: None
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -79,7 +78,7 @@ Status: hold
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: jewelry manufacturing brief template
-Unknown facts: manufacturing_summary, organization_name
+Unknown facts: None
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -93,7 +92,7 @@ Status: hold
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: jewelry manufacturing sample approval checklist
-Unknown facts: manufacturing_summary, organization_name
+Unknown facts: None
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -107,7 +106,7 @@ Status: hold
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: silver jewelry manufacturer
-Unknown facts: manufacturing_summary, organization_name, silver
+Unknown facts: silver
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -121,7 +120,7 @@ Status: hold
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel jewelry manufacturer, custom stainless steel jewelry manufacturer, stainless steel jewellery manufacturer, stainless steel jewelry OEM manufacturer
-Unknown facts: manufacturing_summary, organization_name, stainless_steel
+Unknown facts: stainless_steel
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -135,7 +134,7 @@ Status: hold
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel earrings manufacturer
-Unknown facts: manufacturing_summary, organization_name, stainless_steel
+Unknown facts: stainless_steel
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -149,7 +148,7 @@ Status: hold
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel necklace manufacturer
-Unknown facts: manufacturing_summary, organization_name, stainless_steel
+Unknown facts: stainless_steel
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence
@@ -163,7 +162,7 @@ Status: hold
 - HOLD: Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.
 - HOLD: Supply a reviewed working title; target terms are not approved factual copy.
 Terms: stainless steel ring manufacturer
-Unknown facts: manufacturing_summary, organization_name, stainless_steel
+Unknown facts: stainless_steel
 - Answer the reviewed buyer problem
 - Explain confirmed scope and limits
 - Show first-hand process and quality evidence

@@ -135,5 +135,53 @@
     "moq": null,
     "sample_lead_time": null,
     "production_lead_time": null
-  }
+  },
+  "fact_reviews": {
+    "organization_name": {
+      "value": "Petra Jewelry",
+      "reviewer": "Petra SEO review",
+      "status": "confirmed",
+      "public_safe": true,
+      "source_url": "https://petrajewelryfactory.com/",
+      "reviewed_at": "2026-11-23"
+    },
+    "manufacturing_summary": {
+      "value": "Petra Jewelry makes custom and private-label jewelry for brands.",
+      "reviewer": "Petra SEO review",
+      "status": "confirmed",
+      "public_safe": true,
+      "source_url": "https://petrajewelryfactory.com/private-label/",
+      "reviewed_at": "2026-11-23"
+    }
+  },
+  "term_reviews": {
+    "private label jewelry manufacturer": {
+      "keyword": "private label jewelry manufacturer",
+      "category": "manufacturing_models",
+      "intent": "commercial",
+      "page_type": "supplier_landing",
+      "proposed_page": "/private-label/",
+      "approved_page": "/private-label/",
+      "required_facts": [
+        "organization_name",
+        "manufacturing_summary"
+      ],
+      "status": "approved",
+      "reason": "An English-language web sample shows manufacturer service pages for brand buyers reviewing private-label options, samples and quotes. Exact search positions and CTR require a fresh Search Console comparison.",
+      "serp": {
+        "urls": [
+          "https://www.jy-jewellery.com/private-label-jewellery",
+          "https://www.jewelrytouch.com/private-label-jewelry",
+          "https://marigoldjewel.com/private-label-jewellery-oem-odm"
+        ],
+        "checked_at": "2026-11-23",
+        "market": "English-language web sample; no fixed geography",
+        "device": "desktop",
+        "page_type": "supplier_landing"
+      },
+      "reviewer": "Petra SEO review",
+      "reviewed_at": "2026-11-23"
+    }
+  },
+  "page_reviews": {}
 }

@@ -14,10 +14,7 @@
         "OEM jewelry manufacturer"
       ],
       "eligible_terms": [],
-      "missing_facts": [
-        "manufacturing_summary",
-        "organization_name"
-      ],
+      "missing_facts": [],
       "page_review": null,
       "proof": [],
       "suggested_title": null,
@@ -47,10 +44,7 @@
         "jewelry supplier evaluation checklist"
       ],
       "eligible_terms": [],
-      "missing_facts": [
-        "manufacturing_summary",
-        "organization_name"
-      ],
+      "missing_facts": [],
       "page_review": null,
       "proof": [],
       "suggested_title": null,
@@ -73,17 +67,15 @@
       "topic": "Private label jewelry manufacturing",
       "status": "hold",
       "blockers": [
-        "No term has both reviewed SERP intent and the required confirmed facts.",
         "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis."
       ],
       "terms": [
         "private label jewelry manufacturer"
       ],
-      "eligible_terms": [],
-      "missing_facts": [
-        "manufacturing_summary",
-        "organization_name"
+      "eligible_terms": [
+        "private label jewelry manufacturer"
       ],
+      "missing_facts": [],
       "page_review": null,
       "proof": [],
       "suggested_title": null,
@@ -97,8 +89,38 @@
         "Explain confirmed sampling and production conditions",
         "State what a brand should provide to request a quote"
       ],
-      "evidence": [],
-      "confirmed_facts": {},
+      "evidence": [
+        {
+          "keyword": "private label jewelry manufacturer",
+          "urls": [
+            "https://www.jy-jewellery.com/private-label-jewellery",
+            "https://www.jewelrytouch.com/private-label-jewelry",
+            "https://marigoldjewel.com/private-label-jewellery-oem-odm"
+          ],
+          "checked_at": "2026-11-23",
+          "market": "English-language web sample; no fixed geography",
+          "device": "desktop",
+          "page_type": "supplier_landing"
+        }
+      ],
+      "confirmed_facts": {
+        "manufacturing_summary": {
+          "value": "Petra Jewelry makes custom and private-label jewelry for brands.",
+          "reviewer": "Petra SEO review",
+          "status": "confirmed",
+          "public_safe": true,
+          "source_url": "https://petrajewelryfactory.com/private-label/",
+          "reviewed_at": "2026-11-23"
+        },
+        "organization_name": {
+          "value": "Petra Jewelry",
+          "reviewer": "Petra SEO review",
+          "status": "confirmed",
+          "public_safe": true,
+          "source_url": "https://petrajewelryfactory.com/",
+          "reviewed_at": "2026-11-23"
+        }
+      },
       "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
     },
     {
@@ -114,10 +136,7 @@
         "jewelry manufacturing brief template"
       ],
       "eligible_terms": [],
-      "missing_facts": [
-        "manufacturing_summary",
-        "organization_name"
-      ],
+      "missing_facts": [],
       "page_review": null,
       "proof": [],
       "suggested_title": null,
@@ -148,10 +167,7 @@
         "jewelry manufacturing sample approval checklist"
       ],
       "eligible_terms": [],
-      "missing_facts": [
-        "manufacturing_summary",
-        "organization_name"
-      ],
+      "missing_facts": [],
       "page_review": null,
       "proof": [],
       "suggested_title": null,
@@ -183,8 +199,6 @@
       ],
       "eligible_terms": [],
       "missing_facts": [
-        "manufacturing_summary",
-        "organization_name",
         "silver"
       ],
       "page_review": null,
@@ -221,8 +235,6 @@
       ],
       "eligible_terms": [],
       "missing_facts": [
-        "manufacturing_summary",
-        "organization_name",
         "stainless_steel"
       ],
       "page_review": null,
@@ -256,8 +268,6 @@
       ],
       "eligible_terms": [],
       "missing_facts": [
-        "manufacturing_summary",
-        "organization_name",
         "stainless_steel"
       ],
       "page_review": null,
@@ -291,8 +301,6 @@
       ],
       "eligible_terms": [],
       "missing_facts": [
-        "manufacturing_summary",
-        "organization_name",
         "stainless_steel"
       ],
       "page_review": null,
@@ -326,8 +334,6 @@
       ],
       "eligible_terms": [],
       "missing_facts": [
-        "manufacturing_summary",
-        "organization_name",
         "stainless_steel"
       ],
       "page_review": null,
@@ -348,11 +354,15 @@
       "measurement": "Log the actual human publication date. Review equal 28/56-day windows; either window below 20 clicks is inconclusive. Observed change is not causation."
     }
   ],
-  "organization_schema": null,
+  "organization_schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://petrajewelryfactory.com/#organization",
+    "name": "Petra Jewelry",
+    "url": "https://petrajewelryfactory.com/"
+  },
   "llms_txt": null,
   "unknown_facts": [
-    "organization_name",
-    "manufacturing_summary",
     "moq",
     "sample_lead_time",
     "production_lead_time",

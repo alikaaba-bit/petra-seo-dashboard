@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-24T08:19:23.225233+00:00",
+  "generated_at": "2026-11-24T19:47:22.543663+00:00",
   "site_url": "https://petrajewelryfactory.com/",
   "period": {
     "start": "2026-10-25",
@@ -5932,7 +5932,7 @@
       ]
     }
   ],
-  "content_generated_at": "2026-11-24T08:18:19.758099+00:00",
+  "content_generated_at": "2026-11-24T19:46:20.500151+00:00",
   "crawl_warnings": [
     "/category/uncategorized/page/2/: HTTP 404"
   ],

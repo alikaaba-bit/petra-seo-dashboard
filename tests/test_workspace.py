@@ -170,6 +170,33 @@ class WorkspaceTests(unittest.TestCase):
         self.assertEqual(len(workspace.build_workspace({}, {}, {'attempted_at': '2026-11-10', 'pages': [guide, target]}, {},
                                                        today=TODAY, inventory=inventory)['internal_links']['graph']), 0)
 
+    def test_weekly_checkpoint_uses_last_completed_week_and_shows_observed_coverage(self):
+        page = checked('/contract-manufacturing/')
+        inspection = {'verdict': 'NEUTRAL', 'lastCrawlTime': '2026-11-05T18:34:02Z'}
+        search = {'overall': {'clicks': 0, 'impressions': 9},
+                  'pages': [{**page, 'index_status': 'Not found (404)', 'inspection': inspection},
+                            {'url': SITE + '#/services', 'path': '/#/services', 'inspection': inspection}]}
+        crawl = {'attempted_at': '2026-11-16', 'pages': [page]}
+        report = workspace.build_workspace({}, {}, crawl, {}, today=TODAY)
+        report['alerts'] = []
+        result = workspace.checkpoint_markdown(report, search, crawl, {'id': 123, 'conclusion': 'success'}, TODAY)
+        self.assertIn('2026-11-09 through 2026-11-15', result)
+        self.assertIn('clicks 0 · impressions 9', result)
+        self.assertIn('/contract-manufacturing/ · saved crawl HTTP 200', result)
+        self.assertIn('2026-11-05T18:34:02Z', result)
+        self.assertNotIn('/#/services', result)
+        self.assertIn('Reconcile received quote and catalogue requests', result)
+
+    def test_weekly_checkpoint_preserves_missing_counts_and_collector_alerts(self):
+        report = workspace.build_workspace({}, {}, {}, {}, today=TODAY)
+        result = workspace.checkpoint_markdown(report, {}, {}, {}, TODAY)
+        self.assertIn('clicks unknown · impressions unknown', result)
+        self.assertIn('Latest completed collector run · unknown', result)
+        self.assertIn('Account owner', result)
+        report['alerts'] = []
+        failed = workspace.checkpoint_markdown(report, {}, {}, {'conclusion': 'failure'}, TODAY)
+        self.assertIn('Review the latest collector run before using the saved figures', failed)
+
     def test_manual_ai_observation_separates_absent_from_unobserved_and_rejects_raw_text(self):
         observation = {'provider': 'ChatGPT', 'prompt_id': 'brief-ready', 'checked_at': '2026-11-16',
                        'market': 'GB', 'result': 'absent'}

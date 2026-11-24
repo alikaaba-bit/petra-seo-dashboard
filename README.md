@@ -55,7 +55,7 @@ To inspect a temporary report in the UI, serve a preview containing only `index.
 
 GitHub Pages serves the root of `main`. The daily workflow refreshes GSC, crawls the site, inspects ten priority URLs and saves data after successful collection. The site-wide daily aggregate in `daily-search.json` and the page/query snapshot in `latest.json` have separate dates and sources. The Lighthouse workflow produces mobile lab reports for the homepage, private-label and contract manufacturing pages. GitHub reported the weekly email workflow as manually disabled on November 24. [Actions workflows](https://github.com/alikaaba-bit/petra-seo-dashboard/actions).
 
-The latest reviewed scheduled GSC attempt returned HTTP 403 for the exact URL-prefix property `https://petrajewelryfactory.com/`. The page/query snapshot was last generated November 5, covering finalized data through November 2. Use the bounded crawl for current website evidence and the latest successful source date for each search report. [Failed GitHub run](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/45261706353) · [Sanitized attempt](data/search-health.json).
+The November 24 recovery verified read access to the exact `https://petrajewelryfactory.com/` property and refreshed page/query data. Check dates in the latest successful snapshot before interpreting search results. Use the bounded crawl for current website evidence. [Successful collector run](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/45354874045) · [Search health](data/search-health.json).
 
 Search collection writes `search-health.json` with the attempt time, sanitized error classification and the last successful search snapshot's dates. Authentication, query and follow-up collection failures still exit 1 and preserve `latest.json` and history. The daily workflow uploads this diagnostic even after failure; failed-run artifacts are not automatically published to the dashboard. No raw exception payload or credential value is included. This local diagnostic change does not repair remote permissions or run the collector.
 
@@ -110,6 +110,8 @@ The tests cover date windows, weighting, query/page separation, pagination, prop
 ## Offline operating loop
 
 ### Run the weekly review
+
+The [Weekly SEO Review workflow](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/workflows/seo-weekly-review.yml) runs Mondays at 19:23 Asia/Shanghai (11:23 UTC). The run summary shows the first decision, source dates, sampled Google coverage and private-label proof status. The run artifact includes the detailed review, roadmap and page plan. It reads the saved evidence and latest collector status with read-only access. Confirm successes from existing inbound records, qualify buyer projects, and record approved aggregate counts in Changes & results.
 
 1. Run the bounded crawl. Review Fatal items first, then Revenue, Compounding and Fluff. Confirm an affected URL before writing a handoff. Retain historical failed checks with their observation dates.
 2. Review one destination and its actual buyer SERP. Record market, device, date and evidence URLs. Confirm the relevant facts, first-hand proof and measurement hypothesis in the [public editorial store](data/editorial.json).

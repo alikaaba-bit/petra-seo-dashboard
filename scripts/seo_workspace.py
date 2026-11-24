@@ -486,6 +486,65 @@ def write_workspace(editorial, data_dir, output_dir, crawl=None, baseline=None, 
     return report
 
 
+def checkpoint_markdown(report, search, crawl, collector_run, today):
+    """Summarize one completed business week from the available review evidence."""
+    week_end = today - timedelta(days=today.weekday() + 1)
+    week_start = week_end - timedelta(days=6)
+    sources = report['sources']
+    sprint = report['blitz']
+    period = search.get('period') or {}
+    overall = search.get('overall') or {}
+    clicks = overall.get('clicks')
+    impressions = overall.get('impressions')
+    run_status = collector_run.get('conclusion') or 'unknown'
+    critical = next((item for item in report['alerts'] if item['severity'] == 'critical'), None)
+
+    if critical:
+        decision = f"{critical['owner']} · {critical['next_action']}"
+    elif run_status != 'success':
+        decision = 'SEO operator · Review the latest collector run before using the saved figures.'
+    else:
+        decision = 'Website owner and sales lead · Reconcile received quote and catalogue requests for the completed week.'
+
+    lines = ['# Weekly SEO checkpoint', '', f'Completed business week {week_start} through {week_end} (Asia/Shanghai).',
+             '', '## First decision', '', markdown_text(decision), '', '## Enquiries', '',
+             'Reconcile the first-party quote acceptance counter with received quote requests. Verify catalogue outcomes separately. '
+             'Use original landing and source fields where available. '
+             'Have sales qualify B2B enquiries and deduplicate buyer projects across channels. Record uncertainty for any missing counts or attribution.',
+             '', '## Search and site evidence', '',
+             f"- Latest completed collector run · {markdown_text(run_status)}"]
+    if isinstance(collector_run.get('id'), int):
+        run_id = collector_run['id']
+        lines[-1] += f' · [Run {run_id}](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/runs/{run_id})'
+    lines.extend([
+        f"- Finalized Search Console window · {period.get('start') or 'unknown'} through {period.get('end') or 'unknown'}",
+        f"- Reported property totals · clicks {clicks if clicks is not None else 'unknown'} · "
+        f"impressions {impressions if impressions is not None else 'unknown'}",
+        f"- Website crawl · {sources['crawl'] or 'unknown'}",
+        '', '## Google coverage to review', '',
+    ])
+    routes = crawl_routes(crawl.get('pages', []))
+    coverage = []
+    for page in search.get('pages', []):
+        url = page.get('url')
+        inspection = page.get('inspection') or {}
+        if url in routes and inspection and inspection.get('verdict') != 'PASS' and verified_page(url, routes[url]):
+            state = page.get('index_status') or 'unknown'
+            last_crawl = inspection.get('lastCrawlTime') or 'unknown'
+            path = page.get('path') or url
+            coverage.append('- ' + markdown_text(f"{path} · saved crawl HTTP 200 · Google reported {state} · Google’s last crawl {last_crawl}."))
+    lines.extend(coverage or ['No conflicting results were found in the available inspection sample.'])
+    lines.extend([
+        '', '## Page review', '',
+        f"- {markdown_text(sprint['page'])} · {markdown_text(sprint['status'])} · "
+        f"{sprint['proof_categories']} of {len(PROOF_CATEGORIES)} possible approved proof categories documented.",
+        *['- ' + markdown_text(blocker) for blocker in sprint['blockers']],
+        f"- {len(report['followups'])} publication follow-up windows in the review file. Use finalized equal periods and retain the small-sample rule.",
+        '', '[Dashboard weekly review](https://alikaaba-bit.github.io/petra-seo-dashboard/#workflow)',
+    ])
+    return '\n'.join(lines) + '\n'
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--data-dir', type=Path, default=ROOT / 'data')
@@ -494,6 +553,8 @@ def main():
     parser.add_argument('--crawl-report', type=Path)
     parser.add_argument('--baseline-file', type=Path)
     parser.add_argument('--save-baseline', type=Path, help='Write a new observed baseline; refuses to overwrite')
+    parser.add_argument('--checkpoint', action='store_true', help='Write a weekly checkpoint beside the review files')
+    parser.add_argument('--collector-run', type=Path, help='Optional metadata from the latest completed collector run')
     args = parser.parse_args()
     crawl = latest_crawl(args.data_dir, args.crawl_report)
     if args.save_baseline:
@@ -506,6 +567,11 @@ def main():
         raise ValueError('Baseline file does not exist')
     report = write_workspace(read_json(args.editorial), args.data_dir, args.output_dir, crawl,
                              read_json(args.baseline_file) if args.baseline_file else None)
+    if args.checkpoint:
+        collector_run = read_json(args.collector_run) if args.collector_run else {}
+        today = datetime.now(ZoneInfo('Asia/Shanghai')).date()
+        checkpoint = checkpoint_markdown(report, read_json(args.data_dir / 'latest.json'), crawl, collector_run or {}, today)
+        (args.output_dir / 'checkpoint.md').write_text(checkpoint, encoding='utf-8')
     print(f"Prepared {len(report['terms'])} term dispositions, {len(report['draft_pack']['packets'])} grouped planning packets and {len(report['alerts'])} review alerts. No search refresh or publishing performed.")
 
 

@@ -447,8 +447,9 @@ def latest_crawl(data_dir, explicit=None):
     return attempt if attempt.get('attempted_at', '') >= inventory.get('generated_at', '') and attempt.get('attempted_at') else inventory
 
 
-def write_workspace(editorial, data_dir, output_dir, crawl=None, baseline=None, browser=None):
-    report = build_workspace(editorial, read_json(data_dir / 'latest.json'), crawl if crawl is not None else latest_crawl(data_dir),
+def write_workspace(editorial, data_dir, output_dir, crawl=None, baseline=None, browser=None, *, search=None):
+    search = read_json(data_dir / 'latest.json') if search is None else search
+    report = build_workspace(editorial, search, crawl if crawl is not None else latest_crawl(data_dir),
                              read_json(data_dir / 'performance.json'), baseline, browser or read_json(data_dir / 'browser-check.json'),
                              lab_attempt=read_json(data_dir / 'performance-health.json'),
                              inventory=read_json(data_dir / 'content.json'),
@@ -486,7 +487,7 @@ def write_workspace(editorial, data_dir, output_dir, crawl=None, baseline=None, 
     return report
 
 
-def checkpoint_markdown(report, search, crawl, collector_run, today):
+def checkpoint_markdown(report, search, crawl, collector_run, today, *, decision=None):
     """Summarize one completed business week from the available review evidence."""
     week_end = today - timedelta(days=today.weekday() + 1)
     week_start = week_end - timedelta(days=6)
@@ -499,12 +500,13 @@ def checkpoint_markdown(report, search, crawl, collector_run, today):
     run_status = collector_run.get('conclusion') or 'unknown'
     critical = next((item for item in report['alerts'] if item['severity'] == 'critical'), None)
 
-    if critical:
-        decision = f"{critical['owner']} · {critical['next_action']}"
-    elif run_status != 'success':
-        decision = 'SEO operator · Review the latest collector run before using the saved figures.'
-    else:
-        decision = 'Website owner and sales lead · Reconcile received quote and catalogue requests for the completed week.'
+    if decision is None:
+        if critical:
+            decision = f"{critical['owner']} · {critical['next_action']}"
+        elif run_status != 'success':
+            decision = 'SEO operator · Review the latest collector run before using the saved figures.'
+        else:
+            decision = 'Website owner and sales lead · Reconcile received quote and catalogue requests for the completed week.'
 
     lines = ['# Weekly SEO checkpoint', '', f'Completed business week {week_start} through {week_end} (Asia/Shanghai).',
              '', '## First decision', '', markdown_text(decision), '', '## Enquiries', '',

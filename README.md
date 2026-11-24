@@ -113,6 +113,10 @@ The tests cover date windows, weighting, query/page separation, pagination, prop
 
 The [Weekly SEO Review workflow](https://github.com/alikaaba-bit/petra-seo-dashboard/actions/workflows/seo-weekly-review.yml) runs Mondays at 19:23 Asia/Shanghai (11:23 UTC). The run summary shows the first decision, source dates, sampled Google coverage and private-label proof status. The run artifact includes the detailed review, roadmap and page plan. It reads the saved evidence and latest collector status with read-only access. Confirm successes from existing inbound records, qualify buyer projects, and record approved aggregate counts in Changes & results.
 
+Every weekly run first tests the measurement and decision rules. It checks the exact Search Console property, finalized dates and totals, and holds search decisions on inconsistent input. Temporary GitHub reads retry up to three attempts. A stale or failed crawl triggers one bounded, read-only crawl in the run’s temporary directory. The checkpoint records the recovery outcome.
+
+The workflow carries its verified weekly state forward through its Actions artifact. It compares newly available 28- and 56-day results, keeps low samples inconclusive, and selects one corrective decision or provides the evidence needed for the next page test. Manual reruns within a week have a single review-week count. The job prepares a review for the site owner. Sales qualifications and approved aggregate outcomes supply the business measure.
+
 1. Run the bounded crawl. Review Fatal items first, then Revenue, Compounding and Fluff. Confirm an affected URL before writing a handoff. Retain historical failed checks with their observation dates.
 2. Review one destination and its actual buyer SERP. Record market, device, date and evidence URLs. Confirm the relevant facts, first-hand proof and measurement hypothesis in the [public editorial store](data/editorial.json).
 3. Dry-run the reviewed import and rebuild. The [30-day plan](data/blitz-plan.md) tracks the single private-label candidate and its evidence gates.

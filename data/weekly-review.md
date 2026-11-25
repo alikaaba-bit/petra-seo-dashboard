@@ -5,12 +5,12 @@ Draft planning output. Human approval and publication required.
 ## Source dates
 ```json
 {
-  "search": "2026-11-24T19:47:22.543663+00:00",
-  "search_through": "2026-11-21",
-  "crawl": "2026-11-24T19:46:20.500151+00:00",
+  "search": "2026-11-25T18:54:18.142549+00:00",
+  "search_through": "2026-11-22",
+  "crawl": "2026-11-25T18:53:14.780789+00:00",
   "lab": "2026-11-17T16:01:25.064015+00:00",
   "browser": "2026-11-24T01:37:31.257Z",
-  "search_attempt": "2026-11-24T19:47:22.557754+00:00"
+  "search_attempt": "2026-11-25T18:54:18.153158+00:00"
 }
 ```
 

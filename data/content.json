@@ -150,6 +150,8 @@
         "/faqs/",
         "/how-it-works/",
         "/private-label/",
+        "/resources/",
+        "/resources/stainless-steel-repeat-orders/",
         "/services/",
         "/sustainability/",
         "/team/",
@@ -171,8 +173,6 @@
         "/stainless-steel-jewelry-manufacturer/earrings/",
         "/resources/jewelry-finish-review/",
         "/resources/silver-jewelry-sampling/",
-        "/resources/stainless-steel-repeat-orders/",
-        "/resources/",
         "/collections/"
       ]
     },
@@ -593,6 +593,8 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
+        "/resources/",
+        "/resources/stainless-steel-repeat-orders/",
         "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
         "/stainless-steel-jewelry-manufacturer/",
         "/resources/stainless-steel-sample-approval/",
@@ -607,9 +609,265 @@
         "/resources/stainless-steel-vs-silver/",
         "/stainless-steel-jewelry-manufacturer/earrings/",
         "/resources/jewelry-finish-review/",
-        "/resources/silver-jewelry-sampling/",
+        "/resources/silver-jewelry-sampling/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/",
+      "path": "/resources/",
+      "final_url": "https://petrajewelryfactory.com/resources/",
+      "http_status": 200,
+      "crawl_status": "checked",
+      "title": "Jewelry Manufacturing Journal & Guides | Petra Jewelry",
+      "description": "Explore jewelry manufacturing guides and worksheets for briefs, sample reviews, materials, finishes and choosing a manufacturing partner.",
+      "canonical": "https://petrajewelryfactory.com/resources/",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "Plan a better jewelry collection."
+        },
+        {
+          "level": "h2",
+          "text": "Guides & worksheets"
+        },
+        {
+          "level": "h2",
+          "text": "Stainless steel sample review"
+        },
+        {
+          "level": "h2",
+          "text": "Specifying stainless steel finishes"
+        },
+        {
+          "level": "h2",
+          "text": "Jewelry development record"
+        },
+        {
+          "level": "h2",
+          "text": "Specifying stainless steel materials"
+        },
+        {
+          "level": "h2",
+          "text": "Manufacturing brief worksheet"
+        },
+        {
+          "level": "h2",
+          "text": "Stainless steel or silver"
+        },
+        {
+          "level": "h2",
+          "text": "Finish review worksheet"
+        },
+        {
+          "level": "h2",
+          "text": "Silver sample review"
+        },
+        {
+          "level": "h2",
+          "text": "Repeat stainless steel orders"
+        },
+        {
+          "level": "h2",
+          "text": "Evaluating a jewelry manufacturer"
+        },
+        {
+          "level": "h2",
+          "text": "Manufacturing services"
+        },
+        {
+          "level": "h2",
+          "text": "Stainless steel manufacturing"
+        },
+        {
+          "level": "h2",
+          "text": "Private label manufacturing"
+        },
+        {
+          "level": "h2",
+          "text": "Custom and OEM manufacturing"
+        },
+        {
+          "level": "h2",
+          "text": "Quality requirements before production"
+        },
+        {
+          "level": "h2",
+          "text": "Stainless steel ring manufacturing"
+        },
+        {
+          "level": "h2",
+          "text": "Necklace and pendant manufacturing"
+        },
+        {
+          "level": "h2",
+          "text": "Silver jewelry manufacturing"
+        },
+        {
+          "level": "h2",
+          "text": "Stainless steel earring manufacturing"
+        }
+      ],
+      "word_count": 434,
+      "robots": [
+        "",
+        "index,follow,max-image-preview:large"
+      ],
+      "schema_types": [
+        "Organization",
+        "WebPage",
+        "WebSite"
+      ],
+      "schema_hash": "4d1a41801b40c534904862c7654f845345e7aff28b748de9f67c80f54f517424",
+      "schema_errors": 0,
+      "text": "Petra Jewelry journal\nPlan a better jewelry collection.\nPractical guides and worksheets for manufacturing briefs, sample reviews, materials and finishes.\nGuides & worksheets\nStainless steel sample review\nReview a stainless steel jewelry sample against its brief. Use clear inspection questions, a revision list and a recorded decision before production.\nSpecifying stainless steel finishes\nDefine colour, texture, coverage and finish references for stainless steel jewelry. Keep appearance requirements separate from performance claims.\nJewelry development record\nCopy a jewelry development record to track drawings, samples, revisions and decisions. Keep one clear reference when your project changes hands.\nSpecifying stainless steel materials\nSpecify stainless steel jewelry beyond the grade name. Record component materials, finish requirements, open questions and supporting documentation.\nManufacturing brief worksheet\nCopy Petra’s jewelry manufacturing brief to define materials, finish, quantity, branding and open questions before sampling.\nStainless steel or silver\nCompare stainless steel and silver around your jewelry collection’s design, material specification, finish, documentation and sample requirements.\nFinish review worksheet\nCopy a jewelry finish review worksheet to record references, viewing conditions, observations and actions before choosing the collection’s finish.\nSilver sample review\nPrepare a silver jewelry sample review using the material record, drawing, finish reference and artwork. Record decisions and unresolved questions.\nRepeat stainless steel orders\nBrief a repeat stainless steel jewelry order with approved references, unchanged requirements, intended changes and the proposed quantity allocation.\nEvaluating a jewelry manufacturer\nEvaluate a jewelry manufacturing partner using a consistent brief, sample, proposal and evidence. Compare development, quality, packaging and communication.\nManufacturing services\nStainless steel manufacturing\nDevelop stainless steel jewelry with Petra. Custom and private-label manufacturing for brands, with a 200-unit minimum per style, one colour.\nPrivate label manufacturing\nStart your private-label jewelry collection from Petra’s designs. Explore material, finish, branding and packaging options, with 200 units per style.\nCustom and OEM manufacturing\nBring your jewelry designs to Petra for CAD development, sampling and manufacturing. Stainless steel first, with silver and brass options available.\nQuality requirements before production\nDefine jewelry quality requirements before production: approved references, inspection questions, packaging details and the evidence your project needs.\nStainless steel ring manufacturing\nPrepare a stainless steel ring manufacturing brief with dimensions, size range, finish and artwork. Review your collection requirements with Petra.\nNecklace and pendant manufacturing\nPlan stainless steel necklace and pendant manufacturing with a complete brief covering the pendant, chain, connections, closure and finished length.\nSilver jewelry manufacturing\nBring your silver jewelry designs or collection references to Petra for development, sampling and manufacturing review.\nStainless steel earring manufacturing\nBrief a stainless steel earring project with pair orientation, dimensions, fastening and finish requirements. Start a manufacturing discussion with Petra.",
+      "links": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
+      ],
+      "body_links": [
+        "https://petrajewelryfactory.com/contract-manufacturing/",
+        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/quality-control/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
+        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
+        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
+      ],
+      "fragment_links": [],
+      "issues": [],
+      "incoming_links": [
+        "/",
+        "/catalog/",
+        "/faqs/",
+        "/how-it-works/",
+        "/private-label/",
         "/resources/stainless-steel-repeat-orders/",
-        "/resources/"
+        "/services/",
+        "/sustainability/",
+        "/team/",
+        "/contract-manufacturing/",
+        "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+        "/about/",
+        "/contact/",
+        "/stainless-steel-jewelry-manufacturer/",
+        "/resources/stainless-steel-sample-approval/",
+        "/resources/stainless-steel-finishes/",
+        "/quality-control/",
+        "/stainless-steel-jewelry-manufacturer/rings/",
+        "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
+        "/resources/jewelry-development-record/",
+        "/resources/stainless-steel-material-specification/",
+        "/resources/jewelry-manufacturing-brief/",
+        "/silver-jewelry-manufacturer/",
+        "/resources/stainless-steel-vs-silver/",
+        "/stainless-steel-jewelry-manufacturer/earrings/",
+        "/resources/jewelry-finish-review/",
+        "/resources/silver-jewelry-sampling/",
+        "/collections/"
+      ]
+    },
+    {
+      "url": "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+      "path": "/resources/stainless-steel-repeat-orders/",
+      "final_url": "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+      "http_status": 200,
+      "crawl_status": "checked",
+      "title": "How to Brief a Repeat Stainless Steel Jewelry Order | Petra Jewelry",
+      "description": "Brief a repeat stainless steel jewelry order with approved references, unchanged requirements, intended changes and the proposed quantity allocation.",
+      "canonical": "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+      "headings": [
+        {
+          "level": "h1",
+          "text": "How to Brief a Repeat Stainless Steel Jewelry Order"
+        },
+        {
+          "level": "h2",
+          "text": "Re-establish the reference"
+        },
+        {
+          "level": "h2",
+          "text": "Separate changes from repeats"
+        },
+        {
+          "level": "h2",
+          "text": "Bring previous observations into the brief"
+        },
+        {
+          "level": "h2",
+          "text": "Confirm the scope of the new order"
+        },
+        {
+          "level": "h2",
+          "text": "Build a clearer manufacturing brief."
+        },
+        {
+          "level": "h2",
+          "text": "Tell us what you want to make."
+        }
+      ],
+      "word_count": 374,
+      "robots": [
+        "",
+        "index,follow,max-image-preview:large"
+      ],
+      "schema_types": [
+        "Article",
+        "Organization",
+        "WebSite"
+      ],
+      "schema_hash": "4d62a6709b221d9a65033e568ab0ec26727df5b9b5af856baa7ed387188af698",
+      "schema_errors": 0,
+      "text": "Use the previous style and sample references, then build a short list of unchanged requirements, intended changes and questions still open.\nRe-establish the reference\nIdentify the style, drawing revision, material specification, finish reference and approved sample. Include the packaging and artwork versions that should be used. If your team has more than one reference sample, make clear which one governs the order.\nKeep the product description consistent with the earlier record. A new marketing name should not obscure the manufacturing style identifier.\nSeparate changes from repeats\n| Item | Confirm or update | \n|---|---|\n| Design and dimensions | The governing drawing and any intended revision | \n| Material and finish | Existing specification or proposed change | \n| Quantity | Units by style, colour and agreed allocation | \n| Branding | Artwork version and placement | \n| Packaging | Presentation, labels and packing requirements | \n| Documentation | Reports or evidence required for this order | \n| Timing | Target date to be reviewed in the proposal | \nIf a finish, component or design feature is changing, ask whether another sample review is needed. A deliberate revision should not be hidden inside a repeat-order label.\nBring previous observations into the brief\nRecord any concrete issue your team wants reviewed. Identify the product and observation, attach the relevant evidence, and state the requested action. Keep customer preference, inspection findings and proposed design improvements distinct so the manufacturer understands the purpose of each note.\nDo not promise a result before the issue has been assessed. “Review this closure detail” is a request; “this change will eliminate returns” is an outcome that needs evidence.\nConfirm the scope of the new order\nAsk for a proposal reflecting the current quantity and requirements. Do not assume a previous quote, lead time or material option automatically applies to a new scope.\nPetra's MOQ is 200 units per style in one colour. Production takes 30–35 calendar days, with samples usually taking 30 calendar days when sampling is needed. Discuss the timing for the actual repeat project rather than combining those figures into an assumed arrival date.\nSend your repeat-order references and highlight changes at the top of the message. A clean reference package makes the manufacturing discussion easier to follow.",
+      "links": [
+        "https://petrajewelryfactory.com/",
+        "https://petrajewelryfactory.com/collections/",
+        "https://petrajewelryfactory.com/contact/",
+        "https://petrajewelryfactory.com/private-label/",
+        "https://petrajewelryfactory.com/resources/",
+        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
+        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
+        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
+        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
+      ],
+      "body_links": [
+        "https://petrajewelryfactory.com/contact/"
+      ],
+      "fragment_links": [],
+      "issues": [],
+      "incoming_links": [
+        "/resources/",
+        "/resources/jewelry-finish-review/"
       ]
     },
     {
@@ -994,6 +1252,7 @@
         "/faqs/",
         "/how-it-works/",
         "/private-label/",
+        "/resources/",
         "/services/",
         "/sustainability/",
         "/team/",
@@ -1005,7 +1264,6 @@
         "/quality-control/",
         "/resources/jewelry-development-record/",
         "/resources/jewelry-manufacturing-brief/",
-        "/resources/",
         "/collections/"
       ]
     },
@@ -1084,8 +1342,8 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
-        "/quality-control/",
-        "/resources/"
+        "/resources/",
+        "/quality-control/"
       ]
     },
     {
@@ -1261,6 +1519,8 @@
         "/faqs/",
         "/how-it-works/",
         "/private-label/",
+        "/resources/",
+        "/resources/stainless-steel-repeat-orders/",
         "/services/",
         "/sustainability/",
         "/team/",
@@ -1281,8 +1541,6 @@
         "/stainless-steel-jewelry-manufacturer/earrings/",
         "/resources/jewelry-finish-review/",
         "/resources/silver-jewelry-sampling/",
-        "/resources/stainless-steel-repeat-orders/",
-        "/resources/",
         "/collections/"
       ]
     },
@@ -1393,6 +1651,8 @@
       "incoming_links": [
         "/",
         "/private-label/",
+        "/resources/",
+        "/resources/stainless-steel-repeat-orders/",
         "/contract-manufacturing/",
         "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
         "/resources/stainless-steel-sample-approval/",
@@ -1407,9 +1667,7 @@
         "/resources/stainless-steel-vs-silver/",
         "/stainless-steel-jewelry-manufacturer/earrings/",
         "/resources/jewelry-finish-review/",
-        "/resources/silver-jewelry-sampling/",
-        "/resources/stainless-steel-repeat-orders/",
-        "/resources/"
+        "/resources/silver-jewelry-sampling/"
       ]
     },
     {
@@ -1482,6 +1740,7 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
+        "/resources/",
         "/contract-manufacturing/",
         "/stainless-steel-jewelry-manufacturer/",
         "/quality-control/",
@@ -1489,8 +1748,7 @@
         "/resources/jewelry-development-record/",
         "/stainless-steel-jewelry-manufacturer/earrings/",
         "/resources/jewelry-finish-review/",
-        "/resources/silver-jewelry-sampling/",
-        "/resources/"
+        "/resources/silver-jewelry-sampling/"
       ]
     },
     {
@@ -1564,9 +1822,9 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
+        "/resources/",
         "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-        "/resources/jewelry-finish-review/",
-        "/resources/"
+        "/resources/jewelry-finish-review/"
       ]
     },
     {
@@ -1645,8 +1903,8 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
-        "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
-        "/resources/"
+        "/resources/",
+        "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/"
       ]
     },
     {
@@ -1861,10 +2119,10 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
-        "/resources/stainless-steel-sample-approval/",
-        "/resources/silver-jewelry-sampling/",
+        "/resources/",
         "/resources/stainless-steel-repeat-orders/",
-        "/resources/"
+        "/resources/stainless-steel-sample-approval/",
+        "/resources/silver-jewelry-sampling/"
       ]
     },
     {
@@ -1936,8 +2194,8 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
-        "/resources/stainless-steel-vs-silver/",
-        "/resources/"
+        "/resources/",
+        "/resources/stainless-steel-vs-silver/"
       ]
     },
     {
@@ -2016,6 +2274,7 @@
       "issues": [],
       "incoming_links": [
         "/private-label/",
+        "/resources/",
         "/contract-manufacturing/",
         "/stainless-steel-jewelry-manufacturer/",
         "/resources/stainless-steel-finishes/",
@@ -2024,8 +2283,7 @@
         "/resources/jewelry-development-record/",
         "/resources/stainless-steel-material-specification/",
         "/silver-jewelry-manufacturer/",
-        "/stainless-steel-jewelry-manufacturer/earrings/",
-        "/resources/"
+        "/stainless-steel-jewelry-manufacturer/earrings/"
       ]
     },
     {
@@ -2099,9 +2357,9 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
+        "/resources/",
         "/resources/stainless-steel-vs-silver/",
-        "/resources/silver-jewelry-sampling/",
-        "/resources/"
+        "/resources/silver-jewelry-sampling/"
       ]
     },
     {
@@ -2173,9 +2431,9 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
+        "/resources/",
         "/resources/stainless-steel-material-specification/",
-        "/silver-jewelry-manufacturer/",
-        "/resources/"
+        "/silver-jewelry-manufacturer/"
       ]
     },
     {
@@ -2322,9 +2580,9 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
-        "/resources/stainless-steel-finishes/",
+        "/resources/",
         "/resources/stainless-steel-repeat-orders/",
-        "/resources/"
+        "/resources/stainless-steel-finishes/"
       ]
     },
     {
@@ -2397,266 +2655,8 @@
       "fragment_links": [],
       "issues": [],
       "incoming_links": [
-        "/silver-jewelry-manufacturer/",
-        "/resources/"
-      ]
-    },
-    {
-      "url": "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
-      "path": "/resources/stainless-steel-repeat-orders/",
-      "final_url": "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
-      "http_status": 200,
-      "crawl_status": "checked",
-      "title": "How to Brief a Repeat Stainless Steel Jewelry Order | Petra Jewelry",
-      "description": "Brief a repeat stainless steel jewelry order with approved references, unchanged requirements, intended changes and the proposed quantity allocation.",
-      "canonical": "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
-      "headings": [
-        {
-          "level": "h1",
-          "text": "How to Brief a Repeat Stainless Steel Jewelry Order"
-        },
-        {
-          "level": "h2",
-          "text": "Re-establish the reference"
-        },
-        {
-          "level": "h2",
-          "text": "Separate changes from repeats"
-        },
-        {
-          "level": "h2",
-          "text": "Bring previous observations into the brief"
-        },
-        {
-          "level": "h2",
-          "text": "Confirm the scope of the new order"
-        },
-        {
-          "level": "h2",
-          "text": "Build a clearer manufacturing brief."
-        },
-        {
-          "level": "h2",
-          "text": "Tell us what you want to make."
-        }
-      ],
-      "word_count": 374,
-      "robots": [
-        "",
-        "index,follow,max-image-preview:large"
-      ],
-      "schema_types": [
-        "Article",
-        "Organization",
-        "WebSite"
-      ],
-      "schema_hash": "4d62a6709b221d9a65033e568ab0ec26727df5b9b5af856baa7ed387188af698",
-      "schema_errors": 0,
-      "text": "Use the previous style and sample references, then build a short list of unchanged requirements, intended changes and questions still open.\nRe-establish the reference\nIdentify the style, drawing revision, material specification, finish reference and approved sample. Include the packaging and artwork versions that should be used. If your team has more than one reference sample, make clear which one governs the order.\nKeep the product description consistent with the earlier record. A new marketing name should not obscure the manufacturing style identifier.\nSeparate changes from repeats\n| Item | Confirm or update | \n|---|---|\n| Design and dimensions | The governing drawing and any intended revision | \n| Material and finish | Existing specification or proposed change | \n| Quantity | Units by style, colour and agreed allocation | \n| Branding | Artwork version and placement | \n| Packaging | Presentation, labels and packing requirements | \n| Documentation | Reports or evidence required for this order | \n| Timing | Target date to be reviewed in the proposal | \nIf a finish, component or design feature is changing, ask whether another sample review is needed. A deliberate revision should not be hidden inside a repeat-order label.\nBring previous observations into the brief\nRecord any concrete issue your team wants reviewed. Identify the product and observation, attach the relevant evidence, and state the requested action. Keep customer preference, inspection findings and proposed design improvements distinct so the manufacturer understands the purpose of each note.\nDo not promise a result before the issue has been assessed. “Review this closure detail” is a request; “this change will eliminate returns” is an outcome that needs evidence.\nConfirm the scope of the new order\nAsk for a proposal reflecting the current quantity and requirements. Do not assume a previous quote, lead time or material option automatically applies to a new scope.\nPetra's MOQ is 200 units per style in one colour. Production takes 30–35 calendar days, with samples usually taking 30 calendar days when sampling is needed. Discuss the timing for the actual repeat project rather than combining those figures into an assumed arrival date.\nSend your repeat-order references and highlight changes at the top of the message. A clean reference package makes the manufacturing discussion easier to follow.",
-      "links": [
-        "https://petrajewelryfactory.com/",
-        "https://petrajewelryfactory.com/collections/",
-        "https://petrajewelryfactory.com/contact/",
-        "https://petrajewelryfactory.com/private-label/",
-        "https://petrajewelryfactory.com/resources/",
-        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
-        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/"
-      ],
-      "body_links": [
-        "https://petrajewelryfactory.com/contact/"
-      ],
-      "fragment_links": [],
-      "issues": [],
-      "incoming_links": [
-        "/resources/jewelry-finish-review/",
-        "/resources/"
-      ]
-    },
-    {
-      "url": "https://petrajewelryfactory.com/resources/",
-      "path": "/resources/",
-      "final_url": "https://petrajewelryfactory.com/resources/",
-      "http_status": 200,
-      "crawl_status": "checked",
-      "title": "Jewelry Manufacturing Journal & Guides | Petra Jewelry",
-      "description": "Explore jewelry manufacturing guides and worksheets for briefs, sample reviews, materials, finishes and choosing a manufacturing partner.",
-      "canonical": "https://petrajewelryfactory.com/resources/",
-      "headings": [
-        {
-          "level": "h1",
-          "text": "Plan a better jewelry collection."
-        },
-        {
-          "level": "h2",
-          "text": "Guides & worksheets"
-        },
-        {
-          "level": "h2",
-          "text": "Stainless steel sample review"
-        },
-        {
-          "level": "h2",
-          "text": "Specifying stainless steel finishes"
-        },
-        {
-          "level": "h2",
-          "text": "Jewelry development record"
-        },
-        {
-          "level": "h2",
-          "text": "Specifying stainless steel materials"
-        },
-        {
-          "level": "h2",
-          "text": "Manufacturing brief worksheet"
-        },
-        {
-          "level": "h2",
-          "text": "Stainless steel or silver"
-        },
-        {
-          "level": "h2",
-          "text": "Finish review worksheet"
-        },
-        {
-          "level": "h2",
-          "text": "Silver sample review"
-        },
-        {
-          "level": "h2",
-          "text": "Repeat stainless steel orders"
-        },
-        {
-          "level": "h2",
-          "text": "Evaluating a jewelry manufacturer"
-        },
-        {
-          "level": "h2",
-          "text": "Manufacturing services"
-        },
-        {
-          "level": "h2",
-          "text": "Stainless steel manufacturing"
-        },
-        {
-          "level": "h2",
-          "text": "Private label manufacturing"
-        },
-        {
-          "level": "h2",
-          "text": "Custom and OEM manufacturing"
-        },
-        {
-          "level": "h2",
-          "text": "Quality requirements before production"
-        },
-        {
-          "level": "h2",
-          "text": "Stainless steel ring manufacturing"
-        },
-        {
-          "level": "h2",
-          "text": "Necklace and pendant manufacturing"
-        },
-        {
-          "level": "h2",
-          "text": "Silver jewelry manufacturing"
-        },
-        {
-          "level": "h2",
-          "text": "Stainless steel earring manufacturing"
-        }
-      ],
-      "word_count": 434,
-      "robots": [
-        "",
-        "index,follow,max-image-preview:large"
-      ],
-      "schema_types": [
-        "Organization",
-        "WebPage",
-        "WebSite"
-      ],
-      "schema_hash": "4d1a41801b40c534904862c7654f845345e7aff28b748de9f67c80f54f517424",
-      "schema_errors": 0,
-      "text": "Petra Jewelry journal\nPlan a better jewelry collection.\nPractical guides and worksheets for manufacturing briefs, sample reviews, materials and finishes.\nGuides & worksheets\nStainless steel sample review\nReview a stainless steel jewelry sample against its brief. Use clear inspection questions, a revision list and a recorded decision before production.\nSpecifying stainless steel finishes\nDefine colour, texture, coverage and finish references for stainless steel jewelry. Keep appearance requirements separate from performance claims.\nJewelry development record\nCopy a jewelry development record to track drawings, samples, revisions and decisions. Keep one clear reference when your project changes hands.\nSpecifying stainless steel materials\nSpecify stainless steel jewelry beyond the grade name. Record component materials, finish requirements, open questions and supporting documentation.\nManufacturing brief worksheet\nCopy Petra’s jewelry manufacturing brief to define materials, finish, quantity, branding and open questions before sampling.\nStainless steel or silver\nCompare stainless steel and silver around your jewelry collection’s design, material specification, finish, documentation and sample requirements.\nFinish review worksheet\nCopy a jewelry finish review worksheet to record references, viewing conditions, observations and actions before choosing the collection’s finish.\nSilver sample review\nPrepare a silver jewelry sample review using the material record, drawing, finish reference and artwork. Record decisions and unresolved questions.\nRepeat stainless steel orders\nBrief a repeat stainless steel jewelry order with approved references, unchanged requirements, intended changes and the proposed quantity allocation.\nEvaluating a jewelry manufacturer\nEvaluate a jewelry manufacturing partner using a consistent brief, sample, proposal and evidence. Compare development, quality, packaging and communication.\nManufacturing services\nStainless steel manufacturing\nDevelop stainless steel jewelry with Petra. Custom and private-label manufacturing for brands, with a 200-unit minimum per style, one colour.\nPrivate label manufacturing\nStart your private-label jewelry collection from Petra’s designs. Explore material, finish, branding and packaging options, with 200 units per style.\nCustom and OEM manufacturing\nBring your jewelry designs to Petra for CAD development, sampling and manufacturing. Stainless steel first, with silver and brass options available.\nQuality requirements before production\nDefine jewelry quality requirements before production: approved references, inspection questions, packaging details and the evidence your project needs.\nStainless steel ring manufacturing\nPrepare a stainless steel ring manufacturing brief with dimensions, size range, finish and artwork. Review your collection requirements with Petra.\nNecklace and pendant manufacturing\nPlan stainless steel necklace and pendant manufacturing with a complete brief covering the pendant, chain, connections, closure and finished length.\nSilver jewelry manufacturing\nBring your silver jewelry designs or collection references to Petra for development, sampling and manufacturing review.\nStainless steel earring manufacturing\nBrief a stainless steel earring project with pair orientation, dimensions, fastening and finish requirements. Start a manufacturing discussion with Petra.",
-      "links": [
-        "https://petrajewelryfactory.com/",
-        "https://petrajewelryfactory.com/collections/",
-        "https://petrajewelryfactory.com/contact/",
-        "https://petrajewelryfactory.com/contract-manufacturing/",
-        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
-        "https://petrajewelryfactory.com/private-label/",
-        "https://petrajewelryfactory.com/quality-control/",
-        "https://petrajewelryfactory.com/resources/",
-        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
-        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
-        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
-        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
-        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
-      ],
-      "body_links": [
-        "https://petrajewelryfactory.com/contract-manufacturing/",
-        "https://petrajewelryfactory.com/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
-        "https://petrajewelryfactory.com/private-label/",
-        "https://petrajewelryfactory.com/quality-control/",
-        "https://petrajewelryfactory.com/resources/jewelry-development-record/",
-        "https://petrajewelryfactory.com/resources/jewelry-finish-review/",
-        "https://petrajewelryfactory.com/resources/jewelry-manufacturing-brief/",
-        "https://petrajewelryfactory.com/resources/silver-jewelry-sampling/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-finishes/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-material-specification/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-repeat-orders/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-sample-approval/",
-        "https://petrajewelryfactory.com/resources/stainless-steel-vs-silver/",
-        "https://petrajewelryfactory.com/silver-jewelry-manufacturer/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/earrings/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-        "https://petrajewelryfactory.com/stainless-steel-jewelry-manufacturer/rings/"
-      ],
-      "fragment_links": [],
-      "issues": [],
-      "incoming_links": [
-        "/",
-        "/catalog/",
-        "/faqs/",
-        "/how-it-works/",
-        "/private-label/",
-        "/services/",
-        "/sustainability/",
-        "/team/",
-        "/contract-manufacturing/",
-        "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
-        "/about/",
-        "/contact/",
-        "/stainless-steel-jewelry-manufacturer/",
-        "/resources/stainless-steel-sample-approval/",
-        "/resources/stainless-steel-finishes/",
-        "/quality-control/",
-        "/stainless-steel-jewelry-manufacturer/rings/",
-        "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-        "/resources/jewelry-development-record/",
-        "/resources/stainless-steel-material-specification/",
-        "/resources/jewelry-manufacturing-brief/",
-        "/silver-jewelry-manufacturer/",
-        "/resources/stainless-steel-vs-silver/",
-        "/stainless-steel-jewelry-manufacturer/earrings/",
-        "/resources/jewelry-finish-review/",
-        "/resources/silver-jewelry-sampling/",
-        "/resources/stainless-steel-repeat-orders/",
-        "/collections/"
+        "/resources/",
+        "/silver-jewelry-manufacturer/"
       ]
     },
     {
@@ -2820,6 +2820,8 @@
         "/faqs/",
         "/how-it-works/",
         "/private-label/",
+        "/resources/",
+        "/resources/stainless-steel-repeat-orders/",
         "/services/",
         "/sustainability/",
         "/team/",
@@ -2840,13 +2842,11 @@
         "/resources/stainless-steel-vs-silver/",
         "/stainless-steel-jewelry-manufacturer/earrings/",
         "/resources/jewelry-finish-review/",
-        "/resources/silver-jewelry-sampling/",
-        "/resources/stainless-steel-repeat-orders/",
-        "/resources/"
+        "/resources/silver-jewelry-sampling/"
       ]
     }
   ],
-  "generated_at": "2026-11-24T19:46:20.500151+00:00",
+  "generated_at": "2026-11-25T18:53:14.780789+00:00",
   "warnings": [
     "/category/uncategorized/page/2/: HTTP 404"
   ]

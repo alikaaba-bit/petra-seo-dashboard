@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T18:54:18.156444+00:00",
+  "generated_at": "2026-11-26T18:43:04.874215+00:00",
   "sources": {
-    "search": "2026-11-25T18:54:18.142549+00:00",
-    "search_through": "2026-11-22",
-    "crawl": "2026-11-25T18:53:14.780789+00:00",
+    "search": "2026-11-26T18:43:04.855546+00:00",
+    "search_through": "2026-11-23",
+    "crawl": "2026-11-26T18:42:03.062774+00:00",
     "lab": "2026-11-17T16:01:25.064015+00:00",
     "browser": "2026-11-24T01:37:31.257Z",
-    "search_attempt": "2026-11-25T18:54:18.153158+00:00"
+    "search_attempt": "2026-11-26T18:43:04.869668+00:00"
   },
   "terms": [
     {
@@ -1052,11 +1052,11 @@
   ],
   "alerts": [
     {
-      "id": "crawl-warnings",
+      "id": "lab-stale",
       "severity": "warning",
-      "message": "Crawl findings need review; affected pages remain held from drafts and link suggestions.",
-      "next_action": "Review crawl-health.json warnings and page findings; retain holds for unavailable pages.",
-      "owner": "Website owner"
+      "message": "Lighthouse lab evidence is stale or unavailable.",
+      "next_action": "Review runner access and approved URL targets before a manual lab check.",
+      "owner": "Technical maintainer"
     },
     {
       "id": "term-review",
@@ -1079,7 +1079,7 @@
       "evidence": "The previously unavailable route now returns HTTP 200 with its own canonical.",
       "next_action": "Review guide intent and retain the exact route in the term review.",
       "owner": "SEO lead",
-      "observed_at": "2026-11-25T18:53:14.780789+00:00",
+      "observed_at": "2026-11-26T18:42:03.062774+00:00",
       "page": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/"
     },
     {
@@ -1089,7 +1089,7 @@
       "evidence": "50 extracted words. The 350-word threshold flags pages for editorial triage.",
       "next_action": "Review whether first-time buyers can identify the next decision, their inputs and the sample approval step.",
       "owner": "SEO lead",
-      "observed_at": "2026-11-25T18:53:14.780789+00:00",
+      "observed_at": "2026-11-26T18:42:03.062774+00:00",
       "page": "/how-it-works/"
     },
     {
@@ -1099,7 +1099,7 @@
       "evidence": "284 extracted words. The 350-word threshold flags pages for editorial triage.",
       "next_action": "Check how a brand chooses private label or custom production and finds the brief or catalog.",
       "owner": "SEO lead",
-      "observed_at": "2026-11-25T18:53:14.780789+00:00",
+      "observed_at": "2026-11-26T18:42:03.062774+00:00",
       "page": "/"
     },
     {
@@ -1109,7 +1109,7 @@
       "evidence": "668 extracted words. The 350-word threshold flags pages for editorial triage.",
       "next_action": "Review OEM intent, first-hand evidence and the enquiry step against a dated baseline.",
       "owner": "SEO lead",
-      "observed_at": "2026-11-25T18:53:14.780789+00:00",
+      "observed_at": "2026-11-26T18:42:03.062774+00:00",
       "page": "/contract-manufacturing/"
     },
     {
@@ -1119,7 +1119,7 @@
       "evidence": "10 packets held. 2 distinct required fact fields are unknown or unsupported.",
       "next_action": "Review search intent and confirm required public facts with first-hand evidence for one page.",
       "owner": "Operations owner and SEO lead",
-      "observed_at": "2026-11-25T18:53:14.780789+00:00",
+      "observed_at": "2026-11-26T18:42:03.062774+00:00",
       "page": null
     },
     {
@@ -1129,7 +1129,7 @@
       "evidence": "6 placements to check against the accepted inventory and latest crawl.",
       "next_action": "Review body placement and buyer context on the exact live source and destination.",
       "owner": "SEO lead",
-      "observed_at": "2026-11-25T18:53:14.780789+00:00",
+      "observed_at": "2026-11-26T18:42:03.062774+00:00",
       "page": null
     },
     {
@@ -1157,8 +1157,8 @@
     "page": "/private-label/",
     "keyword": "private label jewelry manufacturer",
     "status": "Held",
-    "crawl_at": "2026-11-25T18:53:14.780789+00:00",
-    "search_through": "2026-11-22",
+    "crawl_at": "2026-11-26T18:42:03.062774+00:00",
+    "search_through": "2026-11-23",
     "live_verified": true,
     "blockers": [
       "Add a reviewed buyer problem, first-hand evidence and measurement hypothesis.",
@@ -1198,8 +1198,8 @@
     "measurement": "Use finalized, equal pre/post windows for page and exact-term clicks, impressions, CTR and average position. Log qualified B2B enquiries with supporting attribution. Either click window under 20 is inconclusive. Observed differences do not establish causation."
   },
   "internal_links": {
-    "inventory_at": "2026-11-25T18:53:14.780789+00:00",
-    "crawl_at": "2026-11-25T18:53:14.780789+00:00",
+    "inventory_at": "2026-11-26T18:42:03.062774+00:00",
+    "crawl_at": "2026-11-26T18:42:03.062774+00:00",
     "suggestions": [
       {
         "source": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",

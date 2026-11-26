@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-25T18:54:18.153158+00:00",
+  "attempted_at": "2026-11-26T18:43:04.869668+00:00",
   "site_url": "https://petrajewelryfactory.com/",
   "source": "Google Search Console",
   "status": "success",
   "last_successful_snapshot": {
-    "generated_at": "2026-11-25T18:54:18.142549+00:00",
+    "generated_at": "2026-11-26T18:43:04.855546+00:00",
     "period": {
-      "start": "2026-10-26",
-      "end": "2026-11-22",
+      "start": "2026-10-27",
+      "end": "2026-11-23",
       "days": 28
     }
   },

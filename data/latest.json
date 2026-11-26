@@ -1,37 +1,30 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-25T18:54:18.142549+00:00",
+  "generated_at": "2026-11-26T18:43:04.855546+00:00",
   "site_url": "https://petrajewelryfactory.com/",
   "period": {
-    "start": "2026-10-26",
-    "end": "2026-11-22",
+    "start": "2026-10-27",
+    "end": "2026-11-23",
     "days": 28
   },
   "previous_period": {
-    "start": "2026-09-28",
-    "end": "2026-10-25",
+    "start": "2026-09-29",
+    "end": "2026-10-26",
     "days": 28
   },
   "overall": {
     "clicks": 1,
-    "impressions": 66,
-    "ctr": 1.515,
-    "position": 10.71
+    "impressions": 68,
+    "ctr": 1.471,
+    "position": 15.85
   },
   "previous_overall": {
     "clicks": 8,
-    "impressions": 87,
-    "ctr": 9.195,
-    "position": 17.08
+    "impressions": 92,
+    "ctr": 8.696,
+    "position": 16.32
   },
   "daily": [
-    {
-      "date": "2026-10-26",
-      "clicks": 0,
-      "impressions": 6,
-      "ctr": 0.0,
-      "position": 3.67
-    },
     {
       "date": "2026-10-27",
       "clicks": 0,
@@ -220,6 +213,13 @@
       "impressions": 5,
       "ctr": 0.0,
       "position": 8.8
+    },
+    {
+      "date": "2026-11-23",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0.0,
+      "position": 49.12
     }
   ],
   "pages": [
@@ -348,20 +348,19 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
           "/private-label/",
+          "/quality-control/",
           "/resources/",
-          "/services/",
+          "/resources/jewelry-development-record/",
           "/sustainability/",
           "/team/",
+          "/services/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/about/",
           "/contact/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/stainless-steel-sample-approval/",
-          "/quality-control/",
-          "/resources/jewelry-development-record/",
           "/resources/jewelry-manufacturing-brief/",
           "/collections/"
         ]
@@ -396,15 +395,15 @@
       "path": "/services/",
       "current": {
         "clicks": 0,
-        "impressions": 2,
-        "ctr": 0.0,
-        "position": 4.0
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
       },
       "previous": {
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 8,
         "ctr": 0.0,
-        "position": 31.17
+        "position": 24.38
       },
       "queries": [],
       "topic": "Jewelry manufacturing services",
@@ -510,7 +509,6 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
           "/private-label/",
           "/sustainability/",
@@ -725,8 +723,8 @@
         "fragment_links": [],
         "issues": [],
         "incoming_links": [
-          "/resources/",
-          "/quality-control/"
+          "/quality-control/",
+          "/resources/"
         ]
       },
       "index_status": "Crawled - currently not indexed",
@@ -790,15 +788,15 @@
       "path": "/private-label/",
       "current": {
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 8,
         "ctr": 0.0,
-        "position": 19.0
+        "position": 23.38
       },
       "previous": {
         "clicks": 0,
-        "impressions": 14,
+        "impressions": 16,
         "ctr": 0.0,
-        "position": 3.93
+        "position": 3.62
       },
       "queries": [
         {
@@ -933,23 +931,23 @@
         "fragment_links": [],
         "issues": [],
         "incoming_links": [
+          "/quality-control/",
           "/resources/",
+          "/resources/jewelry-development-record/",
+          "/resources/silver-jewelry-sampling/",
           "/resources/stainless-steel-repeat-orders/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/stainless-steel-sample-approval/",
           "/resources/stainless-steel-finishes/",
-          "/quality-control/",
           "/stainless-steel-jewelry-manufacturer/rings/",
           "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-          "/resources/jewelry-development-record/",
           "/resources/stainless-steel-material-specification/",
           "/resources/jewelry-manufacturing-brief/",
           "/silver-jewelry-manufacturer/",
           "/resources/stainless-steel-vs-silver/",
           "/stainless-steel-jewelry-manufacturer/earrings/",
-          "/resources/jewelry-finish-review/",
-          "/resources/silver-jewelry-sampling/"
+          "/resources/jewelry-finish-review/"
         ]
       },
       "index_status": "Submitted and indexed",
@@ -1110,12 +1108,12 @@
         "incoming_links": [
           "/private-label/",
           "/resources/",
+          "/resources/jewelry-development-record/",
           "/contract-manufacturing/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/stainless-steel-finishes/",
           "/stainless-steel-jewelry-manufacturer/rings/",
           "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-          "/resources/jewelry-development-record/",
           "/resources/stainless-steel-material-specification/",
           "/silver-jewelry-manufacturer/",
           "/stainless-steel-jewelry-manufacturer/earrings/"
@@ -1277,8 +1275,8 @@
         "issues": [],
         "incoming_links": [
           "/resources/",
-          "/resources/stainless-steel-vs-silver/",
-          "/resources/silver-jewelry-sampling/"
+          "/resources/silver-jewelry-sampling/",
+          "/resources/stainless-steel-vs-silver/"
         ]
       },
       "index_status": "Submitted and indexed",
@@ -1472,23 +1470,23 @@
         "incoming_links": [
           "/",
           "/private-label/",
+          "/quality-control/",
           "/resources/",
+          "/resources/jewelry-development-record/",
+          "/resources/silver-jewelry-sampling/",
           "/resources/stainless-steel-repeat-orders/",
           "/contract-manufacturing/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/resources/stainless-steel-sample-approval/",
           "/resources/stainless-steel-finishes/",
-          "/quality-control/",
           "/stainless-steel-jewelry-manufacturer/rings/",
           "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-          "/resources/jewelry-development-record/",
           "/resources/stainless-steel-material-specification/",
           "/resources/jewelry-manufacturing-brief/",
           "/silver-jewelry-manufacturer/",
           "/resources/stainless-steel-vs-silver/",
           "/stainless-steel-jewelry-manufacturer/earrings/",
-          "/resources/jewelry-finish-review/",
-          "/resources/silver-jewelry-sampling/"
+          "/resources/jewelry-finish-review/"
         ]
       },
       "index_status": "Submitted and indexed",
@@ -2117,15 +2115,15 @@
       "path": "/",
       "current": {
         "clicks": 1,
-        "impressions": 54,
-        "ctr": 1.852,
-        "position": 9.15
+        "impressions": 49,
+        "ctr": 2.041,
+        "position": 9.71
       },
       "previous": {
         "clicks": 8,
-        "impressions": 61,
-        "ctr": 13.115,
-        "position": 11.61
+        "impressions": 67,
+        "ctr": 11.94,
+        "position": 10.91
       },
       "queries": [
         {
@@ -2164,7 +2162,7 @@
       "topic": "Unassigned",
       "intent": "Needs review",
       "business_value": 1,
-      "priority_score": 13,
+      "priority_score": 12,
       "confidence": "Low sample",
       "evidence": [
         "Limited search evidence"
@@ -2320,32 +2318,31 @@
         "issues": [],
         "incoming_links": [
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
           "/private-label/",
+          "/quality-control/",
           "/resources/",
+          "/resources/jewelry-development-record/",
+          "/resources/silver-jewelry-sampling/",
           "/resources/stainless-steel-repeat-orders/",
-          "/services/",
           "/sustainability/",
           "/team/",
           "/contract-manufacturing/",
+          "/services/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/about/",
           "/contact/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/stainless-steel-sample-approval/",
           "/resources/stainless-steel-finishes/",
-          "/quality-control/",
           "/stainless-steel-jewelry-manufacturer/rings/",
           "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-          "/resources/jewelry-development-record/",
           "/resources/stainless-steel-material-specification/",
           "/resources/jewelry-manufacturing-brief/",
           "/silver-jewelry-manufacturer/",
           "/resources/stainless-steel-vs-silver/",
           "/stainless-steel-jewelry-manufacturer/earrings/",
           "/resources/jewelry-finish-review/",
-          "/resources/silver-jewelry-sampling/",
           "/collections/"
         ]
       },
@@ -2499,9 +2496,9 @@
       },
       "previous": {
         "clicks": 0,
-        "impressions": 21,
+        "impressions": 20,
         "ctr": 0.0,
-        "position": 18.24
+        "position": 18.8
       },
       "queries": [],
       "topic": "Unassigned",
@@ -2603,13 +2600,12 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
           "/private-label/",
-          "/services/",
           "/sustainability/",
           "/team/",
           "/contract-manufacturing/",
+          "/services/",
           "/contact/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/jewelry-manufacturing-brief/",
@@ -2766,11 +2762,10 @@
         "issues": [],
         "incoming_links": [
           "/",
-          "/faqs/",
           "/how-it-works/",
-          "/services/",
           "/sustainability/",
           "/team/",
+          "/services/",
           "/about/",
           "/contact/",
           "/collections/"
@@ -2797,15 +2792,15 @@
       "path": "/category/uncategorized/page/2/",
       "current": {
         "clicks": 0,
-        "impressions": 2,
-        "ctr": 0.0,
-        "position": 5.5
-      },
-      "previous": {
-        "clicks": 0,
         "impressions": 0,
         "ctr": 0,
         "position": null
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 5.5
       },
       "queries": [],
       "topic": "Unassigned",
@@ -2814,45 +2809,13 @@
       "priority_score": 10,
       "confidence": "Low sample",
       "evidence": [
-        "Website issue needs attention"
+        "Limited search evidence"
       ],
       "actions": [
-        "Resolve the flagged website issues, then verify the live page."
+        "Review buyer questions and collect more search data before choosing a major rewrite."
       ],
       "effort": "Review",
-      "audit": {
-        "url": "https://petrajewelryfactory.com/category/uncategorized/page/2/",
-        "path": "/category/uncategorized/page/2/",
-        "final_url": "https://petrajewelryfactory.com/category/uncategorized/page/2/",
-        "http_status": 404,
-        "crawl_status": "checked",
-        "title": "This Page Does Not Exist",
-        "description": "Oops, looks like the page is lost.",
-        "canonical": "",
-        "headings": [
-          {
-            "level": "h1",
-            "text": "This Page Does Not Exist"
-          }
-        ],
-        "word_count": 19,
-        "robots": [
-          ""
-        ],
-        "schema_types": [],
-        "schema_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-        "schema_errors": 0,
-        "text": "Sorry, the page you are looking for could not be found. It's just an accident that was not intentional.",
-        "links": [],
-        "body_links": null,
-        "fragment_links": [],
-        "issues": [
-          "HTTP 404",
-          "Missing canonical",
-          "No JSON-LD found; review relevant truthful markup"
-        ],
-        "incoming_links": []
-      },
+      "audit": {},
       "index_status": "Not inspected",
       "click_change": 0,
       "brief": {
@@ -3051,32 +3014,31 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
           "/private-label/",
+          "/quality-control/",
           "/resources/",
+          "/resources/jewelry-development-record/",
+          "/resources/silver-jewelry-sampling/",
           "/resources/stainless-steel-repeat-orders/",
-          "/services/",
           "/sustainability/",
           "/team/",
           "/contract-manufacturing/",
+          "/services/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/about/",
           "/contact/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/stainless-steel-sample-approval/",
           "/resources/stainless-steel-finishes/",
-          "/quality-control/",
           "/stainless-steel-jewelry-manufacturer/rings/",
           "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-          "/resources/jewelry-development-record/",
           "/resources/stainless-steel-material-specification/",
           "/resources/jewelry-manufacturing-brief/",
           "/silver-jewelry-manufacturer/",
           "/resources/stainless-steel-vs-silver/",
           "/stainless-steel-jewelry-manufacturer/earrings/",
-          "/resources/jewelry-finish-review/",
-          "/resources/silver-jewelry-sampling/"
+          "/resources/jewelry-finish-review/"
         ]
       },
       "index_status": "Not inspected",
@@ -3193,31 +3155,30 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
           "/private-label/",
+          "/quality-control/",
           "/resources/",
+          "/resources/jewelry-development-record/",
+          "/resources/silver-jewelry-sampling/",
           "/resources/stainless-steel-repeat-orders/",
-          "/services/",
           "/sustainability/",
           "/team/",
           "/contract-manufacturing/",
+          "/services/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/about/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/stainless-steel-sample-approval/",
           "/resources/stainless-steel-finishes/",
-          "/quality-control/",
           "/stainless-steel-jewelry-manufacturer/rings/",
           "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-          "/resources/jewelry-development-record/",
           "/resources/stainless-steel-material-specification/",
           "/resources/jewelry-manufacturing-brief/",
           "/silver-jewelry-manufacturer/",
           "/resources/stainless-steel-vs-silver/",
           "/stainless-steel-jewelry-manufacturer/earrings/",
           "/resources/jewelry-finish-review/",
-          "/resources/silver-jewelry-sampling/",
           "/collections/"
         ]
       },
@@ -3242,13 +3203,13 @@
       "path": "/faqs/",
       "current": {
         "clicks": 0,
-        "impressions": 2,
-        "ctr": 0.0,
-        "position": 6.5
+        "impressions": 0,
+        "ctr": 0,
+        "position": null
       },
       "previous": {
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 4,
         "ctr": 0.0,
         "position": 6.5
       },
@@ -3259,103 +3220,13 @@
       "priority_score": 10,
       "confidence": "Low sample",
       "evidence": [
-        "2 crawl findings"
+        "Limited search evidence"
       ],
       "actions": [
-        "Review the on-page findings and improve the page's presentation in search."
+        "Review buyer questions and collect more search data before choosing a major rewrite."
       ],
       "effort": "Review",
-      "audit": {
-        "url": "https://petrajewelryfactory.com/faqs/",
-        "path": "/faqs/",
-        "final_url": "https://petrajewelryfactory.com/services/#faq",
-        "http_status": 200,
-        "crawl_status": "checked",
-        "title": "Jewelry Manufacturing Services | Petra Jewelry",
-        "description": "Explore Petra Jewelry manufacturing services, including casting, finishing, stone setting, engraving, polishing and packaging. Share your project requirements.",
-        "canonical": "https://petrajewelryfactory.com/services/",
-        "headings": [
-          {
-            "level": "h1",
-            "text": "Jewelry development that works like clockwork"
-          },
-          {
-            "level": "h2",
-            "text": "Work that works."
-          },
-          {
-            "level": "h3",
-            "text": "Product Development"
-          },
-          {
-            "level": "h3",
-            "text": "Casting"
-          },
-          {
-            "level": "h3",
-            "text": "Stone Setting"
-          },
-          {
-            "level": "h3",
-            "text": "Plating & Finishing"
-          },
-          {
-            "level": "h3",
-            "text": "Packaging Solutions"
-          },
-          {
-            "level": "h3",
-            "text": "Logistics & Fulfillment"
-          },
-          {
-            "level": "h2",
-            "text": "Frequently asked questions"
-          },
-          {
-            "level": "h2",
-            "text": "Let’s make what’s next"
-          },
-          {
-            "level": "h2",
-            "text": "Inside Petra."
-          }
-        ],
-        "word_count": 185,
-        "robots": [
-          ""
-        ],
-        "schema_types": [
-          "Organization",
-          "WebPage",
-          "WebSite"
-        ],
-        "schema_hash": "c9235d27f83e9ce139babb8d3016baccf85f97985c7009501e61d6dc925b0ddd",
-        "schema_errors": 0,
-        "text": "We offer full-spectrum services for brands who want things done right the first time.\nCore services\n- Product Development CAD design, sampling, material sourcing\n- Casting Sterling silver, stainless steel\n- Stone Setting CZ, lab-grown, natural. Prong, pave, bezel\n- Plating & Finishing Gold vermeil, IP plating, rhodium, matte/polish\n- Packaging Solutions Custom boxes, eco-mailers, gift kits\n- Logistics & Fulfillment Assembly, QC, labeling, global shipping\nTell us what you want to make.\nWe reply within 24 hours. Minimums start from 200 units.\nOur minimum order quantity (MOQ) is 200 units. This ensures efficient production and cost-effectiveness for both small and large orders.\nYes. Our contract manufacturing process is IP-safe and NDA-protected, so your designs stay yours from the first sketch to the final shipment.\nYes. Sampling is part of our CAD-to-sample process, so you can approve the piece before you commit to a full production run.\nIt depends on the design, materials and quantity. We confirm a clear timeline with every quote and keep you updated at each stage.\nYes. We offer custom boxes, eco-mailers and gift kits, plus assembly, labeling and global shipping.",
-        "links": [
-          "https://petrajewelryfactory.com/",
-          "https://petrajewelryfactory.com/about/",
-          "https://petrajewelryfactory.com/catalog/",
-          "https://petrajewelryfactory.com/collections/",
-          "https://petrajewelryfactory.com/contact/",
-          "https://petrajewelryfactory.com/contract-manufacturing/",
-          "https://petrajewelryfactory.com/how-it-works/",
-          "https://petrajewelryfactory.com/resources/",
-          "https://petrajewelryfactory.com/services/",
-          "https://petrajewelryfactory.com/sustainability/",
-          "https://petrajewelryfactory.com/team/"
-        ],
-        "body_links": [
-          "https://petrajewelryfactory.com/catalog/",
-          "https://petrajewelryfactory.com/contact/"
-        ],
-        "fragment_links": [],
-        "issues": [
-          "Redirects to /services/#faq",
-          "Canonical points to a different URL"
-        ],
-        "incoming_links": []
-      },
+      "audit": {},
       "index_status": "Not inspected",
       "click_change": 0,
       "brief": {
@@ -3373,15 +3244,15 @@
       "path": "/how-it-works/",
       "current": {
         "clicks": 0,
-        "impressions": 6,
+        "impressions": 4,
         "ctr": 0.0,
-        "position": 5.33
+        "position": 4.0
       },
       "previous": {
         "clicks": 0,
-        "impressions": 0,
-        "ctr": 0,
-        "position": null
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 8.0
       },
       "queries": [],
       "topic": "Unassigned",
@@ -3491,18 +3362,17 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/private-label/",
-          "/services/",
+          "/quality-control/",
+          "/resources/jewelry-development-record/",
           "/sustainability/",
           "/team/",
           "/contract-manufacturing/",
+          "/services/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/about/",
           "/contact/",
           "/stainless-steel-jewelry-manufacturer/",
-          "/quality-control/",
-          "/resources/jewelry-development-record/",
           "/resources/jewelry-manufacturing-brief/",
           "/collections/"
         ]
@@ -3598,9 +3468,9 @@
       "path": "/quality-control/",
       "current": {
         "clicks": 0,
-        "impressions": 0,
-        "ctr": 0,
-        "position": null
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 63.5
       },
       "previous": {
         "clicks": 0,
@@ -3751,9 +3621,9 @@
       "path": "/resources/",
       "current": {
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 3,
         "ctr": 0.0,
-        "position": 6.0
+        "position": 69.33
       },
       "previous": {
         "clicks": 0,
@@ -3931,31 +3801,30 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
           "/private-label/",
+          "/quality-control/",
+          "/resources/jewelry-development-record/",
+          "/resources/silver-jewelry-sampling/",
           "/resources/stainless-steel-repeat-orders/",
-          "/services/",
           "/sustainability/",
           "/team/",
           "/contract-manufacturing/",
+          "/services/",
           "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
           "/about/",
           "/contact/",
           "/stainless-steel-jewelry-manufacturer/",
           "/resources/stainless-steel-sample-approval/",
           "/resources/stainless-steel-finishes/",
-          "/quality-control/",
           "/stainless-steel-jewelry-manufacturer/rings/",
           "/stainless-steel-jewelry-manufacturer/necklaces-pendants/",
-          "/resources/jewelry-development-record/",
           "/resources/stainless-steel-material-specification/",
           "/resources/jewelry-manufacturing-brief/",
           "/silver-jewelry-manufacturer/",
           "/resources/stainless-steel-vs-silver/",
           "/stainless-steel-jewelry-manufacturer/earrings/",
           "/resources/jewelry-finish-review/",
-          "/resources/silver-jewelry-sampling/",
           "/collections/"
         ]
       },
@@ -3980,9 +3849,9 @@
       "path": "/resources/jewelry-development-record/",
       "current": {
         "clicks": 0,
-        "impressions": 0,
-        "ctr": 0,
-        "position": null
+        "impressions": 2,
+        "ctr": 0.0,
+        "position": 26.0
       },
       "previous": {
         "clicks": 0,
@@ -3990,7 +3859,24 @@
         "ctr": 0,
         "position": null
       },
-      "queries": [],
+      "queries": [
+        {
+          "query": "collaborative jewelry design process draper",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0.0,
+          "position": 7.0,
+          "branded": false
+        },
+        {
+          "query": "jewelry concept development draper",
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0.0,
+          "position": 45.0,
+          "branded": false
+        }
+      ],
       "topic": "Unassigned",
       "intent": "Needs review",
       "business_value": 1,
@@ -4076,9 +3962,9 @@
         "issues": [],
         "incoming_links": [
           "/resources/",
+          "/resources/silver-jewelry-sampling/",
           "/resources/stainless-steel-repeat-orders/",
-          "/resources/stainless-steel-sample-approval/",
-          "/resources/silver-jewelry-sampling/"
+          "/resources/stainless-steel-sample-approval/"
         ]
       },
       "index_status": "Not inspected",
@@ -4087,7 +3973,10 @@
         "status": "planning",
         "suggested_title": null,
         "suggested_h1": null,
-        "query_review": [],
+        "query_review": [
+          "collaborative jewelry design process draper",
+          "jewelry concept development draper"
+        ],
         "buyer_questions": [
           "Answer the actual query intent",
           "Add original examples and evidence",
@@ -4095,32 +3984,32 @@
         ],
         "internal_links": [
           {
-            "source": "/silver-jewelry-manufacturer/",
+            "source": "/services/",
             "target": "/resources/jewelry-development-record/",
-            "anchor": "/resources/jewelry-development-record/",
-            "reason": "Shared terms: development, record",
+            "anchor": "collaborative jewelry design process draper",
+            "reason": "Shared terms: design, process",
+            "overlap": 2
+          },
+          {
+            "source": "/how-to-evaluate-jewelry-manufacturing-partners-a-quality-checklist/",
+            "target": "/resources/jewelry-development-record/",
+            "anchor": "collaborative jewelry design process draper",
+            "reason": "Shared terms: design, process",
+            "overlap": 2
+          },
+          {
+            "source": "/stainless-steel-jewelry-manufacturer/",
+            "target": "/resources/jewelry-development-record/",
+            "anchor": "collaborative jewelry design process draper",
+            "reason": "Shared terms: design, process",
             "overlap": 2
           },
           {
             "source": "/stainless-steel-jewelry-manufacturer/rings/",
             "target": "/resources/jewelry-development-record/",
-            "anchor": "/resources/jewelry-development-record/",
-            "reason": "Shared terms: development, record",
+            "anchor": "collaborative jewelry design process draper",
+            "reason": "Shared terms: design, process",
             "overlap": 2
-          },
-          {
-            "source": "/resources/stainless-steel-vs-silver/",
-            "target": "/resources/jewelry-development-record/",
-            "anchor": "/resources/jewelry-development-record/",
-            "reason": "Shared terms: development, record",
-            "overlap": 2
-          },
-          {
-            "source": "/contract-manufacturing/",
-            "target": "/resources/jewelry-development-record/",
-            "anchor": "/resources/jewelry-development-record/",
-            "reason": "Shared terms: development",
-            "overlap": 1
           }
         ],
         "note": "Planning evidence only. Titles and copy come from the reviewed workspace packet after fact and intent approval. Confirm natural link placement before publishing. A query missing from headings is not proof the content is missing."
@@ -4281,9 +4170,9 @@
       "path": "/resources/silver-jewelry-sampling/",
       "current": {
         "clicks": 0,
-        "impressions": 0,
-        "ctr": 0,
-        "position": null
+        "impressions": 1,
+        "ctr": 0.0,
+        "position": 7.0
       },
       "previous": {
         "clicks": 0,
@@ -4962,15 +4851,15 @@
         "fragment_links": [],
         "issues": [],
         "incoming_links": [
+          "/quality-control/",
           "/resources/",
+          "/resources/jewelry-development-record/",
+          "/resources/silver-jewelry-sampling/",
           "/contract-manufacturing/",
           "/stainless-steel-jewelry-manufacturer/",
-          "/quality-control/",
           "/stainless-steel-jewelry-manufacturer/rings/",
-          "/resources/jewelry-development-record/",
           "/stainless-steel-jewelry-manufacturer/earrings/",
-          "/resources/jewelry-finish-review/",
-          "/resources/silver-jewelry-sampling/"
+          "/resources/jewelry-finish-review/"
         ]
       },
       "index_status": "Not inspected",
@@ -5170,13 +5059,13 @@
       "path": "/sustainability/",
       "current": {
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 3,
         "ctr": 0.0,
-        "position": 2.4
+        "position": 2.0
       },
       "previous": {
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 3,
         "ctr": 0.0,
         "position": 3.0
       },
@@ -5275,10 +5164,9 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
-          "/services/",
           "/team/",
+          "/services/",
           "/about/",
           "/contact/",
           "/collections/"
@@ -5408,10 +5296,9 @@
         "incoming_links": [
           "/",
           "/catalog/",
-          "/faqs/",
           "/how-it-works/",
-          "/services/",
           "/sustainability/",
+          "/services/",
           "/about/",
           "/contact/",
           "/collections/"
@@ -5634,11 +5521,27 @@
   "target_reviewed_at": "2026-11-17",
   "queries": [
     {
+      "query": "collaborative jewelry design process draper",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 7.0,
+      "branded": false
+    },
+    {
       "query": "draper utah jewelry manufacturers",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0.0,
       "position": 76.0,
+      "branded": false
+    },
+    {
+      "query": "jewelry concept development draper",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 45.0,
       "branded": false
     },
     {
@@ -5932,10 +5835,8 @@
       ]
     }
   ],
-  "content_generated_at": "2026-11-25T18:53:14.780789+00:00",
-  "crawl_warnings": [
-    "/category/uncategorized/page/2/: HTTP 404"
-  ],
+  "content_generated_at": "2026-11-26T18:42:03.062774+00:00",
+  "crawl_warnings": [],
   "measurement": {
     "leads": "Not connected",
     "note": "Connect aggregate organic enquiries and qualified leads; do not publish customer details in this public repository."
@@ -5948,11 +5849,11 @@
   ],
   "overall_metrics": {
     "total_clicks": 1,
-    "total_impressions": 66,
-    "avg_ctr": 1.515,
-    "avg_position": 10.71,
-    "period_start": "2026-10-26",
-    "period_end": "2026-11-22"
+    "total_impressions": 68,
+    "avg_ctr": 1.471,
+    "avg_position": 15.85,
+    "period_start": "2026-10-27",
+    "period_end": "2026-11-23"
   },
   "top_pages": [
     {
@@ -5965,9 +5866,9 @@
     {
       "page": "/services/",
       "clicks": 0,
-      "impressions": 2,
-      "ctr": 0.0,
-      "position": 4.0
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
     },
     {
       "page": "/#/services",
@@ -5986,9 +5887,9 @@
     {
       "page": "/private-label/",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 8,
       "ctr": 0.0,
-      "position": 19.0
+      "position": 23.38
     },
     {
       "page": "/resources/jewelry-manufacturing-brief/",
@@ -6056,9 +5957,9 @@
     {
       "page": "/",
       "clicks": 1,
-      "impressions": 54,
-      "ctr": 1.852,
-      "position": 9.15
+      "impressions": 49,
+      "ctr": 2.041,
+      "position": 9.71
     },
     {
       "page": "/#/about",
@@ -6098,9 +5999,9 @@
     {
       "page": "/category/uncategorized/page/2/",
       "clicks": 0,
-      "impressions": 2,
-      "ctr": 0.0,
-      "position": 5.5
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
     },
     {
       "page": "/collections/",
@@ -6119,16 +6020,16 @@
     {
       "page": "/faqs/",
       "clicks": 0,
-      "impressions": 2,
-      "ctr": 0.0,
-      "position": 6.5
+      "impressions": 0,
+      "ctr": 0,
+      "position": null
     },
     {
       "page": "/how-it-works/",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 4,
       "ctr": 0.0,
-      "position": 5.33
+      "position": 4.0
     },
     {
       "page": "/product-catalog-request-callai-form/",
@@ -6140,23 +6041,23 @@
     {
       "page": "/quality-control/",
       "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "position": null
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 63.5
     },
     {
       "page": "/resources/",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0.0,
-      "position": 6.0
+      "position": 69.33
     },
     {
       "page": "/resources/jewelry-development-record/",
       "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "position": null
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 26.0
     },
     {
       "page": "/resources/jewelry-finish-review/",
@@ -6168,9 +6069,9 @@
     {
       "page": "/resources/silver-jewelry-sampling/",
       "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "position": null
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 7.0
     },
     {
       "page": "/resources/stainless-steel-finishes/",
@@ -6210,9 +6111,9 @@
     {
       "page": "/sustainability/",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 3,
       "ctr": 0.0,
-      "position": 2.4
+      "position": 2.0
     },
     {
       "page": "/team/",

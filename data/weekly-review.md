@@ -5,17 +5,17 @@ Draft planning output. Human approval and publication required.
 ## Source dates
 ```json
 {
-  "search": "2026-11-25T18:54:18.142549+00:00",
-  "search_through": "2026-11-22",
-  "crawl": "2026-11-25T18:53:14.780789+00:00",
+  "search": "2026-11-26T18:43:04.855546+00:00",
+  "search_through": "2026-11-23",
+  "crawl": "2026-11-26T18:42:03.062774+00:00",
   "lab": "2026-11-17T16:01:25.064015+00:00",
   "browser": "2026-11-24T01:37:31.257Z",
-  "search_attempt": "2026-11-25T18:54:18.153158+00:00"
+  "search_attempt": "2026-11-26T18:43:04.869668+00:00"
 }
 ```
 
 ## Actions
-- warning: Crawl findings need review; affected pages remain held from drafts and link suggestions. Review crawl-health.json warnings and page findings; retain holds for unavailable pages. Owner: Website owner.
+- warning: Lighthouse lab evidence is stale or unavailable. Review runner access and approved URL targets before a manual lab check. Owner: Technical maintainer.
 - warning: 13 target terms need intent review or confirmed facts. Review grouped page briefs; approve only evidence-backed destinations. Owner: SEO lead and operations owner.
 
 ## Roadmap and sprint

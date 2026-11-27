@@ -4,8 +4,8 @@
 - Primary term **private label jewelry manufacturer**
 - Status **Held**
 - Exact route and canonical verified · Yes
-- Crawl evidence 2026-11-26T18:42:03.062774+00:00
-- Finalized page/query data through 2026-11-23
+- Crawl evidence 2026-11-27T18:32:50.274201+00:00
+- Finalized page/query data through 2026-11-24
 - Public proof categories documented 0 of 5
 - Confirmed draft fields manufacturing_summary, organization_name
 
